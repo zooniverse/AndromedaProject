@@ -1,0 +1,14 @@
+<div id="classify">
+  <div class='field'>
+    <img src="<%= @location %>" />
+  </div>
+  <div class='panel'>
+    <p class='tagline'>We need your help.</p>
+    <p class='summary'>Help mark clusters of stars, distance background galaxies and other random stuff!</p>
+    <button class='category'>Star Cluster</button>
+    <button class='category'>Background Galaxy</button>
+    <button class='category'>Telescope Artifact</button>
+    <button class='discuss'>Discuss</button>
+    <button class='next'>Next</button>
+  </div>
+</div>

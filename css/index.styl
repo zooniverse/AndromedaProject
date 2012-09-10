@@ -1,0 +1,35 @@
+$background = #091A32
+$white = #F1F1F1
+$blue = #081935
+
+@import './mixin'
+@import './home'
+@import './nav'
+@import './classify'
+
+.stack > *
+  display: none
+  
+  &.active
+    display: block
+
+a, [data-nav]
+  cursor: pointer
+  color: #0079ae
+  
+  &:hover
+    color: #0079ae
+  
+  img
+    border: none
+
+body
+  margin 0 auto
+  background-color $background
+  color $white
+  border-top 6px solid $white
+  
+  #main
+    margin 0 auto
+    width 1000px
+    margin-bottom 50px
