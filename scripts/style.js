@@ -60,9 +60,9 @@
         'stroke-width': 2
       },
       fish: '#0bc7e8',
-      scallop: '#fd6500',
+      cluster: '#fd6500',
       crustacean: '#b9ca00',
-      seastar: '#c512e0',
+      galaxy: '#c512e0',
       cool: '#001e29',
       helperCircle: {
         opacity: 0.5,

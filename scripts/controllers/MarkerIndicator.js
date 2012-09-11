@@ -43,8 +43,8 @@
             }
           ]
         },
-        seastar: {
-          image: 'images/indicator/seastar.png',
+        galaxy: {
+          image: 'images/indicator/galaxy.png',
           points: [
             {
               x: 35,
@@ -55,8 +55,8 @@
             }
           ]
         },
-        scallop: {
-          image: 'images/indicator/scallop.png',
+        cluster: {
+          image: 'images/indicator/cluster.png',
           points: [
             {
               x: 40,
