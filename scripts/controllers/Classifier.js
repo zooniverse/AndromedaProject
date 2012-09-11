@@ -29,7 +29,7 @@
 
       Classifier.prototype.events = {
         'click .species .toggles button': 'changeSpecies',
-        'click .species .other-creatures button': 'changeOther',
+        'click .species .other-creatures button': 'showArtifacts',
         'click .species .finished': 'finishSpecies',
         'click .favorite .create button': 'createFavorite',
         'click .favorite .destroy button': 'destroyFavorite',
@@ -52,6 +52,8 @@
         this.finishSpecies = __bind(this.finishSpecies, this);
 
         this.changeOther = __bind(this.changeOther, this);
+
+        this.showArtifacts = __bind(this.showArtifacts, this);
 
         this.changeSpecies = __bind(this.changeSpecies, this);
 
@@ -102,8 +104,7 @@
       };
 
       Classifier.prototype.render = function() {
-        this.renderSpeciesPage();
-        return location.hash = '#!/classify/species';
+        return this.renderSpeciesPage();
       };
 
       Classifier.prototype.renderSpeciesPage = function() {
@@ -161,6 +162,17 @@
         this.indicator.setSpecies(species);
         this.speciesButtons.removeClass('active');
         return target.addClass('active');
+      };
+
+      Classifier.prototype.showArtifacts = function(e) {
+        var target;
+        target = $(e.target);
+        if (target.val() === "yes") {
+          $('#artefact-list').show();
+        }
+        if (target.val() === "no") {
+          return $('#artefact-list').hide();
+        }
       };
 
       Classifier.prototype.changeOther = function(e) {
