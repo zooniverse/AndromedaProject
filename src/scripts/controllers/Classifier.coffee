@@ -75,6 +75,7 @@ define (require, exports, module) ->
 
     render: =>
       @renderSpeciesPage()
+      location.hash = '#!/classify/species'
 
     renderSpeciesPage: =>
       selectedMarker = (m for m in @picker.markers when m.selected)[0]

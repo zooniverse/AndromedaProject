@@ -60,7 +60,7 @@
         'stroke-width': 2
       },
       cluster: '#0bc7e8',
-      crustacean: '#b9ca00',
+      ghost: '#b9ca00',
       galaxy: '#c512e0',
       cool: '#001e29',
       helperCircle: {

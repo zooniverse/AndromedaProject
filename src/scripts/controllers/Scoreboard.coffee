@@ -26,9 +26,9 @@ define (require, exports, module) ->
       super
       @html @template
 
-      User.bind 'sign-in', @update
-      Classification.bind 'persist', @update
-      delay @update
+      # User.bind 'sign-in', @update
+      # Classification.bind 'persist', @update
+      # delay @update
 
     update: =>
       return if @forUser and not User.current?

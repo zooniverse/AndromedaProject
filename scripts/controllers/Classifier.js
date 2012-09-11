@@ -102,7 +102,8 @@
       };
 
       Classifier.prototype.render = function() {
-        return this.renderSpeciesPage();
+        this.renderSpeciesPage();
+        return location.hash = '#!/classify/species';
       };
 
       Classifier.prototype.renderSpeciesPage = function() {

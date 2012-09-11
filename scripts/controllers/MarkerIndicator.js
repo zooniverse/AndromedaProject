@@ -54,6 +54,60 @@
               y: 45
             }
           ]
+        },
+        ghost: {
+          image: 'images/indicator/ghost.png',
+          points: [
+            {
+              x: 40,
+              y: 70
+            }, {
+              x: 40,
+              y: 5
+            }, {
+              x: 5,
+              y: 45
+            }, {
+              x: 75,
+              y: 45
+            }
+          ]
+        },
+        star: {
+          image: 'images/indicator/star.png',
+          points: [
+            {
+              x: 40,
+              y: 70
+            }, {
+              x: 40,
+              y: 5
+            }, {
+              x: 5,
+              y: 45
+            }, {
+              x: 75,
+              y: 45
+            }
+          ]
+        },
+        gap: {
+          image: 'images/indicator/gap.png',
+          points: [
+            {
+              x: 40,
+              y: 70
+            }, {
+              x: 40,
+              y: 5
+            }, {
+              x: 5,
+              y: 45
+            }, {
+              x: 75,
+              y: 45
+            }
+          ]
         }
       };
 

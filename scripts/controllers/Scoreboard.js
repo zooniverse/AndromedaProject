@@ -23,9 +23,9 @@
 
       Scoreboard.prototype.elements = {
         '.galaxy.score .count': 'galaxyCount',
-        '.fish.score .count': 'fishCount',
+        '.gap.score .count': 'starCount',
         '.cluster.score .count': 'clusterCount',
-        '.crustacean.score .count': 'crustaceanCount',
+        '.ghost.score .count': 'ghostCount',
         '.classifications.score .count': 'classificationCount'
       };
 
@@ -35,9 +35,6 @@
         this.update = __bind(this.update, this);
         Scoreboard.__super__.constructor.apply(this, arguments);
         this.html(this.template);
-        User.bind('sign-in', this.update);
-        Classification.bind('persist', this.update);
-        delay(this.update);
       }
 
       Scoreboard.prototype.update = function() {
@@ -47,7 +44,7 @@
           return;
         }
         url = "http://" + config.cartoUser + ".cartodb.com/api/v2/sql?callback=?";
-        query = 'SELECT ' + 'SUM(ALL(clusters)) AS clusters, ' + 'SUM(ALL(fish)) AS fish, ' + 'SUM(ALL(galaxys)) AS galaxys, ' + 'SUM(ALL(crustaceans)) AS crustaceans, ' + 'COUNT(ALL(created_at)) AS classifications ' + ("FROM " + config.cartoTable);
+        query = 'SELECT ' + 'SUM(ALL(clusters)) AS clusters, ' + 'SUM(ALL(star)) AS star, ' + 'SUM(ALL(galaxys)) AS galaxys, ' + 'SUM(ALL(ghosts)) AS ghosts, ' + 'COUNT(ALL(created_at)) AS classifications ' + ("FROM " + config.cartoTable);
         if (this.forUser && (User.current != null)) {
           query += " where user_id='" + User.current.id + "'";
         }
@@ -59,12 +56,12 @@
       };
 
       Scoreboard.prototype.render = function(_arg) {
-        var classifications, clusters, crustaceans, fish, galaxys;
-        clusters = _arg.clusters, fish = _arg.fish, galaxys = _arg.galaxys, crustaceans = _arg.crustaceans, classifications = _arg.classifications;
+        var classifications, clusters, galaxys, ghosts, star;
+        clusters = _arg.clusters, star = _arg.star, galaxys = _arg.galaxys, ghosts = _arg.ghosts, classifications = _arg.classifications;
         this.clusterCount.html(clusters || 0);
-        this.fishCount.html(fish || 0);
+        this.starCount.html(star || 0);
         this.galaxyCount.html(galaxys || 0);
-        this.crustaceanCount.html(crustaceans || 0);
+        this.ghostCount.html(ghosts || 0);
         return this.classificationCount.html(classifications || 0);
       };
 

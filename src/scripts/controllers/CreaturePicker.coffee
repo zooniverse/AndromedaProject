@@ -30,16 +30,14 @@ define (require, exports, module) ->
     disabled: false
 
     elements:
-      '.map img': 'map'
-      '.selection-area': 'selectionArea'
-      '.selection-area img': 'image'
-      '.selection-area .scale': 'scale'
+      '.selection-area'     : 'selectionArea'
+      '.selection-area img' : 'image'
 
     events:
-      'mousedown': 'onMouseDown'
-      'touchstart': 'onTouchStart'
-      'touchmove': 'onTouchMove'
-      'touchend': 'onTouchEnd'
+      'mousedown'   : 'onMouseDown'
+      'touchstart'  : 'onTouchStart'
+      'touchmove'   : 'onTouchMove'
+      'touchend'    : 'onTouchEnd'
 
     constructor: ->
       super
@@ -66,8 +64,6 @@ define (require, exports, module) ->
     reset: =>
       @image.attr 'src', @classifier.workflow.selection[0].location.standard
       subject = @classifier.workflow.selection[0]
-      @map.attr 'src', "http://maps.googleapis.com/maps/api/staticmap?center=#{subject.coords[0]},#{subject.coords[1]}&zoom=10&size=745x570&maptype=satellite&sensor=false"
-      @scale.css width: @classifier.workflow.selection[0].metadata.mm_pix * 100
 
     getSize: =>
       width: @image.width(), height: @image.height()

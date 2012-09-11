@@ -94,10 +94,10 @@
         arrowClass: 'right-middle'
       }), new Step({
         heading: 'Identify species',
-        content: ['Next, identify the species in the image.', 'Consult the field guide to learn how to identify and mark different species. Make sure you don\'t mark dead creatures!', 'We\'ll mark all the fish first. Choose "Fish" from the list of species.'],
+        content: ['Next, identify the species in the image.', 'Consult the field guide to learn how to identify and mark different species. Make sure you don\'t mark dead creatures!', 'We\'ll mark all the star first. Choose "star" from the list of species.'],
         attach: {
           x: 'right',
-          to: '[value="fish"]',
+          to: '[value="star"]',
           at: {
             x: 'left'
           }
@@ -106,13 +106,13 @@
           width: 440
         },
         nextOn: {
-          click: '.species [value="fish"]'
+          click: '.species [value="star"]'
         },
         arrowClass: 'right-middle',
-        block: '.species .toggles button:not([value="fish"]), .species .finished'
+        block: '.species .toggles button:not([value="star"]), .species .finished'
       }), new Step({
         heading: 'Marking',
-        content: ['Mark the fish along its longest and widest dimensions.', 'Start by clicking and dragging your mouse from the fish\'s head to its tail...'],
+        content: ['Mark the star along its longest and widest dimensions.', 'Start by clicking and dragging your mouse from the star\'s head to its tail...'],
         attach: {
           y: 'top',
           to: '.creature-picker',
@@ -129,7 +129,7 @@
         arrowClass: 'down-center',
         block: '.species .finished'
       }), new Step({
-        content: ['...then drag along the width of the fish at the widest point along the fish\'s body.', 'You don\'t need to include fins, if it has any.'],
+        content: ['...then drag along the width of the star at the widest point along the star\'s body.', 'You don\'t need to include fins, if it has any.'],
         attach: {
           x: 'left',
           to: '.creature-picker',
@@ -148,7 +148,7 @@
         block: '.species .finished'
       }), new Step({
         heading: 'Identifying species',
-        content: ['We\'ve finished marking all the fish in this image.', 'Next we\'ll mark the galaxys. Choose "galaxy" from the species list.'],
+        content: ['We\'ve finished marking all the star in this image.', 'Next we\'ll mark the galaxys. Choose "galaxy" from the species list.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',

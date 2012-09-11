@@ -25,13 +25,13 @@
   .main .scoreboard > .score.galaxy > .description {
     background: #c512e0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000325}}
-  .main .scoreboard > .score.fish > .description {
+  .main .scoreboard > .score.star > .description {
     background: #0bc7e8; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000326}}
   .main .scoreboard > .score.cluster > .description {
     background: #fd6500; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000327}}
-  .main .scoreboard > .score.crustacean > .description {
+  .main .scoreboard > .score.ghost > .description {
     background: #b9ca00; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000328}}
   .main .scoreboard > .score.classifications > .description {

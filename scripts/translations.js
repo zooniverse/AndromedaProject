@@ -18,19 +18,19 @@
       tutorialGroundCoverFinished: {
         en: 'Click "Done" once you\'re finished choosing.'
       },
-      tutorialFish: {
-        en: ['Now we need to classify the creatures in the image.', 'Let\'s do the fish first. Choose "Fish" from the list of species.']
+      tutorialstar: {
+        en: ['Now we need to classify the creatures in the image.', 'Let\'s do the star first. Choose "star" from the list of species.']
       },
-      tutorialFishHead: {
+      tutorialstarHead: {
         en: ['For most species, we\'ll simply mark across its longer and shorter axes.', 'Let\'s start with the longer axis.', 'Click once on the outermost point at the head...']
       },
-      tutorialFishTail: {
+      tutorialstarTail: {
         en: '...and then the end of the tail to make a line.'
       },
-      tutorialFishLeft: {
+      tutorialstarLeft: {
         en: ['Now, measure the shorter axis.', 'Click at the end of left fin...']
       },
-      tutorialFishRight: {
+      tutorialstarRight: {
         en: '...and then at the end of the right fin.'
       },
       tutorialgalaxy: {

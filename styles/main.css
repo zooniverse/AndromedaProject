@@ -345,13 +345,13 @@ body {
   .main .scoreboard > .score.galaxy > .description {
     background: #c512e0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000325}}
-  .main .scoreboard > .score.fish > .description {
+  .main .scoreboard > .score.star > .description {
     background: #0bc7e8; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000326}}
   .main .scoreboard > .score.cluster > .description {
     background: #fd6500; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000327}}
-  .main .scoreboard > .score.crustacean > .description {
+  .main .scoreboard > .score.ghost > .description {
     background: #b9ca00; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000328}}
   .main .scoreboard > .score.classifications > .description {
@@ -654,7 +654,7 @@ body {
                 background-image: linear-gradient(top, #fd6500, #fd6500);
                 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd6500', endColorstr='#fd6500')"; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003214}}
-              .main #classifier > .options > .steps .toggles > li > button.active[value="fish"] {
+              .main #classifier > .options > .steps .toggles > li > button.active[value="star"] {
                 background-image: -moz-linear-gradient(top, #0bc7e8, #0bc7e8);
                 background-image: -ms-linear-gradient(top, #0bc7e8, #0bc7e8);
                 background-image: -webkit-linear-gradient(top, #0bc7e8, #0bc7e8);
@@ -668,7 +668,7 @@ body {
                 background-image: linear-gradient(top, #c512e0, #c512e0);
                 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c512e0', endColorstr='#c512e0')"; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003216}}
-              .main #classifier > .options > .steps .toggles > li > button.active[value="crustacean"] {
+              .main #classifier > .options > .steps .toggles > li > button.active[value="ghost"] {
                 background-image: -moz-linear-gradient(top, #b9ca00, #b9ca00);
                 background-image: -ms-linear-gradient(top, #b9ca00, #b9ca00);
                 background-image: -webkit-linear-gradient(top, #b9ca00, #b9ca00);

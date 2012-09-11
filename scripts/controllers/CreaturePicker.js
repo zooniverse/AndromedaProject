@@ -39,10 +39,8 @@
       CreaturePicker.prototype.disabled = false;
 
       CreaturePicker.prototype.elements = {
-        '.map img': 'map',
         '.selection-area': 'selectionArea',
-        '.selection-area img': 'image',
-        '.selection-area .scale': 'scale'
+        '.selection-area img': 'image'
       };
 
       CreaturePicker.prototype.events = {
@@ -117,11 +115,7 @@
       CreaturePicker.prototype.reset = function() {
         var subject;
         this.image.attr('src', this.classifier.workflow.selection[0].location.standard);
-        subject = this.classifier.workflow.selection[0];
-        this.map.attr('src', "http://maps.googleapis.com/maps/api/staticmap?center=" + subject.coords[0] + "," + subject.coords[1] + "&zoom=10&size=745x570&maptype=satellite&sensor=false");
-        return this.scale.css({
-          width: this.classifier.workflow.selection[0].metadata.mm_pix * 100
-        });
+        return subject = this.classifier.workflow.selection[0];
       };
 
       CreaturePicker.prototype.getSize = function() {
