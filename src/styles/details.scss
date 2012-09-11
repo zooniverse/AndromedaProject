@@ -99,11 +99,11 @@
           }
 
           &:nth-child(2n) > a {
-            border-top-color: $fish-color;
+            border-top-color: $star-color;
 
             &:hover,
             &.active {
-              color: $fish-color;
+              color: $star-color;
             }
           }
 
@@ -117,11 +117,11 @@
           }
 
           &:nth-child(4n) > a {
-            border-top-color: $crustacean-color;
+            border-top-color: $ghost-color;
 
             &:hover,
             &.active {
-              color: $crustacean-color;
+              color: $ghost-color;
             }
           }
 

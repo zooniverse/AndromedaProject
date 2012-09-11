@@ -10,12 +10,18 @@ define (require, exports, module) ->
 					<ul class="toggles">
 						<li><button value="cluster" data-marker="circle">Star Cluster <span class="count">0</button></li>
 						<li><button value="galaxy" data-marker="circle">Galaxy <span class="count">0</button></li>
+					</ul> 
+					
+					<ul class="toggles">
+						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button></li>
+						<li><button value="star" data-marker="axes">Star <span class="count">0</button></li>
+						<li><button value="gap" data-marker="axes">Gap <span class="count">0</button></li>
 					</ul>
 
 					<div class="indicator"><!--Marker indicator--></div>
 
 					<div class="other-creatures">
-						<h4>Are there any other species<br />present in this image?</h4>
+						<h4>Is there anything odd?</h4>
 						<button value="yes">Yes</button>
 						<button value="no">No</button>
 					</div>

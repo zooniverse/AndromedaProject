@@ -5,8 +5,8 @@ define (require, exports, module) ->
       <div class="count">0</div>
     </div>
 
-    <div class="fish score">
-      <div class="description">Total number of<br />fish marked</div>
+    <div class="star score">
+      <div class="description">Total number of<br />star marked</div>
       <div class="count">0</div>
     </div>
 
@@ -15,8 +15,8 @@ define (require, exports, module) ->
       <div class="count">0</div>
     </div>
 
-    <div class="crustacean score">
-      <div class="description">Total number of<br />crustaceans marked</div>
+    <div class="ghost score">
+      <div class="description">Total number of<br />ghosts marked</div>
       <div class="count">0</div>
     </div>
 

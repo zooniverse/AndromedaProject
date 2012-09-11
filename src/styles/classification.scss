@@ -211,9 +211,9 @@
 							color: $white;
 
 							&[value="cluster"]    {@include linear-gradient($cluster-color);}
-							&[value="fish"]       {@include linear-gradient($fish-color);}
+							&[value="star"]       {@include linear-gradient($star-color);}
 							&[value="galaxy"]    {@include linear-gradient($galaxy-color);}
-							&[value="crustacean"] {@include linear-gradient($crustacean-color);}
+							&[value="ghost"] {@include linear-gradient($ghost-color);}
 						}
 					}
 				}

@@ -57,7 +57,7 @@ define (require, exports, module) ->
 
 		cluster: '#0bc7e8'
 
-		crustacean: '#b9ca00'
+		ghost: '#b9ca00'
 
 		galaxy: '#c512e0'
 
