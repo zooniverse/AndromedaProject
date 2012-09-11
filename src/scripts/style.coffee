@@ -55,9 +55,9 @@ define (require, exports, module) ->
 			stroke: '#fff'
 			'stroke-width': 2
 
-		fish: '#0bc7e8'
+		cluster: '#0bc7e8'
 
-		scallop: '#fd6500'
+		galaxy: '#fd6500'
 
 		crustacean: '#b9ca00'
 

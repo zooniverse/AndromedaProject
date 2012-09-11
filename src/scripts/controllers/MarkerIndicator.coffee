@@ -16,10 +16,10 @@ define (require, exports, module) ->
     template: template
 
     helpers:
-      fish:
+      cluster:
         image: 'images/indicator/fish.png'
         points: [{x: 7, y: 27}, {x: 183, y: 23}, {x: 56, y: 17}, {x: 57, y: 46}]
-      seastar:
+      galaxy:
         image: 'images/indicator/seastar.png'
         points: [{x: 35, y: 35}, {x: 50, y: 5}]
       scallop:

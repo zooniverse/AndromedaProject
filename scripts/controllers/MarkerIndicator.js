@@ -25,7 +25,7 @@
       MarkerIndicator.prototype.template = template;
 
       MarkerIndicator.prototype.helpers = {
-        fish: {
+        cluster: {
           image: 'images/indicator/fish.png',
           points: [
             {
@@ -43,7 +43,7 @@
             }
           ]
         },
-        seastar: {
+        galaxy: {
           image: 'images/indicator/seastar.png',
           points: [
             {

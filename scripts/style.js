@@ -59,8 +59,8 @@
         stroke: '#fff',
         'stroke-width': 2
       },
-      fish: '#0bc7e8',
-      scallop: '#fd6500',
+      cluster: '#0bc7e8',
+      galaxy: '#fd6500',
       crustacean: '#b9ca00',
       seastar: '#c512e0',
       cool: '#001e29',
