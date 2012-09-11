@@ -12,6 +12,7 @@
     "spine/lib/manager"
   ],
   "libs": [
-    "node_modules/Zooniverse/vendor/base64.js"
+    "node_modules/Zooniverse/vendor/base64.js",
+    "./app/lib/kinetic-v4.0.1.js"
   ]
 }

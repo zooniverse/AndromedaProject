@@ -5,7 +5,7 @@ Spine       = require('spine')
 Api         = require('zooniverse/lib/api')
 Navigation  = require('controllers/Navigation')
 Main        = require('controllers/Main')
-# TopBar      = require 'zooniverse/lib/controllers/top_bar'
+TopBar      = require 'zooniverse/lib/controllers/top_bar'
 
 class App extends Spine.Controller
   constructor: ->

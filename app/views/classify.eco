@@ -1,14 +1,19 @@
 <div id="classify">
   <div class='field'>
-    <img src="<%= @location %>" />
+    <img class='subject' src="<%= @location %>" />
   </div>
   <div class='panel'>
     <p class='tagline'>We need your help.</p>
     <p class='summary'>Help mark clusters of stars, distance background galaxies and other random stuff!</p>
-    <button class='category'>Star Cluster</button>
-    <button class='category'>Background Galaxy</button>
-    <button class='category'>Telescope Artifact</button>
-    <button class='discuss'>Discuss</button>
-    <button class='next'>Next</button>
-  </div>
+    <ul class="toggles">
+      <li>
+        <button value="cluster" data-marker="circle">Star Cluster<span class="count">0</button>
+      </li>
+      <li>
+        <button value="galaxy" data-marker="circle">Background Galaxy<span class="count">0</button>
+      </li>
+      <li>
+        <button value="artifact" data-marker="axes">Artifact<span class="count">0</button>
+      </li>
+    </ul>
 </div>
