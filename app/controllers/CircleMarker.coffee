@@ -8,17 +8,17 @@ class CircleMarker extends Marker
 
   constructor: ->
     super
-
+    
     @radiusHandle = @picker.paper.circle()
     @radiusHandle.toBack()
     @radiusHandle.attr style.circle
     @radiusHandle.click @stopPropagation
     @radiusHandle.drag @radiusHandleDrag, @dragStart
-
+    
     @radiusLine = @picker.paper.path()
     @radiusLine.toBack()
     @radiusLine.attr style.boundingBox
-
+    
     @boundingCircle = @picker.paper.circle()
     @boundingCircle.toBack()
     @boundingCircle.attr style.line

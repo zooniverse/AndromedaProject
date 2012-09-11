@@ -1,6 +1,8 @@
 Spine         = require('spine')
 Subject       = require('models/Subject')
+Marker        = require('controllers/Marker')
 CircleMarker  = require('controllers/CircleMarker')
+Style         = require('lib/Styles')
 
 
 class Classify extends Spine.Controller
@@ -11,19 +13,28 @@ class Classify extends Spine.Controller
   
   events:
     'mousedown'   : 'onMouseDown'
+    'mousemove'   : 'onMouseMove'
+    'mouseup'     : 'onMouseUp'
     'touchstart'  : 'onTouchStart'
     'touchmove'   : 'onTouchMove'
     'touchend'    : 'onTouchEnd'
   
   # Instance variables
   paper: null
-  markers: null
+  markers: []
+  strayCircles: []
+  strayAxes: []
   selectedType: null
   selectedMarkerType: null
   disabled: false
   
   # Mouse interactions
   mouseIsDown: false
+  dragThreshold: 3
+  mouseMoves: 0
+  movementCircle: null
+  movementAxis: null
+  movementBoundingCircle: null
   
   constructor: ->
     super
@@ -50,11 +61,121 @@ class Classify extends Spine.Controller
   getSize: =>
     width: @image.width(), height: @image.height()
   
-  onMouseDown: =>
+  
+  createStrayCircle: (cx, cy) =>
+    circle = @paper.circle cx, cy
+    circle.attr Style.circle
+    @strayCircles.push circle
+
+    @el.trigger 'create-stray-circle'
+    return circle
+  
+  createStrayAxis: =>
+    # It will always be between the last two stray circles
+    length = @strayCircles.length
+    strayCircle1 = @strayCircles[length - 2]
+    strayCircle2 = @strayCircles[length - 1]
+    
+    line = @paper.path Marker::lineBetween strayCircle1, strayCircle2
+    line.toBack()
+    line.attr Style.boundingBox
+    @strayAxes.push line
+    
+    @el.trigger 'create-stray-axis'
+    return line
+  
+  onMouseDown: (e) =>
     console.log 'onMouseDown'
     return if @disabled
     
+    # Deselect all markers if selected
+    marker.deselect() for marker in @markers when marker.selected
     
+    @mouseIsDown = true
+    @createStrayCircle(e.offsetX, e.offsetY)
+    
+    e.preventDefault?()
+  
+  onMouseMove: (e) =>
+    console.log 'onMouseMove'
+    return unless @mouseIsDown and not @disabled
+    
+    @mouseMoves += 1
+    return if @mouseMoves < @dragThreshold
+    
+    {width, height} = @getSize()
+    
+    @movementCircle ||= @createStrayCircle()
+    
+    fauxPoint =
+      x: Marker::limit (e.offsetX) / width, 0.01
+      y: Marker::limit (e.offsetY) / height, 0.01
+    
+    @movementCircle.attr
+      cx: fauxPoint.x * width
+      cy: fauxPoint.y * height
+    
+    @movementAxis ||= @createStrayAxis()
+    secondLastCircle = @strayCircles[@strayCircles.length - 2]
+    @movementAxis.attr
+      path: Marker::lineBetween secondLastCircle, @movementCircle
+    
+    if @selectedMarkerType is 'circle'
+      @movementBoundingCircle ||= @createStrayBoundingCircle()
+      @movementBoundingCircle.attr
+        r: @movementAxis.getTotalLength()
+  
+  onMouseUp: (e) =>
+    console.log 'onMouseUp'
+    return unless @mouseIsDown and not @disabled
+    @mouseIsDown = false
+    @mouseMoves = 0
+    
+    @checkStrays()
+    @movementCircle = null
+    @movementAxis = null
+    @movementBoundingCircle = null
+  
+  checkStrays: =>
+    console.log 'checkStrays'
+    
+    if @strayCircles.length is 1
+      @resetStrays()
+    if @strayCircles.length is 2
+      if @selectedMarkerType is 'circle'
+        marker = @createCircleMarker()
+      else
+        @el.trigger 'create-half-axes-marker'
+    else if @strayCircles.length is 3
+      @strayCircles.pop().remove()
+    else if @strayCircles.length is 4
+      marker = @createAxesMarker()
+
+    if marker?
+      @markers.push marker
+
+      setTimeout marker.deselect, 250
+
+      marker.bind 'select', (marker) =>
+        m.deselect() for m in @markers when m isnt marker
+        @trigger 'change-selection'
+
+      marker.bind 'deselect', =>
+        @trigger 'change-selection'
+
+      marker.bind 'release', =>
+        @markers.splice(i, 1) for m, i in @markers when m is marker
+
+      @resetStrays()
+  
+  resetStrays: =>
+    console.log 'resetStrays'
+    @strayCircles?.remove()
+    @strayCircles = @paper.set()
+
+    @strayAxes?.remove()
+    @strayAxes = @paper.set()
+  
   onTouchStart: =>
     console.log 'onTouchStart'
     
