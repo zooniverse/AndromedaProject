@@ -67,19 +67,19 @@ define (require, exports, module) ->
       content: [
         'Next, identify the species in the image.'
         'Consult the field guide to learn how to identify and mark different species. Make sure you don\'t mark dead creatures!'
-        'We\'ll mark all the fish first. Choose "Fish" from the list of species.'
+        'We\'ll mark all the star first. Choose "star" from the list of species.'
       ]
-      attach: x: 'right', to: '[value="fish"]', at: x: 'left'
+      attach: x: 'right', to: '[value="star"]', at: x: 'left'
       style: width: 440
-      nextOn: click: '.species [value="fish"]'
+      nextOn: click: '.species [value="star"]'
       arrowClass: 'right-middle'
-      block: '.species .toggles button:not([value="fish"]), .species .finished'
+      block: '.species .toggles button:not([value="star"]), .species .finished'
 
     new Step
       heading: 'Marking'
       content: [
-        'Mark the fish along its longest and widest dimensions.'
-        'Start by clicking and dragging your mouse from the fish\'s head to its tail...'
+        'Mark the star along its longest and widest dimensions.'
+        'Start by clicking and dragging your mouse from the star\'s head to its tail...'
       ]
       attach: y: 'top', to: '.creature-picker', at: y: 'top'
       style: width: 490
@@ -89,7 +89,7 @@ define (require, exports, module) ->
 
     new Step
       content: [
-        '...then drag along the width of the fish at the widest point along the fish\'s body.'
+        '...then drag along the width of the star at the widest point along the star\'s body.'
         'You don\'t need to include fins, if it has any.'
       ]
       attach: x: 'left', to: '.creature-picker', at: x: 'left', y: 0.67
@@ -101,7 +101,7 @@ define (require, exports, module) ->
     new Step
       heading: 'Identifying species'
       content: [
-        'We\'ve finished marking all the fish in this image.'
+        'We\'ve finished marking all the star in this image.'
         'Next we\'ll mark the galaxys. Choose "galaxy" from the species list.'
       ]
       attach: x: 'right', to: '[value="galaxy"]', at: x: 'left'

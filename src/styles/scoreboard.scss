@@ -22,9 +22,9 @@
     }
 
     &.galaxy         > .description {background: $galaxy-color;}
-    &.fish            > .description {background: $fish-color;}
+    &.star            > .description {background: $star-color;}
     &.cluster         > .description {background: $cluster-color;}
-    &.crustacean      > .description {background: $crustacean-color;}
+    &.ghost      > .description {background: $ghost-color;}
     &.classifications > .description {background: $cool-color;}
 
     > .count {

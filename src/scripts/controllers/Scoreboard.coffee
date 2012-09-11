@@ -17,9 +17,9 @@ define (require, exports, module) ->
 
     elements:
       '.galaxy.score .count': 'galaxyCount'
-      '.fish.score .count': 'fishCount'
+      '.gap.score .count': 'starCount'
       '.cluster.score .count': 'clusterCount'
-      '.crustacean.score .count': 'crustaceanCount'
+      '.ghost.score .count': 'ghostCount'
       '.classifications.score .count': 'classificationCount'
 
     constructor: ->
@@ -37,9 +37,9 @@ define (require, exports, module) ->
 
       query = 'SELECT ' +
         'SUM(ALL(clusters)) AS clusters, ' +
-        'SUM(ALL(fish)) AS fish, ' +
+        'SUM(ALL(star)) AS star, ' +
         'SUM(ALL(galaxys)) AS galaxys, ' +
-        'SUM(ALL(crustaceans)) AS crustaceans, ' +
+        'SUM(ALL(ghosts)) AS ghosts, ' +
         'COUNT(ALL(created_at)) AS classifications ' +
         "FROM #{config.cartoTable}"
 
@@ -49,11 +49,11 @@ define (require, exports, module) ->
       $.getJSON url, q: query, (response) =>
         @render response.rows[0]
 
-    render: ({clusters, fish, galaxys, crustaceans, classifications}) =>
+    render: ({clusters, star, galaxys, ghosts, classifications}) =>
       @clusterCount.html clusters || 0
-      @fishCount.html fish || 0
+      @starCount.html star || 0
       @galaxyCount.html galaxys || 0
-      @crustaceanCount.html crustaceans || 0
+      @ghostCount.html ghosts || 0
       @classificationCount.html classifications || 0
 
   module.exports = Scoreboard
