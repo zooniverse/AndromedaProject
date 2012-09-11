@@ -22,9 +22,9 @@
       Scoreboard.prototype.template = SCOREBOARD_TEMPLATE;
 
       Scoreboard.prototype.elements = {
-        '.seastar.score .count': 'seastarCount',
+        '.galaxy.score .count': 'galaxyCount',
         '.fish.score .count': 'fishCount',
-        '.scallop.score .count': 'scallopCount',
+        '.cluster.score .count': 'clusterCount',
         '.crustacean.score .count': 'crustaceanCount',
         '.classifications.score .count': 'classificationCount'
       };
@@ -47,7 +47,7 @@
           return;
         }
         url = "http://" + config.cartoUser + ".cartodb.com/api/v2/sql?callback=?";
-        query = 'SELECT ' + 'SUM(ALL(scallops)) AS scallops, ' + 'SUM(ALL(fish)) AS fish, ' + 'SUM(ALL(seastars)) AS seastars, ' + 'SUM(ALL(crustaceans)) AS crustaceans, ' + 'COUNT(ALL(created_at)) AS classifications ' + ("FROM " + config.cartoTable);
+        query = 'SELECT ' + 'SUM(ALL(clusters)) AS clusters, ' + 'SUM(ALL(fish)) AS fish, ' + 'SUM(ALL(galaxys)) AS galaxys, ' + 'SUM(ALL(crustaceans)) AS crustaceans, ' + 'COUNT(ALL(created_at)) AS classifications ' + ("FROM " + config.cartoTable);
         if (this.forUser && (User.current != null)) {
           query += " where user_id='" + User.current.id + "'";
         }
@@ -59,11 +59,11 @@
       };
 
       Scoreboard.prototype.render = function(_arg) {
-        var classifications, crustaceans, fish, scallops, seastars;
-        scallops = _arg.scallops, fish = _arg.fish, seastars = _arg.seastars, crustaceans = _arg.crustaceans, classifications = _arg.classifications;
-        this.scallopCount.html(scallops || 0);
+        var classifications, clusters, crustaceans, fish, galaxys;
+        clusters = _arg.clusters, fish = _arg.fish, galaxys = _arg.galaxys, crustaceans = _arg.crustaceans, classifications = _arg.classifications;
+        this.clusterCount.html(clusters || 0);
         this.fishCount.html(fish || 0);
-        this.seastarCount.html(seastars || 0);
+        this.galaxyCount.html(galaxys || 0);
         this.crustaceanCount.html(crustaceans || 0);
         return this.classificationCount.html(classifications || 0);
       };

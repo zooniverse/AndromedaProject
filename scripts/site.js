@@ -17,9 +17,9 @@
     Profile = require('controllers/Profile');
     ImageFlipper = require('controllers/ImageFlipper');
     config.set({
-      name: 'Seafloor Explorer',
+      name: 'Andromeda Project',
       slug: 'seafloor-explorer',
-      description: 'Help explore the ocean floor!',
+      description: 'Help find star clusters and galaxies in M31!',
       domain: 'seafloorExplorer.org',
       talkHost: 'http://talk.seafloorexplorer.org',
       cartoUser: 'the-zooniverse',

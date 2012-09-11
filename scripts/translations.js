@@ -7,7 +7,7 @@
         en: 'Continue'
       },
       tutorialWelcome: {
-        en: ['Welcome to Seafloor Zoo!', 'This tutorial will step you through the Seafloor Zoo classification process.', 'NOTE: This won\'t entirely make sense until I find the right image. Pretend the scallop is a sea star.']
+        en: ['Welcome to Seafloor Zoo!', 'This tutorial will step you through the Seafloor Zoo classification process.', 'NOTE: This won\'t entirely make sense until I find the right image. Pretend the cluster is a sea star.']
       },
       tutorialGroundCover1: {
         en: ['First, we\'ll choose the ground covers from the list that best describes what you can see in the image.', 'This one looks like mostly sand...']
@@ -33,16 +33,16 @@
       tutorialFishRight: {
         en: '...and then at the end of the right fin.'
       },
-      tutorialSeastar: {
-        en: ['Great! Next we\'ll mark the seastar.', 'Choose "Seastar" from the list of species.']
+      tutorialgalaxy: {
+        en: ['Great! Next we\'ll mark the galaxy.', 'Choose "galaxy" from the list of species.']
       },
-      tutorialSeastarExplanation: {
-        en: 'Seastars are generally radial, so we\'ll define a circle around each one.'
+      tutorialgalaxyExplanation: {
+        en: 'galaxys are generally radial, so we\'ll define a circle around each one.'
       },
-      tutorialSeastarCenter: {
+      tutorialgalaxyCenter: {
         en: 'First, mark the center point...'
       },
-      tutorialSeastarTip: {
+      tutorialgalaxyTip: {
         en: '...and then mark a point at the tip of the longest arm.'
       },
       adjustMarkers: {

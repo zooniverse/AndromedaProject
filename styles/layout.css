@@ -1,5 +1,5 @@
 @import "http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800";
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/translations\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/translations\.scss}line{font-family:\000036}}
 html[lang="en"] [lang="de"],
 html[lang="en"] [lang="po"],
 html[lang="de"] [lang="en"],
@@ -8,21 +8,21 @@ html[lang="po"] [lang="en"],
 html[lang="po"] [lang="de"] {
   display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\000036}}
 html {
-  background: #091a32;
-  color: #001e29;
+  background: #081d39;
+  color: #040d19;
   font: 12px "Open Sans", sans-serif;
   overflow-y: scroll; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000313}}
 body {
   margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000316}}
   body:before {
-    background: -moz-radial-gradient(rgba(0, 106, 205, 0.5), rgba(0, 106, 205, 0), rgba(0, 106, 205, 0));
-    background: -webkit-radial-gradient(rgba(0, 106, 205, 0.5), rgba(0, 106, 205, 0), rgba(0, 106, 205, 0));
-    background: radial-gradient(rgba(0, 106, 205, 0.5), rgba(0, 106, 205, 0), rgba(0, 106, 205, 0));
+    background: -moz-radial-gradient(rgba(241, 241, 241, 0.5), rgba(241, 241, 241, 0), rgba(241, 241, 241, 0));
+    background: -webkit-radial-gradient(rgba(241, 241, 241, 0.5), rgba(241, 241, 241, 0), rgba(241, 241, 241, 0));
+    background: radial-gradient(rgba(241, 241, 241, 0.5), rgba(241, 241, 241, 0), rgba(241, 241, 241, 0));
     content: " ";
     height: 1500px;
     left: 50%;
@@ -32,49 +32,49 @@ body {
     top: 50%;
     width: 1500px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000336}}
 .app {
   margin: 0 auto;
   padding-top: 20px;
   position: relative;
   width: 1000px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000342}}
   .app > header {
     color: #f1f1f1;
     margin: 30px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/common\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003132}}
     .app > header:after {
       content: "";
       clear: both;
       display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000347}}
     .app > header > h1 {
       float: left;
       margin: 0;
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000352}}
       .app > header > h1 > a {
         display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000355}}
         .app > header > h1 > a > img {
           border: 0;
           display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000362}}
     .app > header > nav {
       float: right;
       font-size: 10px;
       font-weight: bold;
       line-height: 30px;
       margin-top: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000371}}
       .app > header > nav > ul {
         margin: 0;
         padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000375}}
         .app > header > nav > ul > li {
           display: block;
           float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000379}}
           .app > header > nav > ul > li > a {
             border-radius: 3px;
             color: inherit;
@@ -84,22 +84,22 @@ body {
             text-decoration: none;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
             width: 75px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000391}}
             .app > header > nav > ul > li > a > img {
               display: block;
               margin: 0 auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000396}}
             .app > header > nav > ul > li > a:hover {
               box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1) inset; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003100}}
             .app > header > nav > ul > li > a.active {
               background: rgba(0, 0, 0, 0.1);
               box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003111}}
 .main {
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003115}}
   .main > section {
     -moz-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
     -ms-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
@@ -114,7 +114,7 @@ body {
     position: absolute;
     top: 40px;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003130}}
     .main > section.active {
       display: block\9;
       opacity: 1;
@@ -123,37 +123,37 @@ body {
       position: relative;
       top: 0;
       z-index: 20; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003141}}
     .main > section > section {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       background: #f1f1f1;
-      border-top: 5px solid #001e29;
+      border-top: 5px solid #040d19;
       border-radius: 3px;
       box-shadow: 0 4px 6px -4px #00697c;
       margin-bottom: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003150}}
       .main > section > section.content {
         padding: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003154}}
       .main > section > section > .content {
         margin: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003158}}
       .main > section > section h2 {
         font-size: 35px;
         font-weight: 800;
         margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003166}}
       .main > section > section h3 {
         font-size: 15px;
         font-weight: 600;
         margin: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003181}}
 .image-flipper {
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003185}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003185}}
   .image-flipper > img,
   .image-flipper > figure {
     -moz-transition: opacity 0.5s ease-in-out;
@@ -165,11 +165,11 @@ body {
     opacity: 0;
     position: absolute;
     top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003193}}
     .image-flipper > img:first-child,
     .image-flipper > figure:first-child {
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003198}}
     .image-flipper > img.active,
     .image-flipper > figure.active {
       -moz-transition: opacity 0.25s ease-in-out;
@@ -178,13 +178,13 @@ body {
       transition: opacity 0.25s ease-in-out;
       opacity: 1;
       z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003205}}
   .image-flipper > .flipper-controls {
     bottom: 0;
     position: absolute;
     right: 0;
     z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003211}}
     .image-flipper > .flipper-controls > button {
       background: transparent;
       border: 0;
@@ -194,17 +194,17 @@ body {
       font-size: 2em;
       font-weight: inherit;
       text-shadow: 0 3px 3px #000; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003223}}
       .image-flipper > .flipper-controls > button .label {
         display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003230}}
 .map .cartodb-logo {
   bottom: 2px;
   opacity: 0.5;
   position: absolute;
   right: 8px;
   z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/layout\.scss}line{font-family:\00003237}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003237}}
   .map .cartodb-logo:hover {
     opacity: 1; }

@@ -148,10 +148,10 @@
         block: '.species .finished'
       }), new Step({
         heading: 'Identifying species',
-        content: ['We\'ve finished marking all the fish in this image.', 'Next we\'ll mark the seastars. Choose "seastar" from the species list.'],
+        content: ['We\'ve finished marking all the fish in this image.', 'Next we\'ll mark the galaxys. Choose "galaxy" from the species list.'],
         attach: {
           x: 'right',
-          to: '[value="seastar"]',
+          to: '[value="galaxy"]',
           at: {
             x: 'left'
           }
@@ -160,13 +160,13 @@
           width: 460
         },
         nextOn: {
-          click: '.species .toggles button:contains("Seastar")'
+          click: '.species .toggles button:contains("galaxy")'
         },
         arrowClass: 'right-middle',
-        block: '.species .toggles button:not(:contains("Seastar")), .species .finished'
+        block: '.species .toggles button:not(:contains("galaxy")), .species .finished'
       }), new Step({
         heading: 'Marking',
-        content: ['Mark the seastar by clicking in the center and dragging out to the tip of its longest arm'],
+        content: ['Mark the galaxy by clicking in the center and dragging out to the tip of its longest arm'],
         style: {
           width: 320
         },

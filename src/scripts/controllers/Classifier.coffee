@@ -23,25 +23,23 @@ define (require, exports, module) ->
     indicator: null
 
     events:
-      'click .species .toggles button': 'changeSpecies'
-      'click .species .other-creatures button': 'changeOther'
-      'click .species .finished': 'finishSpecies'
-      'click .favorite .create button': 'createFavorite'
-      'click .favorite .destroy button': 'destroyFavorite'
-      'click .talk [value="yes"]': 'goToTalk'
-      'click .talk [value="no"]': 'nextSubjects'
-      'click .tutorial-again': 'startTutorial'
+      'click .species .toggles button'          : 'changeSpecies'
+      'click .species .other-creatures button'  : 'changeOther'
+      'click .species .finished'                : 'finishSpecies'
+      'click .favorite .create button'          : 'createFavorite'
+      'click .favorite .destroy button'         : 'destroyFavorite'
+      'click .talk [value="yes"]'               : 'goToTalk'
+      'click .talk [value="no"]'                : 'nextSubjects'
+      'click .tutorial-again'                   : 'startTutorial'
 
     elements:
-      '.steps': 'steps'
-      '.species .toggles button': 'speciesButtons'
-      '.species .other-creatures [value="yes"]': 'otherYes'
-      '.species .other-creatures [value="no"]': 'otherNo'
-      '.species .finished': 'speciesFinishedButton'
-      '.summary .favorite .create': 'favoriteCreation'
-      '.summary .favorite .destroy': 'favoriteDestruction'
-      '.summary .map-toggle .thumbnail img': 'imageThumbnail'
-      '.summary .map-toggle .map img': 'mapThumbnail'
+      '.steps'                                  : 'steps'
+      '.species .toggles button'                : 'speciesButtons'
+      '.species .other-creatures [value="yes"]' : 'otherYes'
+      '.species .other-creatures [value="no"]'  : 'otherNo'
+      '.species .finished'                      : 'speciesFinishedButton'
+      '.summary .favorite .create'              : 'favoriteCreation'
+      '.summary .favorite .destroy'             : 'favoriteDestruction'
 
     constructor: ->
       super
@@ -73,8 +71,6 @@ define (require, exports, module) ->
       @steps.removeClass 'finished'
 
       delay 500, =>
-        @imageThumbnail.attr 'src', @workflow.selection[0].location.thumbnail
-
         @updateFavoriteButtons()
 
     render: =>

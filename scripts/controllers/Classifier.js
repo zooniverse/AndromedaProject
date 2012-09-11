@@ -45,9 +45,7 @@
         '.species .other-creatures [value="no"]': 'otherNo',
         '.species .finished': 'speciesFinishedButton',
         '.summary .favorite .create': 'favoriteCreation',
-        '.summary .favorite .destroy': 'favoriteDestruction',
-        '.summary .map-toggle .thumbnail img': 'imageThumbnail',
-        '.summary .map-toggle .map img': 'mapThumbnail'
+        '.summary .favorite .destroy': 'favoriteDestruction'
       };
 
       function Classifier() {
@@ -99,7 +97,6 @@
         this.changeSpecies(null);
         this.steps.removeClass('finished');
         return delay(500, function() {
-          _this.imageThumbnail.attr('src', _this.workflow.selection[0].location.thumbnail);
           return _this.updateFavoriteButtons();
         });
       };
