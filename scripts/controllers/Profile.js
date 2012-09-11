@@ -39,7 +39,6 @@
 
       Profile.prototype.elements = $.extend({
         '.summary .username': 'usernameContainer',
-        '.summary .map': 'mapContainer',
         '.summary .scoreboard': 'scoreboardContainer'
       }, ZooniverseProfile.prototype.elements);
 
@@ -48,13 +47,6 @@
 
         this.userChanged = __bind(this.userChanged, this);
         Profile.__super__.constructor.apply(this, arguments);
-        this.map = new Map({
-          el: this.mapContainer,
-          latitude: 40,
-          longitude: -75,
-          zoom: 5,
-          cartoLogo: true
-        });
         this.scoreboard = new Scoreboard({
           el: this.scoreboardContainer,
           forUser: true
@@ -62,20 +54,9 @@
       }
 
       Profile.prototype.userChanged = function() {
-        var query, url,
-          _this = this;
         Profile.__super__.userChanged.apply(this, arguments);
-        if (this.userLayer != null) {
-          this.map.removeLayer(this.userLayer);
-        }
         if (User.current != null) {
-          this.usernameContainer.html(User.current.name);
-          query = "SELECT * FROM " + config.cartoTable + " WHERE user_id='" + User.current.id + "'";
-          url = "http://" + config.cartoUser + ".cartodb.com/tiles/" + config.cartoTable + "/{z}/{x}/{y}.png?sql=" + query;
-          return delay(function() {
-            _this.userLayer = _this.map.addLayer(url);
-            return _this.map.resized();
-          });
+          return this.usernameContainer.html(User.current.name);
         }
       };
 

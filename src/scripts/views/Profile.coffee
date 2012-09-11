@@ -7,7 +7,6 @@ define (require, exports, module) ->
         Ahoy, <span class="username">username</span>!
         <a href="#sign-out" class="sign-out"t>Not <span class="username">username</span>?</a>
       </h3>
-      <div class="map"></div>
       <div class="scoreboard"></div>
     </section>
 
