@@ -6,7 +6,7 @@ define (require, exports, module) ->
 			en: [
 				'Welcome to Seafloor Zoo!'
 				'This tutorial will step you through the Seafloor Zoo classification process.'
-				'NOTE: This won\'t entirely make sense until I find the right image. Pretend the scallop is a sea star.'
+				'NOTE: This won\'t entirely make sense until I find the right image. Pretend the cluster is a sea star.'
 			]
 		tutorialGroundCover1:
 			en: [
@@ -37,16 +37,16 @@ define (require, exports, module) ->
 			]
 		tutorialFishRight:
 			en: '...and then at the end of the right fin.'
-		tutorialSeastar:
+		tutorialgalaxy:
 			en: [
-				'Great! Next we\'ll mark the seastar.'
-				'Choose "Seastar" from the list of species.'
+				'Great! Next we\'ll mark the galaxy.'
+				'Choose "galaxy" from the list of species.'
 			]
-		tutorialSeastarExplanation:
-			en: 'Seastars are generally radial, so we\'ll define a circle around each one.'
-		tutorialSeastarCenter:
+		tutorialgalaxyExplanation:
+			en: 'galaxys are generally radial, so we\'ll define a circle around each one.'
+		tutorialgalaxyCenter:
 			en: 'First, mark the center point...'
-		tutorialSeastarTip:
+		tutorialgalaxyTip:
 			en: '...and then mark a point at the tip of the longest arm.'
 		adjustMarkers:
 			en: [

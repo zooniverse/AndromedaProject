@@ -16,9 +16,9 @@ define (require, exports, module) ->
     template: SCOREBOARD_TEMPLATE
 
     elements:
-      '.seastar.score .count': 'seastarCount'
+      '.galaxy.score .count': 'galaxyCount'
       '.fish.score .count': 'fishCount'
-      '.scallop.score .count': 'scallopCount'
+      '.cluster.score .count': 'clusterCount'
       '.crustacean.score .count': 'crustaceanCount'
       '.classifications.score .count': 'classificationCount'
 
@@ -36,9 +36,9 @@ define (require, exports, module) ->
       url = "http://#{config.cartoUser}.cartodb.com/api/v2/sql?callback=?"
 
       query = 'SELECT ' +
-        'SUM(ALL(scallops)) AS scallops, ' +
+        'SUM(ALL(clusters)) AS clusters, ' +
         'SUM(ALL(fish)) AS fish, ' +
-        'SUM(ALL(seastars)) AS seastars, ' +
+        'SUM(ALL(galaxys)) AS galaxys, ' +
         'SUM(ALL(crustaceans)) AS crustaceans, ' +
         'COUNT(ALL(created_at)) AS classifications ' +
         "FROM #{config.cartoTable}"
@@ -49,10 +49,10 @@ define (require, exports, module) ->
       $.getJSON url, q: query, (response) =>
         @render response.rows[0]
 
-    render: ({scallops, fish, seastars, crustaceans, classifications}) =>
-      @scallopCount.html scallops || 0
+    render: ({clusters, fish, galaxys, crustaceans, classifications}) =>
+      @clusterCount.html clusters || 0
       @fishCount.html fish || 0
-      @seastarCount.html seastars || 0
+      @galaxyCount.html galaxys || 0
       @crustaceanCount.html crustaceans || 0
       @classificationCount.html classifications || 0
 

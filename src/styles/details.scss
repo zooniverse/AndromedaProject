@@ -90,11 +90,11 @@
           }
 
           &:nth-child(1n) > a {
-            border-top-color: $scallop-color;
+            border-top-color: $cluster-color;
 
             &:hover,
             &.active {
-              color: $scallop-color;
+              color: $cluster-color;
             }
           }
 
@@ -108,11 +108,11 @@
           }
 
           &:nth-child(3n) > a {
-            border-top-color: $seastar-color;
+            border-top-color: $galaxy-color;
 
             &:hover,
             &.active {
-              color: $seastar-color;
+              color: $galaxy-color;
             }
           }
 

@@ -19,11 +19,11 @@ define (require, exports, module) ->
       fish:
         image: 'images/indicator/fish.png'
         points: [{x: 7, y: 27}, {x: 183, y: 23}, {x: 56, y: 17}, {x: 57, y: 46}]
-      seastar:
-        image: 'images/indicator/seastar.png'
+      galaxy:
+        image: 'images/indicator/galaxy.png'
         points: [{x: 35, y: 35}, {x: 50, y: 5}]
-      scallop:
-        image: 'images/indicator/scallop.png'
+      cluster:
+        image: 'images/indicator/cluster.png'
         points: [{x: 40, y: 70}, {x: 40, y: 5}, {x: 5, y: 45}, {x: 75, y: 45}]
       crustacean:
         image: 'images/indicator/crustacean.png'

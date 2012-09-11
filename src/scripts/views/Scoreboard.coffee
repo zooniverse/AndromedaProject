@@ -1,7 +1,7 @@
 define (require, exports, module) ->
   '''
-    <div class="scallop score">
-      <div class="description">Total number of<br />scallops marked</div>
+    <div class="cluster score">
+      <div class="description">Total number of<br />clusters marked</div>
       <div class="count">0</div>
     </div>
 
@@ -10,8 +10,8 @@ define (require, exports, module) ->
       <div class="count">0</div>
     </div>
 
-    <div class="seastar score">
-      <div class="description">Total number of<br />seastars marked</div>
+    <div class="galaxy score">
+      <div class="description">Total number of<br />galaxys marked</div>
       <div class="count">0</div>
     </div>
 
