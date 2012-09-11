@@ -24,7 +24,7 @@ define (require, exports, module) ->
 
     events:
       'click .species .toggles button'          : 'changeSpecies'
-      'click .species .other-creatures button'  : 'changeOther'
+      'click .species .other-creatures button'  : 'showArtifacts'
       'click .species .finished'                : 'finishSpecies'
       'click .favorite .create button'          : 'createFavorite'
       'click .favorite .destroy button'         : 'destroyFavorite'
@@ -115,6 +115,11 @@ define (require, exports, module) ->
       @speciesButtons.removeClass 'active'
       target.addClass 'active'
 
+    showArtifacts: (e) =>
+      target = $(e.target)
+      $('#artefact-list').show() if target.val() is "yes"
+      $('#artefact-list').hide() if target.val() is "no"
+ 
     changeOther: (e) =>
       target = $(e.target)
       value = target.val() is 'yes'

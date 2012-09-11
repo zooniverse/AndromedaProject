@@ -236,6 +236,10 @@
 					width: 100%;
 				}
 			}
+			
+			#artefact-list {
+			  display: none;
+			}
 
 			.other-creatures {
 				@include contain-floats;
