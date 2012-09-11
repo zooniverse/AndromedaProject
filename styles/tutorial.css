@@ -1,0 +1,93 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\000033}}
+.tutorial-step {
+  -moz-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  -ms-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  -webkit-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  background: #f1f1f1;
+  border: 4px solid #001e29;
+    border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #001e29;
+  font-weight: bold;
+  position: absolute;
+  z-index: 10; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000318}}
+  .tutorial-step .controls {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000325}}
+    .tutorial-step .controls button {
+      background: transparent;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      height: 20px;
+      margin: 0;
+      opacity: 0.125;
+      padding: 0;
+      width: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000343}}
+    .tutorial-step .controls:hover button {
+      opacity: 0.25; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000349}}
+  .tutorial-step .message {
+    margin: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000352}}
+    .tutorial-step .message .heading {
+      font-size: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000357}}
+  .tutorial-step .continue {
+    margin-top: 20px;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000361}}
+    .tutorial-step .continue button {
+      background-image: -moz-linear-gradient(top, #f1f1f1, #e3e3e3);
+      background-image: -ms-linear-gradient(top, #f1f1f1, #e3e3e3);
+      background-image: -webkit-linear-gradient(top, #f1f1f1, #e3e3e3);
+      background-image: linear-gradient(top, #f1f1f1, #e3e3e3);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#e3e3e3')";
+      border: 1px solid #bebebe;
+        border-radius: 3px;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      margin: 0;
+      padding: 5px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000378}}
+  .tutorial-step .arrow {
+    border: 10px solid transparent;
+    position: absolute; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000385}}
+    .tutorial-step .arrow.down-center {
+      border-top-color: #001e29;
+      border-bottom-width: 0;
+      left: 50%;
+      margin-left: -10px;
+      top: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\0000393}}
+    .tutorial-step .arrow.right-middle {
+      border-left-color: #001e29;
+      border-right-width: 0;
+      left: 100%;
+      margin-top: -10px;
+      top: 50%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\00003103}}
+  .tutorial-step:hover .controls {
+    opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/tutorial\.scss}line{font-family:\00003109}}
+.tutorial-blocker {
+  cursor: not-allowed;
+  filter: alpha(opacity=1);
+  opacity: 0;
+  position: absolute;
+  z-index: 10; }

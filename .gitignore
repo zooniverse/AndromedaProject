@@ -1,7 +1,6 @@
-.DS_Store
-*.jpg
-*.jpeg
+_Store
 node_modules/
 *.fits
 *.fz
-public/tmp
+subjects/standard
+subjects/thumbnails

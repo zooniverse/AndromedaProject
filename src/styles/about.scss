@@ -1,0 +1,89 @@
+@import "common";
+
+.main [data-page="about"] {
+  a.to-classify {
+    @include linear-gradient($orange, $orange-dark);
+    border: 1px solid $orange-darker {
+      radius: 3px;
+    };
+    box-shadow: 0 1px 0 $orange-light inset;
+    color: $white;
+    font-weight: bold;
+    padding: 5px 20px;
+    position: absolute;
+    right: 20px;
+    text: {
+      decoration: none;
+      shadow: 0 1px 0px $orange-dark;
+    }
+    top: 65px;
+  }
+
+  > [data-page="data"] {
+    > section > section {
+      border-top: 1px solid $gray-light;
+
+      .example {
+        float: left;
+        width: $full-width * (2 / 5);
+
+        & + .content {
+          float: left;
+          margin: $gutter-width {right: 0};
+          width: ($full-width * (3 / 5)) - ($gutter-width * 2);
+
+          > :first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  > [data-page="people"] > section > section {
+    @include contain-floats;
+    border-top: 1px solid $gray-light;
+
+    .headshot {
+      display: block;
+      float: left;
+      margin: $gutter-width {right: 0;};
+      width: 80px;
+
+      & + .content {
+        float: left;
+        width: $full-width - 80 - ($gutter-width * 3);
+
+        > :first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .content {
+      margin: $gutter-width {right: 0;};
+    }
+  }
+
+  [data-page="organizations"] {
+    text-align: center;
+
+    figure {
+      @include box-sizing(border-box);
+      display: inline-block;
+      height: 125px;
+      margin: 0 0 3px;
+      line-height: 140px;
+      padding: 10px;
+      vertical-align: middle;
+      width: 19%;
+
+      img {
+        max-height: 100px;
+        max-width: 100px;
+      }
+
+      figcaption {}
+    }
+  }
+}

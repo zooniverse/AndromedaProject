@@ -1,0 +1,20 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/home\.scss}line{font-family:\000034}}
+.main [data-page="home"] .map {
+  height: 250px;
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/home\.scss}line{font-family:\000039}}
+.main [data-page="home"] .dive-in {
+  background-image: -moz-linear-gradient(top, #fd9000, #f56205);
+  background-image: -ms-linear-gradient(top, #fd9000, #f56205);
+  background-image: -webkit-linear-gradient(top, #fd9000, #f56205);
+  background-image: linear-gradient(top, #fd9000, #f56205);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd9000', endColorstr='#f56205')";
+  border: 1px solid #9f3d0b;
+    border-radius: 3px;
+  box-shadow: 0 1px 0 #feb34d inset;
+  color: #f1f1f1;
+  float: right;
+  font-size: 20px;
+  padding: 10px 60px;
+  text-decoration: none;
+  text-shadow: 0 1px 0px #f56205; }

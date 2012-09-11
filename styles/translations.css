@@ -1,0 +1,8 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/translations\.scss}line{font-family:\000036}}
+html[lang="en"] [lang="de"],
+html[lang="en"] [lang="po"],
+html[lang="de"] [lang="en"],
+html[lang="de"] [lang="po"],
+html[lang="po"] [lang="en"],
+html[lang="po"] [lang="de"] {
+  display: none; }

@@ -1,0 +1,79 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\000034}}
+.main [data-page="about"] a.to-classify {
+  background-image: -moz-linear-gradient(top, #fd9000, #f56205);
+  background-image: -ms-linear-gradient(top, #fd9000, #f56205);
+  background-image: -webkit-linear-gradient(top, #fd9000, #f56205);
+  background-image: linear-gradient(top, #fd9000, #f56205);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd9000', endColorstr='#f56205')";
+  border: 1px solid #9f3d0b;
+    border-radius: 3px;
+  box-shadow: 0 1px 0 #feb34d inset;
+  color: #f1f1f1;
+  font-weight: bold;
+  padding: 5px 20px;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0px #f56205;
+  top: 65px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000323}}
+.main [data-page="about"] > [data-page="data"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000326}}
+  .main [data-page="about"] > [data-page="data"] > section > section .example {
+    float: left;
+    width: 400px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000330}}
+    .main [data-page="about"] > [data-page="data"] > section > section .example + .content {
+      float: left;
+      margin: 20px;
+        margin-right: 0;
+      width: 560px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000335}}
+      .main [data-page="about"] > [data-page="data"] > section > section .example + .content > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000343}}
+.main [data-page="about"] > [data-page="people"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/common\.scss}line{font-family:\00003132}}
+  .main [data-page="about"] > [data-page="people"] > section > section:after {
+    content: "";
+    clear: both;
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000347}}
+  .main [data-page="about"] > [data-page="people"] > section > section .headshot {
+    display: block;
+    float: left;
+    margin: 20px;
+      margin-right: 0;
+    width: 80px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000353}}
+    .main [data-page="about"] > [data-page="people"] > section > section .headshot + .content {
+      float: left;
+      width: 860px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000357}}
+      .main [data-page="about"] > [data-page="people"] > section > section .headshot + .content > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000363}}
+  .main [data-page="about"] > [data-page="people"] > section > section .content {
+    margin: 20px;
+      margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000368}}
+.main [data-page="about"] [data-page="organizations"] {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000371}}
+  .main [data-page="about"] [data-page="organizations"] figure {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 125px;
+    margin: 0 0 3px;
+    line-height: 140px;
+    padding: 10px;
+    vertical-align: middle;
+    width: 19%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/styles\/about\.scss}line{font-family:\0000381}}
+    .main [data-page="about"] [data-page="organizations"] figure img {
+      max-height: 100px;
+      max-width: 100px; }

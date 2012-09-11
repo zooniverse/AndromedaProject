@@ -1,0 +1,240 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800";
+
+@import "translations";
+@import "common";
+
+html {
+  background: $blue;
+  color: $blue-darker;
+  font: 12px "Open Sans", sans-serif;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+
+  &:before {
+    $barely-white: transparentize($white, 0.5);
+    $not-white: transparentize($white, 1);
+    $gradient-width: $full-width * 1.5;
+    $gradient-half-width: $gradient-width / 2;
+
+    @include radial-gradient(#{$barely-white, $not-white, $not-white});
+    content: " ";
+    height: $gradient-width;
+    left: 50%;
+    margin: {
+      left: -$gradient-half-width;
+      top: -$gradient-half-width;
+    };
+    position: fixed;
+    top: 50%;
+    width: $gradient-width;
+  }
+}
+
+.app {
+  margin: 0 auto;
+  padding-top: $gutter-width;
+  position: relative;
+  width: $full-width;
+
+  > header {
+    @include contain-floats;
+    color: $white;
+    margin: 30px 0;
+
+    > h1 {
+      float: left;
+      margin: 0;
+      position: relative;
+
+      > a {
+        display: block;
+
+        > img {
+          border: 0;
+          display: block;
+        }
+      }
+    }
+
+    > nav {
+      float: right;
+      font: {
+        size: 10px;
+        weight: bold;
+      };
+      line-height: 30px;
+      margin-top: 10px;
+
+      > ul {
+        margin: 0;
+        padding: 0;
+
+        > li {
+          display: block;
+          float: left;
+
+          > a {
+            border-radius: 3px;
+            color: inherit;
+            display: inline-block;
+            margin-left: $gutter-width / 2;
+            text: {
+              align: center;
+              decoration: none;
+              shadow: 0 1px 1px transparentize($black, 0.75);
+            };
+            width: ($twelfth-width + $gutter-width) - ($gutter-width / 2);
+
+            > img {
+              display: block;
+              margin: 0 auto;
+            }
+
+            &:hover {
+              box-shadow: 0 0 1px 1px transparentize($black, 0.9) inset;
+            }
+
+            &.active {
+              background: transparentize($black, 0.9);
+              box-shadow: 0 1px 1px transparentize($black, 0.9) inset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  position: relative;
+
+  // Main pages
+  > section {
+    @include transition(#{
+      opacity 0.25s ease-in-out,
+      top 0.25s ease-in-out
+    });
+    display: none\9; // IE8 hack
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: $gutter-width * 2;
+    width: 100%;
+
+    &.active {
+      display: block\9; // IE8 hack
+      opacity: 1;
+      overflow: visible;
+      pointer-events: all;
+      position: relative;
+      top: 0;
+      z-index: 20;
+    }
+
+    // Module on a main page
+    > section {
+      @include box-sizing(border-box);
+      background: $white;
+      border-top: 5px solid $blue-darker;
+      border-radius: 3px;
+      box-shadow: 0 4px 6px -4px #00697c;
+      margin-bottom: $gutter-width;
+
+      // Provide padding either on the module or on its child(ren).
+      &.content {
+        padding: $gutter-width;
+      }
+
+      > .content {
+        margin: $gutter-width;
+      }
+
+      h2 {
+        font: {
+          size: 35px;
+          weight: 800;
+        };
+        margin: 0;
+      }
+
+      h3 {
+        font: {
+          size: 15px;
+          weight: 600;
+        };
+        margin: 0;
+      }
+
+      h4 {}
+
+      p {}
+    }
+  }
+}
+
+.image-flipper {
+  position: relative;
+
+  > img,
+  > figure {
+    @include transition(opacity 0.5s ease-in-out);
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+
+    &:first-child {
+      // The first one will define the parent's size.
+      position: relative;
+    }
+
+    &.active {
+      @include transition(opacity 0.25s ease-in-out);
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  > .flipper-controls {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+
+    > button {
+      background: transparent;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      font: {
+        family: inherit;
+        size: 2em;
+        weight: inherit;
+      };
+      text-shadow: 0 3px 3px #000;
+
+      .label {
+        display: none;
+      }
+    }
+  }
+}
+
+.map .cartodb-logo {
+  bottom: 2px;
+  opacity: 0.5;
+  position: absolute;
+  right: 8px;
+  z-index: 2;
+
+  &:hover {
+    opacity: 1;
+  }
+}

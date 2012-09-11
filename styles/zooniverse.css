@@ -1,0 +1,210 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_i18n\.scss}line{font-family:\000036}}
+html[lang="en"] [lang="de"],
+html[lang="en"] [lang="po"],
+html[lang="de"] [lang="en"],
+html[lang="de"] [lang="po"],
+html[lang="po"] [lang="en"],
+html[lang="po"] [lang="de"] {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\000033}}
+.zooniverse-profile > .profile {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\000038}}
+  .zooniverse-profile > .profile .favorites ul,
+  .zooniverse-profile > .profile .recents ul,
+  .zooniverse-profile > .profile .groups ul {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000316}}
+.zooniverse-profile.has-favorites .favorites .none, .zooniverse-profile.has-recents .recents .none, .zooniverse-profile.has-groups .groups .none {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000320}}
+.zooniverse-profile.has-favorites .favorites ul, .zooniverse-profile.has-recents .recents ul, .zooniverse-profile.has-groups .groups ul {
+  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000326}}
+.zooniverse-profile.signed-in > .login-form {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000330}}
+.zooniverse-profile.signed-in > .profile {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000329}}
+.zooniverse-top-bar {
+  background: #111111;
+  border-bottom: 1px solid #555555;
+  color: #dddddd;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 1px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000346}}
+  .zooniverse-top-bar > div {
+    margin: 0 auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000350}}
+  .zooniverse-top-bar a {
+    color: inherit;
+    text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000355}}
+  .zooniverse-top-bar a.z-logo {
+    background: url("lib/zooniverse/zooniverse-logo.png") center 5px no-repeat;
+    color: transparent;
+    display: inline-block;
+    height: 13px;
+    letter-spacing: -2em;
+    overflow: hidden;
+    text-indent: -4em;
+    width: 120px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000365}}
+    .zooniverse-top-bar a.z-logo:hover {
+      background-position: center -39px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000370}}
+  .zooniverse-top-bar ul {
+    margin: 0;
+    padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000374}}
+    .zooniverse-top-bar ul > li {
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000380}}
+  .zooniverse-top-bar > div > ul {
+    float: left;
+    margin-left: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000384}}
+    .zooniverse-top-bar > div > ul > li {
+      float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000387}}
+      .zooniverse-top-bar > div > ul > li > :first-child {
+        display: block;
+        padding: 6px 16px;
+        border-right: 1px solid #555555;
+        cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
+        .zooniverse-top-bar > div > ul > li > :first-child:hover {
+          color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000394}}
+    .zooniverse-top-bar > div > ul.last-child {
+      float: right;
+      margin-right: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000398}}
+      .zooniverse-top-bar > div > ul.last-child > li > :first-child {
+        border-left: 1px solid #555555;
+        border-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003106}}
+    .zooniverse-top-bar > div > ul .z-dropdown {
+      position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003109}}
+      .zooniverse-top-bar > div > ul .z-dropdown > .last-child {
+        background: #111111;
+        border: 1px solid #555555;
+          border-radius: 0 0 4px 4px;
+          border-top: 0;
+        left: -1px;
+        margin-top: 1px;
+        min-width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        white-space: nowrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003124}}
+      .zooniverse-top-bar > div > ul .z-dropdown:hover {
+        z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003130}}
+      .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a {
+        display: block;
+        padding: 6px 16px;
+        border-top: 1px solid #555555;
+        cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
+        .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a:hover {
+          color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
+        .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a:hover {
+          background: #111111; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
+        .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a > em {
+          color: #555555;
+          font-style: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003138}}
+    .zooniverse-top-bar > div > ul.last-child .z-dropdown > .last-child {
+      left: auto;
+      right: -1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003144}}
+    .zooniverse-top-bar > div > ul .z-accordion > :first-child {
+      display: block;
+      padding: 6px 16px;
+      border-top: 1px solid #555555;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      text-transform: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
+      .zooniverse-top-bar > div > ul .z-accordion > :first-child:hover {
+        color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
+      .zooniverse-top-bar > div > ul .z-accordion > :first-child:hover {
+        background: #111111; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
+      .zooniverse-top-bar > div > ul .z-accordion > :first-child > em {
+        color: #555555;
+        font-style: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003152}}
+    .zooniverse-top-bar > div > ul .z-accordion > .last-child {
+      overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003156}}
+      .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a {
+        display: block;
+        padding: 6px 16px;
+        border-top: 1px solid #555555;
+        cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
+        .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a:hover {
+          color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
+        .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a:hover {
+          background: #111111; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
+        .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a > em {
+          color: #555555;
+          font-style: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003164}}
+    .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form {
+      border-top: 1px solid #555555; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003167}}
+      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form label {
+        display: block;
+        margin: 15px 0;
+        text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003172}}
+        .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form label > span {
+          display: inline-block;
+          width: 15em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003178}}
+      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form p {
+        margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003182}}
+      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form button {
+        border-top: 1px solid #555555;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #555555;
+        color: inherit;
+        font-family: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        padding: 0.25em 1.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
+        .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form button:hover {
+          background: #111111; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
+        .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form button > em {
+          color: #555555;
+          font-style: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Scratch\/Oceans\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003195}}
+      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form > div {
+        margin: 20px;
+        text-align: center; }

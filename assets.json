@@ -1,0 +1,20 @@
+[
+	{"http://requirejs.org/docs/release/2.0.2/comments/require.js": "scripts/lib/require.js"},
+	{"https://raw.github.com/jrburke/almond/latest/almond.js": "scripts/lib/almond.js"},
+
+	{"http://code.jquery.com/jquery-1.7.2.js": "scripts/lib/jquery.js"},
+
+	{"https://github.com/maccman/spine/raw/master/lib/spine.js": "scripts/lib/spine.js"},
+
+	{"http://stringencoders.googlecode.com/svn/trunk/javascript/base64.js": "scripts/lib/base64.js"},
+
+	{"http://github.com/DmitryBaranovskiy/raphael/raw/master/raphael.js": "scripts/lib/raphael.js"},
+
+	{"https://github.com/CloudMade/Leaflet/zipball/v0.3.1": [
+		{"dist/leaflet-src.js": "scripts/lib/leaflet.js"},
+		{"dist/*.css": "styles/lib/leaflet"},
+		{"dist/images": "styles/lib/leaflet/images"}
+	]},
+
+	{"https://raw.github.com/aFarkas/html5shiv/6d46e08c69/src/html5shiv.js": "scripts/lib/html5shiv.js"}
+]
