@@ -2,8 +2,7 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require, exports, module) {
     var $, Annotation, Classification, Classifier, CreaturePicker, MarkerIndicator, Pager, TEMPLATE, User, ZooniverseClassifier, arraysMatch, config, delay, remove, _ref;
@@ -28,33 +27,12 @@
 
       Classifier.prototype.indicator = null;
 
-      Classifier.prototype.groundCoverAnnotation = null;
-
-      Classifier.prototype.availableGroundCovers = [
-        {
-          sand: 'Sand'
-        }, {
-          shell: 'Shell'
-        }, {
-          gravel: 'Gravel'
-        }, {
-          cobble: 'Cobble'
-        }, {
-          boulder: 'Boulder'
-        }, {
-          cantTell: 'Can\'t tell'
-        }
-      ];
-
       Classifier.prototype.events = {
-        'click .ground-cover .toggles button': 'toggleGroundCover',
-        'click .ground-cover .finished': 'finishGroundCover',
         'click .species .toggles button': 'changeSpecies',
         'click .species .other-creatures button': 'changeOther',
         'click .species .finished': 'finishSpecies',
         'click .favorite .create button': 'createFavorite',
         'click .favorite .destroy button': 'destroyFavorite',
-        'click .map-toggle img': 'toggleMap',
         'click .talk [value="yes"]': 'goToTalk',
         'click .talk [value="no"]': 'nextSubjects',
         'click .tutorial-again': 'startTutorial'
@@ -62,8 +40,6 @@
 
       Classifier.prototype.elements = {
         '.steps': 'steps',
-        '.ground-cover .toggles': 'groundCoverList',
-        '.ground-cover .finished': 'groundCoverFinishedButton',
         '.species .toggles button': 'speciesButtons',
         '.species .other-creatures [value="yes"]': 'otherYes',
         '.species .other-creatures [value="no"]': 'otherNo',
@@ -75,29 +51,21 @@
       };
 
       function Classifier() {
-        this.toggleMap = __bind(this.toggleMap, this);
-
         this.finishSpecies = __bind(this.finishSpecies, this);
 
         this.changeOther = __bind(this.changeOther, this);
 
         this.changeSpecies = __bind(this.changeSpecies, this);
 
-        this.finishGroundCover = __bind(this.finishGroundCover, this);
-
-        this.toggleGroundCover = __bind(this.toggleGroundCover, this);
-
         this.updateFavoriteButtons = __bind(this.updateFavoriteButtons, this);
 
         this.renderSpeciesPage = __bind(this.renderSpeciesPage, this);
-
-        this.renderGroundCoverPage = __bind(this.renderGroundCoverPage, this);
 
         this.render = __bind(this.render, this);
 
         this.reset = __bind(this.reset, this);
 
-        var description, id, map, pager, _i, _j, _len, _len1, _ref1, _ref2;
+        var pager, _i, _len, _ref1;
         Classifier.__super__.constructor.apply(this, arguments);
         this.indicator = new MarkerIndicator({
           el: this.el.find('.indicator'),
@@ -115,14 +83,6 @@
             el: pager
           });
         }
-        _ref2 = this.availableGroundCovers;
-        for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
-          map = _ref2[_j];
-          for (id in map) {
-            description = map[id];
-            this.groundCoverList.append("<li><button value=\"" + id + "\">" + description + "</button></li>");
-          }
-        }
         User.bind('sign-in', this.updateFavoriteButtons);
       }
 
@@ -130,58 +90,22 @@
         var _this = this;
         this.picker.reset();
         Classifier.__super__.reset.apply(this, arguments);
-        this.groundCoverAnnotation = new Annotation({
-          classification: this.classification,
-          value: {
-            groundCovers: []
-          }
-        });
         this.otherSpeciesAnnotation = new Annotation({
           classification: this.classification,
           value: {
             otherSpecies: null
           }
         });
-        if (~location.hash.indexOf('/classify')) {
-          location.hash = '#!/classify/ground-cover';
-        }
         this.changeSpecies(null);
         this.steps.removeClass('finished');
         return delay(500, function() {
           _this.imageThumbnail.attr('src', _this.workflow.selection[0].location.thumbnail);
-          _this.mapThumbnail.attr('src', ("http://maps.googleapis.com/maps/api/staticmap\n?center=" + _this.workflow.selection[0].coords[0] + "," + _this.workflow.selection[0].coords[1] + "\n&zoom=10&size=745x570&maptype=satellite&sensor=false").replace(/\n/g, ''));
-          _this.updateFavoriteButtons();
-          _this.el.toggleClass('show-map', false);
-          _this.el.find('.summary .latitude .value').html(_this.classification.subjects[0].coords[0]);
-          _this.el.find('.summary .longitude .value').html(_this.classification.subjects[0].coords[1]);
-          _this.el.find('.summary .depth .value').html(_this.classification.subjects[0].metadata.depth);
-          _this.el.find('.summary .altitude .value').html(_this.classification.subjects[0].metadata.altitude);
-          _this.el.find('.summary .heading .value').html(_this.classification.subjects[0].metadata.heading);
-          _this.el.find('.summary .salinity .value').html(_this.classification.subjects[0].metadata.salinity);
-          _this.el.find('.summary .temperature .value').html(_this.classification.subjects[0].metadata.temperature);
-          return _this.el.find('.summary .speed .value').html(_this.classification.subjects[0].metadata.speed);
+          return _this.updateFavoriteButtons();
         });
       };
 
       Classifier.prototype.render = function() {
-        this.renderGroundCoverPage();
         return this.renderSpeciesPage();
-      };
-
-      Classifier.prototype.renderGroundCoverPage = function() {
-        var button, groundCoverActive, groundCoverPicked, _i, _len, _ref1, _ref2;
-        if (!this.groundCoverAnnotation) {
-          return;
-        }
-        _ref1 = this.groundCoverList.find('button');
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          button = _ref1[_i];
-          button = $(button);
-          groundCoverActive = (_ref2 = button.attr('value'), __indexOf.call(this.groundCoverAnnotation.value.groundCovers, _ref2) >= 0);
-          button.toggleClass('active', groundCoverActive);
-        }
-        groundCoverPicked = this.groundCoverAnnotation.value.groundCovers.length !== 0;
-        return this.groundCoverFinishedButton.attr('disabled', !groundCoverPicked);
       };
 
       Classifier.prototype.renderSpeciesPage = function() {
@@ -224,23 +148,6 @@
         return this.el.toggleClass('can-favorite', signedIn && !tutorial);
       };
 
-      Classifier.prototype.toggleGroundCover = function(e) {
-        var value;
-        value = $(e.target).val();
-        if (__indexOf.call(this.groundCoverAnnotation.value.groundCovers, value) >= 0) {
-          remove(value, {
-            from: this.groundCoverAnnotation.value.groundCovers
-          });
-        } else {
-          this.groundCoverAnnotation.value.groundCovers.push(value);
-        }
-        return this.classification.trigger('change');
-      };
-
-      Classifier.prototype.finishGroundCover = function() {
-        return location.hash = '#!/classify/species';
-      };
-
       Classifier.prototype.changeSpecies = function(e) {
         var species, target;
         if (e == null) {
@@ -270,15 +177,6 @@
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         return this.saveClassification();
-      };
-
-      Classifier.prototype.toggleMap = function(show) {
-        if (typeof show !== 'boolean') {
-          show = (function() {
-            return arguments[0];
-          })();
-        }
-        return this.el.toggleClass('show-map', show);
       };
 
       return Classifier;

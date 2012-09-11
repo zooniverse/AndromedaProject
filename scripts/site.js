@@ -66,14 +66,6 @@
       profile: new Profile({
         el: '[data-page="profile"]'
       }),
-      homeMap: new Map({
-        el: '[data-page="home"] .map',
-        latitude: 40,
-        longitude: -75,
-        zoom: 5,
-        layers: ["http://" + config.cartoUser + ".cartodb.com/tiles/" + config.cartoTable + "/{z}/{x}/{y}.png"],
-        cartoLogo: true
-      }),
       homeScoreboard: new Scoreboard({
         el: '[data-page="home"] .scoreboard'
       })

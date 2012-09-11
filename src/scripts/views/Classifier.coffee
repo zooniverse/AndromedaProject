@@ -4,16 +4,6 @@ define (require, exports, module) ->
 
 		<div class="options">
 			<div class="steps">
-				<div data-page="ground-cover" class="ground-cover active">
-					<h4>Ground covers in this image</h4>
-
-					<ul class="toggles">
-						<!--<li><button value="id">description</button></li>-->
-					</ul>
-
-					<button disabled="disabled" class="finished">Done identifying ground cover</button>
-				</div>
-
 				<div data-page="species" class="species">
 					<h4>Species in this image</h4>
 
