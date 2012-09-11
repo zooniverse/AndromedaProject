@@ -25,24 +25,6 @@
       MarkerIndicator.prototype.template = template;
 
       MarkerIndicator.prototype.helpers = {
-        fish: {
-          image: 'images/indicator/fish.png',
-          points: [
-            {
-              x: 7,
-              y: 27
-            }, {
-              x: 183,
-              y: 23
-            }, {
-              x: 56,
-              y: 17
-            }, {
-              x: 57,
-              y: 46
-            }
-          ]
-        },
         galaxy: {
           image: 'images/indicator/galaxy.png',
           points: [
@@ -70,24 +52,6 @@
             }, {
               x: 75,
               y: 45
-            }
-          ]
-        },
-        crustacean: {
-          image: 'images/indicator/crustacean.png',
-          points: [
-            {
-              x: 70,
-              y: 15
-            }, {
-              x: 70,
-              y: 55
-            }, {
-              x: 5,
-              y: 35
-            }, {
-              x: 130,
-              y: 35
             }
           ]
         }

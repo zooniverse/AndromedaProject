@@ -59,8 +59,7 @@
         stroke: '#fff',
         'stroke-width': 2
       },
-      fish: '#0bc7e8',
-      cluster: '#fd6500',
+      cluster: '#0bc7e8',
       crustacean: '#b9ca00',
       galaxy: '#c512e0',
       cool: '#001e29',
