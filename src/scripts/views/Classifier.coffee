@@ -11,22 +11,22 @@ define (require, exports, module) ->
 						<li><button value="cluster" data-marker="circle">Star Cluster <span class="count">0</button></li>
 						<li><button value="galaxy" data-marker="circle">Galaxy <span class="count">0</button></li>
 					</ul> 
+
+					<div class="indicator"><!--Marker indicator--></div>
+
+					<div class="other-creatures">
+						<h4>Are image artifacts present?</h4>
+						<button value="yes">Yes</button>
+						<button value="no">No</button>
+					</div>
 					
-					<ul class="toggles">
+					<ul class="toggles" id="artefact-list">
 						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button></li>
 						<li><button value="star" data-marker="axes">Star <span class="count">0</button></li>
 						<li><button value="gap" data-marker="axes">Gap <span class="count">0</button></li>
 					</ul>
 
-					<div class="indicator"><!--Marker indicator--></div>
-
-					<div class="other-creatures">
-						<h4>Is there anything odd?</h4>
-						<button value="yes">Yes</button>
-						<button value="no">No</button>
-					</div>
-
-					<button disabled="disabled" class="finished">Done identifying species</button>
+					<button disabled="disabled" class="finished">Done identifying objects</button>
 				</div>
 
 				<div class="help">
