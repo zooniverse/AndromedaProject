@@ -1,4 +1,4 @@
-Seafloor Explorer
+Andromeda Project
 =================
 
 Requires the [`zoo` gem](https://github.com/zooniverse/Front-End-Assets/tree/app).
