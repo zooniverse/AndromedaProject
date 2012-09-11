@@ -82,7 +82,7 @@
           delay(1000, this.resized);
         }
         if (this.cartoLogo) {
-          logo = $('<a href="http://www.cartodb.com/" target="_blank" class="cartodb-logo">\n  <img src="images/cartodb-logo.png" />\n</a>');
+          logo = $('');
           logo.appendTo(this.el);
         }
       }
