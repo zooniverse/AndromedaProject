@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    return '<div class="map">\n	<img />\n</div>\n\n<div class="selection-area">\n	<img />\n\n  <div class="scale">\n    <div class="mark"></div>\n    <div class="mark"></div>\n    <div class="mark"></div>\n    <div class="mark"></div>\n    <div class="mark"></div>\n    <div class="mark"></div>\n    <div class="label">100mm</div>\n  </div>\n</div>';
+    return '<div class="selection-area">\n  <img />\n</div>';
   });
 
 }).call(this);
