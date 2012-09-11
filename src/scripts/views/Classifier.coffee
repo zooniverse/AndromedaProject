@@ -5,12 +5,12 @@ define (require, exports, module) ->
 		<div class="options">
 			<div class="steps">
 				<div data-page="species" class="species">
-					<h4>Species in this image</h4>
+					<h4>Objects in this image</h4>
 
 					<ul class="toggles">
-						<li><button value="scallop" data-marker="axes">Scallop <span class="count">0</button></li>
+						<li><button value="cluster" data-marker="axes">cluster <span class="count">0</button></li>
 						<li><button value="fish" data-marker="axes">Fish <span class="count">0</button></li>
-						<li><button value="seastar" data-marker="circle">Seastar <span class="count">0</button></li>
+						<li><button value="galaxy" data-marker="circle">galaxy <span class="count">0</button></li>
 						<li><button value="crustacean" data-marker="axes">Crustacean <span class="count">0</button></li>
 					</ul>
 
