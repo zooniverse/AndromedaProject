@@ -18,19 +18,19 @@ define (require, exports, module) ->
     helpers:
       galaxy:
         image: 'images/indicator/galaxy.png'
-        points: [{x: 35, y: 35}, {x: 50, y: 5}]
+        points: [{x: 38, y: 35}, {x: 68, y: 28}]
       cluster:
         image: 'images/indicator/cluster.png'
-        points: [{x: 40, y: 70}, {x: 40, y: 5}, {x: 5, y: 45}, {x: 75, y: 45}]
+        points: [{x: 40, y: 35}, {x: 40, y: 5}]
       ghost:
         image: 'images/indicator/ghost.png'
-        points: [{x: 40, y: 70}, {x: 40, y: 5}, {x: 5, y: 45}, {x: 75, y: 45}]  
-      star:
-        image: 'images/indicator/star.png'
-        points: [{x: 40, y: 70}, {x: 40, y: 5}, {x: 5, y: 45}, {x: 75, y: 45}]    
+        points: [{x: 72, y: 37.5}, {x: 95, y: 48}]  
+      cross:
+        image: 'images/indicator/cross.png'
+        points: [{x: 10, y: 1}, {x: 30, y: 40}, {x: 5, y: 45}, {x: 75, y: 45}]    
       gap:
         image: 'images/indicator/gap.png'
-        points: [{x: 40, y: 70}, {x: 40, y: 5}, {x: 5, y: 45}, {x: 75, y: 45}]    
+        points: [{x: 40, y: 70}, {x: 40, y: 5}]    
 
     elements:
       'img': 'image'

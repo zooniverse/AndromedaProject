@@ -22,7 +22,7 @@ define (require, exports, module) ->
 					
 					<ul class="toggles" id="artefact-list">
 						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button></li>
-						<li><button value="star" data-marker="axes">Star <span class="count">0</button></li>
+						<li><button value="cross" data-marker="axes">Cross <span class="count">0</button></li>
 						<li><button value="gap" data-marker="axes">Gap <span class="count">0</button></li>
 					</ul>
 
