@@ -280,6 +280,9 @@
 			.finished {
 				@include box-shadow(0 1px $orange-lighter inset);
 				@include linear-gradient($orange-light, $orange-dark);
+				position: absolute;
+				bottom: 40px;
+				right: 20px;
 				border: 1px solid $orange-darker {
 					radius: 3px;
 				};
@@ -291,7 +294,7 @@
 					weight: bold;
 				};
 				padding: 10px 0;
-				width: 100%;
+				width: 215px;
 
 				&:disabled {
 					opacity: 0.67;

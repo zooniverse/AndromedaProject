@@ -116,8 +116,15 @@ define (require, exports, module) ->
 
     showArtifacts: (e) =>
       target = $(e.target)
-      $('#artefact-list').show() if target.val() is "yes"
-      $('#artefact-list').hide() if target.val() is "no"
+      $('#artefact-list').slideDown() if target.val() is "yes"
+      $('#artefact-list').slideUp() if target.val() is "no"
+
+      @otherYes.addClass 'active' if target.val() is "yes" 
+      @otherNo.addClass 'active' if target.val() is "no" 
+      @otherYes.removeClass 'active' if target.val() is "no" 
+      @otherNo.removeClass 'active' if target.val() is "yes"
+      
+      @speciesFinishedButton.removeAttr 'disabled'
  
     changeOther: (e) =>
       target = $(e.target)
