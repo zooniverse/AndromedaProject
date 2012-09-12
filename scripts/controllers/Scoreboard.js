@@ -44,7 +44,7 @@
           return;
         }
         url = "http://" + config.cartoUser + ".cartodb.com/api/v2/sql?callback=?";
-        query = 'SELECT ' + 'SUM(ALL(clusters)) AS clusters, ' + 'SUM(ALL(star)) AS star, ' + 'SUM(ALL(galaxys)) AS galaxys, ' + 'SUM(ALL(ghosts)) AS ghosts, ' + 'COUNT(ALL(created_at)) AS classifications ' + ("FROM " + config.cartoTable);
+        query = 'SELECT ' + 'SUM(ALL(clusters)) AS clusters, ' + 'SUM(ALL(star)) AS star, ' + 'SUM(ALL(galaxies)) AS galaxies, ' + 'SUM(ALL(ghosts)) AS ghosts, ' + 'COUNT(ALL(created_at)) AS classifications ' + ("FROM " + config.cartoTable);
         if (this.forUser && (User.current != null)) {
           query += " where user_id='" + User.current.id + "'";
         }
@@ -56,11 +56,11 @@
       };
 
       Scoreboard.prototype.render = function(_arg) {
-        var classifications, clusters, galaxys, ghosts, star;
-        clusters = _arg.clusters, star = _arg.star, galaxys = _arg.galaxys, ghosts = _arg.ghosts, classifications = _arg.classifications;
+        var classifications, clusters, galaxies, ghosts, star;
+        clusters = _arg.clusters, star = _arg.star, galaxies = _arg.galaxies, ghosts = _arg.ghosts, classifications = _arg.classifications;
         this.clusterCount.html(clusters || 0);
         this.starCount.html(star || 0);
-        this.galaxyCount.html(galaxys || 0);
+        this.galaxyCount.html(galaxies || 0);
         this.ghostCount.html(ghosts || 0);
         return this.classificationCount.html(classifications || 0);
       };

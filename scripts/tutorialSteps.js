@@ -148,7 +148,7 @@
         block: '.species .finished'
       }), new Step({
         heading: 'Identifying species',
-        content: ['We\'ve finished marking all the star in this image.', 'Next we\'ll mark the galaxys. Choose "galaxy" from the species list.'],
+        content: ['We\'ve finished marking all the star in this image.', 'Next we\'ll mark the galaxies. Choose "galaxy" from the species list.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',

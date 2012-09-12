@@ -37,7 +37,7 @@
         en: ['Great! Next we\'ll mark the galaxy.', 'Choose "galaxy" from the list of species.']
       },
       tutorialgalaxyExplanation: {
-        en: 'galaxys are generally radial, so we\'ll define a circle around each one.'
+        en: 'galaxies are generally radial, so we\'ll define a circle around each one.'
       },
       tutorialgalaxyCenter: {
         en: 'First, mark the center point...'
