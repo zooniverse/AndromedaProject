@@ -29,11 +29,11 @@
           image: 'images/indicator/galaxy.png',
           points: [
             {
-              x: 35,
+              x: 38,
               y: 35
             }, {
-              x: 50,
-              y: 5
+              x: 68,
+              y: 28
             }
           ]
         },
@@ -42,16 +42,10 @@
           points: [
             {
               x: 40,
-              y: 70
+              y: 35
             }, {
               x: 40,
               y: 5
-            }, {
-              x: 5,
-              y: 45
-            }, {
-              x: 75,
-              y: 45
             }
           ]
         },
@@ -59,29 +53,23 @@
           image: 'images/indicator/ghost.png',
           points: [
             {
-              x: 40,
-              y: 70
+              x: 72,
+              y: 37.5
             }, {
-              x: 40,
-              y: 5
-            }, {
-              x: 5,
-              y: 45
-            }, {
-              x: 75,
-              y: 45
+              x: 95,
+              y: 48
             }
           ]
         },
-        star: {
-          image: 'images/indicator/star.png',
+        cross: {
+          image: 'images/indicator/cross.png',
           points: [
             {
-              x: 40,
-              y: 70
+              x: 10,
+              y: 1
             }, {
-              x: 40,
-              y: 5
+              x: 30,
+              y: 40
             }, {
               x: 5,
               y: 45
@@ -100,12 +88,6 @@
             }, {
               x: 40,
               y: 5
-            }, {
-              x: 5,
-              y: 45
-            }, {
-              x: 75,
-              y: 45
             }
           ]
         }
