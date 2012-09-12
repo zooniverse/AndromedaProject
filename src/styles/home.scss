@@ -5,6 +5,14 @@
     height: 250px;
     width: 100%;
   }
+  
+  #banner {
+    background: url('/images/navigation/m31.jpg');
+    background-width: 100%;
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
 
   .dive-in {
     @include linear-gradient($orange, $orange-dark);
@@ -14,6 +22,7 @@
     box-shadow: 0 1px 0 $orange-light inset;
     color: $white;
     float: right;
+    margin-top: 10px;
     font-size: 20px;
     padding: ($gutter-width / 2) ($gutter-width * 3);
     text: {

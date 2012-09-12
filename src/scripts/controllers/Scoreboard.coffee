@@ -38,7 +38,7 @@ define (require, exports, module) ->
       query = 'SELECT ' +
         'SUM(ALL(clusters)) AS clusters, ' +
         'SUM(ALL(star)) AS star, ' +
-        'SUM(ALL(galaxys)) AS galaxys, ' +
+        'SUM(ALL(galaxies)) AS galaxies, ' +
         'SUM(ALL(ghosts)) AS ghosts, ' +
         'COUNT(ALL(created_at)) AS classifications ' +
         "FROM #{config.cartoTable}"
@@ -49,10 +49,10 @@ define (require, exports, module) ->
       $.getJSON url, q: query, (response) =>
         @render response.rows[0]
 
-    render: ({clusters, star, galaxys, ghosts, classifications}) =>
+    render: ({clusters, star, galaxies, ghosts, classifications}) =>
       @clusterCount.html clusters || 0
       @starCount.html star || 0
-      @galaxyCount.html galaxys || 0
+      @galaxyCount.html galaxies || 0
       @ghostCount.html ghosts || 0
       @classificationCount.html classifications || 0
 

@@ -11,7 +11,7 @@ define (require, exports, module) ->
     </div>
 
     <div class="galaxy score">
-      <div class="description">Total number of<br />galaxys marked</div>
+      <div class="description">Total number of<br />galaxies marked</div>
       <div class="count">0</div>
     </div>
 
