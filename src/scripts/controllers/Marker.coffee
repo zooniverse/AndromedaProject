@@ -36,25 +36,6 @@ define (require, exports, module) ->
       @annotation.bind 'change', @render
       @annotation.bind 'destroy', @destroy
 
-      delay @checkForHalf
-
-    checkForHalf: =>
-      # Should we ask if the creature is more than half-in?
-      for point in @annotation.value.points
-        snappedToEdge = true if point.x <= 0 or point.x >= 1
-        snappedToEdge = true if point.y <= 0 or point.y >= 1
-
-      @askIfHalfVisible() if snappedToEdge
-
-    askIfHalfVisible: =>
-      dialog = new Dialog
-        content: "Is at least half of that #{@annotation.value.species} visible in the image?"
-        buttons: [{'Yes': true}, {'No': false}]
-        target: @picker.classifier.el.parent()
-        className: 'classifier'
-        done: (halfInValue) =>
-          @annotation.value.halfIn = halfInValue
-
     drawLabel: (text) =>
       @labelText = @picker.paper.text()
       @labelText.attr style.label.text
@@ -131,7 +112,6 @@ define (require, exports, module) ->
 
     dragEnd: =>
       @deselect() if @wasSelected and not @moved # Basically, a click
-      @checkForHalf() if @moved
 
       delete @startPoints
       delete @wasSelected

@@ -41,7 +41,7 @@
       workflow.trigger('fetching-subjects');
       workflow.enough = new $.Deferred;
       limit = workflow.queueLength - workflow.length;
-      workflow.subjects = Sample;
+      workflow.subjects = Sample.generate();
       if (workflow.subjects.length > workflow.selectionLength) {
         return workflow.enough.resolve(workflow.subjects);
       }
