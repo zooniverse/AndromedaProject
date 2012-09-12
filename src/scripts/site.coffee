@@ -43,7 +43,7 @@ define (require, exports, module) ->
     limit = workflow.queueLength - workflow.length
 
     # If there are enough subjects in the queue, resolve the deferred immediately.
-    workflow.subjects = Sample
+    workflow.subjects = Sample.generate()
     if workflow.subjects.length > workflow.selectionLength
       workflow.enough.resolve workflow.subjects
   

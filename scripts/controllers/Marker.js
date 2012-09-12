@@ -58,10 +58,6 @@
         this.showLabel = __bind(this.showLabel, this);
 
         this.drawLabel = __bind(this.drawLabel, this);
-
-        this.askIfHalfVisible = __bind(this.askIfHalfVisible, this);
-
-        this.checkForHalf = __bind(this.checkForHalf, this);
         Marker.__super__.constructor.apply(this, arguments);
         this.drawLabel();
         this.hideLabel();
@@ -72,45 +68,7 @@
         this.centerCircle.drag(this.centerCircleDrag, this.dragStart, this.dragEnd);
         this.annotation.bind('change', this.render);
         this.annotation.bind('destroy', this.destroy);
-        delay(this.checkForHalf);
       }
-
-      Marker.prototype.checkForHalf = function() {
-        var point, snappedToEdge, _i, _len, _ref;
-        _ref = this.annotation.value.points;
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          point = _ref[_i];
-          if (point.x <= 0 || point.x >= 1) {
-            snappedToEdge = true;
-          }
-          if (point.y <= 0 || point.y >= 1) {
-            snappedToEdge = true;
-          }
-        }
-        if (snappedToEdge) {
-          return this.askIfHalfVisible();
-        }
-      };
-
-      Marker.prototype.askIfHalfVisible = function() {
-        var dialog,
-          _this = this;
-        return dialog = new Dialog({
-          content: "Is at least half of that " + this.annotation.value.species + " visible in the image?",
-          buttons: [
-            {
-              'Yes': true
-            }, {
-              'No': false
-            }
-          ],
-          target: this.picker.classifier.el.parent(),
-          className: 'classifier',
-          done: function(halfInValue) {
-            return _this.annotation.value.halfIn = halfInValue;
-          }
-        });
-      };
 
       Marker.prototype.drawLabel = function(text) {
         var labelHeight;
@@ -233,9 +191,6 @@
       Marker.prototype.dragEnd = function() {
         if (this.wasSelected && !this.moved) {
           this.deselect();
-        }
-        if (this.moved) {
-          this.checkForHalf();
         }
         delete this.startPoints;
         delete this.wasSelected;
