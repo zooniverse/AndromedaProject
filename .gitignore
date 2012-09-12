@@ -4,4 +4,5 @@ node_modules/
 *.fz
 subjects/standard
 subjects/thumbnails
+alpha/
 build*/
