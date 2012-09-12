@@ -156,7 +156,7 @@
         var debug = ~location.search.indexOf('debug=1');
         // And any URL with ?build=1 loads production JS.
         var build = ~location.search.indexOf('build=1');
-
+        
         document.write((rootPort && debug) || (!rootPort && !build) ? development : production);
       }());
     </script>

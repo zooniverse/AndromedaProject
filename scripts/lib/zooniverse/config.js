@@ -23,7 +23,8 @@
     });
     config.set({
       apiHost: 'https://api.zooniverse.org',
-      proxyPath: '/proxy.html'
+      proxyPath: '/proxy.html',
+      dev: false
     });
     if (config.dev) {
       config.set({

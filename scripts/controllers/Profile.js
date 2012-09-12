@@ -5,14 +5,13 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require, exports, module) {
-    var $, Map, Profile, Scoreboard, Spine, TEMPLATE, User, ZooniverseProfile, config, delay, favoriteTemplate, recentTemplate;
+    var $, Profile, Scoreboard, Spine, TEMPLATE, User, ZooniverseProfile, config, delay, favoriteTemplate, recentTemplate;
     Spine = require('Spine');
     $ = require('jQuery');
     delay = require('zooniverse/util').delay;
     config = require('zooniverse/config');
     User = require('zooniverse/models/User');
     ZooniverseProfile = require('zooniverse/controllers/Profile');
-    Map = require('zooniverse/controllers/Map');
     Scoreboard = require('controllers/Scoreboard');
     TEMPLATE = require('views/Profile');
     favoriteTemplate = require('views/ProfileFavorite');
@@ -26,8 +25,6 @@
       Profile.prototype.favoriteTemplate = favoriteTemplate;
 
       Profile.prototype.recentTemplate = recentTemplate;
-
-      Profile.prototype.map = null;
 
       Profile.prototype.userLayer = null;
 

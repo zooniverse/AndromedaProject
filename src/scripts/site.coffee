@@ -11,7 +11,6 @@ define (require, exports, module) ->
 
   Classifier = require 'controllers/Classifier'
   tutorialSteps = require 'tutorialSteps'
-  Map = require 'zooniverse/controllers/Map'
   Scoreboard = require 'controllers/Scoreboard'
   Profile = require 'controllers/Profile'
   ImageFlipper = require 'controllers/ImageFlipper'
@@ -23,9 +22,6 @@ define (require, exports, module) ->
 
     domain: 'andromedaproject.org'
     talkHost: 'http://talk.andromedaproject.org'
-
-    cartoUser: 'the-zooniverse'
-    cartoTable: 'seafloor_explorer'
 
     googleAnalytics: 'UA-1224199-30'
 
@@ -54,9 +50,6 @@ define (require, exports, module) ->
                 temperature: 0
                 speed: 0
                 mm_pix: 1
-
-  Map::apiKey = '21a5504123984624a5e1a856fc00e238' # TODO: This is Brian's.
-  Map::tilesId = 65990
 
   config.set
     classifier: new Classifier

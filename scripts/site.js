@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    var $, App, Classifier, ImageFlipper, Map, Profile, Project, Scoreboard, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, _i, _len, _ref, _results;
+    var $, App, Classifier, ImageFlipper, Profile, Project, Scoreboard, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, _i, _len, _ref, _results;
     $ = require('jQuery');
     config = require('zooniverse/config');
     ids = require('ids');
@@ -12,7 +12,6 @@
     Subject = require('zooniverse/models/Subject');
     Classifier = require('controllers/Classifier');
     tutorialSteps = require('tutorialSteps');
-    Map = require('zooniverse/controllers/Map');
     Scoreboard = require('controllers/Scoreboard');
     Profile = require('controllers/Profile');
     ImageFlipper = require('controllers/ImageFlipper');
@@ -22,8 +21,6 @@
       description: 'Help find star clusters and galaxies in M31!',
       domain: 'andromedaproject.org',
       talkHost: 'http://talk.andromedaproject.org',
-      cartoUser: 'the-zooniverse',
-      cartoTable: 'seafloor_explorer',
       googleAnalytics: 'UA-1224199-30'
     });
     config.set({
@@ -55,8 +52,6 @@
         })
       })
     });
-    Map.prototype.apiKey = '21a5504123984624a5e1a856fc00e238';
-    Map.prototype.tilesId = 65990;
     config.set({
       classifier: new Classifier({
         el: '#classifier',

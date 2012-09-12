@@ -7,7 +7,6 @@ define (require, exports, module) ->
 
   User = require 'zooniverse/models/User'
   ZooniverseProfile = require 'zooniverse/controllers/Profile'
-  Map = require 'zooniverse/controllers/Map'
   Scoreboard = require 'controllers/Scoreboard'
 
   TEMPLATE = require 'views/Profile'
@@ -19,7 +18,6 @@ define (require, exports, module) ->
     favoriteTemplate: favoriteTemplate
     recentTemplate: recentTemplate
 
-    map: null
     userLayer: null
     scoreboard: null
 

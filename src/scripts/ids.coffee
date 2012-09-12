@@ -1,6 +1,6 @@
 define (require, exports, module) ->
   {dev} = require 'zooniverse/config'
-
+  
   if dev
     ids =
       project: 'sea_floor'
