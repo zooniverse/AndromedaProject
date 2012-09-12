@@ -14,7 +14,39 @@ define (require, exports, module) ->
   Scoreboard = require 'controllers/Scoreboard'
   Profile = require 'controllers/Profile'
   ImageFlipper = require 'controllers/ImageFlipper'
+  
+  Sample = require('sample')
+  
+  # Over ride fetchSubjects to pull subjects locally
+  workflow = new Workflow
+    id: ids.workflow
 
+    tutorialSubjects: new Subject
+        id: ids.tutorialSubject
+        location:
+          standard: "subjects/standard/tutorial.jpg"
+          thumbnail: "subjects/standard/tutorial.jpg"
+        coords: [0, 0]
+        metadata:
+          depth: 0
+          altitude: 0
+          heading: 0
+          salinity: 0
+          temperature: 0
+          speed: 0
+          mm_pix: 1
+  
+  workflow.fetchSubjects = (group) ->
+    workflow.trigger 'fetching-subjects'
+    workflow.enough = new $.Deferred
+    
+    limit = workflow.queueLength - workflow.length
+
+    # If there are enough subjects in the queue, resolve the deferred immediately.
+    workflow.subjects = Sample
+    if workflow.subjects.length > workflow.selectionLength
+      workflow.enough.resolve workflow.subjects
+  
   config.set
     name: 'Andromeda Project'
     slug: 'andromeda-project'
@@ -32,24 +64,7 @@ define (require, exports, module) ->
 
       projects: new Project
         id: ids.project
-
-        workflows: new Workflow
-          id: ids.workflow
-
-          tutorialSubjects: new Subject
-              id: ids.tutorialSubject
-              location:
-                standard: "subjects/standard/tutorial.jpg"
-                thumbnail: "subjects/standard/tutorial.jpg"
-              coords: [0, 0]
-              metadata:
-                depth: 0
-                altitude: 0
-                heading: 0
-                salinity: 0
-                temperature: 0
-                speed: 0
-                mm_pix: 1
+        workflows: workflow
 
   config.set
     classifier: new Classifier

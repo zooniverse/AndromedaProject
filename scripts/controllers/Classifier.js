@@ -168,11 +168,24 @@
         var target;
         target = $(e.target);
         if (target.val() === "yes") {
-          $('#artefact-list').show();
+          $('#artefact-list').slideDown();
         }
         if (target.val() === "no") {
-          return $('#artefact-list').hide();
+          $('#artefact-list').slideUp();
         }
+        if (target.val() === "yes") {
+          this.otherYes.addClass('active');
+        }
+        if (target.val() === "no") {
+          this.otherNo.addClass('active');
+        }
+        if (target.val() === "no") {
+          this.otherYes.removeClass('active');
+        }
+        if (target.val() === "yes") {
+          this.otherNo.removeClass('active');
+        }
+        return this.speciesFinishedButton.removeAttr('disabled');
       };
 
       Classifier.prototype.changeOther = function(e) {

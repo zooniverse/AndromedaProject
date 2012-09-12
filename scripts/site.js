@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    var $, App, Classifier, ImageFlipper, Profile, Project, Scoreboard, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, _i, _len, _ref, _results;
+    var $, App, Classifier, ImageFlipper, Profile, Project, Sample, Scoreboard, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, workflow, _i, _len, _ref, _results;
     $ = require('jQuery');
     config = require('zooniverse/config');
     ids = require('ids');
@@ -15,6 +15,37 @@
     Scoreboard = require('controllers/Scoreboard');
     Profile = require('controllers/Profile');
     ImageFlipper = require('controllers/ImageFlipper');
+    Sample = require('sample');
+    workflow = new Workflow({
+      id: ids.workflow,
+      tutorialSubjects: new Subject({
+        id: ids.tutorialSubject,
+        location: {
+          standard: "subjects/standard/tutorial.jpg",
+          thumbnail: "subjects/standard/tutorial.jpg"
+        },
+        coords: [0, 0],
+        metadata: {
+          depth: 0,
+          altitude: 0,
+          heading: 0,
+          salinity: 0,
+          temperature: 0,
+          speed: 0,
+          mm_pix: 1
+        }
+      })
+    });
+    workflow.fetchSubjects = function(group) {
+      var limit;
+      workflow.trigger('fetching-subjects');
+      workflow.enough = new $.Deferred;
+      limit = workflow.queueLength - workflow.length;
+      workflow.subjects = Sample;
+      if (workflow.subjects.length > workflow.selectionLength) {
+        return workflow.enough.resolve(workflow.subjects);
+      }
+    };
     config.set({
       name: 'Andromeda Project',
       slug: 'andromeda-project',
@@ -29,26 +60,7 @@
         languages: ['en'],
         projects: new Project({
           id: ids.project,
-          workflows: new Workflow({
-            id: ids.workflow,
-            tutorialSubjects: new Subject({
-              id: ids.tutorialSubject,
-              location: {
-                standard: "subjects/standard/tutorial.jpg",
-                thumbnail: "subjects/standard/tutorial.jpg"
-              },
-              coords: [0, 0],
-              metadata: {
-                depth: 0,
-                altitude: 0,
-                heading: 0,
-                salinity: 0,
-                temperature: 0,
-                speed: 0,
-                mm_pix: 1
-              }
-            })
-          })
+          workflows: workflow
         })
       })
     });
