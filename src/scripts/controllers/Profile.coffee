@@ -29,19 +29,11 @@ define (require, exports, module) ->
 
     elements: $.extend
       '.summary .username': 'usernameContainer'
-      '.summary .map': 'mapContainer'
       '.summary .scoreboard': 'scoreboardContainer'
       ZooniverseProfile::elements
 
     constructor: ->
       super
-
-      @map = new Map
-        el: @mapContainer
-        latitude: 40
-        longitude: -75
-        zoom: 5
-        cartoLogo: true
 
       @scoreboard = new Scoreboard
         el: @scoreboardContainer
@@ -50,17 +42,8 @@ define (require, exports, module) ->
     userChanged: =>
       super
 
-      @map.removeLayer @userLayer if @userLayer?
-
       if User.current?
         @usernameContainer.html User.current.name
-
-        query = "SELECT * FROM #{config.cartoTable} WHERE user_id='#{User.current.id}'"
-        url = "http://#{config.cartoUser}.cartodb.com/tiles/#{config.cartoTable}/{z}/{x}/{y}.png?sql=#{query}"
-
-        delay =>
-          @userLayer = @map.addLayer url
-          @map.resized()
 
     signOut: (e) =>
       e.preventDefault()

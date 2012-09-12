@@ -18,10 +18,10 @@
     ImageFlipper = require('controllers/ImageFlipper');
     config.set({
       name: 'Andromeda Project',
-      slug: 'seafloor-explorer',
+      slug: 'andromeda-project',
       description: 'Help find star clusters and galaxies in M31!',
-      domain: 'seafloorExplorer.org',
-      talkHost: 'http://talk.seafloorexplorer.org',
+      domain: 'andromedaproject.org',
+      talkHost: 'http://talk.andromedaproject.org',
       cartoUser: 'the-zooniverse',
       cartoTable: 'seafloor_explorer',
       googleAnalytics: 'UA-1224199-30'

@@ -4,7 +4,7 @@ define (require, exports, module) ->
 
 		<div class="options">
 			<div class="steps">
-				<div data-page="species" class="species">
+				<div data-page="species" class="species active">
 					<h4>Objects in this image</h4>
 
 					<ul class="toggles">

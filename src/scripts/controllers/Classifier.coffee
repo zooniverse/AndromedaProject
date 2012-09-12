@@ -6,15 +6,15 @@ define (require, exports, module) ->
 
   ZooniverseClassifier = require 'zooniverse/controllers/Classifier'
 
-  Classification = require 'zooniverse/models/Classification'
-  Annotation = require 'zooniverse/models/Annotation'
-  User = require 'zooniverse/models/User'
+  Classification  = require 'zooniverse/models/Classification'
+  Annotation      = require 'zooniverse/models/Annotation'
+  User            = require 'zooniverse/models/User'
 
-  CreaturePicker = require 'controllers/CreaturePicker'
+  CreaturePicker  = require 'controllers/CreaturePicker'
   MarkerIndicator = require 'controllers/MarkerIndicator'
-  Pager = require 'zooniverse/controllers/Pager'
+  Pager           = require 'zooniverse/controllers/Pager'
 
-  TEMPLATE = require 'views/Classifier'
+  TEMPLATE        = require 'views/Classifier'
 
   class Classifier extends ZooniverseClassifier
     template: TEMPLATE
@@ -75,7 +75,6 @@ define (require, exports, module) ->
 
     render: =>
       @renderSpeciesPage()
-      location.hash = '#!/classify/species'
 
     renderSpeciesPage: =>
       selectedMarker = (m for m in @picker.markers when m.selected)[0]
