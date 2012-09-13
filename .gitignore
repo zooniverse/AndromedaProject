@@ -6,3 +6,5 @@ subjects/standard
 subjects/thumbnails
 alpha/
 build*/
+tiles/
+builder.rb

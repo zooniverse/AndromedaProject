@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    var $, App, Classifier, ImageFlipper, Profile, Project, Sample, Scoreboard, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, workflow, _i, _len, _ref, _results;
+    var $, App, Classifier, ImageFlipper, Profile, Project, Sample, Scoreboard, Sky, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, workflow, _i, _len, _ref, _results;
     $ = require('jQuery');
     config = require('zooniverse/config');
     ids = require('ids');
@@ -15,6 +15,7 @@
     Scoreboard = require('controllers/Scoreboard');
     Profile = require('controllers/Profile');
     ImageFlipper = require('controllers/ImageFlipper');
+    Sky = require('controllers/Sky');
     Sample = require('sample');
     workflow = new Workflow({
       id: ids.workflow,
@@ -36,16 +37,6 @@
         }
       })
     });
-    workflow.fetchSubjects = function(group) {
-      var limit;
-      workflow.trigger('fetching-subjects');
-      workflow.enough = new $.Deferred;
-      limit = workflow.queueLength - workflow.length;
-      workflow.subjects = Sample.generate();
-      if (workflow.subjects.length > workflow.selectionLength) {
-        return workflow.enough.resolve(workflow.subjects);
-      }
-    };
     config.set({
       name: 'Andromeda Project',
       slug: 'andromeda-project',
@@ -58,6 +49,7 @@
       app: new App({
         el: '#main',
         languages: ['en'],
+        appName: 'Andromeda Project',
         projects: new Project({
           id: ids.project,
           workflows: workflow
@@ -65,6 +57,9 @@
       })
     });
     config.set({
+      sky: new Sky({
+        el: '#banner'
+      }),
       classifier: new Classifier({
         el: '#classifier',
         tutorialSteps: tutorialSteps,
