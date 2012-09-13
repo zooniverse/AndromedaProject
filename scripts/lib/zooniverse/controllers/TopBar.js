@@ -2,176 +2,189 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require, exports, module) {
-    var $, LoginForm, Spine, TopBar, User, delay, remove, template, _ref;
-    Spine = require('Spine');
-    $ = require('jQuery');
-    _ref = require('zooniverse/util'), delay = _ref.delay, remove = _ref.remove;
+    var Controller, Dialog, LoginForm, TopBar, User, template;
     User = require('zooniverse/models/User');
-    LoginForm = require('zooniverse/controllers/LoginForm');
+    Controller = require('Spine').Controller;
     template = require('zooniverse/views/TopBar');
+    Dialog = require('zooniverse/controllers/Dialog');
+    LoginForm = require('zooniverse/controllers/LoginForm');
     TopBar = (function(_super) {
 
       __extends(TopBar, _super);
 
-      TopBar.instance = null;
-
-      TopBar.prototype.languages = null;
-
-      TopBar.prototype.langMap = {
-        en: 'English',
-        po: 'Polski',
-        de: 'Deutsche'
-      };
-
-      TopBar.prototype.dropdownsToHide = null;
-
       TopBar.prototype.className = 'zooniverse-top-bar';
 
-      TopBar.prototype.template = template;
-
-      TopBar.prototype.app = null;
-
       TopBar.prototype.events = {
-        'mouseenter .z-dropdown': 'onDropdownEnter',
-        'mouseleave .z-dropdown': 'onDropdownLeave',
-        'click .z-accordion > :first-child': 'onAccordionClick',
-        'click .z-languages a': 'changeLanguage'
+        'click button[name="login"]': 'logIn',
+        'click button[name="signup"]': 'startSignUp',
+        'click button[name="signout"]': 'signOut',
+        'keypress input': 'logInOnEnter',
+        'click a.top-bar-button': 'toggleDisplay',
+        'change select.language': 'setLanguage'
       };
 
       TopBar.prototype.elements = {
-        '.z-languages > :first-child': 'languageLabel',
-        '.z-languages :last-child': 'languageList',
-        '.z-login > :first-child': 'usernameContainer',
-        '.z-login > :last-child': 'loginFormContainer'
+        '#zooniverse-top-bar-container': 'container',
+        '#app-name': 'appNameContainer',
+        '#zooniverse-top-bar-login .login': 'loginContainer',
+        '#zooniverse-top-bar-login .welcome': 'welcomeContainer',
+        'select.language': 'langSelect',
+        '.login .progress': 'progress',
+        '.login .errors': 'errors'
       };
 
       function TopBar() {
-        this.updateLogin = __bind(this.updateLogin, this);
+        this.logInOnEnter = __bind(this.logInOnEnter, this);
 
-        this.updateLanguages = __bind(this.updateLanguages, this);
+        this.setLanguage = __bind(this.setLanguage, this);
 
-        var accordionContainers, dropdownContainers;
-        if (this.constructor.instance != null) {
-          return this.constructor.instance;
-        }
-        this.constructor.instance = this;
+        this.initLanguages = __bind(this.initLanguages, this);
+
+        this.onError = __bind(this.onError, this);
+
+        this.setUser = __bind(this.setUser, this);
+
+        this.render = __bind(this.render, this);
+
+        this.toggleDisplay = __bind(this.toggleDisplay, this);
+
+        this.startSignUp = __bind(this.startSignUp, this);
+
+        this.signOut = __bind(this.signOut, this);
+
+        this.logIn = __bind(this.logIn, this);
+
+        var _this = this;
         TopBar.__super__.constructor.apply(this, arguments);
-        this.dropdownsToHide = [];
-        this.html(this.template);
-        dropdownContainers = this.el.find('.z-dropdown').children(':last-child');
-        dropdownContainers.css({
-          display: 'none',
-          opacity: 0
-        });
-        accordionContainers = this.el.find('.z-accordion > :last-child');
-        accordionContainers.css({
-          height: 0,
-          opacity: 0
-        });
-        this.updateLanguages();
-        User.bind('sign-in', this.updateLogin);
-        new LoginForm({
-          el: this.loginFormContainer
-        });
-        this.updateLogin();
-        this.el.find(':last-child').addClass('last-child');
+        this.app || (this.app = "test");
+        this.appName || (this.appName = "Test Name");
+        this.currentLanguage || (this.currentLanguage = 'en');
+        User.bind('sign-in', this.setUser);
+        User.bind('sign-in-error', this.onError);
+        this.render();
+        this.setAppName();
+        this.initLanguages();
+        this.setUser();
+        if (User.currentChecked) {
+          if (!User.current) {
+            this.toggleDisplay();
+          }
+        } else {
+          User.bind('sign-in', function() {
+            if (User.currentChecked) {
+              return;
+            }
+            if (!User.current) {
+              return _this.toggleDisplay();
+            }
+          });
+        }
       }
 
-      TopBar.prototype.updateLanguages = function() {
-        var lang, _i, _len, _ref1, _results;
-        this.languageLabel.empty();
-        this.languageList.empty();
-        _ref1 = this.languages;
-        _results = [];
-        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-          lang = _ref1[_i];
-          this.languageLabel.append("<span lang=\"" + lang + "\">" + (lang.toUpperCase()) + "</span>");
-          _results.push(this.languageList.append("<li><a href=\"#" + lang + "\">" + (lang.toUpperCase()) + " <em>" + this.langMap[lang] + "</em></a></li>"));
+      TopBar.prototype.logIn = function(e) {
+        var auth, password, username;
+        username = this.el.find('input[name="username"]').val();
+        password = this.el.find('input[name="password"]').val();
+        if ((username !== '') && (password !== '')) {
+          this.el.find('.progress').show();
+          auth = User.authenticate({
+            username: username,
+            password: password
+          });
+          return auth.fail(this.onError);
         }
-        return _results;
       };
 
-      TopBar.prototype.updateLogin = function() {
-        var _ref1;
-        return this.usernameContainer.html(((_ref1 = User.current) != null ? _ref1.name : void 0) || 'Sign in');
+      TopBar.prototype.signOut = function(e) {
+        return User.deauthenticate();
       };
 
-      TopBar.prototype.onDropdownEnter = function(e) {
-        var container, target;
-        target = $(e.currentTarget);
-        container = target.children().last();
-        remove(target, {
-          from: this.dropdownsToHide
+      TopBar.prototype.startSignUp = function(e) {
+        var dialog, loginForm;
+        dialog = new Dialog({
+          content: '',
+          buttons: [
+            {
+              'Cancel': null
+            }
+          ],
+          target: this.el.parent(),
+          className: 'classifier'
         });
-        container.css({
-          display: ''
-        });
-        return container.stop().animate({
-          opacity: 1
-        }, 1);
+        loginForm = new LoginForm;
+        dialog.contentContainer.append(loginForm.el);
+        loginForm.signUp();
+        return dialog.reposition();
       };
 
-      TopBar.prototype.onDropdownLeave = function(e) {
-        var container, target,
-          _this = this;
-        target = $(e.currentTarget);
-        container = target.children().last();
-        this.dropdownsToHide.push(target);
-        return delay(1, function() {
-          if (__indexOf.call(_this.dropdownsToHide, target) < 0) {
-            return;
+      TopBar.prototype.toggleDisplay = function(e) {
+        if (e != null) {
+          e.preventDefault();
+        }
+        return this.el.parent().toggleClass('show-top-bar');
+      };
+
+      TopBar.prototype.render = function() {
+        return this.html(template);
+      };
+
+      TopBar.prototype.setAppName = function() {
+        return this.appNameContainer.append(this.appName);
+      };
+
+      TopBar.prototype.setUser = function() {
+        if (User.current) {
+          this.loginContainer.hide();
+          this.errors.empty();
+          this.welcomeContainer.html(this.userGreeting(User.current.name));
+          this.welcomeContainer.show();
+          if (this.el.parent().hasClass('show-top-bar')) {
+            return setTimeout(this.toggleDisplay, 1000);
           }
-          return container.stop().animate({
-            opacity: 0
-          }, 1, function() {
-            return delay(function() {
-              return container.css({
-                display: 'none'
-              });
-            });
-          });
-        });
-      };
-
-      TopBar.prototype.onAccordionClick = function(e) {
-        var closed, container, naturalHeight, target;
-        target = $(e.currentTarget).parent();
-        container = target.children().last();
-        closed = container.height() === 0;
-        if (closed) {
-          container.css({
-            height: ''
-          });
-          naturalHeight = container.height();
-          container.css({
-            height: 0
-          });
-          return container.animate({
-            height: naturalHeight,
-            opacity: 1
-          });
         } else {
-          return container.animate({
-            height: 0,
-            opacity: 0
-          });
+          this.welcomeContainer.hide();
+          this.loginContainer.show();
+          return this.progress.hide();
         }
       };
 
-      TopBar.prototype.changeLanguage = function(e) {
-        var lang;
-        e.preventDefault();
-        lang = e.currentTarget.hash.slice(-2);
-        return this.el.trigger('request-translation', lang);
+      TopBar.prototype.userGreeting = function(user) {
+        return "<div class=\"inputs\">\n  <h3> Hi, <strong>" + user + "</strong>. Welcome to " + this.appName + "!</h3>\n</div>\n<div class=\"buttons\">\n  <button name=\"signout\" type=\"button\">Sign Out</button>\n</div>";
+      };
+
+      TopBar.prototype.onError = function(error) {
+        this.progress.hide();
+        this.errors.text(error);
+        return this.errors.show();
+      };
+
+      TopBar.prototype.initLanguages = function() {
+        var longLang, shortLang, _ref;
+        _ref = this.languages;
+        for (shortLang in _ref) {
+          longLang = _ref[shortLang];
+          this.langSelect.append("<option value=\"" + shortLang + "\">" + (shortLang.toUpperCase()) + "</option>");
+        }
+        return this.langSelect.val('en');
+      };
+
+      TopBar.prototype.setLanguage = function(e) {
+        this.currentLanguage = this.langSelect.val();
+        return this.el.trigger('request-translation', this.currentLanguage);
+      };
+
+      TopBar.prototype.logInOnEnter = function(e) {
+        if (e.keyCode === 13) {
+          return this.logIn();
+        }
       };
 
       return TopBar;
 
-    })(Spine.Controller);
+    })(Controller);
     return module.exports = TopBar;
   });
 

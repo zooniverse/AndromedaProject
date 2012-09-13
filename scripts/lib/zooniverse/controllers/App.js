@@ -18,6 +18,8 @@
 
       __extends(App, _super);
 
+      App.prototype.appName = '';
+
       App.prototype.languages = null;
 
       App.prototype.projects = null;
@@ -55,7 +57,8 @@
 
       App.prototype.initTopBar = function() {
         this.topBar = new TopBar({
-          languages: this.languages
+          languages: this.languages,
+          appName: this.appName
         });
         return this.topBar.el.prependTo('body');
       };

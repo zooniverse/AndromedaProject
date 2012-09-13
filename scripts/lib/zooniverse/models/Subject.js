@@ -58,7 +58,9 @@
       };
 
       Subject.prototype.facebookHref = function() {
-        return joinLines("https://www.facebook.com/dialog/feed?\napp_id=" + config.facebookAppId + "&\nlink=" + (this.talkHref()) + "&\npicture=" + (this.location.image || this.location) + "&\nname=" + config.name + "&\ncaption=A Zooniverse citizen science project&\ndescription=" + config.description + "&\nredirect_uri=" + location.href);
+        var text;
+        text = "I've classified something on " + config.name + "!";
+        return "http://www.facebook.com/sharer.php?u=" + (this.talkHref());
       };
 
       Subject.prototype.twitterHref = function() {

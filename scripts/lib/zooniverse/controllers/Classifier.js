@@ -5,7 +5,7 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require, exports, module) {
-    var $, Classification, Classifier, Dialog, Favorite, Recent, Spine, Tutorial, User, arraysMatch, delay, _ref;
+    var $, Classification, Classifier, Dialog, Favorite, LoginForm, Recent, Spine, Tutorial, User, arraysMatch, delay, _ref;
     Spine = require('Spine');
     $ = require('jQuery');
     _ref = require('zooniverse/util'), delay = _ref.delay, arraysMatch = _ref.arraysMatch;
@@ -15,6 +15,7 @@
     Recent = require('zooniverse/models/Recent');
     Tutorial = require('zooniverse/controllers/Tutorial');
     Dialog = require('zooniverse/controllers/Dialog');
+    LoginForm = require('zooniverse/controllers/LoginForm');
     Classifier = (function(_super) {
 
       __extends(Classifier, _super);
@@ -32,6 +33,8 @@
       Classifier.prototype.events = {};
 
       Classifier.prototype.elements = {};
+
+      Classifier.prototype.classificationsThisSession = 0;
 
       function Classifier() {
         this.noMoreSubjects = __bind(this.noMoreSubjects, this);
@@ -136,6 +139,7 @@
       };
 
       Classifier.prototype.saveClassification = function() {
+        this.classificationsThisSession += 1;
         this.classification.persist();
         return Recent.create({
           subjects: this.workflow.selection
@@ -181,7 +185,40 @@
       };
 
       Classifier.prototype.nextSubjects = function() {
-        var _this = this;
+        var dialog, _ref1,
+          _this = this;
+        if (((_ref1 = this.classificationsThisSession) === 3 || _ref1 === 9) && !User.current) {
+          dialog = new Dialog({
+            content: $('<div></div>').append('<p>You\'re not signed in!</p>\n<p>Sign in or create an account to receive credit for your work.</p>').html(),
+            buttons: [
+              {
+                'Log in': true
+              }, {
+                'No thanks': false
+              }
+            ],
+            target: this.el.parent(),
+            className: 'classifier',
+            done: function(logIn) {
+              var loginForm;
+              if (logIn) {
+                dialog = new Dialog({
+                  content: '',
+                  buttons: [
+                    {
+                      'Cancel': null
+                    }
+                  ],
+                  target: _this.el.parent(),
+                  className: 'classifier'
+                });
+                loginForm = new LoginForm;
+                dialog.contentContainer.append(loginForm.el);
+                return dialog.reposition();
+              }
+            }
+          });
+        }
         return this.workflow.fetchSubjects().done(function() {
           return _this.workflow.selectNext();
         });

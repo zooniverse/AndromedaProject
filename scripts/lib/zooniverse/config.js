@@ -19,7 +19,7 @@
       return _results;
     };
     config.set({
-      dev: +location.port < 1023 || !!~location.hostname.indexOf('.dev')
+      dev: +location.port > 1023 || !!~location.hostname.indexOf('.dev')
     });
     config.set({
       apiHost: 'https://api.zooniverse.org',
