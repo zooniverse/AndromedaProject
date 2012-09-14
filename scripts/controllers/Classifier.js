@@ -34,8 +34,7 @@
         'click .favorite .create button': 'createFavorite',
         'click .favorite .destroy button': 'destroyFavorite',
         'click .talk [value="yes"]': 'goToTalk',
-        'click .talk [value="no"]': 'nextSubjects',
-        'click .tutorial-again': 'startTutorial'
+        'click .talk [value="no"]': 'nextSubjects'
       };
 
       Classifier.prototype.elements = {
