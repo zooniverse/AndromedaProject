@@ -1,14 +1,10 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000034}}
-.main [data-page="home"] .map {
-  height: 250px;
-  width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000034}}
 .main [data-page="home"] #banner {
-  background-width: 100%;
-  position: relative;
+  border-top: 5px solid #000000;
+  height: 300px;
   width: 100%;
-  height: 400px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000317}}
+  margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000311}}
 .main [data-page="home"] .dive-in {
   background-image: -moz-linear-gradient(top, #fd9000, #f56205);
   background-image: -ms-linear-gradient(top, #fd9000, #f56205);

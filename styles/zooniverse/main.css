@@ -7,221 +7,249 @@ html[lang="po"] [lang="en"],
 html[lang="po"] [lang="de"] {
   display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\000032}}
-.zooniverse-login-form > .errors {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\000033}}
+.zooniverse-profile > .profile {
   display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\000038}}
-.zooniverse-login-form > .waiting {
-  display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\0000312}}
-.zooniverse-login-form > .sign-out {
-  display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\0000317}}
-.zooniverse-login-form.waiting > .sign-in {
-  opacity: 0.5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\0000321}}
-.zooniverse-login-form.waiting > .waiting {
-  display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\0000327}}
-.zooniverse-login-form.has-error > .errors {
-  display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\0000335}}
-.zooniverse-login-form.signed-in > .errors,
-.zooniverse-login-form.signed-in > .sign-in,
-.zooniverse-login-form.signed-in > .waiting {
-  display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_login-form\.scss}line{font-family:\0000339}}
-.zooniverse-login-form.signed-in > .sign-out {
-  display: block; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\000034}}
-.zooniverse-profile .favorites ul,
-.zooniverse-profile .recents ul,
-.zooniverse-profile .groups ul {
-  display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\000038}}
+  .zooniverse-profile > .profile .favorites ul,
+  .zooniverse-profile > .profile .recents ul,
+  .zooniverse-profile > .profile .groups ul {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000316}}
 .zooniverse-profile.has-favorites .favorites .none, .zooniverse-profile.has-recents .recents .none, .zooniverse-profile.has-groups .groups .none {
   display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000320}}
 .zooniverse-profile.has-favorites .favorites ul, .zooniverse-profile.has-recents .recents ul, .zooniverse-profile.has-groups .groups ul {
   display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000326}}
+.zooniverse-profile.signed-in > .login-form {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_profile\.scss}line{font-family:\0000330}}
+.zooniverse-profile.signed-in > .profile {
+  display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\000037}}
+body {
+  -moz-transition: top 0.5s ease-in-out;
+  -ms-transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+  position: relative;
+  top: -100px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000316}}
+body.show-top-bar {
+  top: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000320}}
 .zooniverse-top-bar {
-  background: #111111;
-  color: #dddddd;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  left: 0;
-  letter-spacing: 1px;
-  position: absolute;
-  text-transform: uppercase;
+  margin: 0;
+  position: relative;
   top: 0;
+  left: 0;
+  box-shadow: 10px;
   width: 100%;
-  z-index: 100; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000346}}
-  .zooniverse-top-bar > div {
-    margin: 0 auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000350}}
-  .zooniverse-top-bar a {
+  z-index: 999; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000329}}
+  .zooniverse-top-bar label {
+    display: block;
+    font-size: 11px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000334}}
+  .zooniverse-top-bar input, .zooniverse-top-bar button, .zooniverse-top-bar select {
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000340}}
+  .zooniverse-top-bar button {
+    border: 1px solid #979797;
+    box-shadow: inset 0px 1px 0px white, 0px 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    color: inherit; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000348}}
+  .zooniverse-top-bar input[type="text"], .zooniverse-top-bar input[type="password"] {
+    width: 115px;
+    margin-right: 5px;
+    padding-left: 5px;
+    background: #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #C1C1C1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000357}}
+  .zooniverse-top-bar button {
     color: inherit;
-    text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000355}}
-  .zooniverse-top-bar a.z-logo {
-    background: url("lib/zooniverse/zooniverse-logo.png") center 5px no-repeat;
-    color: transparent;
-    display: inline-block;
-    height: 14px;
-    letter-spacing: -2em;
-    overflow: hidden;
-    text-indent: -4em;
-    width: 120px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000365}}
-    .zooniverse-top-bar a.z-logo:hover {
-      background-position: center -39px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000370}}
-  .zooniverse-top-bar ul {
-    margin: 0;
-    padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000374}}
-    .zooniverse-top-bar ul > li {
-      display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000380}}
-  .zooniverse-top-bar > div > ul {
+    width: 85px;
+    margin-right: 20px;
+    padding-bottom: 2px;
+    margin-right: 10px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000366}}
+  .zooniverse-top-bar button[name="signout"] {
+    margin-left: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000371}}
+#zooniverse-top-bar-container {
+  padding: 30px;
+  display: block;
+  background: #f7f7f7;
+  color: inherit;
+  font-family: "Open Sans";
+  height: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000379}}
+  #zooniverse-top-bar-container h3 {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 10px;
+    margin-top: 0;
+    margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000386}}
+    #zooniverse-top-bar-container h3 strong {
+      font-weight: 700; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000391}}
+  #zooniverse-top-bar-container p {
+    font-size: 11px;
+    margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000396}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-info {
     float: left;
-    margin-left: 1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000384}}
-    .zooniverse-top-bar > div > ul > li {
-      float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000387}}
-      .zooniverse-top-bar > div > ul > li > :first-child {
-        display: block;
-        padding: 6px 16px;
-        border-right: 1px solid #555555;
-        cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
-        .zooniverse-top-bar > div > ul > li > :first-child:hover {
-          color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000394}}
-    .zooniverse-top-bar > div > ul.last-child {
-      float: right;
-      margin-right: 1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000398}}
-      .zooniverse-top-bar > div > ul.last-child > li > :first-child {
-        border-left: 1px solid #555555;
-        border-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003106}}
-    .zooniverse-top-bar > div > ul .z-dropdown {
-      position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003109}}
-      .zooniverse-top-bar > div > ul .z-dropdown > .last-child {
-        background: #111111;
-        border: 1px solid #555555;
-          border-radius: 0 0 4px 4px;
-          border-top: 0;
-        left: -1px;
-        margin-top: 1px;
-        min-width: 100%;
-        overflow: hidden;
-        position: absolute;
-        top: 100%;
-        white-space: nowrap; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003124}}
-      .zooniverse-top-bar > div > ul .z-dropdown:hover {
-        z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003130}}
-      .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a {
-        display: block;
-        padding: 6px 16px;
-        border-top: 1px solid #555555;
-        cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
-        .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a:hover {
-          color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
-        .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a:hover {
-          background: #111111; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
-        .zooniverse-top-bar > div > ul .z-dropdown > ul > li > a > em {
-          color: #555555;
-          font-style: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003138}}
-    .zooniverse-top-bar > div > ul.last-child .z-dropdown > .last-child {
-      left: auto;
-      right: -1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003144}}
-    .zooniverse-top-bar > div > ul .z-accordion > :first-child {
-      display: block;
-      padding: 6px 16px;
-      border-top: 1px solid #555555;
-      cursor: pointer;
-      font-size: 16px;
-      text-align: center;
-      text-transform: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
-      .zooniverse-top-bar > div > ul .z-accordion > :first-child:hover {
-        color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
-      .zooniverse-top-bar > div > ul .z-accordion > :first-child:hover {
-        background: #111111; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
-      .zooniverse-top-bar > div > ul .z-accordion > :first-child > em {
-        color: #555555;
-        font-style: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003152}}
-    .zooniverse-top-bar > div > ul .z-accordion > .last-child {
-      overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003156}}
-      .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a {
-        display: block;
-        padding: 6px 16px;
-        border-top: 1px solid #555555;
-        cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000310}}
-        .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a:hover {
-          color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
-        .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a:hover {
-          background: #111111; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
-        .zooniverse-top-bar > div > ul .z-accordion > .last-child > li a > em {
-          color: #555555;
-          font-style: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003164}}
-    .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form {
-      border-top: 1px solid #555555; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003167}}
-      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form label {
-        display: block;
-        margin: 15px 0;
-        text-align: center; }
+    padding-right: 10px;
+    width: 470px;
+    border-right: 1px solid;
+    height: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003104}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-projects {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    float: left;
+    padding-left: 10px;
+    padding-right: 15px;
+    width: 300px;
+    height: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003112}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-projects a {
+      font-weight: 700;
+      color: inherit;
+      text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003118}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-projects h3 a {
+      font-weight: 200; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003123}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-login {
+    float: right;
+    height: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003127}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-login h3 {
+      display: inline;
+      line-height: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003132}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-login .progress {
+      display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003136}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-login .inputs {
+      display: inline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003140}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-login .buttons {
+      display: inline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003145}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-languages {
+    float: right;
+    height: 45px;
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003150}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-languages select {
+      background: #f7f7f7;
+      color: inherit;
+      margin-top: 12px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding: 5px;
+      border: 0;
+      margin-right: -5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003162}}
+#zooniverse-top-bar-button {
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  margin-left: -500px;
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 0px 0px 5px 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003172}}
-        .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form label > span {
-          display: inline-block;
-          width: 10em; }
+  #zooniverse-top-bar-button img {
+    margin-left: 10px;
+    margin-top: 10px; }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003178}}
-      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form p {
-        margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003182}}
-      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form button {
-        border-top: 1px solid #555555;
-        cursor: pointer;
-        background: transparent;
-        border: 1px solid #555555;
-        color: inherit;
-        font-family: inherit;
-        font-style: inherit;
-        font-weight: inherit;
-        padding: 0.25em 1.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000319}}
-        .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form button:hover {
-          background: #111111; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\0000323}}
-        .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form button > em {
-          color: #555555;
-          font-style: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003195}}
-      .zooniverse-top-bar > div > ul .z-login > .zooniverse-login-form > div {
-        margin: 20px;
-        text-align: right; }
+.dialog.sign-up {
+  height: 325px;
+  width: 300px;
+  font-family: "Open Sans";
+  padding: 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003184}}
+  .dialog.sign-up label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 11px;
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003190}}
+    .dialog.sign-up label > span {
+      display: inline-block;
+      width: 15em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003196}}
+    .dialog.sign-up label input[type="text"],
+    .dialog.sign-up label input[type="password"] {
+      width: 150px;
+      margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003202}}
+  .dialog.sign-up p {
+    margin: 0;
+    text-align: center;
+    font-size: 11px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003208}}
+  .dialog.sign-up p.errors {
+    font-size: 11px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003212}}
+  .dialog.sign-up button[type="submit"] {
+    padding: 0.25em 1.5em;
+    margin-left: 5px;
+    width: 85px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003218}}
+  .dialog.sign-up button.dialog-closer {
+    float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003222}}
+  .dialog.sign-up > div {
+    margin: 20px;
+    text-align: center; }
+
+@media (max-width: 1385px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003230}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-info {
+    width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003233}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-info h3 {
+      margin-top: 17px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003237}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-info p {
+      display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003242}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-projects {
+    width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003245}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-projects h3 {
+      margin-top: 17px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003249}}
+    #zooniverse-top-bar-container #zooniverse-top-bar-projects p {
+      display: none; } }
+@media (max-width: 1050px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003257}}
+  #zooniverse-top-bar-container {
+    padding-left: 15px;
+    padding-right: 15px; } }
+@media (max-width: 990px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003265}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-info {
+    border: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/scripts\/lib\/zooniverse\/styles\/_top-bar\.scss}line{font-family:\00003269}}
+  #zooniverse-top-bar-container #zooniverse-top-bar-projects {
+    display: none; } }
