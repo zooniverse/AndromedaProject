@@ -103,6 +103,12 @@ body {
             }
           }
         }
+        
+        > li.inactive {
+          opacity: 0.25;
+          cursor: default;
+        }
+        
       }
     }
   }

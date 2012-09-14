@@ -1,17 +1,11 @@
 @import "common";
 
 .main [data-page="home"] {
-  .map {
-    height: 250px;
-    width: 100%;
-  }
-  
   #banner {
-    // background: url('../images/navigation/m31.jpg');
-    background-width: 100%;
-    position: relative;
+    border-top: 5px solid #000000;
+    height: 300px;
     width: 100%;
-    height: 400px;
+    margin-bottom: 20px;
   }
 
   .dive-in {
