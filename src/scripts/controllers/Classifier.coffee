@@ -67,7 +67,8 @@ define (require, exports, module) ->
         value: otherSpecies: null
 
       @changeSpecies null
-
+      @speciesFinishedButton.attr 'disabled'
+      
       @steps.removeClass 'finished'
 
       delay 500, =>
@@ -87,11 +88,12 @@ define (require, exports, module) ->
         countElement = button.find '.count'
         countElement.html parseInt(countElement.html(), 10) + 1
 
-      return unless @otherSpeciesAnnotation
-      @otherYes.toggleClass 'active', @otherSpeciesAnnotation.value.otherSpecies is true
-      @otherNo.toggleClass 'active', @otherSpeciesAnnotation.value.otherSpecies is false
+      return unless @otherSpeciesAnnotation    
+      @otherYes.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
+      @otherNo.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
 
-      @speciesFinishedButton.attr 'disabled', not @otherSpeciesAnnotation.value.otherSpecies?
+      @speciesFinishedButton.attr 'disabled', not @otherSpeciesAnnotation.value.otherSpecies? 
+      $('#artefact-list').hide() if @otherSpeciesAnnotation.value.otherSpecies is null
 
     updateFavoriteButtons: =>
       signedIn = User.current?
@@ -118,7 +120,10 @@ define (require, exports, module) ->
       target = $(e.target)
       $('#artefact-list').slideDown() if target.val() is "yes"
       $('#artefact-list').slideUp() if target.val() is "no"
-
+      
+      @otherSpeciesAnnotation.value.otherSpecies = 1 if target.val() is "yes"
+      @otherSpeciesAnnotation.value.otherSpecies = 0 if target.val() is "no"
+      
       @otherYes.addClass 'active' if target.val() is "yes" 
       @otherNo.addClass 'active' if target.val() is "no" 
       @otherYes.removeClass 'active' if target.val() is "no" 
@@ -128,8 +133,9 @@ define (require, exports, module) ->
  
     changeOther: (e) =>
       target = $(e.target)
-      value = target.val() is 'yes'
+      value = target.val()
       @otherSpeciesAnnotation.value.otherSpecies = value
+      console.log("value"+@otherSpeciesAnnotation.value.otherSpecies)
       @classification.trigger 'change'
 
     finishSpecies: =>
