@@ -96,6 +96,7 @@
 
       Tutorial.prototype.start = function() {
         var _ref;
+        return;
         if ((_ref = this.steps[this.current]) != null) {
           _ref.leave();
         }
