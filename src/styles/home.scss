@@ -2,26 +2,38 @@
 
 .main [data-page="home"] {
   #banner {
+    background: url('../images/navigation/m31.jpg');
     border-top: 5px solid #000000;
     height: 400px;
     width: 100%;
     margin-bottom: 20px;
   }
+  
+  h2 {
+    font-size: 2.0em;
+    font-weight: 800;
+  } 
+  
+  p {
+    font-size: 1.0em;
+    font-weight: 400;
+  }
 
   .dive-in {
-    @include linear-gradient($orange, $orange-dark);
-    border: 1px solid $orange-darker {
+    @include linear-gradient(#dddddd, #cccccc);
+    border: 1px solid #222222 {
       radius: 3px;
     };
-    box-shadow: 0 1px 0 $orange-light inset;
-    color: $white;
+    box-shadow: 0 1px 0 #aaaaaa;
+    color: $black;
     float: right;
     margin-top: 10px;
-    font-size: 20px;
-    padding: ($gutter-width / 2) ($gutter-width * 3);
+    font-size: 18px;
+    font-weight: 500;
+    padding: ($gutter-width / 2) ($gutter-width * 2);
     text: {
       decoration: none;
-      shadow: 0 1px 0px $orange-dark;
+      shadow: 0 1px 0px #cccccc;
     }
   }
 }

@@ -14,7 +14,7 @@ body {
   margin: 0;
 
   &:before {
-    $barely-white: transparentize($white, 0.5);
+    $barely-white: transparentize($white, 0.6);
     $not-white: transparentize($white, 1);
     $gradient-width: $full-width * 1.5;
     $gradient-half-width: $gradient-width / 2;
@@ -25,7 +25,7 @@ body {
     left: 50%;
     margin: {
       left: -$gradient-half-width;
-      top: -$gradient-half-width;
+      top: -$gradient-half-width/2;
     };
     position: fixed;
     top: 50%;
@@ -54,6 +54,7 @@ body {
         > img {
           border: 0;
           display: block;
+          width: 250px;
         }
       }
     }

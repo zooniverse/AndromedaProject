@@ -69,8 +69,8 @@ define (require, exports, module) ->
         workflows: workflow
 
   config.set
-    sky: new Sky
-      el: '#banner'
+    # sky: new Sky
+    #   el: '#banner' 
     
     classifier: new Classifier
       el: '#classifier'
