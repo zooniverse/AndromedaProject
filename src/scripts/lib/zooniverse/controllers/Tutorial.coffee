@@ -64,7 +64,7 @@ define (require, exports, module) ->
       inactiveParentPages.length is 0 and @current < @steps.length
 
     start: =>
-      return  # To avoid teaching people how the site works
+      # return  # To avoid teaching people how the site works
       @steps[@current]?.leave()
 
       @el.css display: ''

@@ -96,6 +96,7 @@
           }
         });
         this.changeSpecies(null);
+        this.speciesFinishedButton.attr('disabled');
         this.steps.removeClass('finished');
         return delay(500, function() {
           return _this.updateFavoriteButtons();
@@ -134,9 +135,16 @@
         if (!this.otherSpeciesAnnotation) {
           return;
         }
-        this.otherYes.toggleClass('active', this.otherSpeciesAnnotation.value.otherSpecies === true);
-        this.otherNo.toggleClass('active', this.otherSpeciesAnnotation.value.otherSpecies === false);
-        return this.speciesFinishedButton.attr('disabled', !(this.otherSpeciesAnnotation.value.otherSpecies != null));
+        if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
+          this.otherYes.removeClass('active');
+        }
+        if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
+          this.otherNo.removeClass('active');
+        }
+        this.speciesFinishedButton.attr('disabled', !(this.otherSpeciesAnnotation.value.otherSpecies != null));
+        if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
+          return $('#artefact-list').hide();
+        }
       };
 
       Classifier.prototype.updateFavoriteButtons = function() {
@@ -173,6 +181,12 @@
           $('#artefact-list').slideUp();
         }
         if (target.val() === "yes") {
+          this.otherSpeciesAnnotation.value.otherSpecies = 1;
+        }
+        if (target.val() === "no") {
+          this.otherSpeciesAnnotation.value.otherSpecies = 0;
+        }
+        if (target.val() === "yes") {
           this.otherYes.addClass('active');
         }
         if (target.val() === "no") {
@@ -190,8 +204,9 @@
       Classifier.prototype.changeOther = function(e) {
         var target, value;
         target = $(e.target);
-        value = target.val() === 'yes';
+        value = target.val();
         this.otherSpeciesAnnotation.value.otherSpecies = value;
+        console.log("value" + this.otherSpeciesAnnotation.value.otherSpecies);
         return this.classification.trigger('change');
       };
 

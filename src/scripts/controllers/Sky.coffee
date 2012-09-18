@@ -52,7 +52,8 @@ define (require, exports, module) ->
           s: s
 
         url = convertTileUrl(tilePoint.x, tilePoint.y, 1, zoom)
-        return "/tiles/#{url.src}.jpg"
+        return "http://0.0.0.0:8000/coadd-tiles/#{url.src}.jpg"
+        # return "/tiles/#{url.src}.jpg"
 
       layer.addTo map
   

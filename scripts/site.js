@@ -57,9 +57,6 @@
       })
     });
     config.set({
-      sky: new Sky({
-        el: '#banner'
-      }),
       classifier: new Classifier({
         el: '#classifier',
         tutorialSteps: tutorialSteps,

@@ -65,17 +65,17 @@
           image: 'images/indicator/cross.png',
           points: [
             {
-              x: 10,
-              y: 1
+              x: 50,
+              y: 5
             }, {
-              x: 30,
-              y: 40
+              x: 91,
+              y: 68
             }, {
-              x: 5,
-              y: 45
+              x: 105,
+              y: 79
             }, {
-              x: 75,
-              y: 45
+              x: 40,
+              y: 32
             }
           ]
         },

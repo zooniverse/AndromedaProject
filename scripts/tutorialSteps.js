@@ -6,9 +6,24 @@
     Step = require('zooniverse/controllers/Tutorial').Step;
     return module.exports = [
       new Step({
-        heading: 'Welcome to Seafloor Explorer!',
+        heading: 'Welcome to the Andromeda Project!',
         content: ['This short tutorial will guide you through the classification process.', 'Please read each step carefully and follow the instructions.'],
         continueText: 'Begin',
+        style: {
+          width: 450
+        },
+        attach: {
+          to: '.creature-picker',
+          at: {
+            x: 0.5,
+            y: 0.5
+          }
+        },
+        block: '.options'
+      }), new Step({
+        heading: 'Identify star clusters',
+        content: ['Let\'s identify star clusters in the image.', 'Star clusters show up more clearly in the blue band of the optical spectrum.', 'In this image we can see two clusters.', 'We\'ll mark these first.'],
+        continueText: 'Next',
         style: {
           width: 450
         },
@@ -17,138 +32,64 @@
         },
         block: '.options'
       }), new Step({
-        heading: 'Identify ground cover',
-        content: ['First, choose one or more ground cover from the list that best describes what you see in the image.', 'Consult the field guide to learn how to identify the different ground covers.', 'This one looks like mostly sand...'],
+        heading: 'Identify star clusters',
+        content: ['Choose "star cluster" from the list of species.'],
         attach: {
           x: 'right',
-          to: '[value="sand"]',
-          at: {
-            x: 'left'
-          }
-        },
-        nextOn: {
-          click: '.ground-cover [value="sand"]'
-        },
-        arrowClass: 'right-middle',
-        style: {
-          width: 360
-        },
-        block: '.ground-cover .toggles button:not([value="sand"]), .ground-cover .finished'
-      }), new Step({
-        content: ['...with some gravel...'],
-        attach: {
-          x: 'right',
-          to: '[value="gravel"]',
-          at: {
-            x: 'left'
-          }
-        },
-        nextOn: {
-          click: '.ground-cover [value="gravel"]'
-        },
-        style: {
-          width: 280
-        },
-        arrowClass: 'right-middle',
-        block: '.ground-cover .toggles button:not([value="gravel"]), .ground-cover .finished'
-      }), new Step({
-        content: ['...and a bit of shell...'],
-        attach: {
-          x: 'right',
-          to: '[value="shell"]',
-          at: {
-            x: 'left'
-          }
-        },
-        nextOn: {
-          click: '.ground-cover [value="shell"]'
-        },
-        arrowClass: 'right-middle',
-        block: '.ground-cover .toggles button:not([value="shell"]), .ground-cover .finished'
-      }), new Step({
-        content: ['...and there\'s a big boulder on the left.'],
-        attach: {
-          x: 'right',
-          to: '[value="boulder"]',
-          at: {
-            x: 'left'
-          }
-        },
-        nextOn: {
-          click: '.ground-cover [value="boulder"]'
-        },
-        arrowClass: 'right-middle',
-        block: '.ground-cover .toggles button:not([value="boulder"]), .ground-cover .finished'
-      }), new Step({
-        content: ['Click "Done" once you\'re finished.'],
-        attach: {
-          x: 'right',
-          to: '.ground-cover .finished',
-          at: {
-            x: 'left'
-          }
-        },
-        nextOn: {
-          click: '.ground-cover .finished'
-        },
-        arrowClass: 'right-middle'
-      }), new Step({
-        heading: 'Identify species',
-        content: ['Next, identify the species in the image.', 'Consult the field guide to learn how to identify and mark different species. Make sure you don\'t mark dead creatures!', 'We\'ll mark all the star first. Choose "star" from the list of species.'],
-        attach: {
-          x: 'right',
-          to: '[value="star"]',
+          to: '[value="cluster"]',
           at: {
             x: 'left'
           }
         },
         style: {
-          width: 440
+          width: 340
         },
         nextOn: {
-          click: '.species [value="star"]'
+          click: '.species [value="cluster"]'
         },
         arrowClass: 'right-middle',
-        block: '.species .toggles button:not([value="star"]), .species .finished'
+        block: '.species .toggles button:not([value="cluster"]), .species .finished .other-creatures'
       }), new Step({
-        heading: 'Marking',
-        content: ['Mark the star along its longest and widest dimensions.', 'Start by clicking and dragging your mouse from the star\'s head to its tail...'],
-        attach: {
-          y: 'top',
-          to: '.creature-picker',
-          at: {
-            y: 'top'
-          }
-        },
-        style: {
-          width: 490
-        },
-        nextOn: {
-          'create-half-axes-marker': '#classifier'
-        },
-        arrowClass: 'down-center',
-        block: '.species .finished'
-      }), new Step({
-        content: ['...then drag along the width of the star at the widest point along the star\'s body.', 'You don\'t need to include fins, if it has any.'],
+        heading: 'Mark star clusters',
+        content: ['Mark the cluster by clicking in the center and dragging out until it\'s completely enclosed'],
         attach: {
           x: 'left',
           to: '.creature-picker',
           at: {
-            x: 'left',
-            y: 0.67
+            x: 0.2,
+            y: 0.37
           }
         },
         style: {
-          width: 310
+          width: 400
         },
         nextOn: {
-          'create-axes-marker': '#classifier'
+          'create-marking': '#classifier'
+        },
+        arrowClass: 'left-middle',
+        block: '.species .finished .other-creatures'
+      }), new Step({
+        heading: 'Mark star clusters',
+        content: ['Now let\'s mark another cluster.'],
+        attach: {
+          x: 'left',
+          to: '.creature-picker',
+          at: {
+            x: 0.5,
+            y: 0.97
+          }
+        },
+        style: {
+          width: 240
+        },
+        nextOn: {
+          'create-marking': '#classifier'
         },
         arrowClass: 'right-middle',
-        block: '.species .finished'
+        block: '.species .finished .other-creatures'
       }), new Step({
-        heading: 'Identifying species',
-        content: ['We\'ve finished marking all the star in this image.', 'Next we\'ll mark the galaxies. Choose "galaxy" from the species list.'],
+        heading: 'Identifying background galaxies',
+        content: ['We\'ve finished marking all the clusters in this image.', 'Next we\'ll mark the galaxies. Choose "galaxy" from the species list.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',
@@ -160,13 +101,13 @@
           width: 460
         },
         nextOn: {
-          click: '.species .toggles button:contains("galaxy")'
+          click: '.species [value="galaxy"]'
         },
         arrowClass: 'right-middle',
-        block: '.species .toggles button:not(:contains("galaxy")), .species .finished'
+        block: '.species .toggles button:not([value="galaxy"]), .species .finished .other-creatures'
       }), new Step({
         heading: 'Marking',
-        content: ['Mark the galaxy by clicking in the center and dragging out to the tip of its longest arm'],
+        content: ['Mark the galaxy by clicking in the center and dragging out until completely enclosed (just like the star clusters).'],
         style: {
           width: 320
         },
@@ -175,17 +116,17 @@
           to: '.creature-picker',
           at: {
             x: 0.67,
-            y: 0.15
+            y: 0.55
           }
         },
         nextOn: {
           'create-marking': '#classifier'
         },
         arrowClass: 'right-middle',
-        block: '.species .finished'
+        block: '.species .finished .other-creatures'
       }), new Step({
-        heading: 'Other species',
-        content: ['If there are species in the image other than the ones in the list, we\'d like to know!', 'There are a few sea sponges in this image, so let\'s answer "Yes" to this question.'],
+        heading: 'Artifacts',
+        content: ['Science can be messy.  We also need your help to identify telescope artifacts.', 'Select \'Yes\'.'],
         attach: {
           x: 'right',
           to: '.other-creatures [value="yes"]',
@@ -200,10 +141,66 @@
           click: '.other-creatures [value="yes"]'
         },
         arrowClass: 'right-middle',
-        block: '.species .finished'
+        block: '.species .toggles .species .finished'
+      }), new Step({
+        heading: 'Chip Gap',
+        content: ['This image has a chip gap that comes from the Advanced Camera for Surveys, an instrument on the Hubble Space Telescope.', 'You can see a long diagonal line that goes across the image.'],
+        attach: {
+          x: 'right',
+          to: '#artefact-list [value="gap"]',
+          at: {
+            x: 'left'
+          }
+        },
+        style: {
+          width: 490
+        },
+        arrowClass: 'right-middle',
+        nextOn: {
+          click: '#artefact-list [value="gap"]'
+        },
+        block: '.species .toggles .species .finished #artefact-list button:not([value="gap"])'
+      }), new Step({
+        heading: 'Chip Gap',
+        content: ['Click and drag from the the top to the bottom of the gap'],
+        attach: {
+          x: 'right',
+          to: '.creature-picker',
+          at: {
+            x: 0.30,
+            y: 0.50
+          }
+        },
+        style: {
+          width: 390
+        },
+        arrowClass: 'right-middle',
+        nextOn: {
+          'create-half-axes-marker': '#classifier'
+        },
+        block: '.species .toggles .species .finished #artefact-list'
+      }), new Step({
+        heading: 'Chip Gap',
+        content: ['Click and drag along the width of the artifact.'],
+        attach: {
+          x: 'right',
+          to: '.creature-picker',
+          at: {
+            x: 0.30,
+            y: 0.50
+          }
+        },
+        style: {
+          width: 390
+        },
+        arrowClass: 'right-middle',
+        nextOn: {
+          'create-axes-marker': '#classifier'
+        },
+        block: '.species .toggles .species .finished #artefact-list'
       }), new Step({
         heading: 'Done Identifying and Marking',
-        content: ['Now that we\'ve finished marking all species, click "Done"'],
+        content: ['Now that we\'ve finished marking all objects, click "Finished"'],
         attach: {
           x: 'right',
           to: '.species .finished',
@@ -220,7 +217,7 @@
         arrowClass: 'right-middle'
       }), new Step({
         heading: 'Great job!',
-        content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to dive in and complete some classifications on your own!', 'If you\'re ever unsure of what to mark, you can always consult the field guide on the "About" page for descriptions of the ground covers and species. You can then return to the "Classify" page when you\'re ready.'],
+        content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to explore and complete some classifications on your own!', 'If you\'re ever unsure of what to mark, you can always consult the guide on the "About" page for descriptions of the star clusters, background galaxies and artifacts. You can then return to the "Classify" page when you\'re ready.'],
         attach: {
           x: 'right',
           to: '.talk p',

@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    return '<div class="cluster score">\n  <div class="description">Total number of<br />clusters marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="star score">\n  <div class="description">Total number of<br />star marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="galaxy score">\n  <div class="description">Total number of<br />galaxies marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="ghost score">\n  <div class="description">Total number of<br />ghosts marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="classifications score">\n  <div class="description">Total number of<br />images classified</div>\n  <div class="count">0</div>\n</div>';
+    return '<div class="cluster score">\n  <div class="description">Total number of<br />clusters marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="galaxy score">\n  <div class="description">Total number of<br />galaxies marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="cross score">\n  <div class="description">Total number of<br />crosses marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="ghost score">\n  <div class="description">Total number of<br />ghosts marked</div>\n  <div class="count">0</div>\n</div>\n\n<div class="classifications score">\n  <div class="description">Total number of<br />images classified</div>\n  <div class="count">0</div>\n</div>';
   });
 
 }).call(this);
