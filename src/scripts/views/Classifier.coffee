@@ -8,8 +8,8 @@ define (require, exports, module) ->
 					<h4>Objects in this image</h4>
 
 					<ul class="toggles">
-						<li><button value="cluster" data-marker="circle">Star Cluster <span class="count">0</button></li>
-						<li><button value="galaxy" data-marker="circle">Galaxy <span class="count">0</button></li>
+						<li><button value="cluster" data-marker="circle">Star Cluster <span class="count">0</button><div class="divider"></div></li>
+						<li><button value="galaxy" data-marker="circle">Galaxy <span class="count">0</button><div class="divider"></div></li>
 					</ul> 
 
 					<div class="indicator"><!--Marker indicator--></div>
@@ -21,12 +21,12 @@ define (require, exports, module) ->
 					</div>
 					
 					<ul class="toggles" id="artefact-list">
-						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button></li>
-						<li><button value="cross" data-marker="axes">Cross <span class="count">0</button></li>
-						<li><button value="gap" data-marker="axes">Gap <span class="count">0</button></li>
+						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button><div class="divider"></div></li>
+						<li><button value="cross" data-marker="axes">Cross <span class="count">0</button><div class="divider"></div></li>
+						<li><button value="gap" data-marker="axes">Gap <span class="count">0</button><div class="divider"></div></li>
 					</ul>
 
-					<button disabled="disabled" class="finished">Done identifying objects</button>
+					<button disabled="disabled" class="finished">Finished</button>
 				</div>
 
 				<div class="help">

@@ -182,19 +182,33 @@
 
 				> li {
 					display: block;
+					position: relative;
+          
+					> .divider {
+            position: absolute;
+            right: 50px;
+            top: 1px;
+            border-left: 1px solid $gray-darker;
+            border-right: 1px solid white;
+            width: 0px;
+            height: 40px;
+            padding: 0;
+            margin: 0;
+					}
 
 					> button {
 						@include linear-gradient($gray-light, $gray-dark);
 						border: 1px solid $gray-darker;
+						border-radius: 3px;
 						color: $blue-dark;
 						cursor: pointer;
 						display: block;
 						font: {
 							family: inherit;
-							size: 20px;
+							size: 18px;
 						};
-						padding: ($gutter-width / 2) $gutter-width;
-						margin: -1px 0 0;
+						padding: $gutter-width*0.4 $gutter-width;
+						margin: 0 0 3px 0;
 						text: {
 							align: left;
 							transform: lowercase;
@@ -202,7 +216,7 @@
 						width: 100%;
 
 						> .count {
-							float: right;
+              float: right;
 						}
 
 						&.active {
@@ -253,6 +267,8 @@
 					@include box-sizing(border-box);
 					@include linear-gradient($gray-light, $gray-dark);
 					border: 1px solid $gray-darker;
+					border-radius: 3px;
+					margin: 0px;
 					cursor: pointer;
 					color: $blue-dark;
 					display: block;
@@ -262,11 +278,11 @@
 						size: inherit;
 						weight: inherit;
 					};
-					padding: 0;
+					padding: 10;
 					width: 50%;
 
 					&:first-of-type {
-						border-right-width: 0;
+            margin-right: 1px;
 					}
 
 					&.active {
@@ -278,23 +294,24 @@
 			}
 
 			.finished {
-				@include box-shadow(0 1px $orange-lighter inset);
-				@include linear-gradient($orange-light, $orange-dark);
 				position: absolute;
 				bottom: 40px;
-				right: 20px;
-				border: 1px solid $orange-darker {
-					radius: 3px;
-				};
-				color: $white;
-				cursor: pointer;
-				font: {
-					family: inherit;
-					size: 12px;
-					weight: bold;
-				};
 				padding: 10px 0;
 				width: 215px;
+				
+				@include linear-gradient(#dddddd, #eeeeee);
+        border: 1px solid #cccccc {
+          radius: 3px;
+        };
+        box-shadow: 0 1px 0 #cccccc;
+        color: $black;
+        margin-top: 0px;
+        font-size: 18px;
+        font-weight: 500;
+        text: {
+          decoration: none;
+          shadow: 2px 2px 3px #eeeeee;
+        }
 
 				&:disabled {
 					opacity: 0.67;
