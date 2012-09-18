@@ -3,37 +3,40 @@
 .main [data-page="home"] {
   #banner {
     background: url('../images/navigation/m31.jpg');
-    border-top: 5px solid #000000;
+    border: 3px solid #ffffff;
     height: 400px;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 984px;
+    margin-bottom: 0px; 
+    padding: 5px;
   }
   
   h2 {
-    font-size: 2.0em;
+    font-size: 1.7em;
     font-weight: 800;
   } 
   
   p {
-    font-size: 1.0em;
+    font-size: 0.9em;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
   }
 
   .dive-in {
-    @include linear-gradient(#dddddd, #cccccc);
-    border: 1px solid #222222 {
+    @include linear-gradient(#dddddd, #eeeeee);
+    border: 1px solid #cccccc {
       radius: 3px;
     };
-    box-shadow: 0 1px 0 #aaaaaa;
+    box-shadow: 0 1px 0 #cccccc;
     color: $black;
     float: right;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 18px;
     font-weight: 500;
-    padding: ($gutter-width / 2) ($gutter-width * 2);
+    padding: ($gutter-width / 3) ($gutter-width * 2);
     text: {
       decoration: none;
-      shadow: 0 1px 0px #cccccc;
+      shadow: 2px 2px 3px #eeeeee;
     }
   }
 }

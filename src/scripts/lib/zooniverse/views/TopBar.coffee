@@ -30,6 +30,6 @@ define (require, exports, module) ->
       </div>
     </div>
     <div id="zooniverse-top-bar-button">
-      <a href="#" class="top-bar-button"><img src="images/zoo-icon.png" width="30" height="30" /></a>
+      <a href="#" class="top-bar-button"><img src="images/zoo-icon.png" width="26" height="26" /></a>
     </div>
   """
