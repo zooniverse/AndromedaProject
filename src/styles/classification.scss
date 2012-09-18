@@ -224,10 +224,11 @@
 							border-color: transparent;
 							color: $white;
 
-							&[value="cluster"]    {@include linear-gradient($cluster-color);}
-							&[value="star"]       {@include linear-gradient($star-color);}
-							&[value="galaxy"]    {@include linear-gradient($galaxy-color);}
+							&[value="cluster"] {@include linear-gradient($cluster-color);}
+							&[value="galaxy"] {@include linear-gradient($galaxy-color);}
 							&[value="ghost"] {@include linear-gradient($ghost-color);}
+							&[value="cross"] {@include linear-gradient($cross-color);} 
+							&[value="gap"] {@include linear-gradient($gap-color);}
 						}
 					}
 				}

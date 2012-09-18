@@ -5,13 +5,13 @@ define (require, exports, module) ->
       <div class="count">0</div>
     </div>
 
-    <div class="star score">
-      <div class="description">Total number of<br />star marked</div>
-      <div class="count">0</div>
-    </div>
-
     <div class="galaxy score">
       <div class="description">Total number of<br />galaxies marked</div>
+      <div class="count">0</div>
+    </div>
+    
+    <div class="cross score">
+      <div class="description">Total number of<br />crosses marked</div>
       <div class="count">0</div>
     </div>
 

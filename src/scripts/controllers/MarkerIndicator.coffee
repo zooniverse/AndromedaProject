@@ -27,7 +27,7 @@ define (require, exports, module) ->
         points: [{x: 72, y: 37.5}, {x: 95, y: 48}]  
       cross:
         image: 'images/indicator/cross.png'
-        points: [{x: 10, y: 1}, {x: 30, y: 40}, {x: 5, y: 45}, {x: 75, y: 45}]    
+        points: [{x: 50, y: 5}, {x: 91, y: 68}, {x: 105, y: 79}, {x: 40, y:32}]    
       gap:
         image: 'images/indicator/gap.png'
         points: [{x: 40, y: 70}, {x: 40, y: 5}]    

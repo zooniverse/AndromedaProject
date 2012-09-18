@@ -99,11 +99,11 @@
           }
 
           &:nth-child(2n) > a {
-            border-top-color: $star-color;
+            border-top-color: $cross-color;
 
             &:hover,
             &.active {
-              color: $star-color;
+              color: $cross-color;
             }
           }
 
@@ -126,11 +126,11 @@
           }
 
           &:nth-child(5n) > a {
-            border-top-color: $cool-color;
+            border-top-color: $gap-color;
 
             &:hover,
             &.active {
-              color: $cool-color;
+              color: $gap-color;
             }
           }
         }

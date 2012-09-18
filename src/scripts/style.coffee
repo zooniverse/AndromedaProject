@@ -55,11 +55,15 @@ define (require, exports, module) ->
 			stroke: '#fff'
 			'stroke-width': 2
 
-		cluster: '#0bc7e8'
+		cluster: '#fd6500'
 
 		ghost: '#b9ca00'
 
 		galaxy: '#c512e0'
+
+		gap: '#001e29'  
+
+		cross: '#0bc7e8'  
 
 		cool: '#001e29'
 
