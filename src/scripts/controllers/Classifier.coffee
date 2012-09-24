@@ -76,6 +76,9 @@ define (require, exports, module) ->
 
     render: =>
       @renderSpeciesPage()
+      
+      # Star cluster selected by default
+      $('button[value="cluster"]').click()
 
     renderSpeciesPage: =>
       selectedMarker = (m for m in @picker.markers when m.selected)[0]

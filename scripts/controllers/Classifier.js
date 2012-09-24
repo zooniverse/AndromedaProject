@@ -104,7 +104,8 @@
       };
 
       Classifier.prototype.render = function() {
-        return this.renderSpeciesPage();
+        this.renderSpeciesPage();
+        return $('button[value="cluster"]').click();
       };
 
       Classifier.prototype.renderSpeciesPage = function() {
