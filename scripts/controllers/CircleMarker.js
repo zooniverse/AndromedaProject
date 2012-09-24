@@ -120,13 +120,11 @@
           cx: centerPoint.x * w,
           cy: centerPoint.y * h
         }, 250);
-        this.radiusLine.animate({
+        return this.radiusLine.animate({
           opacity: 0
-        }, 125);
-        return this.boundingCircle.animate({
-          r: 0,
-          opacity: 0
-        }, 250);
+        }, 125, this.boundingCircle.animate({
+          opacity: 0.5
+        }, 250));
       };
 
       CircleMarker.prototype.destroy = function() {

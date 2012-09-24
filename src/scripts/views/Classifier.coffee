@@ -13,12 +13,6 @@ define (require, exports, module) ->
 					</ul> 
 
 					<div class="indicator"><!--Marker indicator--></div>
-
-					<div class="other-creatures">
-						<h4>Are image artifacts present?</h4>
-						<button value="yes">Yes</button>
-						<button value="no">No</button>
-					</div>
 					
 					<ul class="toggles" id="artefact-list">
 						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button><div class="divider"></div></li>
@@ -26,7 +20,7 @@ define (require, exports, module) ->
 						<li><button value="gap" data-marker="axes">Gap <span class="count">0</button><div class="divider"></div></li>
 					</ul>
 
-					<button disabled="disabled" class="finished">Finished</button>
+					<button class="finished">Finished</button>
 				</div>
 
 				<div class="help">

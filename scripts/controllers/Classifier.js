@@ -34,7 +34,8 @@
         'click .favorite .create button': 'createFavorite',
         'click .favorite .destroy button': 'destroyFavorite',
         'click .talk [value="yes"]': 'goToTalk',
-        'click .talk [value="no"]': 'nextSubjects'
+        'click .talk [value="no"]': 'nextSubjects',
+        'click .tutorial-again': 'startTutorial'
       };
 
       Classifier.prototype.elements = {
@@ -96,7 +97,6 @@
           }
         });
         this.changeSpecies(null);
-        this.speciesFinishedButton.attr('disabled');
         this.steps.removeClass('finished');
         return delay(500, function() {
           return _this.updateFavoriteButtons();
@@ -139,11 +139,7 @@
           this.otherYes.removeClass('active');
         }
         if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
-          this.otherNo.removeClass('active');
-        }
-        this.speciesFinishedButton.attr('disabled', !(this.otherSpeciesAnnotation.value.otherSpecies != null));
-        if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
-          return $('#artefact-list').hide();
+          return this.otherNo.removeClass('active');
         }
       };
 

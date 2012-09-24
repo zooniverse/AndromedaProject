@@ -17,8 +17,6 @@ define (require, exports, module) ->
 
   Sky = require 'controllers/Sky'
   
-  Sample = require('sample')
-  
   # Over ride fetchSubjects to pull subjects locally
   workflow = new Workflow
     id: ids.workflow
@@ -37,17 +35,6 @@ define (require, exports, module) ->
           temperature: 0
           speed: 0
           mm_pix: 1
-  
-  # workflow.fetchSubjects = (group) ->
-  #   workflow.trigger 'fetching-subjects'
-  #   workflow.enough = new $.Deferred
-  #   
-  #   limit = workflow.queueLength - workflow.length
-  # 
-  #   # If there are enough subjects in the queue, resolve the deferred immediately.
-  #   workflow.subjects = Sample.generate()
-  #   if workflow.subjects.length > workflow.selectionLength
-  #     workflow.enough.resolve workflow.subjects
   
   config.set
     name: 'Andromeda Project'
@@ -69,8 +56,8 @@ define (require, exports, module) ->
         workflows: workflow
 
   config.set
-    # sky: new Sky
-    #   el: '#banner' 
+    sky: new Sky
+      el: '#banner'
     
     classifier: new Classifier
       el: '#classifier'

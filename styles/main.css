@@ -378,7 +378,6 @@ body {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000034}}
 .main [data-page="home"] #banner {
-  background: url("../images/navigation/m31.jpg");
   border: 3px solid #ffffff;
   height: 400px;
   width: 984px;
@@ -741,9 +740,6 @@ body {
           top: 0;
           width: 100%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003255}}
-      .main #classifier > .options > .steps #artefact-list {
-        display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003259}}
       .main #classifier > .options > .steps .other-creatures {
         margin: 20px 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003135}}
@@ -751,10 +747,10 @@ body {
           content: "";
           clear: both;
           display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003259}}
         .main #classifier > .options > .steps .other-creatures > h4 {
           margin-bottom: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003267}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003263}}
         .main #classifier > .options > .steps .other-creatures > button {
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
@@ -776,10 +772,10 @@ body {
           font-weight: inherit;
           padding: 10;
           width: 49%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003281}}
           .main #classifier > .options > .steps .other-creatures > button:first-of-type {
             margin-right: 1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003289}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003285}}
           .main #classifier > .options > .steps .other-creatures > button.active {
             background-image: -moz-linear-gradient(top, #004250, #004250);
             background-image: -ms-linear-gradient(top, #004250, #004250);
@@ -788,7 +784,7 @@ body {
             -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#004250', endColorstr='#004250')";
             border-color: transparent;
             color: #f1f1f1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003293}}
       .main #classifier > .options > .steps .finished {
         position: absolute;
         bottom: 40px;
@@ -808,10 +804,10 @@ body {
         font-weight: 500;
         text-decoration: none;
         text-shadow: 2px 2px 3px #eeeeee; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003313}}
         .main #classifier > .options > .steps .finished:disabled {
           opacity: 0.67; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003318}}
       .main #classifier > .options > .steps > .help {
         bottom: 0;
         font-size: 11px;
@@ -820,7 +816,7 @@ body {
         position: absolute;
         text-align: center;
         width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003327}}
         .main #classifier > .options > .steps > .help > a {
           background: rgba(0, 0, 0, 0.1);
           border-radius: 3px;
@@ -828,16 +824,16 @@ body {
           display: inline-block;
           padding: 3px 6px;
           text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003338}}
     .main #classifier > .options > .summary {
       font-size: 14px;
       font-weight: bold;
       margin: 20px;
       text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003346}}
       .main #classifier > .options > .summary .map-toggle {
         margin-bottom: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003349}}
         .main #classifier > .options > .summary .map-toggle img {
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
@@ -848,38 +844,38 @@ body {
           display: block;
           height: 130px;
           width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003359}}
         .main #classifier > .options > .summary .map-toggle > .thumbnail > img {
           display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003364}}
       .main #classifier > .options > .summary .information {
         font-size: 12px;
         margin: 1em 0 50px;
         text-align: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003370}}
         .main #classifier > .options > .summary .information > div .label {
           display: inline-block;
           width: 40%;
           vertical-align: bottom; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003376}}
         .main #classifier > .options > .summary .information > div .value {
           display: inline-block;
           max-width: 45%;
           overflow: hidden;
           vertical-align: bottom; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003385}}
       .main #classifier > .options > .summary .favorite {
         display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003390}}
         .main #classifier > .options > .summary .favorite .destroy {
           display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003393}}
           .main #classifier > .options > .summary .favorite .destroy button {
             display: inline-block;
             font-size: 10px;
             padding: 0 2px;
             width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003402}}
       .main #classifier > .options > .summary button {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -895,41 +891,44 @@ body {
         padding: 5px 0;
         text-align: center;
         width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003420}}
+      .main #classifier > .options > .summary > .talk {
+        color: #f1f1f1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003135}}
-      .main #classifier > .options > .summary > .talk:after {
-        content: "";
-        clear: both;
-        display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003427}}
-      .main #classifier > .options > .summary > .talk button {
-        width: 49%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003430}}
-        .main #classifier > .options > .summary > .talk button:first-child {
-          margin-right: 1%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003439}}
+        .main #classifier > .options > .summary > .talk:after {
+          content: "";
+          clear: both;
+          display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003423}}
+        .main #classifier > .options > .summary > .talk button {
+          width: 49%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003426}}
+          .main #classifier > .options > .summary > .talk button:first-child {
+            margin-right: 1%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003435}}
   .main #classifier.show-map > .image > .selection-area {
     -moz-transform: scale(0.01);
     -webkit-transform: scale(0.01);
     -ms-transform: scale(0.01);
     transform: scale(0.01);
     opacity: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003445}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003441}}
   .main #classifier.show-map > .options > .summary > .map-toggle > .thumbnail > img {
     display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003449}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003445}}
   .main #classifier.show-map > .options > .summary > .map-toggle > .map > img {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003456}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003452}}
   .main #classifier.can-favorite > .options > .summary .favorite {
     display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003463}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003459}}
   .main #classifier.is-favored > .options > .summary .favorite .create {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003467}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003463}}
   .main #classifier.is-favored > .options > .summary .favorite .destroy {
     display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003474}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003470}}
 .classifier.dialog {
   -moz-transition: opacity 0.25s ease-in-out;
   -ms-transition: opacity 0.25s ease-in-out;
@@ -943,15 +942,15 @@ body {
   position: absolute;
   opacity: 0;
   z-index: 50; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003487}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003483}}
   .classifier.dialog .content {
     padding: 10px 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003491}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003487}}
   .classifier.dialog .buttons {
     border-top: 1px solid #ececec;
     padding: 10px 20px;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003496}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003492}}
     .classifier.dialog .buttons button {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -968,11 +967,11 @@ body {
       font-weight: inherit;
       margin: 0 0.25em;
       padding: 0em 2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003511}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003507}}
   .classifier.dialog.open {
     opacity: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003516}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003512}}
 .dialog-blocker {
   -moz-transition: opacity 0.25s ease-in-out;
   -ms-transition: opacity 0.25s ease-in-out;
@@ -981,7 +980,7 @@ body {
   background: rgba(241, 241, 241, 0.25);
   position: absolute;
   z-index: 40; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003522}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003518}}
   .dialog-blocker.open {
     opacity: 1; }
 

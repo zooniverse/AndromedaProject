@@ -13,7 +13,7 @@
       __extends(Sky, _super);
 
       Sky.prototype.mapOptions = {
-        attributionControl: false,
+        attributionControl: true,
         worldCopyJump: false
       };
 
@@ -25,18 +25,20 @@
 
       Sky.prototype.createMap = function() {
         var layer, map;
-        map = L.map('banner', this.mapOptions).setView([-35, 40], 3);
-        console.log(map.getBounds().getCenter());
+        map = L.map('banner', this.mapOptions).setView([14, 0], 2);
+        map.attributionControl.setPrefix('');
         layer = L.tileLayer('/tiles/#{tilename}.jpg', {
           minZoom: 2,
-          maxZoom: 8
+          maxZoom: 8,
+          attribution: 'Robert Gendler - The Andromeda Galaxy (M31) &copy; 2005',
+          continuousWorld: true,
+          noWrap: true
         });
         layer.getTileUrl = function(tilePoint) {
           var convertTileUrl, url, zoom;
           zoom = this._getZoomForUrl();
           convertTileUrl = function(x, y, s, zoom) {
             var d, e, f, g, pixels;
-            console.log(arguments);
             pixels = Math.pow(2, zoom);
             d = (x + pixels) % pixels;
             e = (y + pixels) % pixels;
@@ -71,7 +73,7 @@
             };
           };
           url = convertTileUrl(tilePoint.x, tilePoint.y, 1, zoom);
-          return "http://0.0.0.0:8000/coadd-tiles/" + url.src + ".jpg";
+          return "http://www.andromedaproject.org.s3.amazonaws.com/alpha/tiles/" + url.src + ".jpg";
         };
         return layer.addTo(map);
       };

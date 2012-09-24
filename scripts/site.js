@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    var $, App, Classifier, ImageFlipper, Profile, Project, Sample, Scoreboard, Sky, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, workflow, _i, _len, _ref, _results;
+    var $, App, Classifier, ImageFlipper, Profile, Project, Scoreboard, Sky, Subject, Workflow, config, current, devRefs, el, ids, name, reference, tutorialSteps, workflow, _i, _len, _ref, _results;
     $ = require('jQuery');
     config = require('zooniverse/config');
     ids = require('ids');
@@ -16,7 +16,6 @@
     Profile = require('controllers/Profile');
     ImageFlipper = require('controllers/ImageFlipper');
     Sky = require('controllers/Sky');
-    Sample = require('sample');
     workflow = new Workflow({
       id: ids.workflow,
       tutorialSubjects: new Subject({
@@ -57,6 +56,9 @@
       })
     });
     config.set({
+      sky: new Sky({
+        el: '#banner'
+      }),
       classifier: new Classifier({
         el: '#classifier',
         tutorialSteps: tutorialSteps,

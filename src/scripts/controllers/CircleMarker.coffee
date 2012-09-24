@@ -110,10 +110,10 @@ define (require, exports, module) ->
 				opacity: 0
 				125
 
-			@boundingCircle.animate
-				r: 0
-				opacity: 0
-				250
+      @boundingCircle.animate
+        # r: 0
+        opacity: 0.5
+        250
 
 		destroy: =>
 			super

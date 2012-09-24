@@ -30,7 +30,7 @@ define (require, exports, module) ->
       'click .favorite .destroy button'         : 'destroyFavorite'
       'click .talk [value="yes"]'               : 'goToTalk'
       'click .talk [value="no"]'                : 'nextSubjects'
-      # 'click .tutorial-again'                   : 'startTutorial'
+      'click .tutorial-again'                   : 'startTutorial'
 
     elements:
       '.steps'                                  : 'steps'
@@ -67,7 +67,7 @@ define (require, exports, module) ->
         value: otherSpecies: null
 
       @changeSpecies null
-      @speciesFinishedButton.attr 'disabled'
+      # @speciesFinishedButton.attr 'disabled'
       
       @steps.removeClass 'finished'
 
@@ -92,8 +92,8 @@ define (require, exports, module) ->
       @otherYes.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
       @otherNo.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
 
-      @speciesFinishedButton.attr 'disabled', not @otherSpeciesAnnotation.value.otherSpecies? 
-      $('#artefact-list').hide() if @otherSpeciesAnnotation.value.otherSpecies is null
+      # @speciesFinishedButton.attr 'disabled', not @otherSpeciesAnnotation.value.otherSpecies? 
+      # $('#artefact-list').hide() if @otherSpeciesAnnotation.value.otherSpecies is null
 
     updateFavoriteButtons: =>
       signedIn = User.current?

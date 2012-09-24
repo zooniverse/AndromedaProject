@@ -5,7 +5,7 @@ define (require, exports, module) ->
   class Sky extends Spine.Controller
     
     mapOptions:
-      attributionControl: false
+      attributionControl: true
       worldCopyJump: false
       
     constructor: ->
@@ -13,17 +13,20 @@ define (require, exports, module) ->
       @createMap()
     
     createMap: =>
-      map = L.map('banner', @mapOptions).setView([-35, 40], 3)
-      console.log map.getBounds().getCenter()
+      map = L.map('banner', @mapOptions).setView([14, 0], 2)
+      map.attributionControl.setPrefix('')
+      
       layer = L.tileLayer('/tiles/#{tilename}.jpg',
         minZoom: 2
         maxZoom: 8
+        attribution: 'Robert Gendler - The Andromeda Galaxy (M31) &copy; 2005'
+        continuousWorld: true
+        noWrap: true
       )
       layer.getTileUrl = (tilePoint) ->
         
         zoom = @_getZoomForUrl()
         convertTileUrl = (x, y, s, zoom) ->
-          console.log arguments
           pixels = Math.pow(2, zoom)
           d = (x + pixels) % (pixels)
           e = (y + pixels) % (pixels)
@@ -52,8 +55,7 @@ define (require, exports, module) ->
           s: s
 
         url = convertTileUrl(tilePoint.x, tilePoint.y, 1, zoom)
-        return "http://0.0.0.0:8000/coadd-tiles/#{url.src}.jpg"
-        # return "/tiles/#{url.src}.jpg"
+        return "http://www.andromedaproject.org.s3.amazonaws.com/alpha/tiles/#{url.src}.jpg"
 
       layer.addTo map
   
