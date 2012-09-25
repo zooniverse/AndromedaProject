@@ -14,7 +14,7 @@ define (require, exports, module) ->
       block: '.options'
 
     new Step
-      heading: 'Identify star clusters'
+      heading: 'Identify Star Clusters'
       content: [
         'Let\'s identify star clusters in the image.'
         'Star clusters show up more clearly in the blue band of the optical spectrum.'
@@ -27,20 +27,20 @@ define (require, exports, module) ->
       block: '.options'
     
     new Step
-      heading: 'Identify star clusters'
+      heading: 'Identify Star Clusters'
       content: [
-        'Choose "star cluster" from the list of species.'
+        'The button "star cluster" is always marked by default.'
       ]
       attach: x: 'right', to: '[value="cluster"]', at: x: 'left'
       style: width: 340
-      nextOn: click: '.species [value="cluster"]'
+      continueText: 'Next'
       arrowClass: 'right-middle'
       block: '.species .toggles button:not([value="cluster"]), .species .finished .other-creatures'
       
     new Step
-      heading: 'Mark star clusters'
+      heading: 'Mark Star Clusters'
       content: [
-        'Mark the cluster by clicking in the center and dragging out until it\'s completely enclosed'
+        'Mark the cluster by clicking in the center then dragging out until the majority of the cluster is enclosed.'
       ]
       attach: x: 'left', to: '.creature-picker', at: x: 0.2, y: 0.37
       style: width: 400
@@ -49,7 +49,7 @@ define (require, exports, module) ->
       block: '.species .finished .other-creatures'
 
     new Step
-      heading: 'Mark star clusters'
+      heading: 'Mark Star Clusters'
       content: [
         'Now let\'s mark another cluster.'
       ]
@@ -60,10 +60,11 @@ define (require, exports, module) ->
       block: '.species .finished .other-creatures'
 
     new Step
-      heading: 'Identifying background galaxies'
+      heading: 'Identifying Background Galaxies'
       content: [
-        'We\'ve finished marking all the clusters in this image.'
-        'Next we\'ll mark the galaxies. Choose "galaxy" from the species list.'
+        'We\'ve finished marking all the clusters in this image. On to the background galaxies!'
+        'Background galaxies are more distant galaxies that we occasionally see through all the dust of a foreground galaxy.'
+        'Choose "galaxy" from the species list to mark them.'
       ]
       attach: x: 'right', to: '[value="galaxy"]', at: x: 'left'
       style: width: 460
@@ -74,7 +75,7 @@ define (require, exports, module) ->
     new Step
       heading: 'Marking'
       content: [
-        'Mark the galaxy by clicking in the center and dragging out until completely enclosed (just like the star clusters).'
+        'Mark the galaxy by clicking in the center then dragging out until the majority is enclosed (just like the star clusters).'
       ]
       style: width: 320
       attach: x: 'right', to: '.creature-picker', at: x: 0.67, y: 0.55
@@ -86,12 +87,10 @@ define (require, exports, module) ->
       heading: 'Artifacts'
       content: [
         'Science can be messy.  We also need your help to identify telescope artifacts.'
-        'Select \'Yes\'.'
       ]
-      attach: x: 'right', to: '.other-creatures [value="yes"]', at: x: 'left'
-      style: width: 310
-      nextOn: click: '.other-creatures [value="yes"]'
-      arrowClass: 'right-middle'
+      attach: x: 'right', to: '.creature-picker', at: x: 0.67, y: 0.55
+      style: width: 320
+      continueText: 'Okay!'
       block: '.species .toggles .species .finished'
 
     new Step
@@ -100,11 +99,11 @@ define (require, exports, module) ->
         'This image has a chip gap that comes from the Advanced Camera for Surveys, an instrument on the Hubble Space Telescope.'
         'You can see a long diagonal line that goes across the image.'
       ]
-      attach: x: 'right', to: '#artefact-list [value="gap"]', at: x: 'left'
+      attach: x: 'right', to: '#artefact-list [value="linear"]', at: x: 'left'
       style: width: 490
       arrowClass: 'right-middle'
-      nextOn: click: '#artefact-list [value="gap"]'
-      block: '.species .toggles .species .finished #artefact-list button:not([value="gap"])'
+      nextOn: click: '#artefact-list [value="linear"]'
+      block: '.species .toggles .species .finished #artefact-list button:not([value="linear"])'
 
     new Step
       heading: 'Chip Gap'
@@ -145,8 +144,8 @@ define (require, exports, module) ->
         'This concludes the tutorial. Now you\'re ready to explore and complete some classifications on your own!'
         'If you\'re ever unsure of what to mark, you can always consult the guide on the "About" page for descriptions of the star clusters, background galaxies and artifacts. You can then return to the "Classify" page when you\'re ready.'
       ]
-      attach: x: 'right', to: '.talk p', at: x: 'left'
+      attach: to: '.creature-picker', at: x: 0.5, y: 0.5
       style: width: 400
-      arrowClass: 'right-middle'
+      arrowClass: 'right-to'
       nextOn: click: '.talk button'
   ]

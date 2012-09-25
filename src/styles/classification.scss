@@ -228,7 +228,7 @@
 							&[value="galaxy"] {@include linear-gradient($galaxy-color);}
 							&[value="ghost"] {@include linear-gradient($ghost-color);}
 							&[value="cross"] {@include linear-gradient($cross-color);} 
-							&[value="gap"] {@include linear-gradient($gap-color);}
+							&[value="linear"] {@include linear-gradient($linear-color);}
 						}
 					}
 				}

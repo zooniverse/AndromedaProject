@@ -28,8 +28,8 @@ define (require, exports, module) ->
       cross:
         image: 'images/indicator/cross.png'
         points: [{x: 50, y: 5}, {x: 91, y: 68}, {x: 105, y: 79}, {x: 40, y:32}]    
-      gap:
-        image: 'images/indicator/gap.png'
+      linear:
+        image: 'images/indicator/linear.png'
         points: [{x: 40, y: 70}, {x: 40, y: 5}]    
 
     elements:

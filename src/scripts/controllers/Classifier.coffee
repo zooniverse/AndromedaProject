@@ -57,7 +57,12 @@ define (require, exports, module) ->
       new Pager el: pager for pager in @el.find('[data-page]').parent()
 
       User.bind 'sign-in', @updateFavoriteButtons
+      @picker.el.bind 'create-half-axes-marker', @disableFinished
+      @picker.el.bind 'create-axes-marker', @enableFinished
 
+    disableFinished: => $('button[class="finished"]').attr('disabled', 'disabled')
+    enableFinished: => $('button[class="finished"]').removeAttr('disabled')
+        
     reset: =>
       @picker.reset()
 
@@ -78,7 +83,12 @@ define (require, exports, module) ->
       @renderSpeciesPage()
       
       # Star cluster selected by default
-      $('button[value="cluster"]').click()
+      active = false
+      for item in $('button[data-marker]')
+        if $(item).hasClass('active')
+          active = true
+          break
+      $('button[value="cluster"]').click() unless active
 
     renderSpeciesPage: =>
       selectedMarker = (m for m in @picker.markers when m.selected)[0]
@@ -91,9 +101,9 @@ define (require, exports, module) ->
         countElement = button.find '.count'
         countElement.html parseInt(countElement.html(), 10) + 1
 
-      return unless @otherSpeciesAnnotation    
-      @otherYes.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
-      @otherNo.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
+      return unless @otherSpeciesAnnotation
+      # @otherYes.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
+      # @otherNo.removeClass 'active' if @otherSpeciesAnnotation.value.otherSpecies is null
 
       # @speciesFinishedButton.attr 'disabled', not @otherSpeciesAnnotation.value.otherSpecies? 
       # $('#artefact-list').hide() if @otherSpeciesAnnotation.value.otherSpecies is null

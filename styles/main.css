@@ -719,7 +719,7 @@ body {
                 background-image: linear-gradient(top, #0bc7e8, #0bc7e8);
                 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#0bc7e8', endColorstr='#0bc7e8')"; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003231}}
-              .main #classifier > .options > .steps .toggles > li > button.active[value="gap"] {
+              .main #classifier > .options > .steps .toggles > li > button.active[value="linear"] {
                 background-image: -moz-linear-gradient(top, #001e29, #001e29);
                 background-image: -ms-linear-gradient(top, #001e29, #001e29);
                 background-image: -webkit-linear-gradient(top, #001e29, #001e29);

@@ -65,6 +65,10 @@
 
         this.reset = __bind(this.reset, this);
 
+        this.enableFinished = __bind(this.enableFinished, this);
+
+        this.disableFinished = __bind(this.disableFinished, this);
+
         var pager, _i, _len, _ref1;
         Classifier.__super__.constructor.apply(this, arguments);
         this.indicator = new MarkerIndicator({
@@ -84,7 +88,17 @@
           });
         }
         User.bind('sign-in', this.updateFavoriteButtons);
+        this.picker.el.bind('create-half-axes-marker', this.disableFinished);
+        this.picker.el.bind('create-axes-marker', this.enableFinished);
       }
+
+      Classifier.prototype.disableFinished = function() {
+        return $('button[class="finished"]').attr('disabled', 'disabled');
+      };
+
+      Classifier.prototype.enableFinished = function() {
+        return $('button[class="finished"]').removeAttr('disabled');
+      };
 
       Classifier.prototype.reset = function() {
         var _this = this;
@@ -104,8 +118,20 @@
       };
 
       Classifier.prototype.render = function() {
+        var active, item, _i, _len, _ref1;
         this.renderSpeciesPage();
-        return $('button[value="cluster"]').click();
+        active = false;
+        _ref1 = $('button[data-marker]');
+        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+          item = _ref1[_i];
+          if ($(item).hasClass('active')) {
+            active = true;
+            break;
+          }
+        }
+        if (!active) {
+          return $('button[value="cluster"]').click();
+        }
       };
 
       Classifier.prototype.renderSpeciesPage = function() {
@@ -134,13 +160,7 @@
           countElement.html(parseInt(countElement.html(), 10) + 1);
         }
         if (!this.otherSpeciesAnnotation) {
-          return;
-        }
-        if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
-          this.otherYes.removeClass('active');
-        }
-        if (this.otherSpeciesAnnotation.value.otherSpecies === null) {
-          return this.otherNo.removeClass('active');
+
         }
       };
 

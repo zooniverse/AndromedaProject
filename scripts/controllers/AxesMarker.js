@@ -168,12 +168,10 @@
       AxesMarker.prototype.deselect = function() {
         AxesMarker.__super__.deselect.apply(this, arguments);
         this.circles.animate({
-          cx: this.centerCircle.attr('cx'),
-          cy: this.centerCircle.attr('cy'),
-          opacity: 0
+          opacity: 0.5
         }, 250);
         return this.lines.animate({
-          opacity: 0
+          opacity: 0.5
         }, 125);
       };
 

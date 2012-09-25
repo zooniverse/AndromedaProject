@@ -23,7 +23,7 @@
 
       Scoreboard.prototype.elements = {
         '.galaxy.score .count': 'galaxyCount',
-        '.gap.score .count': 'starCount',
+        '.linear.score .count': 'starCount',
         '.cluster.score .count': 'clusterCount',
         '.ghost.score .count': 'ghostCount',
         '.classifications.score .count': 'classificationCount'

@@ -21,7 +21,7 @@
         },
         block: '.options'
       }), new Step({
-        heading: 'Identify star clusters',
+        heading: 'Identify Star Clusters',
         content: ['Let\'s identify star clusters in the image.', 'Star clusters show up more clearly in the blue band of the optical spectrum.', 'In this image we can see two clusters.', 'We\'ll mark these first.'],
         continueText: 'Next',
         style: {
@@ -32,8 +32,8 @@
         },
         block: '.options'
       }), new Step({
-        heading: 'Identify star clusters',
-        content: ['Choose "star cluster" from the list of species.'],
+        heading: 'Identify Star Clusters',
+        content: ['The button "star cluster" is always marked by default.'],
         attach: {
           x: 'right',
           to: '[value="cluster"]',
@@ -44,14 +44,12 @@
         style: {
           width: 340
         },
-        nextOn: {
-          click: '.species [value="cluster"]'
-        },
+        continueText: 'Next',
         arrowClass: 'right-middle',
         block: '.species .toggles button:not([value="cluster"]), .species .finished .other-creatures'
       }), new Step({
-        heading: 'Mark star clusters',
-        content: ['Mark the cluster by clicking in the center and dragging out until it\'s completely enclosed'],
+        heading: 'Mark Star Clusters',
+        content: ['Mark the cluster by clicking in the center then dragging out until the majority of the cluster is enclosed.'],
         attach: {
           x: 'left',
           to: '.creature-picker',
@@ -69,7 +67,7 @@
         arrowClass: 'left-middle',
         block: '.species .finished .other-creatures'
       }), new Step({
-        heading: 'Mark star clusters',
+        heading: 'Mark Star Clusters',
         content: ['Now let\'s mark another cluster.'],
         attach: {
           x: 'left',
@@ -88,8 +86,8 @@
         arrowClass: 'right-middle',
         block: '.species .finished .other-creatures'
       }), new Step({
-        heading: 'Identifying background galaxies',
-        content: ['We\'ve finished marking all the clusters in this image.', 'Next we\'ll mark the galaxies. Choose "galaxy" from the species list.'],
+        heading: 'Identifying Background Galaxies',
+        content: ['We\'ve finished marking all the clusters in this image. On to the background galaxies!', 'Background galaxies are more distant galaxies that we occasionally see through all the dust of a foreground galaxy.', 'Choose "galaxy" from the species list to mark them.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',
@@ -107,7 +105,7 @@
         block: '.species .toggles button:not([value="galaxy"]), .species .finished .other-creatures'
       }), new Step({
         heading: 'Marking',
-        content: ['Mark the galaxy by clicking in the center and dragging out until completely enclosed (just like the star clusters).'],
+        content: ['Mark the galaxy by clicking in the center then dragging out until the majority is enclosed (just like the star clusters).'],
         style: {
           width: 320
         },
@@ -126,28 +124,26 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Artifacts',
-        content: ['Science can be messy.  We also need your help to identify telescope artifacts.', 'Select \'Yes\'.'],
+        content: ['Science can be messy.  We also need your help to identify telescope artifacts.'],
         attach: {
           x: 'right',
-          to: '.other-creatures [value="yes"]',
+          to: '.creature-picker',
           at: {
-            x: 'left'
+            x: 0.67,
+            y: 0.55
           }
         },
         style: {
-          width: 310
+          width: 320
         },
-        nextOn: {
-          click: '.other-creatures [value="yes"]'
-        },
-        arrowClass: 'right-middle',
+        continueText: 'Okay!',
         block: '.species .toggles .species .finished'
       }), new Step({
         heading: 'Chip Gap',
         content: ['This image has a chip gap that comes from the Advanced Camera for Surveys, an instrument on the Hubble Space Telescope.', 'You can see a long diagonal line that goes across the image.'],
         attach: {
           x: 'right',
-          to: '#artefact-list [value="gap"]',
+          to: '#artefact-list [value="linear"]',
           at: {
             x: 'left'
           }
@@ -157,9 +153,9 @@
         },
         arrowClass: 'right-middle',
         nextOn: {
-          click: '#artefact-list [value="gap"]'
+          click: '#artefact-list [value="linear"]'
         },
-        block: '.species .toggles .species .finished #artefact-list button:not([value="gap"])'
+        block: '.species .toggles .species .finished #artefact-list button:not([value="linear"])'
       }), new Step({
         heading: 'Chip Gap',
         content: ['Click and drag from the the top to the bottom of the gap'],
@@ -219,16 +215,16 @@
         heading: 'Great job!',
         content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to explore and complete some classifications on your own!', 'If you\'re ever unsure of what to mark, you can always consult the guide on the "About" page for descriptions of the star clusters, background galaxies and artifacts. You can then return to the "Classify" page when you\'re ready.'],
         attach: {
-          x: 'right',
-          to: '.talk p',
+          to: '.creature-picker',
           at: {
-            x: 'left'
+            x: 0.5,
+            y: 0.5
           }
         },
         style: {
           width: 400
         },
-        arrowClass: 'right-middle',
+        arrowClass: 'right-to',
         nextOn: {
           click: '.talk button'
         }

@@ -126,11 +126,11 @@
           }
 
           &:nth-child(5n) > a {
-            border-top-color: $gap-color;
+            border-top-color: $linear-color;
 
             &:hover,
             &.active {
-              color: $gap-color;
+              color: $linear-color;
             }
           }
         }

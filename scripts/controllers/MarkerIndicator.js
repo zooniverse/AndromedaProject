@@ -79,8 +79,8 @@
             }
           ]
         },
-        gap: {
-          image: 'images/indicator/gap.png',
+        linear: {
+          image: 'images/indicator/linear.png',
           points: [
             {
               x: 40,
