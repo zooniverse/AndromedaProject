@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+*.fits
+*.fz
+subjects/standard
+subjects/thumbnails
+alpha/
+build*/
+tiles/
+builder.rb
