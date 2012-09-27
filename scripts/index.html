@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>pixelToLocation</title>
+  <script src='mapbox.js'></script>
+  <link href='mapbox.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; font:normal 14px/20px 'Georgia', serif; }
+    #map { position:absolute; top:0; left:0; bottom:25px; right:0; }
+    #places {
+        position:absolute;
+        left:0;
+        bottom:0; 
+        right:0;
+        height:24px;
+        border-top:1px solid #000;
+    }
+    #places a { margin:0 10px; }
+  </style>
+</head>
+<body>
+  <div id='map'></div>
+  <div id='places'>
+      <a href='#' data-pixel='1800,1715'>Albert Memorial</a>
+      <a href='#' data-pixel='2429,675'>Royal Botanic Gardens</a>
+      <a href='#' data-pixel='1431,562'>Paddington Recreational Ground</a>
+      <a href='#' data-pixel='3855,1233'>St Paul's Cathedral</a>
+  </div>
+  <script>
+      // normalize x/y values to their ratio to the full image size,
+      // so they can work at multiple scales
+      function pixelToCoordinate(w, h) {
+        return function(x, y) {
+          // here's the only real tricky part
+          // of the code: if the image doesn't fill
+          // the whole canvas, that means that it's
+          // nudged either down or to the left
+          // to be centered. The size of this nudge
+          // is equal to the difference between
+          // the width and height over two.
+
+          if (w > h) y += (w - h) / 2;
+          if (w < h) x += (h - w) / 2;
+
+          return new MM.Coordinate(
+            // row
+            y / Math.max(w, h),
+            // column
+            x / Math.max(w, h),
+            // zoom
+            0
+          );
+        };
+      }
+      function pixelToLocation(w, h, map) {
+        var toCoordinate = pixelToCoordinate(w, h);
+        return function(x, y) {
+          // map.coordinateLocation takes a coordinate
+          // value and returns a geographical
+          // location value.
+          return map.coordinateLocation(toCoordinate(x, y));
+        };
+      }
+      
+      var m = mapbox.map('map');
+      m.addLayer(new MM.TemplatedLayer('http://www.andromedaproject.org.s3.amazonaws.com/tiles/F475_B01/{Z}/{X}/{Y}.png'));
+      
+      var pxl = pixelToLocation(16668, 16361, m);
+      
+      var markerLayer = mapbox.markers.layer();
+      mapbox.markers.interaction(markerLayer);
+      m.addLayer(markerLayer);
+      loc = pxl(0, 0);
+      console.log(loc);
+      markerLayer.add_feature({
+        geometry: {
+            coordinates: [loc.lat, loc.lon]
+        },
+        properties: {
+            'marker-color': '#000',
+            'marker-symbol': 'star-stroked',
+            title: 'Example Marker',
+            description: 'This is a single marker.'
+        }
+      });
+      
+      
+      m.ui.zoomer.add();
+      m.ui.zoombox.add();
+      m.zoom(3);
+      
+      // mapbox.auto('map', 'tmcw.geographica', function(m) {
+      //     var pxl = pixelToLocation(5000, 3292, m);
+      //     m.zoom(5);
+      //     m.center(pxl(1800, 1715));
+      // 
+      //     var as = document.getElementsByTagName('a');
+      //     for (var i = 0; i < as.length; i++) {
+      //         var px = '';
+      //         if (px = as[i].getAttribute('data-pixel')) {
+      //             px = px.split(',');
+      //             as[i].onclick = (function(x, y) {
+      //                 return function(e) {
+      //                     m.center(pxl(x, y), true);
+      //                     return false;
+      //                 };
+      //             })(+px[0], +px[1]);
+      //         }
+      //     }
+      // });
+</script>
