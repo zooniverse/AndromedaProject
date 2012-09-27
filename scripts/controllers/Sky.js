@@ -31,7 +31,6 @@
           minZoom: 2,
           maxZoom: 8,
           attribution: 'Robert Gendler - The Andromeda Galaxy (M31) &copy; 2005',
-          continuousWorld: true,
           noWrap: true
         });
         layer.getTileUrl = function(tilePoint) {
