@@ -8,3 +8,4 @@ alpha/
 build*/
 tiles/
 builder.rb
+.rvmrc
