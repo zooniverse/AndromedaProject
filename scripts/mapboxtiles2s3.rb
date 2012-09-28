@@ -27,9 +27,9 @@ tiles.each_with_index do |tile, index|
   # puts "#{zoom}, #{column}, #{row}"
   puts zoom, column, row if index % 100 == 0
   
-  # Convert from TMS to XYZ
-  columns = 2 ** zoom - 1
-  row = columns - row
+  # # Convert from TMS to XYZ
+  # columns = 2 ** zoom - 1
+  # row = columns - row
   
   AWS::S3::S3Object.store("#{row}.png", data, "#{bucket_name}/#{root}/#{directory}/#{zoom}/#{column}/")
 end

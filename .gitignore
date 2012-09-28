@@ -9,3 +9,4 @@ build*/
 tiles/
 builder.rb
 *.mbtiles
+.rvmrc
