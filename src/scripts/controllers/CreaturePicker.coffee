@@ -64,6 +64,7 @@ define (require, exports, module) ->
     reset: =>
       @image.attr 'src', @classifier.workflow.selection[0].location.standard
       subject = @classifier.workflow.selection[0]
+      console.log subject
 
     getSize: =>
       width: @image.width(), height: @image.height()

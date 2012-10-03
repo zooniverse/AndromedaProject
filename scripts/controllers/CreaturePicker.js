@@ -115,7 +115,8 @@
       CreaturePicker.prototype.reset = function() {
         var subject;
         this.image.attr('src', this.classifier.workflow.selection[0].location.standard);
-        return subject = this.classifier.workflow.selection[0];
+        subject = this.classifier.workflow.selection[0];
+        return console.log(subject);
       };
 
       CreaturePicker.prototype.getSize = function() {

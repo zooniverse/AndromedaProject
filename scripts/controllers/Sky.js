@@ -25,54 +25,20 @@
 
       Sky.prototype.createMap = function() {
         var layer, map;
-        map = L.map('banner', this.mapOptions).setView([14, 0], 2);
+        map = L.map('banner', this.mapOptions).setView([14, 0], 0);
         map.attributionControl.setPrefix('');
         layer = L.tileLayer('/tiles/#{tilename}.jpg', {
-          minZoom: 2,
+          minZoom: 0,
           maxZoom: 8,
           attribution: 'Robert Gendler - The Andromeda Galaxy (M31) &copy; 2005',
           noWrap: true
         });
         layer.getTileUrl = function(tilePoint) {
-          var convertTileUrl, url, zoom;
-          zoom = this._getZoomForUrl();
-          convertTileUrl = function(x, y, s, zoom) {
-            var d, e, f, g, pixels;
-            pixels = Math.pow(2, zoom);
-            d = (x + pixels) % pixels;
-            e = (y + pixels) % pixels;
-            f = "t";
-            g = 0;
-            while (g < zoom) {
-              pixels = pixels / 2;
-              if (e < pixels) {
-                if (d < pixels) {
-                  f += "q";
-                } else {
-                  f += "r";
-                  d -= pixels;
-                }
-              } else {
-                if (d < pixels) {
-                  f += "t";
-                  e -= pixels;
-                } else {
-                  f += "s";
-                  d -= pixels;
-                  e -= pixels;
-                }
-              }
-              g++;
-            }
-            return {
-              x: x,
-              y: y,
-              src: f,
-              s: s
-            };
-          };
-          url = convertTileUrl(tilePoint.x, tilePoint.y, 1, zoom);
-          return "http://www.andromedaproject.org.s3.amazonaws.com/alpha/tiles/" + url.src + ".jpg";
+          var x, y, z;
+          z = this._getZoomForUrl();
+          x = tilePoint.x;
+          y = tilePoint.y;
+          return "http://www.andromedaproject.org.s3.amazonaws.com/tiles/F475_B01/" + z + "/" + x + "/" + y + ".png";
         };
         return layer.addTo(map);
       };

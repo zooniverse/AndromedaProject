@@ -6,6 +6,7 @@ subjects/standard
 subjects/thumbnails
 alpha/
 build*/
+data/
 tiles/
 builder.rb
 .rvmrc
