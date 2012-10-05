@@ -23,5 +23,20 @@ def header2json():
         output.write(json.dumps(wcs))
         output.close()
 
+def subimage_centers():
+    data_dir = os.path.join('..', 'data')
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs.fits'))
+    
+    d = {}
+    for row in data:
+        img_id = row[3]
+        x = str(row[6])
+        y = str(row[7])
+        d[img_id] = {'x': x, 'y': y}
+    output = open(os.path.join(data_dir, 'image-centers.json'), 'w')
+    output.write(json.dumps(d))
+    output.close()
+
 if __name__ == '__main__':
-    header2json()
+    # header2json()
+    subimage_centers()
