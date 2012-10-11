@@ -96,7 +96,7 @@ body {
               decoration: none;
               shadow: 0 1px 1px transparentize($black, 0.75);
             };
-            width: ($twelfth-width + $gutter-width) - ($gutter-width / 2);
+            width: (($twelfth-width + $gutter-width) - ($gutter-width / 2))*0.8;
 
             > img {
               display: block;

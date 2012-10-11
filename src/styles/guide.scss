@@ -1,0 +1,55 @@
+@import "common";
+
+.main [data-page="guide"] {
+  div.content {
+     padding: 5px;
+  }
+  
+  div.images {
+    text-align: left;
+    width: 700px;
+    margin: 0 0 10px 0;
+    padding: 5px 0px;
+  }
+  
+  img.large {
+    width: 330px;
+  }
+  
+  img.medium_big {
+    width: 260px;
+  }
+  
+  img.medium {
+    width: 230px;
+  }
+  
+  img.small {
+    width: 138px;
+    height: 138px;
+  }
+  
+  div.images span.caption {
+  	width: 600px;
+  	font-size: 0.9em;
+  	font-style: italic;
+  }
+  
+  a.to-classify {
+	@include linear-gradient($orange, $orange-dark);
+	border: 1px solid $orange-darker {
+	  radius: 3px;
+	};
+	box-shadow: 0 1px 0 $orange-light inset;
+	color: rgb(4, 13, 25);
+	font-weight: bold;
+	padding: 5px 20px;
+	position: absolute;
+	right: 20px;
+	text: {
+	  decoration: none;
+	  shadow: 0 1px 0px $orange-dark;
+	}
+	top: 65px;
+  }
+}
