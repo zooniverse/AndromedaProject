@@ -1,6 +1,24 @@
 @import "common";
 
 .main [data-page="about"] {
+  
+  div.images {
+    text-align: left;
+    width: 700px;
+    margin: 0 0 10px 0;
+    padding: 5px 0px;
+  }
+  
+  img.large {
+    width: 330px;
+  }
+  
+  div.images span.caption {
+    width: 600px;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  
   a.to-classify {
     @include linear-gradient($orange, $orange-dark);
     border: 1px solid $orange-darker {
