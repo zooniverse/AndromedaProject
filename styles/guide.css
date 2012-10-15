@@ -1,0 +1,45 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
+.main [data-page="guide"] div.content {
+  padding: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000038}}
+.main [data-page="guide"] div.images {
+  text-align: left;
+  width: 700px;
+  margin: 0 0 10px 0;
+  padding: 5px 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000315}}
+.main [data-page="guide"] img.large {
+  width: 330px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000319}}
+.main [data-page="guide"] img.medium_big {
+  width: 260px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000323}}
+.main [data-page="guide"] img.medium {
+  width: 230px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000327}}
+.main [data-page="guide"] img.small {
+  width: 138px;
+  height: 138px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000332}}
+.main [data-page="guide"] div.images span.caption {
+  width: 600px;
+  font-size: 0.9em;
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000338}}
+.main [data-page="guide"] a.to-classify {
+  background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: linear-gradient(top, #eeeeee, #eeeeee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#eeeeee')";
+  border: 1px solid #dddddd;
+    border-radius: 3px;
+  box-shadow: 0 1px 0 #dddddd inset;
+  color: #040d19;
+  font-weight: bold;
+  padding: 5px 20px;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0px #eeeeee;
+  top: 65px; }

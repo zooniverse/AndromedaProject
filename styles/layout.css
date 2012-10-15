@@ -94,7 +94,7 @@ body {
             text-align: center;
             text-decoration: none;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-            width: 75px; }
+            width: 60px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003101}}
             .app > header > nav > ul > li > a > img {
               display: block;

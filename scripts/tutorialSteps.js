@@ -22,7 +22,7 @@
         block: '.options'
       }), new Step({
         heading: 'Identify Star Clusters',
-        content: ['Let\'s identify star clusters in the image.', 'Star clusters show up more clearly in the blue band of the optical spectrum.', 'In this image we can see two clusters.', 'We\'ll mark these first.'],
+        content: ['Let\'s identify star clusters in the image.', 'Star clusters are tight groups of many stars.', 'Star clusters usually appear quite blue. A few clusters may appear quite red, if they\'re old or dusty.', 'In this image we can see two clusters. We\'ll mark these first.'],
         continueText: 'Next',
         style: {
           width: 450
@@ -87,7 +87,7 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Identifying Background Galaxies',
-        content: ['We\'ve finished marking all the clusters in this image. On to the background galaxies!', 'Background galaxies are more distant galaxies that we occasionally see through all the dust of a foreground galaxy.', 'Choose "galaxy" from the species list to mark them.'],
+        content: ['We\'ve finished marking all the clusters in this image. On to the background galaxies!', 'Background galaxies are distant galaxies that we can see through all the dust of Andromeda.', 'They will be large compared to stars of similar brightness, and may have sizes as large as the largest stellar clusters. Some may appear quite diffuse.', 'Choose "galaxy" from the species list to mark them.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',
@@ -140,7 +140,7 @@
         block: '.species .toggles .species .finished'
       }), new Step({
         heading: 'Chip Gap',
-        content: ['This image has a chip gap that comes from the Advanced Camera for Surveys, an instrument on the Hubble Space Telescope.', 'You can see a long diagonal line that goes across the image.'],
+        content: ['This image has a "chip-gap" caused by the instrument we use on the Hubble Space Telescope.', 'Although we take data to help fill the gap, you will frequently see small artifacts near the gap.', 'You can see the gap here, as a long diagonal line that goes across the image.', 'Since we know where these gaps are, we do not need you to mark them.'],
         attach: {
           x: 'right',
           to: '#artefact-list [value="linear"]',
