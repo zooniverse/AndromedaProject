@@ -2,14 +2,6 @@ define (require, exports, module) ->
   '''
     <section class="login-form content"></section>
 
-    <section class="summary">
-      <h3 class="content">
-        Ahoy, <span class="username">username</span>!
-        <a href="#sign-out" class="sign-out"t>Not <span class="username">username</span>?</a>
-      </h3>
-      <div class="scoreboard"></div>
-    </section>
-
     <section class="favorites">
       <h4 class="content">Favorites</h4>
       <p class="none content">You haven't marked any favorites.</p>

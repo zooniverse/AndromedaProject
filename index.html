@@ -25,7 +25,7 @@
             <li><a href="#!/about">About</a></li>
             <li><a href="#!/classify">Classify</a></li>
             <li><a href="#!/guide">Guide</a></li>
-            <li class="inactive" ><a href="#!/home">Profile</a></li>
+            <li><a href="#!/profile">Profile</a></li>
             <li class="inactive" ><a href="#!/home" target="_blank">Talk</a></li>
             <li class="inactive" ><a href="#!/home" target="_blank">Blog</a></li>
           </ul>
@@ -45,8 +45,6 @@
         </section>
         
         <section data-page="about" class="active">
-                  
-          <a href="#!/classify" class="to-classify after">Classify</a>
 
           <section data-page="people" class="details active">
             <nav>
@@ -89,9 +87,9 @@
                   
                   <p>Star clusters don't all look the same, because they have a huge range of masses, sizes, and ages.  This makes identifying clusters tricky, and nearly impossible to automate.  From the first year of PHAT data, a team of eight researchers searched through each image, identifying star clusters by eye.  Using less than 1/5th the total PHAT survey area, we cataloged about 600 star clusters (<a href="http://adsabs.harvard.edu/abs/2012ApJ...752...95J">Johnson+ 2012</a>).  With the Andromeda Project, we hope that you will help us find the 1000s of star clusters hiding in the rest of the survey!</p>
                   
-                  <p>In addition to finding clusters, we also want to know what clusters we can't see.  For this reason, we have created synthetic clusters with known ages, masses and sizes.  By having you identify both the real and synthetic clusters, we can assess how complete our catalog is in terms of cluster properties.  This is essential for future analysis we wish to perform using the clusters.  CHECK: As you are searching through the data, you will be told when you have identified a cluster that was previously cataloged or a synthetic cluster.</p>                  
+                  <p>In addition to finding clusters, we also want to know what clusters we can't see.  For this reason, we have created synthetic clusters with known ages, masses and sizes.  By having you identify both the real and synthetic clusters, we can assess how complete our catalog is in terms of cluster properties.  This is essential for future analysis we wish to perform using the clusters.  <b>CHECK: As you are searching through the data, you will be told when you have identified a cluster that was previously cataloged or a synthetic cluster.</b></p>                  
                   
-                  <p>After identification, we need to determine how old and how massive the star clusters are.  In some clusters, we can resolve individual stars that allow us to determine the age and mass of the object.  But even in clusters where individual star stars are too faint or close together, we can use the collective light from the cluster in all six wavelength bands to determine their age, mass, and the amount of dust that surrounds them and dims their light (Fouesneau+ 2012, in prep.).  After ages and masses for clusters are known, we can use these clusters to study the rarest and fastest stages of stellar evolution, to understand the structure and scale of star formation, and to understand how Andromeda has changed over billions of years.</p>
+                  <p>After identification, we need to determine how old and how massive the star clusters are.  In some clusters, we can resolve individual stars that allow us to determine the age and mass of the object.  But even in clusters where individual stars are too faint or close together, we can use the collective light from the cluster in all six wavelength bands to determine their age, mass, and the amount of dust that surrounds them and dims their light (Fouesneau+ 2012, in prep.).  After ages and masses for clusters are known, we can use these clusters to study the rarest and fastest stages of stellar evolution, to understand the structure and scale of star formation, and to understand how Andromeda has changed over billions of years.</p>
                   
                   <p>In addition to identifying clusters, we also ask you to find galaxies seen through Andromeda’s disk.  Stars are often spaced far enough apart that we can see galaxies that lie behind the disk in the background.  We plan to use these galaxies to study the small scale structure of the gas and dust in Andromeda.</p>
                   
@@ -226,185 +224,217 @@
 
         </section>
 
-        <section data-page="guide" class="active">
-          <section class="details">
-            <div class="content">
-              <h3>Expanded Tutorial</h3>
-              <p>The primary purpose of the Andromeda Project is to identify star clusters using Hubble Space Telescope (HST) images of the Andromeda Galaxy.  These images were taken as part of the Panchromatic Hubble Andromeda Treasury project.  See the science overview for more details on the survey and what we are hoping to do with the data.  The primary goal of the Andromeda Project is to identify the thousands of star clusters visible in these images.</p>
+        <section data-page="guide">
+            <section data-page="type" class="details active">
+              <nav>
+                <ul>
+                  <li><a href="#!/guide/type/phat-guide" class="active">Guide</a></li>
+                  <li><a href="#!/guide/type/star-clusters" class="after">Star Clusters</a></li>
+                  <li><a href="#!/guide/type/background-galaxies" class="after">Background Galaxies</a></li>
+                  <li><a href="#!/guide/type/other-and-artifacts" class="before">Other Objects and Artifacts</a></li>
+                </ul>
+              </nav>
               
+              <section data-page="phat-guide" class="active">
+                <section>
+                  <div class='content'>
+                    <h3>Guide</h3>
+                    <p>The primary purpose of the Andromeda Project is to identify star clusters using Hubble Space Telescope (HST) images of the Andromeda Galaxy.  These images were taken as part of the Panchromatic Hubble Andromeda Treasury project.  See the science overview for more details on the survey and what we are hoping to do with the data.  The primary goal of the Andromeda Project is to identify the thousands of star clusters visible in these images.</p>
+                  </div>
+                </section>  
+              </section>
               
-              <h4>Identifying Star Clusters:</h4>
-              <p>Within the Andromeda galaxy, stars are grouped together on a wide range of size scales.  There are large-scale spiral arms, loose associations of stars, and small dense star clusters.  We are interested primarily in stellar clusters, the most compact structures visible in our images.</p>         
+              <section data-page="star-clusters" class="after">
+                <section>
+                  <div class='content'>
+                    <h3>Star Clusters</h3>
+                    <h4>Identifying Star Clusters:</h4>
+                    <p>Within the Andromeda galaxy, stars are grouped together on a wide range of size scales.  There are large-scale spiral arms, loose associations of stars, and small dense star clusters.  We are interested primarily in stellar clusters, the most compact structures visible in our images.</p>         
+
+                    <div class="images">
+                      <img src="images/tutorial/clst-assoc_color.jpg" class="large"/>
+                      <br/>
+                      <span class="caption">A dense cluster (upper right) that lies close to a loose association of stars.</span>
+                    </div>
+
+                    <p>The image above shows a large association that also includes a compact stellar cluster.  We want you to identify these denser objects; if an object breaks up into several smaller pieces, those substructures are the clusters we wish to identify.</p>
+
+
+                    <h4>What do star clusters look like?</h4>
+                    <p>Star clusters have an amazing range of properties, ranging from scrawny newborn clusters to old massive globular clusters (that are among the oldest objects in the Universe).  The appearance of star clusters in our images depend on five factors: mass, age, size, dust extinction, and the galaxy background they are seen against.  Let's take a look how each of these influence what a cluster looks like.</p>
+
+
+                    <h4>1. Mass</h4>
+                    <p>The more massive a cluster is, the more stars it will have and the easier it will be to find.  The clusters visible in our data have total masses ranging from a few hundred to a million times the mass of the Sun.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/pc1358_color.jpg" class="medium">
+                      <img src="images/tutorial/pc358_color.jpg" class="medium">
+                      <br/>
+                      <span class="caption">The cluster on the left is ~10,000 times the mass of the Sun, while the cluster on the right is 10 times smaller.</span>
+                    </div>
+
+                    <p>Star clusters all have many more faint low-mass stars than the bright stars we can see on our images, so you’re identifying just the “tip of the iceberg.”  Even a star cluster that has just three or four bright stars can have hundreds of fainter ones that individually go unseen.  Because of this, one reliable signature of a star cluster is an enhancement in the background light in the image giving them a “fuzzy” appearance.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/pc428_color.jpg" class="large"/>
+                      <br/>
+                      <span class="caption">A cluster with a few faint stars and clearly fuzzy background.</span>
+                    </div>  
+
+                    <h4>2. Age</h4>
+                    <p>As a cluster ages, its most massive stars burn through all their fuel quickly and die leaving just their lower-mass fainter stars.  This makes old star clusters both fainter and redder in color than young clusters with a similar mass.  In a very young cluster, the brightest stars will be massive blue stars.  Then as a cluster ages, its brightest, most massive stars die as supernovae or planetary nebulae, while slightly less massive stars become large red giant and supergiant stars.  The oldest clusters have only red giant stars visible in our images.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/pc1_color.jpg" class="medium">
+                      <img src="images/tutorial/pc1053_color.jpg" class="medium">
+                      <img src="images/tutorial/pc1627_color.jpg" class="medium">
+                      <br/>
+                      <span class="caption">From left to right, cluster ages range from a few million years, to a hundred million  years, to a few billion years.</span>
+                    </div>
+
+                    <h4>3. Size</h4>
+                    <p>The force of gravity gets weaker with distance, so any star cluster whose members are going to stay together for the long haul need to be packed together densely.  The average star cluster is about 20 light years across, which in our images is about 30 pixels.  But the size of clusters varies by more than a factor of ten.  The bigger the cluster is, the harder it can be to find, as its light is spread out over a larger area.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/pc1148_color.jpg" class="medium">
+                      <img src="images/tutorial/pc236_color.jpg" class="medium">
+                      <img src="images/tutorial/pc362_color.jpg" class="medium">
+                    </div>
+
+                    <h4>4. Amount of Dust</h4>
+                    <p>Clouds of cool gas and small dust particles are found both in Andromeda and in our own Galaxy.  This dust makes objects look redder than they are, just like the dust in our atmosphere makes the sun appear red at sunset.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/pc1156_color.jpg" class="medium">
+                      <img src="images/tutorial/pc998-pc1002_color.jpg" class="medium">
+                      <br/>
+                      <span class="caption">Left: one of the most highly reddened clusters found so far in M31.  Right: a close pair of clusters, where one is reddened by dust and the other is not.</span>
+                    </div>
+
+                    <h4>5. Environment</h4>
+                    <p>The PHAT data we are searching extends across the disk of Andromeda from its busy center to its tenuous outskirts, covering a distance of more than 50,000 light years (for reference, our Sun is about 25,000 light years from the center of our Galaxy).  The varying backgrounds is one of the aspects of identifying star clusters that makes the task particularly hard to automate.  Fortunately, humans are skilled at identifying clusters against complicated backgrounds.  Below are some examples of clusters in different backgrounds.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/pc663_context.jpg" class="medium">
+                      <img src="images/tutorial/pc1104_context.jpg" class="medium">
+                      <img src="images/tutorial/pc1640_context.jpg" class="medium">
+                      <br/>
+                      <span class="caption">Clusters in different fields.</span>
+                    </div>
+
+                    <h4>Existing samples of star clusters in Andromeda</h4>
+                    <p>A group of eight researchers from around the world searched through a small fraction of the data you are looking at, compiling our first catalog of star clusters (<a href="http://adsabs.harvard.edu/abs/2012ApJ...752...95J">Johnson+ 2012</a>).  Sometimes while identifying clusters, you will come across these previously known clusters.  <b>After you finish a field that has previously identified clusters, you will be shown the location of these clusters.</b>. In addition, there are a large number of catalogs of star clusters created from lower resolution ground-based observations.  These catalogs include many of the brightest clusters, but miss most of the lower mass clusters that you can identify.</p>
+
+
+                    <h4>Synthetic Clusters and Interpreting Our Results</h4>
+                    <p>In order to understand how Andromeda’s cluster system evolves over time and interpret the catalog you help make, we need to figure out what objects we are able to find successfully, and which objects can not be detected.  To figure out what objects make it into our catalog, we also include synthetic clusters in a fraction of the search images that allows us to determine the limits of our catalog.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/fake-left_real-right_color.jpg" class="large">
+                      <br/>
+                      <span class="caption">Synthetic clusters.</span>
+                    </div>
+                  </div>
+                </section>
+              </section>
               
-              <div class="images">
-                <img src="images/tutorial/clst-assoc_color.jpg" class="large"/>
-                <br/>
-                <span class="caption">A dense cluster (upper right) that lies close to a loose association of stars.</span>
-              </div>
+              <section data-page="background-galaxies" class="after">
+                <section>
+                  <div class='content'>
+                    <h3>Background Galaxies</h3>
+                    <p>Distant galaxies that lie behind Andromeda’s disk are often seen in the PHAT images.  For those who have participated in Galaxy Zoo, these galaxies will look familiar.  There are disky, spiral galaxies (like Andromeda) as well as rounder, smoother elliptical galaxies. We want you to identify these background galaxies, which we will use to study the structure of dust on small scales in Andromeda.  Some examples of background galaxies are shown below.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/galaxy_good-pair.jpg" class="large">
+                      <br/>
+                      <img src="images/tutorial/gal22_color_sm.jpg" class="small">
+                      <img src="images/tutorial/gal178_color_sm.jpg" class="small">
+                      <img src="images/tutorial/gal79_color.jpg" class="small">
+                      <img src="images/tutorial/gal97_color.jpg" class="small">
+                      <img src="images/tutorial/gal110_color.jpg" class="small">
+                      <img src="images/tutorial/gal121_color.jpg" class="small">
+                      <img src="images/tutorial/gal185_color.jpg" class="small">
+                      <img src="images/tutorial/gal266_color.jpg" class="small">
+                      <br />
+                      <span class="caption">Background galaxy examples.</span>
+                    </div>
+                  </div>
+                </section>
+              </section>
               
-              <p>The image above shows a large association that also includes a compact stellar cluster.  We want you to identify these denser objects; if an object breaks up into several smaller pieces, those substructures are the clusters we wish to identify.</p>
+              <section data-page="other-and-artifacts" class="after">
+                <section>
+                  <div class='content'>
+                    <h3>HII Regions</h3>
+                    <p>We expect there to be a few other types of objects in our images, including HII regions.  These objects are clouds of gas that surround massive hot stars.  The ionized radiation emitted from these objects causes the gas to emit emission lines at a number of distinct wavelengths, including those that are captured in our blue image.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/hii.jpg" class="large">
+                      <br/>
+                      <span class="caption">Example HII region.</span>
+                    </div>
+                    
+                    <h3>Artifacts</h3>
+                    <h4>Image artifacts you should mark:</h4>
+                    <p>The PHAT images are beautiful, but they also have some imperfections.  These fall into two categories: (1) the imperfections we don’t know about and that we could use your help in finding, and (2) the ones we do know about, but that you should be aware of.</p>
+
+
+                    <h4>1. Bright/Saturated Stars</h4>
+                    <p>Very bright stars cause an artificial cross shaped pattern that is caused by the support structure of Hubble’s secondary mirror.  When we try to identify individual stars in Andromeda, we mistake these bright crosses as a line of stars.  Please mark the full extent of the crosses with the cross tool to help improve the quality of our stellar catalogs.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/sat_1.jpg" class="medium_big">
+                      <img src="images/tutorial/sat_2.jpg" class="medium_big">
+                      <br/>
+                      <span class="caption">Examples of saturated stars.</span>
+                    </div>
+
+                    <h4>2. Ghost Images</h4>
+                    <p>Bright stars can also make additional reflections within the telescope or camera, causing out of focus “ghost” images. These images often look like a ring of light or eyeglasses. Please identify these using the Ghost tool. You also find ghosts-of-ghosts, as you see in this image. These should be marked as well.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/ghost.jpg" class="large">
+                      <br/>
+                      <span class="caption">Examples of ghosts.</span>
+                    </div>
+
+                    <h4>3. Satellite/Asteroid Trails, &amp; Other Linear Artifacts</h4>
+                    <p>Satellites and asteroids that pass through the line-of-sight of the telescope during our exposures are seen as lines in our image that appear in just one color.  In addition, an artifact known as “dragon’s breath” occurs when a bright star lands on the edge of the image, scattering light into the frame.  Please mark these using the Linear tool.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/linear_dragon.jpg" class="large">
+                      <br/>
+                      <span class="caption">Examples of a linear feature.</span>
+                    </div>
+                    
+                    <h4>Image artifacts you should not mark:</h4>
+                    <h4> 1. Chip-Gaps</h4>
+                    <p>The images for this project were taken using HST’s Advanced Camera for Surveys (ACS) instrument.  This camera uses two separate CCD chips that have a small gap separating them.  We fill in this gap using overlapping images, but sometimes these overlapping data do not exist, or the overlapping data are imperfectly aligned.  This causes diagonal streaks through our data, but we are aware of their locations and therefore should simply be ignored.  Below are some examples of chip gaps.</p>
+
+                    <div class="images">
+                      <img src="images/tutorial/chip_hi.jpg" class="medium_big">
+                      <img src="images/tutorial/chip_mid.jpg" class="medium_big">
+                      <img src="images/tutorial/chip_mismatch.jpg" class="medium_big">
+                      <img src="images/tutorial/chip_lo.jpg" class="medium_big">
+                      <br/>
+                      <span class="caption">Examples of chip-gaps.</span>
+                    </div>
+
+                    <h4>2. Charge Transfer Efficiency (CTE) Imperfections</h4>
+                    <p>The cameras used to take the images are charge-coupled devices or CCDs.  When a photon hits a pixel in these cameras, it creates a free electron.  These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal.  This process is typically very efficient, moving &gt;99.999% of the electrons correctly.  But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred.  This inefficiency shows itself as small streaks in the image; some examples are shown below.  This is especially noticeable in the least dense parts of our images.</p>           
+
+                    <div class="images">
+                      <img src="images/tutorial/cte.jpg" class="large">
+                      <br/>
+                      <span class="caption">Example CTE.</span>
+                    </div>
+                    
+                  </div>
+                </section>
+              </section>
               
-              
-              <h4>What do star clusters look like?</h4>
-              <p>Star clusters have an amazing range of properties, ranging from scrawny newborn clusters to old massive globular clusters (that are among the oldest objects in the Universe).  The appearance of star clusters in our images depend on five factors: mass, age, size, dust extinction, and the galaxy background they are seen against.  Lets take a look how each of these influence what a cluster looks like.</p>
-              
-              
-              <h4>1. Mass</h4>
-              <p>The more massive a cluster is, the more stars it will have and the easier it will be to find.  The clusters visible in our data have total masses ranging from a few hundred to a million times the mass of the Sun.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/pc1358_color.jpg" class="medium">
-                <img src="images/tutorial/pc358_color.jpg" class="medium">
-                <br/>
-                <span class="caption">The cluster on the left is ~10,000 times the mass of the Sun, while the cluster on the right is 10 times smaller.</span>
-              </div>
-              
-              <p>Star clusters all have many more faint low-mass stars than the bright stars we can see on our images, so you’re identifying just the “tip of the iceberg.”  Even a star cluster that has just three or four bright stars can have hundreds of fainter ones that individually go unseen.  Because of this, one reliable signature of a star cluster is an enhancement in the background light in the image giving them a “fuzzy” appearance.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/pc428_color.jpg" class="large"/>
-                <br/>
-                <span class="caption">A cluster with a few faint stars and clearly fuzzy background.</span>
-              </div>  
-              
-              <h4>2. Age</h4>
-              <p>As a cluster ages, its most massive stars burn through all their fuel quickly and die leaving just their lower-mass fainter stars.  This makes old star clusters both fainter and redder in color than young clusters with a similar mass.  In a very young cluster, the brightest stars will be massive blue stars.  Then as a cluster ages, its brightest, most massive stars die as supernovae or planetary nebulae, while slightly less massive stars become large red giant and supergiant stars.  The oldest clusters have only red giant stars visible in our images.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/pc1_color.jpg" class="medium">
-                <img src="images/tutorial/pc1053_color.jpg" class="medium">
-                <img src="images/tutorial/pc1627_color.jpg" class="medium">
-                <br/>
-                <span class="caption">Caption: From left to right, cluster ages range from a few million years, to a hundred million  years, to a few billion years.</span>
-              </div>
-              
-              <h4>3. Size</h4>
-              <p>he force of gravity gets weaker with distance, so any star cluster whose members are going to stay together for the long haul need to be packed together densely.  The average star clusters is about 20 light years across, which in our images is about 30 pixels.  But the size of clusters varies by more than a factor of ten.  The bigger the cluster is, the harder it can be to find, as its light is spread out over a larger area.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/pc1148_color.jpg" class="medium">
-                <img src="images/tutorial/pc236_color.jpg" class="medium">
-                <img src="images/tutorial/pc362_color.jpg" class="medium">
-              </div>
-              
-              <h4>4. Amount of Dust</h4>
-              <p>Clouds of cool gas and small dust particles are found both in Andromeda and in our own Galaxy.  This dust makes objects look redder than they are, just like the dust in our atmosphere makes the sun appear red at sunset.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/pc1156_color.jpg" class="medium">
-                <img src="images/tutorial/pc998-pc1002_color.jpg" class="medium">
-                <br/>
-                <span class="caption">Left: one of the most highly reddened clusters found so far in M31.  Right: a close pair of clusters, where one is reddened by dust and the other is not.</span>
-              </div>
-              
-              <h4>5. Environment</h4>
-              <p>The PHAT data we are searching extends across the disk of Andromeda from its busy center to its tenuous outskirts, covering a distance of more than 50,000 light years (for reference, our Sun is about 25,000 light years from the center of our Galaxy).  The varying backgrounds is one of the aspects of identifying star clusters that makes the task particularly hard to automate.  Fortunately, humans are skilled at identifying clusters against complicated backgrounds.  Below are some examples of clusters in different backgrounds.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/pc663_context.jpg" class="medium">
-                <img src="images/tutorial/pc1104_context.jpg" class="medium">
-                <img src="images/tutorial/pc1640_context.jpg" class="medium">
-                <br/>
-                <span class="caption">Clusters in different fields.</span>
-              </div>
-              
-              <h4>Existing samples of star clusters in Andromeda</h4>
-              <p>A group of eight researchers from around the world searched through a small fraction of the data you are looking at, compiling our first catalog of star clusters (<a href="http://adsabs.harvard.edu/abs/2012ApJ...752...95J">Johnson+ 2012</a>).  Sometimes while identifying clusters, you will come across these previously known clusters.  After you finish a field that has previously identified clusters, you will be shown the location of these clusters.  In addition, there are a large number of catalogs of star clusters created from lower resolution ground-based observations.  These catalogs include many of the brightest clusters, but miss most of the lower mass clusters that you can identify.</p>
-              
-              
-              <h4>Synthetic Clusters and Interpreting Our Results</h4>
-              <p>In order to understand how Andromeda’s cluster system evolves over time and interpret the catalog you help to make, we need to figure out what objects we are able to find successfully, and which objects can not be detected.  To figure out what objects make it into our catalog, we also include synthetic clusters in a fraction of the search images that allows us to determine the limits of our catalog.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/fake-left_real-right_color.jpg" class="large">
-                <br/>
-                <span class="caption">Synthetic clusters.</span>
-              </div>
-              
-              <h3>Background galaxies</h3>
-              <p>Distant galaxies that lie behind Andromeda’s disk are often seen in the PHAT images.  For those who have participated in Galaxy Zoo, these galaxies will look familiar.  There are disky, spiral galaxies (like Andromeda) as well as rounder, smoother elliptical galaxies. We want you to identify these background galaxies, which we will use to study the structure of dust on small scales in Andromeda.  Some examples of background galaxies are shown below.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/galaxy_good-pair.jpg" class="large">
-                <br/>
-                <img src="images/tutorial/gal22_color_sm.jpg" class="small">
-                <img src="images/tutorial/gal178_color_sm.jpg" class="small">
-                <img src="images/tutorial/gal79_color.jpg" class="small">
-                <img src="images/tutorial/gal97_color.jpg" class="small">
-                <img src="images/tutorial/gal110_color.jpg" class="small">
-                <img src="images/tutorial/gal121_color.jpg" class="small">
-                <img src="images/tutorial/gal185_color.jpg" class="small">
-                <img src="images/tutorial/gal266_color.jpg" class="small">
-                <br />
-                <span class="caption">Background galaxy examples.</span>
-              </div>
-              
-              <h3>Other Objects:</h3>
-              <h4>HII Regions</h4>
-              <p>We expect there to be a few other types of objects in our images, including HII regions.  These objects are clouds of gas that surround massive hot stars.  The ionized radiation emitted from these objects causes the gas to emit emission lines at a number of distinct wavelengths, including those that are captured in our blue image.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/hii.jpg" class="large">
-                <br/>
-                <span class="caption">Example HII region.</span>
-              </div>
-              
-              <h4>Image artifacts you should mark:</h4>
-              <p>The PHAT images are beautiful, but they also have some imperfections.  These fall into two categories: (1) the imperfections we don’t know about and that we could use your help in finding, and (2) the ones we do know about, but that you should be aware of.</p>
-              
-              
-              <h4>1. Bright/Saturated Stars</h4>
-              <p>Very bright stars cause an artificial cross shaped pattern that is caused by the support structure of Hubble’s secondary mirror.  When we try to identify individual stars in Andromeda, we mistake these bright crosses as a line of stars.  Please mark the full extent of the crosses with the cross tool to help improve the quality of our stellar catalogs.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/sat_1.jpg" class="medium_big">
-                <img src="images/tutorial/sat_2.jpg" class="medium_big">
-                <br/>
-                <span class="caption">Examples of saturated stars.</span>
-              </div>
-              
-              <h4>2. Ghost Images</h4>
-              <p>Bright stars can also make additional reflections within the telescope or camera, causing out of focus “ghost” images. These images often look like a ring of light or eyeglasses. Please identify these using the Ghost tool. You also find ghosts-of-ghosts, as you see in this image. These should be marked as well.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/ghost.jpg" class="large">
-                <br/>
-                <span class="caption">Examples of ghosts.</span>
-              </div>
-              
-              <h4>3. Satellite/Asteroid Trails, &amp; Other Linear Artifacts</h4>
-              <p>Satellites and asteroids that pass through the line-of-sight of the telescope during our exposures are seen as lines in our image that appear in just one color.  In addition, an artifact known as “dragon’s breath” occurs when a bright star lands on the edge of the image, scattering light into the frame.  Please mark these using the Linear tool.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/linear_dragon.jpg" class="large">
-                <br/>
-                <span class="caption">Examples of a linear feature.</span>
-              </div>
-              
-              <h4>Image artifacts you should mark:</h4>
-              <h4> 1. Chip-Gaps</h4>
-              <p>The images for this project were taken using HST’s Advanced Camera for Surveys (ACS) instrument.  This camera uses two separate CCD chips that have a small gap separating them.  We fill in this gap using overlapping images, but sometimes these overlapping data do not exist, or the overlapping data are imperfectly aligned.  This causes diagonal streaks through our data, but we are aware of their locations and therefore should simply be ignored.  Below are some examples of chip gaps.</p>
-              
-              <div class="images">
-                <img src="images/tutorial/chip_hi.jpg" class="medium_big">
-                <img src="images/tutorial/chip_mid.jpg" class="medium_big">
-                <img src="images/tutorial/chip_mismatch.jpg" class="medium_big">
-                <img src="images/tutorial/chip_lo.jpg" class="medium_big">
-                <br/>
-                <span class="caption">Examples of chip-gaps.</span>
-              </div>
-              
-              <h4>2. Charge Transfer Efficiency (CTE) Imperfections</h4>
-              <p>The cameras used to take the images are charge-coupled devices or CCDs.  When a photon hits a pixel in these cameras, it creates a free electron.  These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal.  This process is typically very efficient, moving &gt;99.999% of the electrons correctly.  But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred.  This inefficiency shows itself as small streaks in the image; some examples are shown below.  This is especially noticeable in the least dense parts of our images.</p>           
-              
-              <div class="images">
-                <img src="images/tutorial/cte.jpg" class="large">
-                <br/>
-                <span class="caption">Example CTE.</span>
-              </div>
-              
-            </div>
-          </section>
+            </section>
         </section>
         
         <section data-page="classify">

@@ -2,7 +2,7 @@
 (function() {
 
   define(function(require, exports, module) {
-    return '<section class="login-form content"></section>\n\n<section class="summary">\n  <h3 class="content">\n    Ahoy, <span class="username">username</span>!\n    <a href="#sign-out" class="sign-out"t>Not <span class="username">username</span>?</a>\n  </h3>\n  <div class="scoreboard"></div>\n</section>\n\n<section class="favorites">\n  <h4 class="content">Favorites</h4>\n  <p class="none content">You haven\'t marked any favorites.</p>\n  <ul></ul>\n  <p class="more"><button name="more">Load more</button></p>\n</section>\n\n<section class="recents">\n  <h4 class="content">Recents</h4>\n  <p class="none content">You haven\'t classified anything recently.</p>\n  <ul></ul>\n  <p class="more"><button name="more">Load more</button></p>\n</section>';
+    return '<section class="login-form content"></section>\n\n<section class="favorites">\n  <h4 class="content">Favorites</h4>\n  <p class="none content">You haven\'t marked any favorites.</p>\n  <ul></ul>\n  <p class="more"><button name="more">Load more</button></p>\n</section>\n\n<section class="recents">\n  <h4 class="content">Recents</h4>\n  <p class="none content">You haven\'t classified anything recently.</p>\n  <ul></ul>\n  <p class="more"><button name="more">Load more</button></p>\n</section>';
   });
 
 }).call(this);
