@@ -198,6 +198,7 @@
 
 					> button {
 						@include linear-gradient($gray-light, $gray-dark);
+						box-shadow: inset 0px 1px 0px white, 0 1px 3px rgba(0, 0, 0, .1);
 						border: 1px solid $gray-darker;
 						border-radius: 3px;
 						color: $blue-dark;
@@ -220,15 +221,7 @@
 						}
 
 						&.active {
-							@include linear-gradient($blue);
-							border-color: transparent;
-							color: $white;
-
-							&[value="cluster"] {@include linear-gradient($cluster-color);}
-							&[value="galaxy"] {@include linear-gradient($galaxy-color);}
-							&[value="ghost"] {@include linear-gradient($ghost-color);}
-							&[value="cross"] {@include linear-gradient($cross-color);} 
-							&[value="linear"] {@include linear-gradient($linear-color);}
+							color: $cluster-color;
 						}
 					}
 				}
