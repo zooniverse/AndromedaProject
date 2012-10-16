@@ -25,14 +25,19 @@ define (require, exports, module) ->
 
 				<div class="help">
 					<span>Need help?</span>
-					<a href="#!/about/data/ground-cover/sand/from-classify" title="Check out the field guide" class="field-guide">Field guide</a>
+					<a href="#!/guide/from-classify" title="Check out the guide" class="field-guide">Guide</a>
 					<a href="#start-tutorial" title="Go through the tutorial again" class="tutorial-again">Tutorial</a>
 				</div>
 			</div>
 
 			<div class="summary">
 				<p>Thanks!</p>
-
+        
+        <div class="feedback">
+          <canvas class='overlay' width='215' height='248'></canvas>
+          <img src='images/andromeda_opt.jpg' />
+        </div>
+        
 				<div class="favorite">
 					<div class="create"><button>Add to my favorites</button></div>
 					<div class="destroy">Favorite added! <button>Undo</button></div>

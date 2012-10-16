@@ -23,6 +23,11 @@ def header2json():
         output.write(json.dumps(wcs))
         output.close()
 
+def rescale(x, y):
+    x = 215. * x / 650.
+    y = 248. * y / 750.
+    return [x, y]
+
 def subimage_centers():
     data_dir = os.path.join('..', 'data')
     data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs.fits'))
@@ -30,9 +35,8 @@ def subimage_centers():
     d = {}
     for row in data:
         img_id = row[3]
-        x = str(row[6])
-        y = str(row[7])
-        d[img_id] = {'x': x, 'y': y}
+        [x, y] = rescale(row[6], row[7])
+        d[img_id] = {'x': str(x), 'y': str(y)}
     output = open(os.path.join(data_dir, 'image-centers.json'), 'w')
     output.write(json.dumps(d))
     output.close()

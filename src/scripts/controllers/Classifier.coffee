@@ -38,6 +38,8 @@ define (require, exports, module) ->
       '.species .other-creatures [value="yes"]' : 'otherYes'
       '.species .other-creatures [value="no"]'  : 'otherNo'
       '.species .finished'                      : 'speciesFinishedButton'
+      '.summary'                                : 'summary'
+      '.overlay'                                : 'overlay'
       '.summary .favorite .create'              : 'favoriteCreation'
       '.summary .favorite .destroy'             : 'favoriteDestruction'
 
@@ -154,6 +156,26 @@ define (require, exports, module) ->
     finishSpecies: =>
       @picker.setDisabled true
       @steps.addClass 'finished'
+      
+      # TODO: Show summary when finished
+      subject = @picker.classifier.workflow.selection[0]
+      center = subject.metadata.subimageCenter
+      if center?
+        x = parseFloat(center.x)
+        y = 248 - parseFloat(center.y)
+        radius = 4
+        
+        context = @overlay[0].getContext('2d')
+        context.clearRect(0, 0, 215, 248)
+        
+        context.beginPath()
+        context.arc(x, y, radius, 0, 2 * Math.PI, false)
+        context.fillStyle = "#F1F1F1"
+        context.lineWidth = 1
+        context.strokeStyle = "#505050"
+        context.stroke()
+        context.fill()
+      
       @saveClassification()
 
   module.exports = Classifier

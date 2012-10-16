@@ -52,6 +52,7 @@
 			position: relative;
 			top: 0;
 			width: 100%;
+			z-index: 4;
 
 			&.disabled {
 				cursor: not-allowed;
@@ -136,7 +137,8 @@
 		right: 0;
 		top: 0;
 		width: $quarter-width + $gutter-width;
-
+    z-index: 0;
+    
 		> .steps {
 			@include box-sizing(border-box);
 			@include transition(#{
@@ -155,7 +157,7 @@
 			right: 0;
 			top: 0;
 			width: 100%;
-			z-index: 1;
+			z-index: 3;
 
 			&.finished {
 				opacity: 0.5;
@@ -329,54 +331,34 @@
 		}
 
 		> .summary {
+		  color: #F1F1F1;
+		  
 			font: {
 				size: 14px;
 				weight: bold;
 			};
 			margin: $gutter-width;
 			text-align: center;
-
-			.map-toggle {
-				margin-bottom: $gutter-width;
-
-				img {
-					@include box-sizing(border-box);
-					border: 3px solid $white;
-					box-shadow: 0 3px 3px -3px transparentize($black, 0.33);
-					cursor: pointer;
-					display: block;
-					height: 130px;
-					width: 100%;
-				}
-
-				> .thumbnail > img {
-					display: none;
-				}
-			}
-
-			.information {
-				font-size: 12px;
-				margin: 1em 0 50px;
-				text-align: left;
-
-				> div {
-					.label {
-						display: inline-block;
-						width: 40%;
-						vertical-align: bottom;
-					}
-
-					.value {
-						display: inline-block;
-						max-width: 45%;
-						overflow: hidden;
-						vertical-align: bottom;
-					}
-				}
-			}
-
+      
+      .feedback {
+        position: static;
+        height: 248px;
+        width: 0px;
+        padding-bottom: 120px;
+        
+        canvas {
+          position: absolute;
+          z-index: 1;
+        }
+        img {
+          position: absolute;
+          width: 215px;
+          height: 248px;
+          z-index: 0;
+        }
+      }
+      
 			.favorite {
-				display: none;
 
 				.create {}
 
@@ -420,23 +402,6 @@
 						margin-right: 1%;
 					}
 				}
-			}
-		}
-	}
-
-	&.show-map {
-		> .image > .selection-area {
-			@include transform(scale(0.01));
-			opacity: 0;
-		}
-
-		> .options > .summary > .map-toggle {
-			> .thumbnail > img {
-				display: block;
-			}
-
-			> .map > img {
-				display: none;
 			}
 		}
 	}
