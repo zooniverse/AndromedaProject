@@ -1,4 +1,5 @@
 require 'json'
+require 'csv'
 
 project = AndromedaSubject.project
 
@@ -40,10 +41,31 @@ files = %w(B09-F11_1 B09-F11_10 B09-F11_11 B09-F11_12 B09-F11_13 B09-F11_14 B09-
 
 dirname = File.dirname(__FILE__)
 centers = JSON.parse(File.read("#{dirname}/../data/image-centers.json"))
+
+year1 = {}
+CSV.foreach("#{dirname}/brick-number-year1.csv") do |row|
+  brick, id, x, y = row
+  id = id.strip()
+  x = x.strip()
+  y = y.strip()
+  unless year1.has_key?(brick)
+    year1[brick] = []
+  end
+  cluster = {
+    id: id,
+    x: x,
+    y: y
+  }
+  year1[brick].push(cluster)
+end
+
 files.each.with_index do |name, index|
   
   wcs = JSON.parse(File.read("#{dirname}/../data/headers/#{name}.fits.json"))
   center = centers[name]
+  
+  clusters = year1[name]
+  
   AndromedaSubject.create({
     project_id: project.id,
     workflow_ids: [ workflow.id ],
@@ -54,7 +76,8 @@ files.each.with_index do |name, index|
     metadata: {
       filename: name,
       wcs: wcs,
-      subimageCenter: center
+      subimageCenter: center,
+      year1: clusters
     }
   })
   
