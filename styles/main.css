@@ -605,7 +605,7 @@ body {
 .main #classifier {
   border: 5px solid #f1f1f1;
   border-radius: 3px 0 0 3px;
-  width: 745px; }
+  width: 735px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000320}}
   .main #classifier > .image {
     -moz-box-sizing: border-box;
@@ -613,7 +613,7 @@ body {
     box-sizing: border-box;
     cursor: crosshair;
     background: #f1f1f1;
-    height: 582px;
+    height: 500px;
     position: relative;
     width: 100%;
     z-index: 2; }
@@ -705,7 +705,7 @@ body {
           white-space: nowrap; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003134}}
   .main #classifier > .options {
-    height: 592px;
+    height: 510px;
     position: absolute;
     right: 0;
     top: 0;
@@ -905,7 +905,7 @@ body {
         position: static;
         height: 248px;
         width: 0px;
-        padding-bottom: 120px; }
+        padding-bottom: 60px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003349}}
         .main #classifier > .options > .summary .feedback canvas {
           position: absolute;

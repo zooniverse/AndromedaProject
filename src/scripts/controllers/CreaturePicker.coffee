@@ -62,6 +62,7 @@ define (require, exports, module) ->
           @classifier.indicator.setStep 0
 
     reset: =>
+      @paper.clear()
       @image.attr 'src', @classifier.workflow.selection[0].location.standard
       subject = @classifier.workflow.selection[0]
       console.log subject

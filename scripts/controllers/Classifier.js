@@ -104,6 +104,7 @@
 
       Classifier.prototype.reset = function() {
         var _this = this;
+        console.log('reset');
         this.picker.reset();
         Classifier.__super__.reset.apply(this, arguments);
         this.otherSpeciesAnnotation = new Annotation({
@@ -230,7 +231,7 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var center, context, radius, subject, x, y;
+        var center, cluster, context, pixradius, radius, subject, x, y, year1, _i, _len;
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
@@ -248,6 +249,18 @@
           context.strokeStyle = "#505050";
           context.stroke();
           context.fill();
+        }
+        year1 = subject.metadata.year1;
+        if (year1 != null) {
+          for (_i = 0, _len = year1.length; _i < _len; _i++) {
+            cluster = year1[_i];
+            x = parseFloat(cluster.x);
+            y = parseFloat(cluster.y);
+            pixradius = parseFloat(cluster.pixradius);
+            this.picker.paper.circle(x, 500 - y, pixradius).attr({
+              stroke: '#F1F1F1'
+            });
+          }
         }
         return this.saveClassification();
       };

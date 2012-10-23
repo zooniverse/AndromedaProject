@@ -66,8 +66,9 @@ define (require, exports, module) ->
     enableFinished: => $('button[class="finished"]').removeAttr('disabled')
         
     reset: =>
+      console.log 'reset'
       @picker.reset()
-
+      
       super
       @otherSpeciesAnnotation = new Annotation
         classification: @classification
@@ -157,8 +158,9 @@ define (require, exports, module) ->
       @picker.setDisabled true
       @steps.addClass 'finished'
       
-      # TODO: Show summary when finished
       subject = @picker.classifier.workflow.selection[0]
+        
+      # Show center of field on small map
       center = subject.metadata.subimageCenter
       if center?
         x = parseFloat(center.x)
@@ -175,6 +177,16 @@ define (require, exports, module) ->
         context.strokeStyle = "#505050"
         context.stroke()
         context.fill()
+      
+      # Show year 1 catalog on subject
+      year1 = subject.metadata.year1
+      if year1?
+        
+        for cluster in year1
+          x = parseFloat(cluster.x)
+          y = parseFloat(cluster.y)
+          pixradius = parseFloat(cluster.pixradius)
+          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', stroke-width: 16})
       
       @saveClassification()
 

@@ -35,7 +35,7 @@ $quarter-width: ($twelfth-width * 3) + ($gutter-width * 2);
 $third-width: ($twelfth-width * 4) + ($gutter-width * 3);
 $half-width: ($twelfth-width * 6) + ($gutter-width * 5);
 $two-third-width: ($third-width * 2) + $gutter-width;
-$three-quarter-width: ($quarter-width * 3) + ($gutter-width * 2);
+$three-quarter-width: ($quarter-width * 3) + ($gutter-width * 2) - 10;
 $full-width: ($twelfth-width * 12) + ($gutter-width * 11);
 
 // Cross-broswer:
