@@ -20,6 +20,6 @@ define (require, exports, module) ->
     proxyPath: '/proxy.html'
 
   # TODO: What if dev Ouroboros isn't on 3000?
-  config.set apiHost: "http://#{location.hostname}:3000" if config.dev
+  # config.set apiHost: "http://#{location.hostname}:3000" if config.dev
 
   module.exports = config

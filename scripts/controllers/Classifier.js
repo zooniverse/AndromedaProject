@@ -258,7 +258,8 @@
             y = parseFloat(cluster.y);
             pixradius = parseFloat(cluster.pixradius);
             this.picker.paper.circle(x, 500 - y, pixradius).attr({
-              stroke: '#F1F1F1'
+              stroke: '#F1F1F1',
+              'stroke-width': 16
             });
           }
         }

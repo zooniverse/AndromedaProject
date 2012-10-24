@@ -186,7 +186,7 @@ define (require, exports, module) ->
           x = parseFloat(cluster.x)
           y = parseFloat(cluster.y)
           pixradius = parseFloat(cluster.pixradius)
-          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', stroke-width: 16})
+          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 16})
       
       @saveClassification()
 
