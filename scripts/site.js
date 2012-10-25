@@ -66,9 +66,6 @@
       }),
       profile: new Profile({
         el: '[data-page="profile"]'
-      }),
-      homeScoreboard: new Scoreboard({
-        el: '[data-page="home"] .scoreboard'
       })
     });
     _ref = $('[data-image-flipper]');

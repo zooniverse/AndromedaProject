@@ -10,11 +10,16 @@ define (require, exports, module) ->
       
     constructor: ->
       super
-      @createMap()
+      
+      jQuery(window).bind('hashchange', @createMap)
+      if window.location['hash'] in ['', '#!/home']
+        @createMap()
     
     createMap: =>
-      map = L.map('banner', @mapOptions).setView([14, 0], 2)
-      map.attributionControl.setPrefix('')
+      return if @map?
+      return unless window.location['hash'] in ['', '#!/home']
+      @map = L.map('banner', @mapOptions).setView([14, 0], 2)
+      @map.attributionControl.setPrefix('')
       
       layer = L.tileLayer('/tiles/#{tilename}.jpg',
         minZoom: 2
@@ -62,6 +67,6 @@ define (require, exports, module) ->
         url = convertTileUrl(tilePoint.x, tilePoint.y, 1, zoom)
         return "http://www.andromedaproject.org.s3.amazonaws.com/alpha/tiles/#{url.src}.jpg"
 
-      layer.addTo map
+      layer.addTo @map
   
   module.exports = Sky

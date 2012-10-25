@@ -98,7 +98,7 @@ define (require, exports, module) ->
       favorite = new Favorite
         subjects: @workflow.selection
         projectID: @workflow.project.id
-
+      console.log favorite
       favorite.persist()
 
     destroyFavorite: =>

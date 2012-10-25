@@ -152,6 +152,7 @@
           subjects: this.workflow.selection,
           projectID: this.workflow.project.id
         });
+        console.log(favorite);
         return favorite.persist();
       };
 

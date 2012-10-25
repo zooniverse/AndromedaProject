@@ -67,9 +67,6 @@ define (require, exports, module) ->
     profile: new Profile
       el: '[data-page="profile"]'
 
-    homeScoreboard: new Scoreboard
-      el: '[data-page="home"] .scoreboard'
-
   for el in $('[data-image-flipper]')
     current = $(el).attr 'data-image-flipper'
     new ImageFlipper {el, current}

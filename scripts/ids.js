@@ -4,7 +4,7 @@
   define(function(require, exports, module) {
     var dev, ids;
     dev = require('zooniverse/config').dev;
-    dev = false;
+    dev = true;
     if (dev) {
       ids = {
         project: 'andromeda',

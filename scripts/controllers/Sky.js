@@ -19,14 +19,25 @@
 
       function Sky() {
         this.createMap = __bind(this.createMap, this);
+
+        var _ref;
         Sky.__super__.constructor.apply(this, arguments);
-        this.createMap();
+        jQuery(window).bind('hashchange', this.createMap);
+        if ((_ref = window.location['hash']) === '' || _ref === '#!/home') {
+          this.createMap();
+        }
       }
 
       Sky.prototype.createMap = function() {
-        var layer, map;
-        map = L.map('banner', this.mapOptions).setView([14, 0], 2);
-        map.attributionControl.setPrefix('');
+        var layer, _ref;
+        if (this.map != null) {
+          return;
+        }
+        if ((_ref = window.location['hash']) !== '' && _ref !== '#!/home') {
+          return;
+        }
+        this.map = L.map('banner', this.mapOptions).setView([14, 0], 2);
+        this.map.attributionControl.setPrefix('');
         layer = L.tileLayer('/tiles/#{tilename}.jpg', {
           minZoom: 2,
           maxZoom: 8,
@@ -74,7 +85,7 @@
           url = convertTileUrl(tilePoint.x, tilePoint.y, 1, zoom);
           return "http://www.andromedaproject.org.s3.amazonaws.com/alpha/tiles/" + url.src + ".jpg";
         };
-        return layer.addTo(map);
+        return layer.addTo(this.map);
       };
 
       return Sky;
