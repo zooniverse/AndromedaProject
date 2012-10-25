@@ -85,9 +85,9 @@ files.each.with_index do |name, index|
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
   wcs = JSON.parse(File.read("#{dirname}/../data/headers/#{brickname}.fits.json"))
   coords = [wcs['CRVAL1'], wcs['CRVAL2']]
-  center = centers[name]
-  year1clusters = year1[name]
-  synthetic_clusters = synthetic[name]
+  center = centers[brickname]
+  year1clusters = year1[brickname]
+  synthetic_clusters = synthetic[brickname]
   
   AndromedaSubject.create({
     project_id: project.id,

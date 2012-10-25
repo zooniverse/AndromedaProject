@@ -231,12 +231,13 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var center, cluster, context, pixradius, radius, subject, x, y, year1, _i, _len;
+        var center, cluster, context, pixradius, radius, subject, synthetic, synthetics, x, y, year1, _i, _j, _len, _len1;
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
-        center = subject.metadata.subimageCenter;
+        center = subject.metadata.center;
         if (center != null) {
+          console.log('here');
           x = parseFloat(center.x);
           y = 248 - parseFloat(center.y);
           radius = 4;
@@ -259,7 +260,20 @@
             pixradius = parseFloat(cluster.pixradius);
             this.picker.paper.circle(x, 500 - y, pixradius).attr({
               stroke: '#F1F1F1',
-              'stroke-width': 16
+              'stroke-width': 4
+            });
+          }
+        }
+        synthetics = subject.metadata.synthetic;
+        if (synthetics != null) {
+          for (_j = 0, _len1 = synthetics.length; _j < _len1; _j++) {
+            synthetic = synthetics[_j];
+            x = parseFloat(synthetic.x);
+            y = parseFloat(synthetic.y);
+            pixradius = parseFloat(synthetic.pixradius);
+            this.picker.paper.circle(x, 500 - y, pixradius).attr({
+              stroke: '#CD3E20',
+              'stroke-width': 4
             });
           }
         }

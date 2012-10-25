@@ -25,6 +25,11 @@
       apiHost: 'https://api.zooniverse.org',
       proxyPath: '/proxy.html'
     });
+    if (config.dev) {
+      config.set({
+        apiHost: "http://" + location.hostname + ":3000"
+      });
+    }
     return module.exports = config;
   });
 

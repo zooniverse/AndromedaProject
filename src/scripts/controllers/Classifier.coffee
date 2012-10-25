@@ -161,8 +161,9 @@ define (require, exports, module) ->
       subject = @picker.classifier.workflow.selection[0]
         
       # Show center of field on small map
-      center = subject.metadata.subimageCenter
+      center = subject.metadata.center
       if center?
+        console.log 'here'
         x = parseFloat(center.x)
         y = 248 - parseFloat(center.y)
         radius = 4
@@ -186,7 +187,17 @@ define (require, exports, module) ->
           x = parseFloat(cluster.x)
           y = parseFloat(cluster.y)
           pixradius = parseFloat(cluster.pixradius)
-          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 16})
+          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 4})
+      
+      # Show synthetic clusters
+      synthetics = subject.metadata.synthetic
+      if synthetics?
+        
+        for synthetic in synthetics
+          x = parseFloat(synthetic.x)
+          y = parseFloat(synthetic.y)
+          pixradius = parseFloat(synthetic.pixradius)
+          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
       
       @saveClassification()
 
