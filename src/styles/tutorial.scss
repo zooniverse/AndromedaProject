@@ -97,6 +97,14 @@
 	    margin-top: -$arrow-size;
 	    top: 50%;
 	  }
+
+	  &.left-middle {
+	    border-right-color: $arrow-color;
+	    border-left-width: 0;
+	    right: 100%;
+	    margin-top: -$arrow-size;
+	    top: 50%;
+	  }
 	}
 
 	&:hover {

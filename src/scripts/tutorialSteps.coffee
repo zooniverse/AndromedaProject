@@ -56,7 +56,7 @@ define (require, exports, module) ->
       attach: x: 'left', to: '.creature-picker', at: x: 0.25, y: 0.2
       style: width: 240
       nextOn: 'create-marking': '#classifier'
-      arrowClass: 'right-middle'
+      arrowClass: 'left-middle'
       block: '.species .finished .other-creatures'
 
     new Step
@@ -84,13 +84,13 @@ define (require, exports, module) ->
       arrowClass: 'left-middle'
       block: '.species .finished .other-creatures'
       
-      new Step
+    new Step
       heading: 'Mark Background Galaxies'
       content: [
         'Now let\'s mark the other, fainter galaxy.'
       ]
       style: width: 320
-      attach: x: 'right', to: '.creature-picker', at: x: 0.4, y: 0.65
+      attach: x: 'right', to: '.creature-picker', at: x: 0.75, y: 0.65
       nextOn: 'create-marking': '#classifier'
       arrowClass: 'right-middle'
       block: '.species .finished .other-creatures'
@@ -101,13 +101,33 @@ define (require, exports, module) ->
         'Science can be messy.  We also need your help to identify telescope artifacts.'
         'This image has a saturated star.'
         'The cross-shaped pattern centered on the star is caused by the support structure of Hubble’s secondary mirror.'
-        'Choose "cross" from the object list to mark it.'
-        'To mark the cross, click and drag from end-to-end along the two crossing line segments.'
       ]
-      attach: x: 'right', to: '.creature-picker', at: x: 0.67, y: 0.55
+      attach: x: 'right', to: '.creature-picker', at: x: 0.75, y: 0.55
       style: width: 320
       continueText: 'Okay!'
       block: '.species .toggles .species .finished'
+
+    new Step
+      heading: 'Identify Artifacts'
+      content: [
+        'Choose "cross" from the object list to mark it.'
+      ]
+      attach: x: 'right', to: '[value="cross"]', at: x: 'left'
+      style: width: 460
+      nextOn: click: '.species [value="cross"]'
+      arrowClass: 'right-middle'
+      block: '.species .toggles button:not([value="cross"]), .species .finished .other-creatures'
+
+    new Step
+      heading: 'Identify Artifacts'
+      content: [
+        'To mark the cross, click and drag from end-to-end along the two crossing line segments.'
+      ]
+      style: width: 320
+      attach: x: 'right', to: '.creature-picker', at: x: 0.7, y: 0.15
+      nextOn: 'create-marking': '#classifier'
+      arrowClass: 'right-middle'
+      block: '.species .finished .other-creatures'
 
     new Step
       heading: 'Done Identifying and Marking'
