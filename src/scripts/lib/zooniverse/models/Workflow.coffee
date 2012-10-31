@@ -34,7 +34,7 @@ define (require, exports, module) ->
       @selection ?= []
 
       User.bind 'sign-in', =>
-        console.log 'Workflow detected sign in'
+        # console.log 'Workflow detected sign in'
         # When a user signs in, they'll need a whole new queue.
         @subjects.pop() until @subjects.length is 0 if User.current?
         @fetchSubjects().done =>
@@ -54,8 +54,8 @@ define (require, exports, module) ->
         @enough.resolve @subjects
 
       unless limit is 0
-        console.log 'Workflow fetching subjects...',
-          'Need:', @queueLength, 'have:', @subjects.length, 'fetching:', limit
+        # console.log 'Workflow fetching subjects...',
+          # 'Need:', @queueLength, 'have:', @subjects.length, 'fetching:', limit
 
         currentSubjectIDs = (subject.id for subject in @subjects)
 
@@ -90,7 +90,7 @@ define (require, exports, module) ->
       @enough.promise()
 
     selectNext: =>
-      console.log 'Workflow changing selection'
+      # console.log 'Workflow changing selection'
       if @subjects.length >= @selectionLength
         @selection = @subjects.splice 0, @selectionLength
         @trigger 'change-selection', @selection

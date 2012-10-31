@@ -24,9 +24,9 @@ define (require, exports, module) ->
         tutorialDone: raw.project?.tutorial_done || false
 
     @checkCurrent: (@project) =>
-      console.log 'Checking current user...'
+      # console.log 'Checking current user...'
       API.checkCurrent {@project}, (response) =>
-        console.log 'Current user', response.name || response.success
+        # console.log 'Current user', response.name || response.success
 
         if response.success
           @signIn @fromJSON response

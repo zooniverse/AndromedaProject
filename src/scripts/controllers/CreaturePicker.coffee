@@ -6,6 +6,7 @@ define (require, exports, module) ->
   Marker = require 'controllers/Marker'
   CircleMarker = require 'controllers/CircleMarker'
   AxesMarker = require 'controllers/AxesMarker'
+  LineMarker = require 'controllers/LineMarker'
 
   Annotation = require 'zooniverse/models/Annotation'
 
@@ -65,7 +66,6 @@ define (require, exports, module) ->
       @paper.clear()
       @image.attr 'src', @classifier.workflow.selection[0].location.standard
       subject = @classifier.workflow.selection[0]
-      console.log subject
 
     getSize: =>
       width: @image.width(), height: @image.height()
@@ -192,6 +192,8 @@ define (require, exports, module) ->
       if @strayCircles.length is 2
         if @selectedMarkerType is 'circle'
           marker = @createCircleMarker()
+        else if @selectedMarkerType is 'line'
+          marker = @createLineMarker()
         else
           @el.trigger 'create-half-axes-marker'
       else if @strayCircles.length is 3
@@ -218,7 +220,6 @@ define (require, exports, module) ->
 
     createCircleMarker: (x, y) =>
       marking = @createMarking()
-      console.log marking
       marker = new CircleMarker
         annotation: marking
         picker: @
@@ -233,6 +234,14 @@ define (require, exports, module) ->
       @el.trigger 'create-axes-marker'
       marker
 
+    createLineMarker: =>
+      marking = @createMarking()
+      marker = new LineMarker
+        annotation: marking
+        picker: @
+      @el.trigger 'create-line-marker'
+      marker
+
     createMarking: =>
       {width, height} = @getSize()
       
@@ -244,7 +253,6 @@ define (require, exports, module) ->
           y: circle.attr('cy') / height
         points.push point
       
-      console.log @classifier
       annotation = Annotation.create
         classification: @classifier.classification
         value:

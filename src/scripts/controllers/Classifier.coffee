@@ -66,7 +66,6 @@ define (require, exports, module) ->
     enableFinished: => $('button[class="finished"]').removeAttr('disabled')
         
     reset: =>
-      console.log 'reset'
       @picker.reset()
       
       super
