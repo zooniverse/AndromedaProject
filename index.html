@@ -376,17 +376,24 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
               <section data-page="background-galaxies" class="after">
                 <section>
                   <div class='content'>
-                    <h3>Background Galaxies</h3>
+                    <h3>Background galaxies</h3>
                     <p>Distant galaxies that lie behind Andromeda’s disk are often seen in the PHAT images. For those who have participated in Galaxy Zoo, these galaxies will look familiar. There are disky, spiral galaxies (like Andromeda) as well as rounder, smoother elliptical galaxies. We want you to identify these background galaxies in order to allow us to study the structure of dust on small scales in Andromeda.</p>
                     
-                    <p>Some examples of background galaxies are shown below.  <em>Note that some of the smaller, rounder galaxies can be easily confused with stellar clusters, particularly in crowded fields with many stars.</em>  In general, background galaxies will tend to be redder, smoother, and less round than typical stellar clusters.  Background galaxies will also have a larger fraction of diffuse light.</p>
+                    <div class="left-col" style="width:580px;">
+                      <div class="images">
+                        <img src="images/tutorial/bckgals.jpg" width="580px" style="position:relative;top:-3px;left:-5px">
+                      </div>
+                    </div>
 
-                    <div class="images">
-                      <img src="images/tutorial/bckgals.jpg" width="80%">
-                      <br />
-                      <span class="caption">Examples of background galaxies.  Left: A dramatic pair of spirals, seen edge-on and face on is shown on the left.  Right: Six typical background galaxies, showing a range of sizes, luminosities, and shapes.</span>
+                    <div class="right-col" style="width:300px;">
+                    
+                      <p>On the left you can see some examples of background galaxies. On the left is a dramatic pair of spirals, seen edge-on and face on is shown on the left. Also shonw are six typical background galaxies, showing a range of sizes, luminosities, and shapes.</p>
+
+                      <p>Note that some of the smaller, rounder galaxies can be easily confused with stellar clusters, particularly in crowded fields with many stars. In general, background galaxies will tend to be redder, smoother, and less round than typical stellar clusters. Background galaxies will also have a larger fraction of diffuse light.</p>
+
                     </div>
                     
+                    <div style="clear:both;"></div>
                     <a href="#!/guide/type/other-and-artifacts" class="dive-in">Other Objects and Artifacts &rarr;</a>
 
                   </div>
@@ -396,73 +403,96 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
               <section data-page="other-and-artifacts" class="after">
                 <section>
                   <div class='content'>
-                    <h3>HII Regions</h3>
-                    <p>Some of the youngest stars reach high enough temperatures that they emit very high energy ultraviolet light.  This light can ionize the surrounding gas, which then glows at a number of distinct wavelengths.  The glow from these "emission lines" is particularly strong in our blue image, leading to a diffuse blue nebula (see below).  This nebula is known as an "HII Region" (pronounced "H-two"), because it contains ionized Hydrogen.  If you see tight groups of stars associated with these blue nebulae, you should mark them as clusters.  However, not all HII regions contain or are associated with clusters, as is the case for the example presented below.</p>
+                    <h3 class="smaller">HII Regions</h3>
+                    
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/hii.jpg" class="large">
+                        <br/>
+                        <span class="caption">An example of an HII region, which can be identified by the blue nebulosity around the stars.</span>
+                      </div>
+                    </div>
 
-                    <div class="images">
-                      <img src="images/tutorial/hii.jpg" class="large">
-                      <br/>
-                      <span class="caption">An example of an HII region, which can be identified by the blue nebulosity around the stars.</span>
+                    <div class="right-col">
+                      <p>Some of the youngest stars reach high enough temperatures that they emit very high energy ultraviolet light.  This light can ionize the surrounding gas, which then glows at a number of distinct wavelengths.  The glow from these "emission lines" is particularly strong in our blue image, leading to a diffuse blue nebula (see below).  This nebula is known as an "HII Region" (pronounced "H-two"), because it contains ionized Hydrogen.  If you see tight groups of stars associated with these blue nebulae, you should mark them as clusters.  However, not all HII regions contain or are associated with clusters, as is the case for the example presented below.</p>
                     </div>
                     
-                    <h3>Artifacts</h3>
+                    <h3 class="smaller">Image artifacts you should <em>not</em> mark:</h3>
                     <p>The PHAT images are beautiful, but they also have some imperfections. These fall into two categories: (1) the imperfections we don’t know about and that we could use your help in finding, and (2) the ones we do know about, but that you should be aware of.</p>
-                    
-                    <h4>Image artifacts you should <em>not</em> mark:</h4>
-                    
-                    <h4> 1. Chip-Gaps</h4>
-                    <p>The images for this project were taken using HST’s Advanced Camera for Surveys (ACS) instrument. This camera uses two separate CCD chips that have a small gap separating them. We fill in this gap using overlapping images, but sometimes these overlapping data do not exist, or the overlapping data are imperfectly aligned. This causes diagonal streaks in the image, but we are aware of their locations and therefore they should simply be ignored. Below are some examples of chip gaps.</p>
-                    
-                    <div class="images">
-                      <img src="images/tutorial/chip_hi.jpg" class="medium_big">
-                      <img src="images/tutorial/chip_mid.jpg" class="medium_big">
-                      <img src="images/tutorial/chip_mismatch.jpg" class="medium_big">
-                      <img src="images/tutorial/chip_lo.jpg" class="medium_big">
-                      <br/>
-                      <span class="caption">Examples of chip-gaps, caused by the small space between the two CCDs on the Advanced Camera for Surveys.  Within the gaps, you will sometimes see black stripes, individual bright pixels due to cosmic rays, and stars with unusual colors or morphologies.</span>
-                    </div>
-                    
-                    <h4>2. Charge Transfer Efficiency (CTE) Imperfections</h4>
-                    <p>The cameras used to take the images are charge-coupled devices or CCDs. When a photon hits a pixel in these cameras, it creates a free electron. These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal. This process is typically very efficient, moving &gt;99.999% of the electrons correctly. But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred. This inefficiency shows itself as small streaks in the image; some examples are shown below. This is especially noticeable in the least dense parts of our images.</p>           
-                    
-                    <div class="images">
-                      <img src="images/tutorial/cte.jpg" class="xlarge">
-                      <br/>
-                      <span class="caption">An example of CTE "steaks".  Problems on the CCD lead to "bleeding".  These features are most evident in images with smaller numbers of stars, and become weaker farther away from the chip gap.</span>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/tutorial/chip_hi.jpg" class="medium">
+                        <img src="images/tutorial/chip_mid.jpg" class="medium">
+                        <div style="clear:both;"></div>
+                        <img src="images/tutorial/chip_mismatch.jpg" class="medium">
+                        <img src="images/tutorial/chip_lo.jpg" class="medium">
+                        <br/>
+                        <span class="caption">Examples of chip-gaps, caused by the small space between the two CCDs on the Advanced Camera for Surveys.  Within the gaps, you will sometimes see black stripes, individual bright pixels due to cosmic rays, and stars with unusual colors or morphologies.</span>
+                      </div>
                     </div>
 
-                    <h4>Image artifacts you should mark:</h4>
+                    <div class="right-col">
+                      <h4> 1. Chip-Gaps</h4>
+                      <p>The images for this project were taken using HST’s Advanced Camera for Surveys (ACS) instrument. This camera uses two separate CCD chips that have a small gap separating them. We fill in this gap using overlapping images, but sometimes these overlapping data do not exist, or the overlapping data are imperfectly aligned. This causes diagonal streaks in the image, but we are aware of their locations and therefore they should simply be ignored. Below are some examples of chip gaps.</p>
+                    </div>
+                    
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/cte.jpg" class="large">
+                        <br/>
+                        <span class="caption">An example of CTE "steaks".  Problems on the CCD lead to "bleeding".  These features are most evident in images with smaller numbers of stars, and become weaker farther away from the chip gap.</span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                      <h4>2. Charge Transfer Efficiency (CTE) Imperfections</h4>
+                      <p>The cameras used to take the images are charge-coupled devices or CCDs. When a photon hits a pixel in these cameras, it creates a free electron. These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal. This process is typically very efficient, moving &gt;99.999% of the electrons correctly. But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred. This inefficiency shows itself as small streaks in the image; some examples are shown below. This is especially noticeable in the least dense parts of our images.</p>   
+                    </div>        
+
+                    <h3 class="smaller">Image artifacts you should mark:</h3>
                     <p>There are a number of artifacts that we would like your help in finding.  These are features whose presence cannot be predicted, but that can corrupt our measurements if we do not know no know they're there.</p>
-                    
-                    <h4>1. "Diffraction Spikes" Around Bright Stars (common)</h4>
-                    <p>Very bright stars cause an artificial "cross" shaped pattern that is caused by the support structure of Hubble’s secondary mirror. When we try to identify individual stars in Andromeda, we mistake these bright crosses (known as "diffraction spikes") as a line of stars. You can help us improve our stellar catalogs by marking the full extent of the crosses with the "Cross" tool.</p>
 
-                    <div class="images">
-                      <img src="images/tutorial/sat_1.jpg" class="medium_big">
-                      <img src="images/tutorial/sat_2.jpg" class="medium_big">
-                      <br/>
-                      <span class="caption">Examples of saturated stars.</span>
-                    </div>
-                    
-                    <h4>2. Satellite/Asteroid Trails, &amp; Other Linear Artifacts (somewhat rare)</h4>
-                    <p>There are a number of artifacts that can show up as linear artifacts in our images: (1) Satellites and asteroids that pass through the line-of-sight of the telescope during our exposures are seen as lines in our image that appear in just one color; (2) an artifact known as “dragon’s breath” occurs when a bright star lands on the edge of the image, scattering light into the frame; (3) diffraction spikes can be large enough that they show up in images adjacent to the one containing the bright star that produced them.  Please mark any of these features using the "Linear" tool.</p>
-                    
-                    <div class="images">
-                      <img src="images/tutorial/linear_dragon.jpg" class="medium">
-                      <img src="images/tutorial/linear_longspike.jpg" class="medium">
-                      <br/>
-                      <span class="caption">Two examples of linear features.</span>
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/sat_1.jpg" class="medium">
+                        <img src="images/tutorial/sat_2.jpg" class="medium">
+                        <br/>
+                        <span class="caption">Examples of saturated stars.</span>
+                      </div>
                     </div>
 
-                    <h4>3. Ghost Images</h4>
-                    <p>In addition to diffraction spikes, bright stars can also produce additional reflections within the telescope or camera, causing out of focus “ghost” images. These images often look like a ring of light or eyeglasses. Please identify these using the Ghost tool. You also find ghosts-of-ghosts, as you see in this image. These should be marked as well.</p>
-
-                    <div class="images">
-                      <img src="images/tutorial/ghost.jpg" class="large">
-                      <br/>
-                      <span class="caption">An example of an "eyeglass" ghost caused by a internal telescope reflections of a bright star elsewhere in HST's field of view.</span>
+                    <div class="right-col">
+                      <h4>1. "Diffraction Spikes" Around Bright Stars (common)</h4>
+                      <p>Very bright stars cause an artificial "cross" shaped pattern that is caused by the support structure of Hubble’s secondary mirror. When we try to identify individual stars in Andromeda, we mistake these bright crosses (known as "diffraction spikes") as a line of stars. You can help us improve our stellar catalogs by marking the full extent of the crosses with the "Cross" tool.</p>
+                    </div>
+                    
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/linear_dragon.jpg" class="medium">
+                        <img src="images/tutorial/linear_longspike.jpg" class="medium">
+                        <span class="caption">Two examples of linear features.</span>
+                      </div>
                     </div>
 
+                    <div class="right-col">
+                      <h4>2. Satellite/Asteroid Trails, &amp; Other Linear Artifacts (somewhat rare)</h4>
+                      <p>There are a number of artifacts that can show up as linear artifacts in our images: (1) Satellites and asteroids that pass through the line-of-sight of the telescope during our exposures are seen as lines in our image that appear in just one color; (2) an artifact known as “dragon’s breath” occurs when a bright star lands on the edge of the image, scattering light into the frame; (3) diffraction spikes can be large enough that they show up in images adjacent to the one containing the bright star that produced them.  Please mark any of these features using the "Linear" tool.</p>
+                    </div>
+
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/ghost.jpg" class="large">
+                        <span class="caption">An example of an "eyeglass" ghost caused by a internal telescope reflections of a bright star elsewhere in HST's field of view.</span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                      <h4>3. Ghost Images</h4>
+                      <p>In addition to diffraction spikes, bright stars can also produce additional reflections within the telescope or camera, causing out of focus “ghost” images. These images often look like a ring of light or eyeglasses. Please identify these using the Ghost tool. You also find ghosts-of-ghosts, as you see in this image. These should be marked as well.</p>
+                    </div>
+
+                    <div style="clear:both;"></div>
                     <a href="#!/classify" class="dive-in">Classify &rarr;</a>
                     
                   </div>

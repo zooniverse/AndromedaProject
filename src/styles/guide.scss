@@ -2,8 +2,7 @@
 
 .main [data-page="guide"] {
   div.content {
-     padding: 5px;
-     padding-left: 20px
+     padding: 5px 20px;
   }
 
   h3.smaller {
@@ -34,16 +33,9 @@
     padding: 5px 0px;
   }
   
-  img.xlarge {
-    width: 520px;
-  }
-  
   img.large {
-    width: 330px;
-  }
-  
-  img.medium_big {
-    width: 200px;
+    float: left;
+    width: 440px;
     padding: 0 10px 10px 0; 
   }
   
