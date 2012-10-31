@@ -30,7 +30,7 @@ define (require, exports, module) ->
         points: [{x: 17, y: 5}, {x: 59, y: 68}, {x: 4, y: 59}, {x: 71, y:14}]    
       linear:
         image: 'images/indicator/linear.png'
-        points: [{x: 40, y: 70}, {x: 40, y: 5}]    
+        points: [{x: 10, y: 9}, {x: 130, y: 64}]    
 
     elements:
       'img': 'image'
