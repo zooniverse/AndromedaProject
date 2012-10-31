@@ -18,7 +18,7 @@ define (require, exports, module) ->
     helpers:
       galaxy:
         image: 'images/indicator/galaxy.png'
-        points: [{x: 38, y: 35}, {x: 68, y: 28}]
+        points: [{x: 40, y: 35}, {x: 68, y: 28}]
       cluster:
         image: 'images/indicator/cluster.png'
         points: [{x: 40, y: 35}, {x: 40, y: 5}]
@@ -27,7 +27,7 @@ define (require, exports, module) ->
         points: [{x: 72, y: 37.5}, {x: 95, y: 48}]  
       cross:
         image: 'images/indicator/cross.png'
-        points: [{x: 50, y: 5}, {x: 91, y: 68}, {x: 105, y: 79}, {x: 40, y:32}]    
+        points: [{x: 17, y: 5}, {x: 59, y: 68}, {x: 4, y: 59}, {x: 71, y:14}]    
       linear:
         image: 'images/indicator/linear.png'
         points: [{x: 40, y: 70}, {x: 40, y: 5}]    
