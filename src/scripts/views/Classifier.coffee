@@ -25,7 +25,7 @@ define (require, exports, module) ->
 
 				<div class="help">
 					<span>Need help?</span>
-					<a href="#!/guide/from-classify" title="Check out the guide" class="field-guide">Guide</a>
+					<a href="#!/guide/from-classify" target="_blank" title="Check out the guide" class="field-guide">Guide</a>
 					<a href="#start-tutorial" title="Go through the tutorial again" class="tutorial-again">Tutorial</a>
 				</div>
 			</div>
