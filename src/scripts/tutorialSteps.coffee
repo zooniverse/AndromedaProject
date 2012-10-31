@@ -122,12 +122,27 @@ define (require, exports, module) ->
       heading: 'Identify Artifacts'
       content: [
         'To mark the cross, click and drag from end-to-end along the two crossing line segments.'
+        'When you can only see one spike, you can use the \'linear\' tool instead.'
       ]
       style: width: 320
       attach: x: 'right', to: '.creature-picker', at: x: 0.7, y: 0.15
       nextOn: 'create-marking': '#classifier'
       arrowClass: 'right-middle'
       block: '.species .finished .other-creatures'
+
+    new Step
+      heading: 'Black and white images'
+      content: [
+        'Sometimes we\'ll show you grayscale images such as this one.'
+        'These are just images taken with only one of the camera\'s filters.'
+        'You just mark them as you do with the colour images.'
+      ]
+      attach: to: '.creature-picker', at: x: 0.5, y: 0.5
+      onEnter: ->
+        jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_bw.jpg")
+      style: width: 400
+      continueText: 'Next'
+      arrowClass: 'left-middle'
 
     new Step
       heading: 'Done Identifying and Marking'
@@ -137,6 +152,20 @@ define (require, exports, module) ->
       attach: x: 'right', to: '.species .finished', at: x: 'left'
       style: width: 390
       nextOn: click: '.species .finished'
+      arrowClass: 'right-middle'
+
+    new Step
+      heading: 'Chip-gaps'
+      content: [
+        'You may sometimes see blocky image artifacts like this.'
+        'These are called chip-gaps and you don\'t need to mark them.'
+      ]
+      attach: to: '.creature-picker', at: x: 0.25, y: 0.5
+      onEnter: ->
+        jQuery("#classifier .selection-area svg").remove()
+        jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_chipgap.jpg")
+      style: width: 400
+      continueText: 'Next'
       arrowClass: 'right-middle'
 
     new Step
