@@ -5,21 +5,21 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require, exports, module) {
-    var AxesMarker, Marker, Raphael, Spine, indexOf, style;
+    var LineMarker, Marker, Raphael, Spine, indexOf, style;
     Spine = require('Spine');
     Raphael = require('Raphael');
     Marker = require('controllers/Marker');
     indexOf = require('util').indexOf;
     style = require('style');
-    AxesMarker = (function(_super) {
+    LineMarker = (function(_super) {
 
-      __extends(AxesMarker, _super);
+      __extends(LineMarker, _super);
 
-      AxesMarker.prototype.circles = null;
+      LineMarker.prototype.circles = null;
 
-      AxesMarker.prototype.lines = null;
+      LineMarker.prototype.lines = null;
 
-      function AxesMarker() {
+      function LineMarker() {
         this.destroy = __bind(this.destroy, this);
 
         this.circleDrag = __bind(this.circleDrag, this);
@@ -37,7 +37,7 @@
         this.setupCircleHover = __bind(this.setupCircleHover, this);
 
         var p, points;
-        AxesMarker.__super__.constructor.apply(this, arguments);
+        LineMarker.__super__.constructor.apply(this, arguments);
         points = this.annotation.value.points;
         this.circles = this.picker.paper.set((function() {
           var _i, _len, _results;
@@ -66,7 +66,7 @@
         this.annotation.trigger('change');
       }
 
-      AxesMarker.prototype.setupCircleHover = function() {
+      LineMarker.prototype.setupCircleHover = function() {
         var marker, out, over;
         marker = this;
         over = function() {
@@ -79,9 +79,9 @@
         return this.circles.hover(over, out);
       };
 
-      AxesMarker.prototype.render = function() {
+      LineMarker.prototype.render = function() {
         var circle, h, i, intersection, line, points, w, _i, _j, _len, _len1, _ref, _ref1, _ref2, _results;
-        AxesMarker.__super__.render.apply(this, arguments);
+        LineMarker.__super__.render.apply(this, arguments);
         _ref = this.picker.getSize(), w = _ref.width, h = _ref.height;
         intersection = this.getIntersection();
         this.centerCircle.attr({
@@ -115,19 +115,18 @@
         return _results;
       };
 
-      AxesMarker.prototype.getIntersection = function() {
-        var grads, interX, interY, points;
+      LineMarker.prototype.getIntersection = function() {
+        var points, x, y;
         points = this.annotation.value.points;
-        grads = [(points[0].y - points[1].y) / ((points[0].x - points[1].x) || 0.00001), (points[2].y - points[3].y) / ((points[2].x - points[3].x) || 0.00001)];
-        interX = ((points[2].y - points[0].y) + (grads[0] * points[0].x - grads[1] * points[2].x)) / (grads[0] - grads[1]);
-        interY = grads[0] * (interX - points[0].x) + points[0].y;
+        x = (points[0].x + points[1].x) / 2;
+        y = (points[0].y + points[1].y) / 2;
         return {
-          x: interX,
-          y: interY
+          x: x,
+          y: y
         };
       };
 
-      AxesMarker.prototype.getBoundingPathString = function() {
+      LineMarker.prototype.getBoundingPathString = function() {
         var h, path, point, points, w, _i, _j, _len, _len1, _ref, _ref1, _step, _step1;
         _ref = this.picker.getSize(), w = _ref.width, h = _ref.height;
         points = this.annotation.value.points;
@@ -146,9 +145,9 @@
         return path.join(' ');
       };
 
-      AxesMarker.prototype.select = function() {
+      LineMarker.prototype.select = function() {
         var circle, h, i, points, w, _i, _len, _ref, _ref1;
-        AxesMarker.__super__.select.apply(this, arguments);
+        LineMarker.__super__.select.apply(this, arguments);
         _ref = this.picker.getSize(), w = _ref.width, h = _ref.height;
         points = this.annotation.value.points;
         _ref1 = this.circles;
@@ -165,8 +164,8 @@
         }, 333);
       };
 
-      AxesMarker.prototype.deselect = function() {
-        AxesMarker.__super__.deselect.apply(this, arguments);
+      LineMarker.prototype.deselect = function() {
+        LineMarker.__super__.deselect.apply(this, arguments);
         this.circles.animate({
           opacity: 0.5
         }, 250);
@@ -175,7 +174,7 @@
         }, 125);
       };
 
-      AxesMarker.prototype.circleDrag = function(dx, dy) {
+      LineMarker.prototype.circleDrag = function(dx, dy) {
         var h, i, points, w, _ref;
         this.moved = true;
         points = this.annotation.value.points;
@@ -186,16 +185,16 @@
         return this.annotation.trigger('change');
       };
 
-      AxesMarker.prototype.destroy = function() {
-        AxesMarker.__super__.destroy.apply(this, arguments);
+      LineMarker.prototype.destroy = function() {
+        LineMarker.__super__.destroy.apply(this, arguments);
         this.circles.remove();
         return this.lines.remove();
       };
 
-      return AxesMarker;
+      return LineMarker;
 
     })(Marker);
-    return module.exports = AxesMarker;
+    return module.exports = LineMarker;
   });
 
 }).call(this);

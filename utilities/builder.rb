@@ -83,9 +83,9 @@ end
 files.each.with_index do |name, index|
   
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
-  wcs = JSON.parse(File.read("#{dirname}/../data/headers/#{brickname}.fits.json"))
-  coords = [wcs['CRVAL1'], wcs['CRVAL2']]
   center = centers[brickname]
+  coords = [center["ra"], center["dec"]]
+  center = [center["x"], center["y"]]
   year1clusters = year1[brickname]
   synthetic_clusters = synthetic[brickname]
   
