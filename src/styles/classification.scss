@@ -219,12 +219,28 @@
 						width: 100%;
 
 						> .count {
-              float: right;
+              				float: right;
 						}
+					}
 
-						&.active {
-							color: $cluster-color;
-						}
+					> button[value="cluster"].active {
+						color: $cluster-color;
+					}
+
+					> button[value="galaxy"].active {
+						color: $galaxy-color;
+					}
+
+					> button[value="ghost"].active {
+						color: $ghost-color;
+					}
+
+					> button[value="cross"].active {
+						color: $cross-color;
+					}
+
+					> button[value="linear"].active {
+						color: $linear-color;
 					}
 				}
 			}
