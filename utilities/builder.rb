@@ -7,10 +7,20 @@ Classification.where(project_id: project.id).destroy_all if project
 Recent.where(project_id: project.id).destroy_all if project
 Favorite.where(project_id: project.id).destroy_all if project
 
-User.all.each do |user|
-  if user.attributes['projects']
-    if project && user.attributes['projects'][project.id.to_s]
-      user.update :$set => { "projects.#{ project.id.to_s }" => { } }
+if project
+  user_total = User.count
+  user_index = 0
+  User.collection.find({ }, { timeout: false, fields: ['projects'] }) do |user_cursor|
+    while user_cursor.has_next?
+      user = user_cursor.next_document
+        
+      if user['projects'] && user['projects'][project.id.to_s]
+        User.collection.update({ _id: user['_id'] }, {
+          :$set => { "projects.#{ project.id.to_s }" => { } }
+        })
+      end
+      
+      puts "#{ user_index += 1 } / #{ user_total }"
     end
   end
 end
@@ -19,10 +29,10 @@ AndromedaSubject.destroy_all
 project.workflows.destroy_all if project
 project.destroy if project
 
-redis = Ouroboros.redis["andromeda_#{ Rails.env }"]
-redis.keys.each do |key|
-  redis.del key
-end
+# redis = Ouroboros.redis["andromeda_#{ Rails.env }"]
+# redis.keys('andromeda_*').each do |key|
+#   redis.del key
+# end
 
 project = Project.where(name: 'andromeda').first || Project.create({
   name: 'andromeda'
@@ -109,4 +119,4 @@ files.each.with_index do |name, index|
 end
 
 
-AndromedaSubject.activate_randomly
+# AndromedaSubject.activate_randomly
