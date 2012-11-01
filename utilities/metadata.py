@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 import numpy
 import pyfits
 
@@ -24,6 +25,7 @@ def header2json():
         output.write(json.dumps(wcs))
         output.close()
 
+
 def subimage_centers():
     
     def rescale(x, y):
@@ -32,7 +34,7 @@ def subimage_centers():
         return [x, y]
     
     data_dir = os.path.join('..', 'data')
-    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs.fits'))
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs_v1.fits'))
     
     d = {}
     for row in data:
@@ -43,11 +45,12 @@ def subimage_centers():
     output.write(json.dumps(d))
     output.close()
 
+
 def getYear1Catalog():
     """
     Convert FITS table of year 1 PHAT cluster catalog to CSV
     """
-    data_file = os.path.join('..', 'data', 'phat_pcassign.fits')
+    data_file = os.path.join('..', 'data', 'phat_pcassign_v1.fits')
     data = pyfits.getdata(data_file)
     
     output = open('year1catalog.csv', 'w')
@@ -62,6 +65,7 @@ def getYear1Catalog():
         output.write("%s, %s, %s, %s, %s, %s, %s\n" % (fieldname, cluster, x, y, pixradius, ra, dec))
     
     output.close()
+
 
 def getSyntheticCatalog():
     """
@@ -83,5 +87,15 @@ def getSyntheticCatalog():
             f.write("%s, %s, %s, %s, %s, %s, %s, %s\n" % (subimg, fcid, x, y, ra, dec, reff, pixradius))
 
 if __name__ == '__main__':
-    # getYear1Catalog()
-    # getSyntheticCatalog()
+	if len(sys.argv) != 2:
+		sys.exit()
+	
+	argument = sys.argv[1]
+	if argument == 'header':
+		header2json()
+	elif argument == 'centers':
+		subimage_centers()
+	elif argument == 'year1':
+		getYear1Catalog()
+	elif argument == 'synthetic':
+		getSyntheticCatalog()
