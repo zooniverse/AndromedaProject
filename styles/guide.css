@@ -1,34 +1,58 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
 .main [data-page="guide"] div.content {
-  padding: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000038}}
+  padding: 5px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000038}}
+.main [data-page="guide"] h3.smaller {
+  padding-top: 20px;
+  font-size: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000313}}
+.main [data-page="guide"] .dive-in {
+  clear: both;
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px white, 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: black;
+  float: right;
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px white;
+  background: #EFEFEF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000329}}
 .main [data-page="guide"] div.images {
   text-align: left;
   width: 700px;
   margin: 0 0 10px 0;
   padding: 5px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000315}}
-.main [data-page="guide"] img.xlarge {
-  width: 530px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000336}}
 .main [data-page="guide"] img.large {
-  width: 330px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000323}}
-.main [data-page="guide"] img.medium_big {
-  width: 260px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000327}}
+  float: left;
+  width: 440px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000342}}
 .main [data-page="guide"] img.medium {
-  width: 230px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000331}}
+  float: left;
+  width: 215px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000348}}
+.main [data-page="guide"] img.medium_3 {
+  float: left;
+  width: 140px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000354}}
 .main [data-page="guide"] img.small {
-  width: 138px;
-  height: 138px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000336}}
-.main [data-page="guide"] div.images span.caption {
-  width: 600px;
+  float: left;
+  width: 138px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000359}}
+.main [data-page="guide"] .caption {
+  padding: 0 10px 10px 0;
+  float: left;
+  width: 440px;
   font-size: 0.9em;
   font-style: italic; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000367}}
 .main [data-page="guide"] a.to-classify {
   background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
   background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
@@ -46,38 +70,67 @@
   text-decoration: none;
   text-shadow: 0 1px 0px #eeeeee;
   top: 65px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000386}}
 .main [data-page="guide"] > [data-page="data"] > section > section {
   border-top: 1px solid #dbdbdb; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000389}}
   .main [data-page="guide"] > [data-page="data"] > section > section .example {
     float: left;
     width: 400px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000393}}
     .main [data-page="guide"] > [data-page="data"] > section > section .example + .content {
       float: left;
       margin: 20px;
-        margin-right: 0;
       width: 560px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000398}}
       .main [data-page="guide"] > [data-page="data"] > section > section .example + .content > :first-child {
         margin-top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003106}}
 .main [data-page="guide"] > [data-page="type"] > section > section {
   border-top: 1px solid #dbdbdb; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
   .main [data-page="guide"] > [data-page="type"] > section > section:after {
     content: "";
     clear: both;
     display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003110}}
   .main [data-page="guide"] > [data-page="type"] > section > section .content {
-    margin: 20px;
-      margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000390}}
+    position: relative;
+    margin: 20px 20px 40px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003114}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content p {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003118}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content h4 {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003122}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content h3 {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003126}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content .left-col {
+      margin-top: 20px;
+      position: relative;
+      float: left;
+      width: 450px;
+      margin-right: 10px;
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003134}}
+      .main [data-page="guide"] > [data-page="type"] > section > section .content .left-col > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003139}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content .right-col {
+      margin-top: 20px;
+      position: relative;
+      float: left;
+      width: 450px;
+      margin-left: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003146}}
+      .main [data-page="guide"] > [data-page="type"] > section > section .content .right-col > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003153}}
 .main [data-page="guide"] [data-page="organizations"] {
   text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003156}}
   .main [data-page="guide"] [data-page="organizations"] figure {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -89,7 +142,7 @@
     padding: 10px;
     vertical-align: middle;
     width: 19%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003166}}
     .main [data-page="guide"] [data-page="organizations"] figure img {
       max-height: 100px;
       max-width: 100px; }

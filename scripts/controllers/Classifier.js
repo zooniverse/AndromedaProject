@@ -104,7 +104,6 @@
 
       Classifier.prototype.reset = function() {
         var _this = this;
-        console.log('reset');
         this.picker.reset();
         Classifier.__super__.reset.apply(this, arguments);
         this.otherSpeciesAnnotation = new Annotation({

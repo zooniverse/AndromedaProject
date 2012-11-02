@@ -22,7 +22,7 @@
       dev: +location.port > 1023 || !!~location.hostname.indexOf('.dev')
     });
     config.set({
-      apiHost: 'https://api.zooniverse.org',
+      apiHost: 'https://dev.zooniverse.org',
       proxyPath: '/proxy.html'
     });
     if (config.dev) {

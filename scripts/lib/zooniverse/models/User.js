@@ -38,11 +38,9 @@
 
       User.checkCurrent = function(project) {
         User.project = project;
-        console.log('Checking current user...');
         return API.checkCurrent({
           project: User.project
         }, function(response) {
-          console.log('Current user', response.name || response.success);
           if (response.success) {
             User.signIn(User.fromJSON(response));
           } else {
