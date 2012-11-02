@@ -353,7 +353,7 @@
 				size: 14px;
 				weight: bold;
 			};
-			margin: $gutter-width;
+			margin: $gutter-width/4;
 			text-align: center;
       
       .feedback {
@@ -368,9 +368,10 @@
         }
         img {
           position: absolute;
-          width: 215px;
-          height: 248px;
+          width: 245px;
+          height: 282px;
           z-index: 0;
+          border: 2px solid rgb(241,241,241);
         }
       }
       
@@ -386,17 +387,19 @@
 						font-size: 10px;
 						padding: 0 2px;
 						width: auto;
+						color: #000000;
+		  				background-color: rgb(241,241,241);
 					}
 				}
 			}
 
 			button {
 				@include box-sizing(border-box);
-				background: $blue-darker;
+				color: #000000;
+		  		background-color: rgb(241,241,241);
 				border: 0 {
 					radius: 3px;
 				};
-				color: $white;
 				cursor: pointer;
 				font: {
 					family: inherit;
@@ -411,6 +414,8 @@
 			> .talk {
 				@include contain-floats;
         color: $white;
+        position: absolute;
+        bottom: 0px;
 				button {
 					width: 49%;
 

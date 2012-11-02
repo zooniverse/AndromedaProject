@@ -34,7 +34,7 @@ define (require, exports, module) ->
 				<p>Thanks!</p>
         
         <div class="feedback">
-          <canvas class='overlay' width='215' height='248'></canvas>
+          <canvas class='overlay'></canvas>
           <img src='images/andromeda_opt.jpg' />
         </div>
         
