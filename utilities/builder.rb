@@ -29,10 +29,12 @@ AndromedaSubject.destroy_all
 project.workflows.destroy_all if project
 project.destroy if project
 
-# redis = Ouroboros.redis["andromeda_#{ Rails.env }"]
-# redis.keys('andromeda_*').each do |key|
-#   redis.del key
-# end
+if Rails.env == 'development'
+  redis = Ouroboros.redis["andromeda_#{ Rails.env }"]
+  redis.keys('andromeda_*').each do |key|
+    redis.del key
+  end
+end
 
 project = Project.where(name: 'andromeda').first || Project.create({
   name: 'andromeda'
@@ -50,9 +52,10 @@ workflow = Workflow.where(name: 'andromeda').first || Workflow.create({
 dirname = File.dirname(__FILE__)
 
 # All Subjects
-files = []
-File.open("#{dirname}/../data/andromeda_subjects.txt").each do |line|
-  files.push line.strip()
+subjects = {}
+CSV.foreach("#{dirname}/../data/andromeda_subjects_with_ids.csv") do |row|
+  _id, zooniverse_id, subimg = row
+  subjects[subimg] = {'_id' => _id, 'zooniverse_id' => zooniverse_id}
 end
 
 centers = JSON.parse(File.read("#{dirname}/../data/image-centers.json"))
@@ -94,9 +97,13 @@ CSV.foreach("#{dirname}/../data/synthetic-clusters.csv") do |row|
   synthetic[subimg].push(object)
 end
 
-files.each.with_index do |name, index|
-  
+index = 0
+subjects.each_pair do |name, ids|
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
+  
+  _id = ids['_id']
+  zooniverse_id = ids['zooniverse_id']
+  
   center = centers[brickname]
   coords = [center["ra"], center["dec"]]
   center = [center["x"], center["y"]]
@@ -104,6 +111,8 @@ files.each.with_index do |name, index|
   synthetic_clusters = synthetic[brickname]
   
   AndromedaSubject.create({
+    _id: _id,
+    zooniverse_id: zooniverse_id,
     project_id: project.id,
     workflow_ids: [ workflow.id ],
     coords: coords,
@@ -119,8 +128,8 @@ files.each.with_index do |name, index|
     }
   })
   
-  puts "#{ index + 1 } / #{ files.length }"
+  puts "#{ index + 1 } / #{ subjects.length }"
+  index += 1
 end
 
-
-# AndromedaSubject.activate_randomly
+AndromedaSubject.activate_randomly if Rails.env == 'development'

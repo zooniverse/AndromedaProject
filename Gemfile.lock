@@ -13,6 +13,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    bson (1.7.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -29,4 +30,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson
   zoo!
