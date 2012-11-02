@@ -6,6 +6,7 @@ subjects/standard
 subjects/thumbnails
 alpha/
 build*/
-data/
+data/headers
+data/imghead_final
 tiles/
 .rvmrc

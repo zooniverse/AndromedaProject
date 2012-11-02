@@ -178,25 +178,25 @@ define (require, exports, module) ->
         context.stroke()
         context.fill()
       
-      # Show year 1 catalog on subject
-      year1 = subject.metadata.year1
-      if year1?
-        
-        for cluster in year1
-          x = parseFloat(cluster.x)
-          y = parseFloat(cluster.y)
-          pixradius = parseFloat(cluster.pixradius)
-          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 4})
-      
-      # Show synthetic clusters
-      synthetics = subject.metadata.synthetic
-      if synthetics?
-        
-        for synthetic in synthetics
-          x = parseFloat(synthetic.x)
-          y = parseFloat(synthetic.y)
-          pixradius = parseFloat(synthetic.pixradius)
-          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
+      # # Show year 1 catalog on subject
+      # year1 = subject.metadata.year1
+      # if year1?
+      #   
+      #   for cluster in year1
+      #     x = parseFloat(cluster.x)
+      #     y = parseFloat(cluster.y)
+      #     pixradius = parseFloat(cluster.pixradius)
+      #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 4})
+      # 
+      # # Show synthetic clusters
+      # synthetics = subject.metadata.synthetic
+      # if synthetics?
+      #   
+      #   for synthetic in synthetics
+      #     x = parseFloat(synthetic.x)
+      #     y = parseFloat(synthetic.y)
+      #     pixradius = parseFloat(synthetic.pixradius)
+      #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
       
       @saveClassification()
 
