@@ -1,1 +1,1385 @@
-@import "http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800";html[lang="en"] [lang="de"],html[lang="en"] [lang="po"],html[lang="de"] [lang="en"],html[lang="de"] [lang="po"],html[lang="po"] [lang="en"],html[lang="po"] [lang="de"]{display:none}html{background:#0c0819;color:#040d19;font:12px "Open Sans", sans-serif;overflow-y:scroll}body{margin:0}body:before{content:" ";height:1500px;left:50%;margin-left:-750px;margin-top:-562.5px;position:fixed;top:50%;width:1500px}.app{margin:-50px auto 50px;position:relative;width:1000px}.app>header{color:#f1f1f1;margin:25px 0}.app>header:after{content:"";clear:both;display:table}.app>header>h1{position:relative;z-index:1000;float:left;margin:-2px 0 0 80px;font-size:2.0em;font-weight:200;text-transform:uppercase}.app>header>h1>a{display:block;text-decoration:none;color:#f1f1f1}.app>header>h1>a>img{border:0;display:block;width:250px}.app>header>h1>a>span{font-weight:600}.app>header>nav{float:right;position:relative;z-index:1000;font-size:10px;font-weight:bold;line-height:30px;margin-top:0px}.app>header>nav>ul{margin:0;padding:0}.app>header>nav>ul>li{display:block;float:left}.app>header>nav>ul>li>a{border-radius:3px;color:inherit;display:inline-block;margin-left:10px;text-align:center;text-decoration:none;text-shadow:0 1px 1px rgba(0,0,0,0.25);width:60px}.app>header>nav>ul>li>a>img{display:block;margin:0 auto}.app>header>nav>ul>li>a:hover{box-shadow:0 0 1px 1px rgba(0,0,0,0.1) inset}.app>header>nav>ul>li>a.active{background:rgba(0,0,0,0.1);box-shadow:0 1px 1px rgba(0,0,0,0.1) inset}.app>header>nav>ul>li.inactive{opacity:0.25}.main{position:relative}.main>section{-moz-transition:opacity 0.25s ease-in-out,top 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out,top 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out,top 0.25s ease-in-out;transition:opacity 0.25s ease-in-out,top 0.25s ease-in-out;display:none\9;height:100%;left:0;opacity:0;overflow:hidden;pointer-events:none;position:absolute;top:40px;width:100%}.main>section.active{display:block\9;opacity:1;overflow:visible;pointer-events:all;position:relative;top:0;z-index:20}.main>section>section{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;background:#f1f1f1;border-top:0px solid #040d19;border-radius:0px  0px 3px 3px;box-shadow:0 4px 6px -4px #00697c;margin-bottom:20px}.main>section>section.content{padding:20px 30px 25px 30px}.main>section>section>.content{margin:20px}.main>section>section h2{font-size:35px;font-weight:800;margin:0}.main>section>section h3{font-size:15px;font-weight:600;margin:0}.image-flipper{position:relative}.image-flipper>img,.image-flipper>figure{-moz-transition:opacity 0.5s ease-in-out;-ms-transition:opacity 0.5s ease-in-out;-webkit-transition:opacity 0.5s ease-in-out;transition:opacity 0.5s ease-in-out;display:block;left:0;opacity:0;position:absolute;top:0}.image-flipper>img:first-child,.image-flipper>figure:first-child{position:relative}.image-flipper>img.active,.image-flipper>figure.active{-moz-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;opacity:1;z-index:1}.image-flipper>.flipper-controls{bottom:0;position:absolute;right:0;z-index:2}.image-flipper>.flipper-controls>button{background:transparent;border:0;color:#fff;cursor:pointer;font-family:inherit;font-size:2em;font-weight:inherit;text-shadow:0 3px 3px #000}.image-flipper>.flipper-controls>button .label{display:none}.map .cartodb-logo{bottom:2px;opacity:0.5;position:absolute;right:8px;z-index:2}.map .cartodb-logo:hover{opacity:1}.main .details{font-size:12px}.main .details [data-page]{display:none}.main .details [data-page].active{display:block}.main .details h3{font-size:35px;font-weight:normal;margin:0.5em 0}.main .details h4{font-size:14px;font-weight:bold;margin:1.5em 0 8px}.main .details p{margin:0 0 1em}.main .details>nav>ul{margin:0;padding:0 10px}.main .details>nav>ul>li{display:inline}.main .details>nav>ul>li a{color:inherit;display:inline-block;font-size:12px;padding:10px;text-decoration:none}.main .details>nav>ul>li a.active{font-weight:bold}.main .details>section>nav>ul{display:table;margin:0;padding:0;width:100%}.main .details>section>nav>ul>li{border-left:1px solid #dbdbdb;display:table-cell;width:10%}.main .details>section>nav>ul>li:first-child{border-left:0}.main .details>section>nav>ul>li>a{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border-top:4px solid #0c0819;color:inherit;display:block;font-weight:bold;padding:10px 0;text-align:center;text-decoration:none;text-transform:uppercase}.main .details>section>nav>ul>li>a.active{background-image:-moz-linear-gradient(top, #e1e1e1, #f1f1f1);background-image:-ms-linear-gradient(top, #e1e1e1, #f1f1f1);background-image:-webkit-linear-gradient(top, #e1e1e1, #f1f1f1);background-image:linear-gradient(top, #e1e1e1, #f1f1f1);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1e1e1', endColorstr='#f1f1f1')"}.main .details>section>nav>ul>li:nth-child(1n)>a{border-top-color:#db9f00}.main .details>section>nav>ul>li:nth-child(1n)>a:hover,.main .details>section>nav>ul>li:nth-child(1n)>a.active{color:#db9f00}.main .details>section>nav>ul>li:nth-child(2n)>a{border-top-color:#a20f32}.main .details>section>nav>ul>li:nth-child(2n)>a:hover,.main .details>section>nav>ul>li:nth-child(2n)>a.active{color:#a20f32}.main .details>section>nav>ul>li:nth-child(3n)>a{border-top-color:#9c62ee}.main .details>section>nav>ul>li:nth-child(3n)>a:hover,.main .details>section>nav>ul>li:nth-child(3n)>a.active{color:#9c62ee}.main .details>section>nav>ul>li:nth-child(4n)>a{border-top-color:#097d4e}.main .details>section>nav>ul>li:nth-child(4n)>a:hover,.main .details>section>nav>ul>li:nth-child(4n)>a.active{color:#097d4e}.main .details>section>nav>ul>li:nth-child(5n)>a{border-top-color:#3d75db}.main .details>section>nav>ul>li:nth-child(5n)>a:hover,.main .details>section>nav>ul>li:nth-child(5n)>a.active{color:#3d75db}.main .details>section>section:after{content:"";clear:both;display:table}.main .scoreboard:after{content:"";clear:both;display:table}.main .scoreboard>.score{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border-left:1px solid #dbdbdb;float:left;text-align:right;width:20%}.main .scoreboard>.score:first-child{border-left:0}.main .scoreboard>.score>.description{color:#f1f1f1;font-weight:800;line-height:1.5;padding:40px 20px 20px}.main .scoreboard>.score.galaxy>.description{background:#9c62ee}.main .scoreboard>.score.cross>.description{background:#a20f32}.main .scoreboard>.score.cluster>.description{background:#db9f00}.main .scoreboard>.score.ghost>.description{background:#097d4e}.main .scoreboard>.score.classifications>.description{background:#001e29}.main .scoreboard>.score>.count{font-size:20px;line-height:1;padding:20px}.main [data-page="home"] #banner{border:3px solid #ffffff;height:400px;width:984px;margin-bottom:0px;padding:5px}.main [data-page="home"] h2{font-size:1.7em;font-weight:800}.main [data-page="home"] p{font-size:0.9em;font-weight:400;margin:0;padding:0}.main [data-page="home"] .dive-in{border:1px solid #c1c1c1;border-radius:3px;box-shadow:inset 0px 1px 0px #fff,0 1px 3px rgba(0,0,0,0.1);color:black;float:right;margin-top:0px;font-size:18px;font-weight:600;padding:7px 40px;text-decoration:none;text-shadow:0px 1px 0px white;background:#EFEFEF}.main [data-page="home"] .dive-in:hover{border:1px solid #979797}.main [data-page="home"] .dive-in:active{box-shadow:inset 0px 0px 2px rgba(0,0,0,0.2)}.main [data-page="about"] div.images{text-align:left;width:700px;margin:0 0 10px 0;padding:5px 0px}.main [data-page="about"] img.large{width:330px}.main [data-page="about"] div.images span.caption{width:600px;font-size:0.9em;font-style:italic}.main [data-page="about"] a.to-classify{background-image:-moz-linear-gradient(top, #eee, #eee);background-image:-ms-linear-gradient(top, #eee, #eee);background-image:-webkit-linear-gradient(top, #eee, #eee);background-image:linear-gradient(top, #eee, #eee);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#eee')";border:1px solid #ddd;border-radius:3px;box-shadow:0 1px 0 #ddd inset;color:#f1f1f1;font-weight:bold;padding:5px 20px;position:absolute;right:20px;text-decoration:none;text-shadow:0 1px 0px #eee;top:65px}.main [data-page="about"]>[data-page="data"]>section>section{border-top:1px solid #dbdbdb}.main [data-page="about"]>[data-page="data"]>section>section .example{float:left;width:400px}.main [data-page="about"]>[data-page="data"]>section>section .example+.content{float:left;margin:20px;margin-right:0;width:560px}.main [data-page="about"]>[data-page="data"]>section>section .example+.content>:first-child{margin-top:0}.main [data-page="about"]>[data-page="people"]>section>section{border-top:1px solid #dbdbdb}.main [data-page="about"]>[data-page="people"]>section>section:after{content:"";clear:both;display:table}.main [data-page="about"]>[data-page="people"]>section>section .headshot{display:block;float:left;margin:20px;margin-right:0;width:80px}.main [data-page="about"]>[data-page="people"]>section>section .headshot+.content{float:left;width:860px}.main [data-page="about"]>[data-page="people"]>section>section .headshot+.content>:first-child{margin-top:0}.main [data-page="about"]>[data-page="people"]>section>section .content{margin:20px;margin-right:0}.main [data-page="about"] [data-page="organizations"]{text-align:center}.main [data-page="about"] [data-page="organizations"] figure{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:125px;margin:0 0 3px;line-height:140px;padding:10px;vertical-align:middle;width:19%}.main [data-page="about"] [data-page="organizations"] figure img{max-height:100px;max-width:100px}.main [data-page="guide"] div.content{padding:5px 20px}.main [data-page="guide"] h3.smaller{padding-top:20px;font-size:20px}.main [data-page="guide"] .dive-in{clear:both;border:1px solid #c1c1c1;border-radius:3px;box-shadow:inset 0px 1px 0px #fff,0 1px 3px rgba(0,0,0,0.1);color:black;float:right;margin-top:0px;font-size:14px;font-weight:600;padding:4px 10px;text-decoration:none;text-shadow:0px 1px 0px white;background:#EFEFEF}.main [data-page="guide"] div.images{text-align:left;width:700px;margin:0 0 10px 0;padding:5px 0px}.main [data-page="guide"] img.large{float:left;width:440px;padding:0 10px 10px 0}.main [data-page="guide"] img.medium{float:left;width:215px;padding:0 10px 10px 0}.main [data-page="guide"] img.medium_3{float:left;width:140px;padding:0 10px 10px 0}.main [data-page="guide"] img.small{float:left;width:138px}.main [data-page="guide"] .caption{padding:0 10px 10px 0;float:left;width:440px;font-size:0.9em;font-style:italic}.main [data-page="guide"] a.to-classify{background-image:-moz-linear-gradient(top, #eee, #eee);background-image:-ms-linear-gradient(top, #eee, #eee);background-image:-webkit-linear-gradient(top, #eee, #eee);background-image:linear-gradient(top, #eee, #eee);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#eee')";border:1px solid #ddd;border-radius:3px;box-shadow:0 1px 0 #ddd inset;color:#040d19;font-weight:bold;padding:5px 20px;position:absolute;right:20px;text-decoration:none;text-shadow:0 1px 0px #eee;top:65px}.main [data-page="guide"]>[data-page="data"]>section>section{border-top:1px solid #dbdbdb}.main [data-page="guide"]>[data-page="data"]>section>section .example{float:left;width:400px}.main [data-page="guide"]>[data-page="data"]>section>section .example+.content{float:left;margin:20px;width:560px}.main [data-page="guide"]>[data-page="data"]>section>section .example+.content>:first-child{margin-top:0}.main [data-page="guide"]>[data-page="type"]>section>section{border-top:1px solid #dbdbdb}.main [data-page="guide"]>[data-page="type"]>section>section:after{content:"";clear:both;display:table}.main [data-page="guide"]>[data-page="type"]>section>section .content{position:relative;margin:20px 20px 40px 20px}.main [data-page="guide"]>[data-page="type"]>section>section .content p{clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content h4{clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content h3{clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content .left-col{margin-top:20px;position:relative;float:left;width:450px;margin-right:10px;clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content .left-col>:first-child{margin-top:0}.main [data-page="guide"]>[data-page="type"]>section>section .content .right-col{margin-top:20px;position:relative;float:left;width:450px;margin-left:10px}.main [data-page="guide"]>[data-page="type"]>section>section .content .right-col>:first-child{margin-top:0}.main [data-page="guide"] [data-page="organizations"]{text-align:center}.main [data-page="guide"] [data-page="organizations"] figure{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:125px;margin:0 0 3px;line-height:140px;padding:10px;vertical-align:middle;width:19%}.main [data-page="guide"] [data-page="organizations"] figure img{max-height:100px;max-width:100px}.main #classifier{border:5px solid #f1f1f1;border-radius:3px 0 0 3px;width:735px}.main #classifier>.image{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;cursor:crosshair;background:#f1f1f1;height:500px;position:relative;width:100%;z-index:2}.main #classifier>.image>.map{height:100%;left:0;position:absolute;top:0;width:100%}.main #classifier>.image>.map>img{height:100%;width:100%}.main #classifier>.image>.selection-area{-moz-transition:opacity 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,transform 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,transform 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,transform 0.25s ease-in-out;transition:opacity 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,transform 0.25s ease-in-out;height:100%;left:0;position:relative;top:0;width:100%;z-index:4}.main #classifier>.image>.selection-area.disabled{cursor:not-allowed}.main #classifier>.image>.selection-area>img{height:100%;left:0;position:absolute;top:0;width:100%}.main #classifier>.image>.selection-area>.scale{-moz-transition:width 0.5s ease-in-out;-ms-transition:width 0.5s ease-in-out;-webkit-transition:width 0.5s ease-in-out;transition:width 0.5s ease-in-out;bottom:10px;height:7px;left:10px;opacity:0.75;pointer-events:none;position:absolute;width:10px}.main #classifier>.image>.selection-area>.scale:after{background:#f1f1f1;content:" ";height:1px;left:0;margin-top:-1px;position:absolute;top:50%;width:100%}.main #classifier>.image>.selection-area>.scale>.mark{float:left;height:100%;margin-left:20%;position:relative;width:0}.main #classifier>.image>.selection-area>.scale>.mark:after{background:#f1f1f1;content:" ";height:100%;left:0;position:absolute;top:0;width:1px}.main #classifier>.image>.selection-area>.scale>.mark:first-child{margin-left:0}.main #classifier>.image>.selection-area>.scale>.label{color:#f1f1f1;font-size:11px;font-weight:bold;left:100%;line-height:1;margin-left:1em;position:absolute;top:-2px;white-space:nowrap}.main #classifier>.options{height:510px;position:absolute;right:0;top:0;width:255px;z-index:0}.main #classifier>.options>.steps{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;-moz-transition:opacity 0.25s ease-in-out,right 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out,right 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out,right 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;transition:opacity 0.25s ease-in-out,right 0.25s ease-in-out,-moz-transform 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;background:#f1f1f1;border-radius:0 3px 3px 0;box-shadow:0 3px 3px -3px rgba(0,0,0,0.67);height:100%;opacity:1;padding:20px;position:absolute;right:0;top:0;width:100%;z-index:3}.main #classifier>.options>.steps.finished{opacity:0.5;right:100%;-moz-transform:scale(0.9);-webkit-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9)}.main #classifier>.options>.steps [data-page]{display:none}.main #classifier>.options>.steps [data-page].active{display:block}.main #classifier>.options>.steps h4{margin:0;text-align:center}.main #classifier>.options>.steps .toggles{margin:20px 0;padding:0}.main #classifier>.options>.steps .toggles>li{display:block;position:relative}.main #classifier>.options>.steps .toggles>li>.divider{position:absolute;right:50px;top:1px;border-left:1px solid #bebebe;border-right:1px solid white;width:0px;height:40px;padding:0;margin:0}.main #classifier>.options>.steps .toggles>li>button{background-image:-moz-linear-gradient(top, #ececec, #e3e3e3);background-image:-ms-linear-gradient(top, #ececec, #e3e3e3);background-image:-webkit-linear-gradient(top, #ececec, #e3e3e3);background-image:linear-gradient(top, #ececec, #e3e3e3);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#e3e3e3')";box-shadow:inset 0px 1px 0px #fff,0 1px 3px rgba(0,0,0,0.1);border:1px solid #bebebe;border-radius:3px;color:#001e29;cursor:pointer;display:block;font-family:inherit;font-size:18px;padding:8px 20px;margin:0 0 3px 0;text-align:left;text-transform:lowercase;width:100%}.main #classifier>.options>.steps .toggles>li>button>.count{float:right}.main #classifier>.options>.steps .toggles>li>button[value="cluster"].active{color:#db9f00}.main #classifier>.options>.steps .toggles>li>button[value="galaxy"].active{color:#9c62ee}.main #classifier>.options>.steps .toggles>li>button[value="ghost"].active{color:#097d4e}.main #classifier>.options>.steps .toggles>li>button[value="cross"].active{color:#a20f32}.main #classifier>.options>.steps .toggles>li>button[value="linear"].active{color:#3d75db}.main #classifier>.options>.steps .indicator{border-bottom:1px solid #e3e3e3;height:90px;margin-bottom:20px;position:relative;text-align:center}.main #classifier>.options>.steps .indicator>.points{height:100%;left:0;position:absolute;top:0;width:100%}.main #classifier>.options>.steps .other-creatures{margin:20px 0}.main #classifier>.options>.steps .other-creatures:after{content:"";clear:both;display:table}.main #classifier>.options>.steps .other-creatures>h4{margin-bottom:10px}.main #classifier>.options>.steps .other-creatures>button{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;background-image:-moz-linear-gradient(top, #ececec, #e3e3e3);background-image:-ms-linear-gradient(top, #ececec, #e3e3e3);background-image:-webkit-linear-gradient(top, #ececec, #e3e3e3);background-image:linear-gradient(top, #ececec, #e3e3e3);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#e3e3e3')";border:1px solid #bebebe;border-radius:3px;margin:0px;cursor:pointer;color:#001e29;display:block;float:left;font-family:inherit;font-size:inherit;font-weight:inherit;padding:10;width:49%}.main #classifier>.options>.steps .other-creatures>button:first-of-type{margin-right:1px}.main #classifier>.options>.steps .other-creatures>button.active{background-image:-moz-linear-gradient(top, #004250, #004250);background-image:-ms-linear-gradient(top, #004250, #004250);background-image:-webkit-linear-gradient(top, #004250, #004250);background-image:linear-gradient(top, #004250, #004250);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#004250', endColorstr='#004250')";border-color:transparent;color:#f1f1f1}.main #classifier>.options>.steps .finished{position:absolute;bottom:40px;padding:10px 0;width:215px;background-image:-moz-linear-gradient(top, #ddd, #eee);background-image:-ms-linear-gradient(top, #ddd, #eee);background-image:-webkit-linear-gradient(top, #ddd, #eee);background-image:linear-gradient(top, #ddd, #eee);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddd', endColorstr='#eee')";border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 #cccccc;color:#000;margin-top:0px;font-size:18px;font-weight:500;text-decoration:none;text-shadow:2px 2px 3px #eeeeee}.main #classifier>.options>.steps .finished:disabled{opacity:0.67}.main #classifier>.options>.steps>.help{bottom:0;font-size:11px;left:0;padding:10px 0;position:absolute;text-align:center;width:100%}.main #classifier>.options>.steps>.help>a{background:rgba(0,0,0,0.1);border-radius:3px;color:inherit;display:inline-block;padding:3px 6px;text-decoration:none}.main #classifier>.options>.summary{color:#F1F1F1;font-size:14px;font-weight:bold;margin:20px;text-align:center}.main #classifier>.options>.summary .feedback{position:static;height:248px;width:0px;padding-bottom:60px}.main #classifier>.options>.summary .feedback canvas{position:absolute;z-index:1}.main #classifier>.options>.summary .feedback img{position:absolute;width:215px;height:248px;z-index:0}.main #classifier>.options>.summary .favorite .destroy{display:none}.main #classifier>.options>.summary .favorite .destroy button{display:inline-block;font-size:10px;padding:0 2px;width:auto}.main #classifier>.options>.summary button{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;background:#040d19;border:0;border-radius:3px;color:#f1f1f1;cursor:pointer;font-family:inherit;font-size:inherit;font-weight:inherit;padding:5px 0;text-align:center;width:100%}.main #classifier>.options>.summary>.talk{color:#f1f1f1}.main #classifier>.options>.summary>.talk:after{content:"";clear:both;display:table}.main #classifier>.options>.summary>.talk button{width:49%}.main #classifier>.options>.summary>.talk button:first-child{margin-right:1%}.main #classifier.can-favorite>.options>.summary .favorite{display:block}.main #classifier.is-favored>.options>.summary .favorite .create{display:none}.main #classifier.is-favored>.options>.summary .favorite .destroy{display:block}.classifier.dialog{-moz-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;background:#f1f1f1;border-radius:3px;border-top:5px solid #004250;margin-left:-130px;padding:10px 0;position:absolute;opacity:0;z-index:50}.classifier.dialog .content{padding:10px 20px}.classifier.dialog .buttons{border-top:1px solid #ececec;padding:10px 20px;text-align:center}.classifier.dialog .buttons button{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;background-image:-moz-linear-gradient(top, #ececec, #e3e3e3);background-image:-ms-linear-gradient(top, #ececec, #e3e3e3);background-image:-webkit-linear-gradient(top, #ececec, #e3e3e3);background-image:linear-gradient(top, #ececec, #e3e3e3);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#e3e3e3')";border:1px solid #bebebe;color:#001e29;font-family:inherit;font-size:inherit;font-weight:inherit;margin:0 0.25em;padding:0em 2em}.classifier.dialog.open{opacity:1}.dialog-blocker{-moz-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;background:rgba(241,241,241,0.25);position:absolute;z-index:40}.dialog-blocker.open{opacity:1}.tutorial-step{-moz-transition:left 0.25s ease-in 0.125s,top 0.25s ease-out;-ms-transition:left 0.25s ease-in 0.125s,top 0.25s ease-out;-webkit-transition:left 0.25s ease-in 0.125s,top 0.25s ease-out;transition:left 0.25s ease-in 0.125s,top 0.25s ease-out;background:#f1f1f1;border:4px solid #040d19;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,0.5);color:#040d19;font-weight:bold;position:absolute;z-index:10}.tutorial-step .controls{opacity:0;position:absolute;right:0;text-align:right;top:0}.tutorial-step .controls button{background:transparent;border:0;color:inherit;cursor:pointer;font-family:inherit;font-size:inherit;font-weight:inherit;height:20px;margin:0;opacity:0.125;padding:0;width:20px}.tutorial-step .controls:hover button{opacity:0.25}.tutorial-step .message{margin:20px}.tutorial-step .message .heading{font-size:16px}.tutorial-step .continue{margin-top:20px;text-align:center}.tutorial-step .continue button{background-image:-moz-linear-gradient(top, #f1f1f1, #e3e3e3);background-image:-ms-linear-gradient(top, #f1f1f1, #e3e3e3);background-image:-webkit-linear-gradient(top, #f1f1f1, #e3e3e3);background-image:linear-gradient(top, #f1f1f1, #e3e3e3);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#e3e3e3')";border:1px solid #bebebe;border-radius:3px;color:inherit;cursor:pointer;font-family:inherit;font-size:inherit;font-weight:inherit;margin:0;padding:5px 20px}.tutorial-step .arrow{border:10px solid transparent;position:absolute}.tutorial-step .arrow.down-center{border-top-color:#040d19;border-bottom-width:0;left:50%;margin-left:-10px;top:100%}.tutorial-step .arrow.right-middle{border-left-color:#040d19;border-right-width:0;left:100%;margin-top:-10px;top:50%}.tutorial-step .arrow.left-middle{border-right-color:#040d19;border-left-width:0;right:100%;margin-top:-10px;top:50%}.tutorial-step:hover .controls{opacity:1}.tutorial-blocker{cursor:not-allowed;filter:alpha(opacity=1);opacity:0;position:absolute;z-index:10}.main [data-page="profile"]>.login-form{margin:100px auto 0;text-align:center;width:40%}.main [data-page="profile"]>.login-form label{display:block;margin:10px 0}.main [data-page="profile"]>.login-form label>span{display:block}.main [data-page="profile"]>.login-form>.errors{font-weight:bold;margin:0 0 10px}.main [data-page="profile"]>.login-form>.waiting,.main [data-page="profile"]>.login-form>.sign-out{display:none}.main [data-page="profile"]>.login-form.waiting>.sign-in{display:none}.main [data-page="profile"]>.login-form.waiting>.waiting{display:block}.main [data-page="profile"]>.summary{display:none}.main [data-page="profile"]>.summary>h3{margin:20px}.main [data-page="profile"]>.summary>h3>.sign-out{color:inherit;float:right;font-size:10px;margin-top:5px;opacity:0.5;text-decoration:none}.main [data-page="profile"]>.summary>.map{border-top:1px solid #dbdbdb;height:250px}.main [data-page="profile"]>.favorites{display:none;float:left;margin-right:20px;width:660px}.main [data-page="profile"]>.favorites>ul{margin:0;padding:0}.main [data-page="profile"]>.favorites>ul:after{content:"";clear:both;display:table}.main [data-page="profile"]>.favorites>ul>li{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:block;float:left;margin:0;padding:0 0 20px 20px;position:relative}.main [data-page="profile"]>.favorites>ul>li .delete{-moz-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;background:transparent;border:0;color:#f1f1f1;cursor:pointer;font-weight:bold;opacity:0;padding:0;position:absolute;right:3px;top:3px;z-index:1}.main [data-page="profile"]>.favorites>ul>li>a{display:block;position:relative;text-align:center}.main [data-page="profile"]>.favorites>ul>li>a .thumbnail{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;background:#ccc;border-radius:4px;box-shadow:0 1px 0 #fff;display:block;width:193.33333px;height:155px}.main [data-page="profile"]>.favorites>ul>li>a .info{-moz-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;-webkit-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;bottom:10px;color:#f1f1f1;font-weight:bold;left:0;opacity:0;position:absolute;width:100%}.main [data-page="profile"]>.favorites>ul>li:hover .delete,.main [data-page="profile"]>.favorites>ul>li:hover .info{opacity:1}.main [data-page="profile"]>.favorites p.more{display:none;text-align:right}.main [data-page="profile"]>.favorites p.more button{background:transparent;border:0;cursor:pointer}.main [data-page="profile"]>.recents{display:none;float:left;width:320px}.main [data-page="profile"]>.recents ul{margin:0;padding:0}.main [data-page="profile"]>.recents ul li{border-top:1px solid #dbdbdb;display:block;padding:10px}.main [data-page="profile"]>.recents ul li:after{content:"";clear:both;display:table}.main [data-page="profile"]>.recents p.more{display:none;text-align:right}.main [data-page="profile"]>.recents p.more button{background:transparent;border:0;cursor:pointer}.main [data-page="profile"]>.recents .thumbnail{border-radius:5px;box-shadow:0 1px 0 #fff;float:left;width:25%}.main [data-page="profile"]>.recents .description{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;font-weight:bold;padding-left:10px;width:75%}.main [data-page="profile"]>.recents .description .visited{font-weight:normal}.main [data-page="profile"].signed-in>.login-form{display:none}.main [data-page="profile"].signed-in>.summary,.main [data-page="profile"].signed-in>.favorites,.main [data-page="profile"].signed-in>.recents{display:block}.main [data-page="profile"].has-favorites>.favorites>.none,.main [data-page="profile"].has-recents>.recents>.none,.main [data-page="profile"].has-groups>.groups>.none{display:none}.main [data-page="profile"].has-favorites>.favorites>p.more,.main [data-page="profile"].has-recents>.recents>p.more,.main [data-page="profile"].has-groups>.groups>p.more{display:block}.main [data-page="profile"].has-favorites>.favorites>ul,.main [data-page="profile"].has-recents>.recents>ul,.main [data-page="profile"].has-groups>.groups>ul{display:block}
+@import "http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800";
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/translations\.scss}line{font-family:\000036}}
+html[lang="en"] [lang="de"],
+html[lang="en"] [lang="po"],
+html[lang="de"] [lang="en"],
+html[lang="de"] [lang="po"],
+html[lang="po"] [lang="en"],
+html[lang="po"] [lang="de"] {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\000036}}
+html {
+  background: #0c0819;
+  color: #040d19;
+  font: 12px "Open Sans", sans-serif;
+  overflow-y: scroll; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000313}}
+body {
+  margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000316}}
+  body:before {
+    content: " ";
+    height: 1500px;
+    left: 50%;
+    margin-left: -750px;
+    margin-top: -562.5px;
+    position: fixed;
+    top: 50%;
+    width: 1500px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000335}}
+.app {
+  margin: -50px auto 50px;
+  position: relative;
+  width: 1000px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000340}}
+  .app > header {
+    color: #f1f1f1;
+    margin: 25px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+    .app > header:after {
+      content: "";
+      clear: both;
+      display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000345}}
+    .app > header > h1 {
+      position: relative;
+      z-index: 1000;
+      float: left;
+      margin: -2px 0 0 80px;
+      font-size: 2.0em;
+      font-weight: 200;
+      text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000354}}
+      .app > header > h1 > a {
+        display: block;
+        text-decoration: none;
+        color: #f1f1f1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000359}}
+        .app > header > h1 > a > img {
+          border: 0;
+          display: block;
+          width: 250px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000365}}
+        .app > header > h1 > a > span {
+          font-weight: 600; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000371}}
+    .app > header > nav {
+      float: right;
+      position: relative;
+      z-index: 1000;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 30px;
+      margin-top: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000380}}
+      .app > header > nav > ul {
+        margin: 0;
+        padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000384}}
+        .app > header > nav > ul > li {
+          display: block;
+          float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\0000388}}
+          .app > header > nav > ul > li > a {
+            border-radius: 3px;
+            color: inherit;
+            display: inline-block;
+            margin-left: 10px;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+            width: 60px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003100}}
+            .app > header > nav > ul > li > a > img {
+              display: block;
+              margin: 0 auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003105}}
+            .app > header > nav > ul > li > a:hover {
+              box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1) inset; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003109}}
+            .app > header > nav > ul > li > a.active {
+              background: rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003116}}
+        .app > header > nav > ul > li.inactive {
+          opacity: 0.25; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003125}}
+.main {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003129}}
+  .main > section {
+    -moz-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    display: none\9;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 40px;
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003144}}
+    .main > section.active {
+      display: block\9;
+      opacity: 1;
+      overflow: visible;
+      pointer-events: all;
+      position: relative;
+      top: 0;
+      z-index: 20; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003155}}
+    .main > section > section {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #f1f1f1;
+      border-top: 0px solid #040d19;
+      border-radius: 0px  0px 3px 3px;
+      box-shadow: 0 4px 6px -4px #00697c;
+      margin-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003164}}
+      .main > section > section.content {
+        padding: 20px 30px 25px 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003168}}
+      .main > section > section > .content {
+        margin: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003172}}
+      .main > section > section h2 {
+        font-size: 35px;
+        font-weight: 800;
+        margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003180}}
+      .main > section > section h3 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003195}}
+.image-flipper {
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003199}}
+  .image-flipper > img,
+  .image-flipper > figure {
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003207}}
+    .image-flipper > img:first-child,
+    .image-flipper > figure:first-child {
+      position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003212}}
+    .image-flipper > img.active,
+    .image-flipper > figure.active {
+      -moz-transition: opacity 0.25s ease-in-out;
+      -ms-transition: opacity 0.25s ease-in-out;
+      -webkit-transition: opacity 0.25s ease-in-out;
+      transition: opacity 0.25s ease-in-out;
+      opacity: 1;
+      z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003219}}
+  .image-flipper > .flipper-controls {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003225}}
+    .image-flipper > .flipper-controls > button {
+      background: transparent;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 2em;
+      font-weight: inherit;
+      text-shadow: 0 3px 3px #000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003237}}
+      .image-flipper > .flipper-controls > button .label {
+        display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003244}}
+.map .cartodb-logo {
+  bottom: 2px;
+  opacity: 0.5;
+  position: absolute;
+  right: 8px;
+  z-index: 2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/layout\.scss}line{font-family:\00003251}}
+  .map .cartodb-logo:hover {
+    opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000033}}
+.main .details {
+  font-size: 12px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000036}}
+  .main .details [data-page] {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000039}}
+    .main .details [data-page].active {
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000314}}
+  .main .details h3 {
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0.5em 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000322}}
+  .main .details h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 1.5em 0 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000330}}
+  .main .details p {
+    margin: 0 0 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000335}}
+  .main .details > nav > ul {
+    margin: 0;
+    padding: 0 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000339}}
+    .main .details > nav > ul > li {
+      display: inline; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000342}}
+      .main .details > nav > ul > li a {
+        color: inherit;
+        display: inline-block;
+        font-size: 12px;
+        padding: 10px;
+        text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000349}}
+        .main .details > nav > ul > li a.active {
+          font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000359}}
+  .main .details > section > nav > ul {
+    display: table;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000365}}
+    .main .details > section > nav > ul > li {
+      border-left: 1px solid #dbdbdb;
+      display: table-cell;
+      width: 10%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000370}}
+      .main .details > section > nav > ul > li:first-child {
+        border-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000374}}
+      .main .details > section > nav > ul > li > a {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-top: 4px solid #0c0819;
+        color: inherit;
+        display: block;
+        font-weight: bold;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000387}}
+        .main .details > section > nav > ul > li > a.active {
+          background-image: -moz-linear-gradient(top, #e1e1e1, #f1f1f1);
+          background-image: -ms-linear-gradient(top, #e1e1e1, #f1f1f1);
+          background-image: -webkit-linear-gradient(top, #e1e1e1, #f1f1f1);
+          background-image: linear-gradient(top, #e1e1e1, #f1f1f1);
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1e1e1', endColorstr='#f1f1f1')"; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000392}}
+      .main .details > section > nav > ul > li:nth-child(1n) > a {
+        border-top-color: #db9f00; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000396}}
+        .main .details > section > nav > ul > li:nth-child(1n) > a:hover, .main .details > section > nav > ul > li:nth-child(1n) > a.active {
+          color: #db9f00; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003101}}
+      .main .details > section > nav > ul > li:nth-child(2n) > a {
+        border-top-color: #a20f32; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003105}}
+        .main .details > section > nav > ul > li:nth-child(2n) > a:hover, .main .details > section > nav > ul > li:nth-child(2n) > a.active {
+          color: #a20f32; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003110}}
+      .main .details > section > nav > ul > li:nth-child(3n) > a {
+        border-top-color: #9c62ee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003114}}
+        .main .details > section > nav > ul > li:nth-child(3n) > a:hover, .main .details > section > nav > ul > li:nth-child(3n) > a.active {
+          color: #9c62ee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003119}}
+      .main .details > section > nav > ul > li:nth-child(4n) > a {
+        border-top-color: #097d4e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003123}}
+        .main .details > section > nav > ul > li:nth-child(4n) > a:hover, .main .details > section > nav > ul > li:nth-child(4n) > a.active {
+          color: #097d4e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003128}}
+      .main .details > section > nav > ul > li:nth-child(5n) > a {
+        border-top-color: #3d75db; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003132}}
+        .main .details > section > nav > ul > li:nth-child(5n) > a:hover, .main .details > section > nav > ul > li:nth-child(5n) > a.active {
+          color: #3d75db; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+  .main .details > section > section:after {
+    content: "";
+    clear: both;
+    display: table; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+.main .scoreboard:after {
+  content: "";
+  clear: both;
+  display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\000036}}
+.main .scoreboard > .score {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-left: 1px solid #dbdbdb;
+  float: left;
+  text-align: right;
+  width: 20%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000313}}
+  .main .scoreboard > .score:first-child {
+    border-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000317}}
+  .main .scoreboard > .score > .description {
+    color: #f1f1f1;
+    font-weight: 800;
+    line-height: 1.5;
+    padding: 40px 20px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000324}}
+  .main .scoreboard > .score.galaxy > .description {
+    background: #9c62ee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000325}}
+  .main .scoreboard > .score.cross > .description {
+    background: #a20f32; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000326}}
+  .main .scoreboard > .score.cluster > .description {
+    background: #db9f00; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000327}}
+  .main .scoreboard > .score.ghost > .description {
+    background: #097d4e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000328}}
+  .main .scoreboard > .score.classifications > .description {
+    background: #001e29; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000330}}
+  .main .scoreboard > .score > .count {
+    font-size: 20px;
+    line-height: 1;
+    padding: 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000034}}
+.main [data-page="home"] #banner {
+  border: 3px solid #ffffff;
+  height: 400px;
+  width: 984px;
+  margin-bottom: 0px;
+  padding: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000312}}
+.main [data-page="home"] h2 {
+  font-size: 1.7em;
+  font-weight: 800; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000317}}
+.main [data-page="home"] p {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000324}}
+.main [data-page="home"] .dive-in {
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px white, 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: black;
+  float: right;
+  margin-top: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 7px 40px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px white;
+  background: #EFEFEF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000339}}
+.main [data-page="home"] .dive-in:hover {
+  border: 1px solid #979797; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000343}}
+.main [data-page="home"] .dive-in:active {
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\000035}}
+.main [data-page="about"] div.images {
+  text-align: left;
+  width: 700px;
+  margin: 0 0 10px 0;
+  padding: 5px 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000312}}
+.main [data-page="about"] img.large {
+  width: 330px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000316}}
+.main [data-page="about"] div.images span.caption {
+  width: 600px;
+  font-size: 0.9em;
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000322}}
+.main [data-page="about"] a.to-classify {
+  background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: linear-gradient(top, #eeeeee, #eeeeee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#eeeeee')";
+  border: 1px solid #dddddd;
+    border-radius: 3px;
+  box-shadow: 0 1px 0 #dddddd inset;
+  color: #f1f1f1;
+  font-weight: bold;
+  padding: 5px 20px;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0px #eeeeee;
+  top: 65px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000341}}
+.main [data-page="about"] > [data-page="data"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000344}}
+  .main [data-page="about"] > [data-page="data"] > section > section .example {
+    float: left;
+    width: 400px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000348}}
+    .main [data-page="about"] > [data-page="data"] > section > section .example + .content {
+      float: left;
+      margin: 20px;
+        margin-right: 0;
+      width: 560px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000353}}
+      .main [data-page="about"] > [data-page="data"] > section > section .example + .content > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000361}}
+.main [data-page="about"] > [data-page="people"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+  .main [data-page="about"] > [data-page="people"] > section > section:after {
+    content: "";
+    clear: both;
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000365}}
+  .main [data-page="about"] > [data-page="people"] > section > section .headshot {
+    display: block;
+    float: left;
+    margin: 20px;
+      margin-right: 0;
+    width: 80px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000371}}
+    .main [data-page="about"] > [data-page="people"] > section > section .headshot + .content {
+      float: left;
+      width: 860px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000375}}
+      .main [data-page="about"] > [data-page="people"] > section > section .headshot + .content > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000381}}
+  .main [data-page="about"] > [data-page="people"] > section > section .content {
+    margin: 20px;
+      margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000386}}
+.main [data-page="about"] [data-page="organizations"] {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000389}}
+  .main [data-page="about"] [data-page="organizations"] figure {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 125px;
+    margin: 0 0 3px;
+    line-height: 140px;
+    padding: 10px;
+    vertical-align: middle;
+    width: 19%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/about\.scss}line{font-family:\0000399}}
+    .main [data-page="about"] [data-page="organizations"] figure img {
+      max-height: 100px;
+      max-width: 100px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
+.main [data-page="guide"] div.content {
+  padding: 5px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000038}}
+.main [data-page="guide"] h3.smaller {
+  padding-top: 20px;
+  font-size: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000313}}
+.main [data-page="guide"] .dive-in {
+  clear: both;
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px white, 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: black;
+  float: right;
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px white;
+  background: #EFEFEF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000329}}
+.main [data-page="guide"] div.images {
+  text-align: left;
+  width: 700px;
+  margin: 0 0 10px 0;
+  padding: 5px 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000336}}
+.main [data-page="guide"] img.large {
+  float: left;
+  width: 440px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000342}}
+.main [data-page="guide"] img.medium {
+  float: left;
+  width: 215px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000348}}
+.main [data-page="guide"] img.medium_3 {
+  float: left;
+  width: 140px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000354}}
+.main [data-page="guide"] img.small {
+  float: left;
+  width: 138px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000359}}
+.main [data-page="guide"] .caption {
+  padding: 0 10px 10px 0;
+  float: left;
+  width: 440px;
+  font-size: 0.9em;
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000367}}
+.main [data-page="guide"] a.to-classify {
+  background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: linear-gradient(top, #eeeeee, #eeeeee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#eeeeee')";
+  border: 1px solid #dddddd;
+    border-radius: 3px;
+  box-shadow: 0 1px 0 #dddddd inset;
+  color: #040d19;
+  font-weight: bold;
+  padding: 5px 20px;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0px #eeeeee;
+  top: 65px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000386}}
+.main [data-page="guide"] > [data-page="data"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000389}}
+  .main [data-page="guide"] > [data-page="data"] > section > section .example {
+    float: left;
+    width: 400px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000393}}
+    .main [data-page="guide"] > [data-page="data"] > section > section .example + .content {
+      float: left;
+      margin: 20px;
+      width: 560px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000398}}
+      .main [data-page="guide"] > [data-page="data"] > section > section .example + .content > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003106}}
+.main [data-page="guide"] > [data-page="type"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+  .main [data-page="guide"] > [data-page="type"] > section > section:after {
+    content: "";
+    clear: both;
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003110}}
+  .main [data-page="guide"] > [data-page="type"] > section > section .content {
+    position: relative;
+    margin: 20px 20px 40px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003114}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content p {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003118}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content h4 {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003122}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content h3 {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003126}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content .left-col {
+      margin-top: 20px;
+      position: relative;
+      float: left;
+      width: 450px;
+      margin-right: 10px;
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003134}}
+      .main [data-page="guide"] > [data-page="type"] > section > section .content .left-col > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003139}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content .right-col {
+      margin-top: 20px;
+      position: relative;
+      float: left;
+      width: 450px;
+      margin-left: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003146}}
+      .main [data-page="guide"] > [data-page="type"] > section > section .content .right-col > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003153}}
+.main [data-page="guide"] [data-page="organizations"] {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003156}}
+  .main [data-page="guide"] [data-page="organizations"] figure {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 125px;
+    margin: 0 0 3px;
+    line-height: 140px;
+    padding: 10px;
+    vertical-align: middle;
+    width: 19%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003166}}
+    .main [data-page="guide"] [data-page="organizations"] figure img {
+      max-height: 100px;
+      max-width: 100px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\000033}}
+.main #classifier {
+  border: 5px solid #f1f1f1;
+  border-radius: 3px 0 0 3px;
+  width: 735px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000320}}
+  .main #classifier > .image {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: crosshair;
+    background: #f1f1f1;
+    height: 500px;
+    position: relative;
+    width: 100%;
+    z-index: 2; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000329}}
+    .main #classifier > .image > .map {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000337}}
+      .main #classifier > .image > .map > img {
+        height: 100%;
+        width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000343}}
+    .main #classifier > .image > .selection-area {
+      -moz-transition: opacity 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out, transform 0.25s ease-in-out;
+      -ms-transition: opacity 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out, transform 0.25s ease-in-out;
+      -webkit-transition: opacity 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out, transform 0.25s ease-in-out;
+      transition: opacity 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out, transform 0.25s ease-in-out;
+      height: 100%;
+      left: 0;
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 4; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000357}}
+      .main #classifier > .image > .selection-area.disabled {
+        cursor: not-allowed; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000361}}
+      .main #classifier > .image > .selection-area > img {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000369}}
+      .main #classifier > .image > .selection-area > .scale {
+        -moz-transition: width 0.5s ease-in-out;
+        -ms-transition: width 0.5s ease-in-out;
+        -webkit-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+        bottom: 10px;
+        height: 7px;
+        left: 10px;
+        opacity: 0.75;
+        pointer-events: none;
+        position: absolute;
+        width: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000379}}
+        .main #classifier > .image > .selection-area > .scale:after {
+          background: #f1f1f1;
+          content: " ";
+          height: 1px;
+          left: 0;
+          margin-top: -1px;
+          position: absolute;
+          top: 50%;
+          width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000390}}
+        .main #classifier > .image > .selection-area > .scale > .mark {
+          float: left;
+          height: 100%;
+          margin-left: 20%;
+          position: relative;
+          width: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\0000397}}
+          .main #classifier > .image > .selection-area > .scale > .mark:after {
+            background: #f1f1f1;
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003107}}
+          .main #classifier > .image > .selection-area > .scale > .mark:first-child {
+            margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003112}}
+        .main #classifier > .image > .selection-area > .scale > .label {
+          color: #f1f1f1;
+          font-size: 11px;
+          font-weight: bold;
+          left: 100%;
+          line-height: 1;
+          margin-left: 1em;
+          position: absolute;
+          top: -2px;
+          white-space: nowrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003134}}
+  .main #classifier > .options {
+    height: 510px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 255px;
+    z-index: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003142}}
+    .main #classifier > .options > .steps {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-transition: opacity 0.25s ease-in-out, right 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+      -ms-transition: opacity 0.25s ease-in-out, right 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+      -webkit-transition: opacity 0.25s ease-in-out, right 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+      transition: opacity 0.25s ease-in-out, right 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+      background: #f1f1f1;
+      border-radius: 0 3px 3px 0;
+      box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.67);
+      height: 100%;
+      opacity: 1;
+      padding: 20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 3; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003162}}
+      .main #classifier > .options > .steps.finished {
+        opacity: 0.5;
+        right: 100%;
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003168}}
+      .main #classifier > .options > .steps [data-page] {
+        display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003171}}
+        .main #classifier > .options > .steps [data-page].active {
+          display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003176}}
+      .main #classifier > .options > .steps h4 {
+        margin: 0;
+        text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003181}}
+      .main #classifier > .options > .steps .toggles {
+        margin: 20px 0;
+        padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003185}}
+        .main #classifier > .options > .steps .toggles > li {
+          display: block;
+          position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003189}}
+          .main #classifier > .options > .steps .toggles > li > .divider {
+            position: absolute;
+            right: 50px;
+            top: 1px;
+            border-left: 1px solid #bebebe;
+            border-right: 1px solid white;
+            width: 0px;
+            height: 40px;
+            padding: 0;
+            margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003201}}
+          .main #classifier > .options > .steps .toggles > li > button {
+            background-image: -moz-linear-gradient(top, #ececec, #e3e3e3);
+            background-image: -ms-linear-gradient(top, #ececec, #e3e3e3);
+            background-image: -webkit-linear-gradient(top, #ececec, #e3e3e3);
+            background-image: linear-gradient(top, #ececec, #e3e3e3);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#e3e3e3')";
+            box-shadow: inset 0px 1px 0px white, 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #bebebe;
+            border-radius: 3px;
+            color: #001e29;
+            cursor: pointer;
+            display: block;
+            font-family: inherit;
+            font-size: 18px;
+            padding: 8px 20px;
+            margin: 0 0 3px 0;
+            text-align: left;
+            text-transform: lowercase;
+            width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003221}}
+            .main #classifier > .options > .steps .toggles > li > button > .count {
+              float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003226}}
+          .main #classifier > .options > .steps .toggles > li > button[value="cluster"].active {
+            color: #db9f00; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003230}}
+          .main #classifier > .options > .steps .toggles > li > button[value="galaxy"].active {
+            color: #9c62ee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003234}}
+          .main #classifier > .options > .steps .toggles > li > button[value="ghost"].active {
+            color: #097d4e; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003238}}
+          .main #classifier > .options > .steps .toggles > li > button[value="cross"].active {
+            color: #a20f32; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003242}}
+          .main #classifier > .options > .steps .toggles > li > button[value="linear"].active {
+            color: #3d75db; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003248}}
+      .main #classifier > .options > .steps .indicator {
+        border-bottom: 1px solid #e3e3e3;
+        height: 90px;
+        margin-bottom: 20px;
+        position: relative;
+        text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003257}}
+        .main #classifier > .options > .steps .indicator > .points {
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003266}}
+      .main #classifier > .options > .steps .other-creatures {
+        margin: 20px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+        .main #classifier > .options > .steps .other-creatures:after {
+          content: "";
+          clear: both;
+          display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003270}}
+        .main #classifier > .options > .steps .other-creatures > h4 {
+          margin-bottom: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003274}}
+        .main #classifier > .options > .steps .other-creatures > button {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          background-image: -moz-linear-gradient(top, #ececec, #e3e3e3);
+          background-image: -ms-linear-gradient(top, #ececec, #e3e3e3);
+          background-image: -webkit-linear-gradient(top, #ececec, #e3e3e3);
+          background-image: linear-gradient(top, #ececec, #e3e3e3);
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#e3e3e3')";
+          border: 1px solid #bebebe;
+          border-radius: 3px;
+          margin: 0px;
+          cursor: pointer;
+          color: #001e29;
+          display: block;
+          float: left;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          padding: 10;
+          width: 49%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003292}}
+          .main #classifier > .options > .steps .other-creatures > button:first-of-type {
+            margin-right: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003296}}
+          .main #classifier > .options > .steps .other-creatures > button.active {
+            background-image: -moz-linear-gradient(top, #004250, #004250);
+            background-image: -ms-linear-gradient(top, #004250, #004250);
+            background-image: -webkit-linear-gradient(top, #004250, #004250);
+            background-image: linear-gradient(top, #004250, #004250);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#004250', endColorstr='#004250')";
+            border-color: transparent;
+            color: #f1f1f1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003304}}
+      .main #classifier > .options > .steps .finished {
+        position: absolute;
+        bottom: 40px;
+        padding: 10px 0;
+        width: 215px;
+        background-image: -moz-linear-gradient(top, #dddddd, #eeeeee);
+        background-image: -ms-linear-gradient(top, #dddddd, #eeeeee);
+        background-image: -webkit-linear-gradient(top, #dddddd, #eeeeee);
+        background-image: linear-gradient(top, #dddddd, #eeeeee);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#eeeeee')";
+        border: 1px solid #cccccc;
+          border-radius: 3px;
+        box-shadow: 0 1px 0 #cccccc;
+        color: black;
+        margin-top: 0px;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        text-shadow: 2px 2px 3px #eeeeee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003324}}
+        .main #classifier > .options > .steps .finished:disabled {
+          opacity: 0.67; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003329}}
+      .main #classifier > .options > .steps > .help {
+        bottom: 0;
+        font-size: 11px;
+        left: 0;
+        padding: 10px 0;
+        position: absolute;
+        text-align: center;
+        width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003338}}
+        .main #classifier > .options > .steps > .help > a {
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 3px;
+          color: inherit;
+          display: inline-block;
+          padding: 3px 6px;
+          text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003349}}
+    .main #classifier > .options > .summary {
+      color: #F1F1F1;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 5px;
+      text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003359}}
+      .main #classifier > .options > .summary .feedback {
+        position: static;
+        height: 248px;
+        width: 0px;
+        padding-bottom: 60px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003365}}
+        .main #classifier > .options > .summary .feedback canvas {
+          position: absolute;
+          z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003369}}
+        .main #classifier > .options > .summary .feedback img {
+          position: absolute;
+          width: 245px;
+          height: 282px;
+          z-index: 0;
+          border: 2px solid #f1f1f1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003382}}
+      .main #classifier > .options > .summary .favorite .destroy {
+        display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003385}}
+        .main #classifier > .options > .summary .favorite .destroy button {
+          display: inline-block;
+          font-size: 10px;
+          padding: 0 2px;
+          width: auto;
+          color: #000000;
+          background-color: #f1f1f1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003396}}
+      .main #classifier > .options > .summary button {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #000000;
+        background-color: #f1f1f1;
+        border: 0;
+          border-radius: 3px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        padding: 5px 0;
+        text-align: center;
+        width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003414}}
+      .main #classifier > .options > .summary > .talk {
+        color: #f1f1f1;
+        position: absolute;
+        bottom: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+        .main #classifier > .options > .summary > .talk:after {
+          content: "";
+          clear: both;
+          display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003419}}
+        .main #classifier > .options > .summary > .talk button {
+          width: 49%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003422}}
+          .main #classifier > .options > .summary > .talk button:first-child {
+            margin-right: 1%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003431}}
+  .main #classifier.can-favorite > .options > .summary .favorite {
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003438}}
+  .main #classifier.is-favored > .options > .summary .favorite .create {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003442}}
+  .main #classifier.is-favored > .options > .summary .favorite .destroy {
+    display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003449}}
+.classifier.dialog {
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  background: #f1f1f1;
+  border-radius: 3px;
+  border-top: 5px solid #004250;
+  margin-left: -130px;
+  padding: 10px 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 50; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003462}}
+  .classifier.dialog .content {
+    padding: 10px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003466}}
+  .classifier.dialog .buttons {
+    border-top: 1px solid #ececec;
+    padding: 10px 20px;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003471}}
+    .classifier.dialog .buttons button {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-image: -moz-linear-gradient(top, #ececec, #e3e3e3);
+      background-image: -ms-linear-gradient(top, #ececec, #e3e3e3);
+      background-image: -webkit-linear-gradient(top, #ececec, #e3e3e3);
+      background-image: linear-gradient(top, #ececec, #e3e3e3);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#e3e3e3')";
+      border: 1px solid #bebebe;
+      color: #001e29;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      margin: 0 0.25em;
+      padding: 0em 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003486}}
+  .classifier.dialog.open {
+    opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003491}}
+.dialog-blocker {
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  background: rgba(241, 241, 241, 0.25);
+  position: absolute;
+  z-index: 40; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003497}}
+  .dialog-blocker.open {
+    opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\000033}}
+.tutorial-step {
+  -moz-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  -ms-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  -webkit-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
+  background: #f1f1f1;
+  border: 4px solid #040d19;
+    border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #040d19;
+  font-weight: bold;
+  position: absolute;
+  z-index: 10; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000318}}
+  .tutorial-step .controls {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000325}}
+    .tutorial-step .controls button {
+      background: transparent;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      height: 20px;
+      margin: 0;
+      opacity: 0.125;
+      padding: 0;
+      width: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000343}}
+    .tutorial-step .controls:hover button {
+      opacity: 0.25; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000349}}
+  .tutorial-step .message {
+    margin: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000352}}
+    .tutorial-step .message .heading {
+      font-size: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000357}}
+  .tutorial-step .continue {
+    margin-top: 20px;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000361}}
+    .tutorial-step .continue button {
+      background-image: -moz-linear-gradient(top, #f1f1f1, #e3e3e3);
+      background-image: -ms-linear-gradient(top, #f1f1f1, #e3e3e3);
+      background-image: -webkit-linear-gradient(top, #f1f1f1, #e3e3e3);
+      background-image: linear-gradient(top, #f1f1f1, #e3e3e3);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#e3e3e3')";
+      border: 1px solid #bebebe;
+        border-radius: 3px;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      margin: 0;
+      padding: 5px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000378}}
+  .tutorial-step .arrow {
+    border: 10px solid transparent;
+    position: absolute; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000385}}
+    .tutorial-step .arrow.down-center {
+      border-top-color: #040d19;
+      border-bottom-width: 0;
+      left: 50%;
+      margin-left: -10px;
+      top: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000393}}
+    .tutorial-step .arrow.right-middle {
+      border-left-color: #040d19;
+      border-right-width: 0;
+      left: 100%;
+      margin-top: -10px;
+      top: 50%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003101}}
+    .tutorial-step .arrow.left-middle {
+      border-right-color: #040d19;
+      border-left-width: 0;
+      right: 100%;
+      margin-top: -10px;
+      top: 50%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003111}}
+  .tutorial-step:hover .controls {
+    opacity: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003117}}
+.tutorial-blocker {
+  cursor: not-allowed;
+  filter: alpha(opacity=1);
+  opacity: 0;
+  position: absolute;
+  z-index: 10; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\000034}}
+.main [data-page="profile"] > .login-form {
+  margin: 100px auto 0;
+  text-align: center;
+  width: 40%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\000039}}
+  .main [data-page="profile"] > .login-form label {
+    display: block;
+    margin: 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000313}}
+    .main [data-page="profile"] > .login-form label > span {
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000318}}
+  .main [data-page="profile"] > .login-form > .errors {
+    font-weight: bold;
+    margin: 0 0 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000324}}
+  .main [data-page="profile"] > .login-form > .waiting,
+  .main [data-page="profile"] > .login-form > .sign-out {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000329}}
+  .main [data-page="profile"] > .login-form.waiting > .sign-in {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000333}}
+  .main [data-page="profile"] > .login-form.waiting > .waiting {
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000339}}
+.main [data-page="profile"] > .summary {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000342}}
+  .main [data-page="profile"] > .summary > h3 {
+    margin: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000345}}
+    .main [data-page="profile"] > .summary > h3 > .sign-out {
+      color: inherit;
+      float: right;
+      font-size: 10px;
+      margin-top: 5px;
+      opacity: 0.5;
+      text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000355}}
+  .main [data-page="profile"] > .summary > .map {
+    border-top: 1px solid #dbdbdb;
+    height: 250px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000363}}
+.main [data-page="profile"] > .favorites {
+  display: none;
+  float: left;
+  margin-right: 20px;
+  width: 660px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000369}}
+  .main [data-page="profile"] > .favorites > ul {
+    margin: 0;
+    padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+    .main [data-page="profile"] > .favorites > ul:after {
+      content: "";
+      clear: both;
+      display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000374}}
+    .main [data-page="profile"] > .favorites > ul > li {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0 0 20px 20px;
+      position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000382}}
+      .main [data-page="profile"] > .favorites > ul > li .delete {
+        -moz-transition: opacity 0.25s ease-in-out;
+        -ms-transition: opacity 0.25s ease-in-out;
+        -webkit-transition: opacity 0.25s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
+        background: transparent;
+        border: 0;
+        color: #f1f1f1;
+        cursor: pointer;
+        font-weight: bold;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\0000397}}
+      .main [data-page="profile"] > .favorites > ul > li > a {
+        display: block;
+        position: relative;
+        text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003102}}
+        .main [data-page="profile"] > .favorites > ul > li > a .thumbnail {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          background: #ccc;
+          border-radius: 4px;
+          box-shadow: 0 1px 0 #fff;
+          display: block;
+          width: 193.33333px;
+          height: 155px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003112}}
+        .main [data-page="profile"] > .favorites > ul > li > a .info {
+          -moz-transition: opacity 0.25s ease-in-out;
+          -ms-transition: opacity 0.25s ease-in-out;
+          -webkit-transition: opacity 0.25s ease-in-out;
+          transition: opacity 0.25s ease-in-out;
+          bottom: 10px;
+          color: #f1f1f1;
+          font-weight: bold;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003126}}
+      .main [data-page="profile"] > .favorites > ul > li:hover .delete,
+      .main [data-page="profile"] > .favorites > ul > li:hover .info {
+        opacity: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003133}}
+  .main [data-page="profile"] > .favorites p.more {
+    display: none;
+    text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003137}}
+    .main [data-page="profile"] > .favorites p.more button {
+      background: transparent;
+      border: 0;
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003145}}
+.main [data-page="profile"] > .recents {
+  display: none;
+  float: left;
+  width: 320px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003150}}
+  .main [data-page="profile"] > .recents ul {
+    margin: 0;
+    padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003154}}
+    .main [data-page="profile"] > .recents ul li {
+      border-top: 1px solid #dbdbdb;
+      display: block;
+      padding: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+      .main [data-page="profile"] > .recents ul li:after {
+        content: "";
+        clear: both;
+        display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003162}}
+  .main [data-page="profile"] > .recents p.more {
+    display: none;
+    text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003166}}
+    .main [data-page="profile"] > .recents p.more button {
+      background: transparent;
+      border: 0;
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003173}}
+  .main [data-page="profile"] > .recents .thumbnail {
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #fff;
+    float: left;
+    width: 25%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003180}}
+  .main [data-page="profile"] > .recents .description {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 75%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003187}}
+    .main [data-page="profile"] > .recents .description .visited {
+      font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003194}}
+.main [data-page="profile"].signed-in > .login-form {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003200}}
+.main [data-page="profile"].signed-in > .summary,
+.main [data-page="profile"].signed-in > .favorites,
+.main [data-page="profile"].signed-in > .recents {
+  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003208}}
+.main [data-page="profile"].has-favorites > .favorites > .none, .main [data-page="profile"].has-recents > .recents > .none, .main [data-page="profile"].has-groups > .groups > .none {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003212}}
+.main [data-page="profile"].has-favorites > .favorites > p.more, .main [data-page="profile"].has-recents > .recents > p.more, .main [data-page="profile"].has-groups > .groups > p.more {
+  display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/profile\.scss}line{font-family:\00003216}}
+.main [data-page="profile"].has-favorites > .favorites > ul, .main [data-page="profile"].has-recents > .recents > ul, .main [data-page="profile"].has-groups > .groups > ul {
+  display: block; }
