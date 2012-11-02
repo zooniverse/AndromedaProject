@@ -158,7 +158,7 @@ define (require, exports, module) ->
       @steps.addClass 'finished'
       
       subject = @picker.classifier.workflow.selection[0]
-        
+      console.log subject
       # Show center of field on small map
       center = subject.metadata.center
       if center?
@@ -168,7 +168,7 @@ define (require, exports, module) ->
         radius = 4
         
         context = @overlay[0].getContext('2d')
-        context.clearRect(0, 0, 215, 248)
+        context.clearRect(0, 0, 245, 282)
         
         context.beginPath()
         context.arc(x, y, radius, 0, 2 * Math.PI, false)
@@ -188,15 +188,15 @@ define (require, exports, module) ->
       #     pixradius = parseFloat(cluster.pixradius)
       #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 4})
       # 
-      # # Show synthetic clusters
-      # synthetics = subject.metadata.synthetic
-      # if synthetics?
-      #   
-      #   for synthetic in synthetics
-      #     x = parseFloat(synthetic.x)
-      #     y = parseFloat(synthetic.y)
-      #     pixradius = parseFloat(synthetic.pixradius)
-      #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
+      # Show synthetic clusters
+      synthetics = subject.metadata.synthetic
+      if synthetics?
+        
+        for synthetic in synthetics
+          x = parseFloat(synthetic.x)
+          y = parseFloat(synthetic.y)
+          pixradius = parseFloat(synthetic.pixradius)
+          @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
       
       @saveClassification()
 
