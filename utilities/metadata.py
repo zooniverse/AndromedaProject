@@ -86,16 +86,52 @@ def getSyntheticCatalog():
             pixradius = reff * 13.12
             f.write("%s, %s, %s, %s, %s, %s, %s, %s\n" % (subimg, fcid, x, y, ra, dec, reff, pixradius))
 
+
+def betaSubjects():
+  """
+  Select beta subjects in a 3:1 ratio of real to synthetics.
+  
+  Subfields for beta are:
+  
+  B21-F14
+  B15-F09
+  B15-F11
+  
+  There are 28 subimages per subfield.  Each subimage is flavored as
+  color, grayscale, color+synthetics, grayscale+synthetics.
+  """
+  subimage = 0
+  ratio = 3
+  
+  color = "%s_%d"
+  gray = "%s_F475W"
+  synth = "%s_sc"
+  
+  for subfield in ['B21-F14', 'B15-F09', 'B15-F11']:
+    for i in xrange(1, 29):
+      f1 = color % (subfield, i)
+      f2 = gray % (f1)
+      print f1
+      print f2
+      
+      if (i - 1) % 3 == 0:        
+        f3 = synth % (f1)
+        f4 = synth % (f2)      
+        print f3
+        print f4
+
 if __name__ == '__main__':
-	if len(sys.argv) != 2:
-		sys.exit()
-	
-	argument = sys.argv[1]
-	if argument == 'header':
-		header2json()
-	elif argument == 'centers':
-		subimage_centers()
-	elif argument == 'year1':
-		getYear1Catalog()
-	elif argument == 'synthetic':
-		getSyntheticCatalog()
+  betaSubjects()
+  
+  if len(sys.argv) != 2:
+    sys.exit()
+
+  argument = sys.argv[1]
+  if argument == 'header':
+    header2json()
+  elif argument == 'centers':
+    subimage_centers()
+  elif argument == 'year1':
+    getYear1Catalog()
+  elif argument == 'synthetic':
+    getSyntheticCatalog()
