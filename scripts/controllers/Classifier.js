@@ -27,6 +27,8 @@
 
       Classifier.prototype.indicator = null;
 
+      Classifier.prototype.feedback = ["PHAT Catch!", "Wicked!", "Nice!", "Congratulations!"];
+
       Classifier.prototype.events = {
         'click .species .toggles button': 'changeSpecies',
         'click .species .other-creatures button': 'showArtifacts',
@@ -230,16 +232,15 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var center, context, pixradius, radius, subject, synthetic, synthetics, x, y, _i, _len;
+        var annotation, center, centerPoint, context, distance, pixradius, points, radius, subject, synthetic, synthetics, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
         console.log(subject);
         center = subject.metadata.center;
         if (center != null) {
-          console.log('here');
           x = parseFloat(center.x);
-          y = 248 - parseFloat(center.y);
+          y = 282 - parseFloat(center.y);
           radius = 4;
           context = this.overlay[0].getContext('2d');
           context.clearRect(0, 0, 245, 282);
@@ -252,16 +253,38 @@
           context.fill();
         }
         synthetics = subject.metadata.synthetic;
-        if (synthetics != null) {
-          for (_i = 0, _len = synthetics.length; _i < _len; _i++) {
-            synthetic = synthetics[_i];
-            x = parseFloat(synthetic.x);
-            y = parseFloat(synthetic.y);
-            pixradius = parseFloat(synthetic.pixradius);
-            this.picker.paper.circle(x, 500 - y, pixradius).attr({
-              stroke: '#CD3E20',
-              'stroke-width': 4
-            });
+        if (synthetics) {
+          if (this.classification.hasOwnProperty('annotations')) {
+            _ref1 = this.classification.annotations;
+            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+              annotation = _ref1[_i];
+              if (annotation.hasOwnProperty('value')) {
+                if (annotation.value.hasOwnProperty('species')) {
+                  if (annotation.value.species === 'cluster') {
+                    points = annotation.value.points;
+                    centerPoint = points[0];
+                    x1 = 725 * centerPoint.x;
+                    y1 = 500 * centerPoint.y;
+                    for (_j = 0, _len1 = synthetics.length; _j < _len1; _j++) {
+                      synthetic = synthetics[_j];
+                      x2 = parseFloat(synthetic.x);
+                      y2 = 500 - parseFloat(synthetic.y);
+                      distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                      console.log("distance = ", distance);
+                      if (distance < 20) {
+                        pixradius = parseFloat(synthetic.pixradius);
+                        this.picker.paper.circle(x2, y2, pixradius).attr({
+                          stroke: '#CD3E20',
+                          'stroke-width': 4
+                        });
+                        words = this.feedback[Math.floor(Math.random() * this.feedback.length)];
+                        this.picker.paper.text(x2, y2 - 20, "" + words + "\nYou found a synthetic cluster!").attr("fill", "#F1F1F1").attr("font-size", "12px");
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
         return this.saveClassification();
