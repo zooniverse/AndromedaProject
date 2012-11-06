@@ -1,6 +1,9 @@
 require 'csv'
 require 'bson'
 
+# Script to generate BSON ids and Zooniverse ids for Andromeda Project
+# subjects.  This script should only be run once over all subjects.
+
 class ZooniverseIdGenerator
   def self.next_id
     @last_id ||= 'AAP0000000'
@@ -25,6 +28,7 @@ end
 
 dirname = File.dirname(__FILE__)
 
+# Init CSV file for writing ids
 csv = CSV::open('andromeda_subjects_with_ids.csv', 'wb')
 header = ['_id', 'zooniverse_id', 'subimage']
 csv << header

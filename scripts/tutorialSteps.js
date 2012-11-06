@@ -205,7 +205,7 @@
           }
         },
         onEnter: function() {
-          return jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_bw.jpg");
+          return jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_bw.jpeg");
         },
         style: {
           width: 400
@@ -241,7 +241,7 @@
         },
         onEnter: function() {
           jQuery("#classifier .selection-area svg").empty();
-          return jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_chipgap.jpg");
+          return jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_chipgap.jpeg");
         },
         style: {
           width: 400

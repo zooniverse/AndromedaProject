@@ -5,12 +5,12 @@ define (require, exports, module) ->
   if dev
     ids =
       project: 'andromeda'
-      workflow: '50533aa51a320e6c37000001'
-      tutorialSubject: '4ff748f654558f75b1000002'
+      workflow: '5052085f516bcb6b8a000003'
+      tutorialSubject: '509935796aa0e064b6000001'
   else
     ids =
       project: 'andromeda'
-      workflow: '50533aa51a320e6c37000001'
-      tutorialSubject: '4fea1ca7c32dab27fa000002'
+      workflow: '5052085f516bcb6b8a000003'
+      tutorialSubject: '509935796aa0e064b6000001'
 
   module.exports = ids

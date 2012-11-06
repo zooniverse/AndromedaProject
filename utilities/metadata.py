@@ -87,7 +87,7 @@ def getSyntheticCatalog():
             f.write("%s, %s, %s, %s, %s, %s, %s, %s\n" % (subimg, fcid, x, y, ra, dec, reff, pixradius))
 
 
-def betaSubjects():
+def getBetaSubjects():
   """
   Select beta subjects in a 3:1 ratio of real to synthetics.
   
@@ -121,7 +121,6 @@ def betaSubjects():
         print f4
 
 if __name__ == '__main__':
-  betaSubjects()
   
   if len(sys.argv) != 2:
     sys.exit()
@@ -135,3 +134,6 @@ if __name__ == '__main__':
     getYear1Catalog()
   elif argument == 'synthetic':
     getSyntheticCatalog()
+  elif argument == 'beta':
+    getBetaSubjects()
+  

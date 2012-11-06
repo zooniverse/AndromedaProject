@@ -112,11 +112,20 @@ beta.each_with_index do |name, index|
   _id = BSON::ObjectId(subjects[name]['_id'])
   zooniverse_id = subjects[name]['zooniverse_id']
   
-  center = centers[brickname]
-  coords = [center["ra"], center["dec"]]
-  center = [center["x"], center["y"]]
-  year1clusters = year1[brickname]
-  synthetic_clusters = synthetic[brickname]
+  if name == 'tutorial'
+    center = nil
+    coords = nil
+    center = nil
+    year1clusters = nil
+    synthetic_clusters = nil
+  else
+    center = centers[brickname]
+    coords = [center["ra"], center["dec"]]
+    center = [center["x"], center["y"]]
+    year1clusters = year1[brickname]
+    synthetic_clusters = synthetic[brickname]
+  end
+  
   
   AndromedaSubject.create({
     _id: _id,

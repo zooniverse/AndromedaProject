@@ -139,7 +139,7 @@ define (require, exports, module) ->
       ]
       attach: to: '.creature-picker', at: x: 0.5, y: 0.5
       onEnter: ->
-        jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_bw.jpg")
+        jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_bw.jpeg")
       style: width: 400
       continueText: 'Next'
       arrowClass: 'left-middle'
@@ -163,7 +163,7 @@ define (require, exports, module) ->
       attach: to: '.creature-picker', at: x: 0.25, y: 0.5
       onEnter: ->
         jQuery("#classifier .selection-area svg").empty()
-        jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_chipgap.jpg")
+        jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_chipgap.jpeg")
       style: width: 400
       continueText: 'Next'
       arrowClass: 'right-middle'

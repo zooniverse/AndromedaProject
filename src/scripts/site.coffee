@@ -24,17 +24,8 @@ define (require, exports, module) ->
     tutorialSubjects: new Subject
         id: ids.tutorialSubject
         location:
-          standard: "subjects/standard/tutorial.jpg"
-          thumbnail: "subjects/standard/tutorial.jpg"
-        coords: [0, 0]
-        metadata:
-          depth: 0
-          altitude: 0
-          heading: 0
-          salinity: 0
-          temperature: 0
-          speed: 0
-          mm_pix: 1
+          standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/tutorial.jpg"
+          thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/tutorial.jpg"
   
   config.set
     name: 'Andromeda Project'
