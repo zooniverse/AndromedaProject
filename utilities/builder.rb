@@ -60,7 +60,7 @@ end
 
 # Beta Subjects
 beta = []
-File.open("#{dirname}/../data/beta_subjects.txt", 'r') do |f|
+File.open("#{dirname}/../data/beta_subjects_3_1.txt", 'r') do |f|
   while (line = f.gets)
     beta.push line.strip
   end
