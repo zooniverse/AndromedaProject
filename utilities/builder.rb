@@ -29,7 +29,7 @@ AndromedaSubject.destroy_all
 project.workflows.destroy_all if project
 project.destroy if project
 
-if Rails.env == 'development'
+if Rails.env == "development"
   redis = Ouroboros.redis["andromeda_#{ Rails.env }"]
   redis.keys('andromeda_*').each do |key|
     redis.del key
@@ -56,6 +56,14 @@ subjects = {}
 CSV.foreach("#{dirname}/../data/andromeda_subjects_with_ids.csv") do |row|
   _id, zooniverse_id, subimg = row
   subjects[subimg] = {'_id' => _id, 'zooniverse_id' => zooniverse_id}
+end
+
+# Beta Subjects
+beta = []
+File.open("#{dirname}/../data/beta_subjects_3_1.txt", 'r') do |f|
+  while (line = f.gets)
+    beta.push line.strip
+  end
 end
 
 centers = JSON.parse(File.read("#{dirname}/../data/image-centers.json"))
@@ -97,12 +105,12 @@ CSV.foreach("#{dirname}/../data/synthetic-clusters.csv") do |row|
   synthetic[subimg].push(object)
 end
 
-index = 0
-subjects.each_pair do |name, ids|
+
+beta.each_with_index do |name, index|
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
   
-  _id = ids['_id']
-  zooniverse_id = ids['zooniverse_id']
+  _id = BSON::ObjectId(subjects[name]['_id'])
+  zooniverse_id = subjects[name]['zooniverse_id']
   
   center = centers[brickname]
   coords = [center["ra"], center["dec"]]
@@ -128,8 +136,43 @@ subjects.each_pair do |name, ids|
     }
   })
   
-  puts "#{ index + 1 } / #{ subjects.length }"
-  index += 1
+  puts "#{ index + 1 } / #{ beta.length }"
 end
 
-AndromedaSubject.activate_randomly if Rails.env == 'development'
+# # All subjects for production
+# index = 0
+# subjects.each_pair do |name, ids|
+#   brickname = name.gsub('_F475W', '').gsub('_sc', '')
+#   
+#   _id = ids['_id']
+#   zooniverse_id = ids['zooniverse_id']
+#   
+#   center = centers[brickname]
+#   coords = [center["ra"], center["dec"]]
+#   center = [center["x"], center["y"]]
+#   year1clusters = year1[brickname]
+#   synthetic_clusters = synthetic[brickname]
+#   
+#   AndromedaSubject.create({
+#     _id: _id,
+#     zooniverse_id: zooniverse_id,
+#     project_id: project.id,
+#     workflow_ids: [ workflow.id ],
+#     coords: coords,
+#     location: {
+#       standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
+#       thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+#     },
+#     metadata: {
+#       subimg: name,
+#       center: center,
+#       year1: year1clusters,
+#       synthetic: synthetic_clusters
+#     }
+#   })
+#   
+#   puts "#{ index + 1 } / #{ subjects.length }"
+#   index += 1
+# end
+
+AndromedaSubject.activate_randomly if Rails.env == "development"

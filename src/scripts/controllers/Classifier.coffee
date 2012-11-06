@@ -21,7 +21,8 @@ define (require, exports, module) ->
 
     picker: null
     indicator: null
-
+    feedback: ["PHAT Catch!", "Wicked!", "Nice!", "Congratulations!"]
+    
     events:
       'click .species .toggles button'          : 'changeSpecies'
       'click .species .other-creatures button'  : 'showArtifacts'
@@ -158,17 +159,16 @@ define (require, exports, module) ->
       @steps.addClass 'finished'
       
       subject = @picker.classifier.workflow.selection[0]
-        
+      console.log subject
       # Show center of field on small map
       center = subject.metadata.center
       if center?
-        console.log 'here'
         x = parseFloat(center.x)
-        y = 248 - parseFloat(center.y)
+        y = 282 - parseFloat(center.y)
         radius = 4
         
         context = @overlay[0].getContext('2d')
-        context.clearRect(0, 0, 215, 248)
+        context.clearRect(0, 0, 245, 282)
         
         context.beginPath()
         context.arc(x, y, radius, 0, 2 * Math.PI, false)
@@ -188,15 +188,32 @@ define (require, exports, module) ->
       #     pixradius = parseFloat(cluster.pixradius)
       #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 4})
       # 
-      # # Show synthetic clusters
-      # synthetics = subject.metadata.synthetic
-      # if synthetics?
-      #   
-      #   for synthetic in synthetics
-      #     x = parseFloat(synthetic.x)
-      #     y = parseFloat(synthetic.y)
-      #     pixradius = parseFloat(synthetic.pixradius)
-      #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
+      
+      # Check if subject has synthetics
+      synthetics = subject.metadata.synthetic
+      if synthetics      
+        # Check if user marked near a synthetic cluster
+        if @classification.hasOwnProperty('annotations')
+          for annotation in @classification.annotations
+            if annotation.hasOwnProperty('value')
+              if annotation.value.hasOwnProperty('species')
+                if annotation.value.species is 'cluster'
+                  points = annotation.value.points
+                  centerPoint = points[0]
+                  x1 = 725 * centerPoint.x
+                  y1 = 500 * centerPoint.y
+                  
+                  for synthetic in synthetics
+                    x2 = parseFloat(synthetic.x)
+                    y2 = 500 - parseFloat(synthetic.y)
+                    distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
+                    
+                    console.log "distance = ", distance
+                    if distance < 20
+                      pixradius = parseFloat(synthetic.pixradius)
+                      @picker.paper.circle(x2, y2, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
+                      words = @feedback[Math.floor(Math.random() * @feedback.length)]
+                      @picker.paper.text(x2, y2 - 20, "#{words}\nYou found a synthetic cluster!").attr("fill", "#F1F1F1").attr("font-size", "12px")
       
       @saveClassification()
 

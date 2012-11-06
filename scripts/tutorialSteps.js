@@ -240,25 +240,6 @@
           }
         },
         onEnter: function() {
-          jQuery("#classifier .selection-area svg").remove();
-          return jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_chipgap.jpg");
-        },
-        style: {
-          width: 400
-        },
-        continueText: 'Next',
-        arrowClass: 'right-middle'
-      }), new Step({
-        heading: 'Great job!',
-        content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to explore and complete some classifications on your own!', 'If you\'re ever unsure of what to mark, you can always consult the "Guide" page for descriptions and image examples of star clusters, background galaxies, and artifacts.'],
-        attach: {
-          to: '.creature-picker',
-          at: {
-            x: 0.25,
-            y: 0.5
-          }
-        },
-        onEnter: function() {
           jQuery("#classifier .selection-area svg").empty();
           return jQuery("#classifier .selection-area img").attr("src", "subjects/standard/tutorial_chipgap.jpg");
         },

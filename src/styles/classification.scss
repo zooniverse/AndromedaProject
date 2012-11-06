@@ -1,5 +1,4 @@
 @import "common";
-
 .main #classifier {
 	$blue: rgb(0, 66, 80);
 	$blue-dark: #001e29;
@@ -358,12 +357,14 @@
       
       .feedback {
         position: static;
-        height: 248px;
+        height: 282px;
         width: 0px;
         padding-bottom: 60px;
         
         canvas {
           position: absolute;
+          width: 249px;
+          height: 286px;
           z-index: 1;
         }
         img {
