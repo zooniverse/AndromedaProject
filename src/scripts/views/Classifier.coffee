@@ -41,13 +41,9 @@ define (require, exports, module) ->
 				<div class="favorite">
 					<div class="create"><button>Add to my favorites</button></div>
 					<div class="destroy">Favorite added! <button>Undo</button></div>
+					  <button value='no' style='width: 100%;margin-top: 20px'>Continue</button>
 				</div>
 
-				<div class="talk">
-					<p>Would you like to discuss this image in Talk?</p>
-					<button value="yes">Yes</button>
-					<button value="no">No</button>
-				</div>
 			</div>
 		</div>
 	'''

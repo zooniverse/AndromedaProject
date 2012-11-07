@@ -31,6 +31,7 @@ define (require, exports, module) ->
       'click .favorite .destroy button'         : 'destroyFavorite'
       'click .talk [value="yes"]'               : 'goToTalk'
       'click .talk [value="no"]'                : 'nextSubjects'
+      'click .favorite [value="no"]'            : 'nextSubjects'
       'click .tutorial-again'                   : 'startTutorial'
 
     elements:

@@ -355,7 +355,7 @@
         padding: 5px 0;
         text-align: center;
         width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003415}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003414}}
       .main #classifier > .options > .summary > .talk {
         color: #f1f1f1;
         position: absolute;
@@ -365,23 +365,23 @@
           content: "";
           clear: both;
           display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003420}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003419}}
         .main #classifier > .options > .summary > .talk button {
-          width: 49%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003423}}
+          width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003422}}
           .main #classifier > .options > .summary > .talk button:first-child {
             margin-right: 1%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003432}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003431}}
   .main #classifier.can-favorite > .options > .summary .favorite {
     display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003439}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003438}}
   .main #classifier.is-favored > .options > .summary .favorite .create {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003443}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003442}}
   .main #classifier.is-favored > .options > .summary .favorite .destroy {
     display: block; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003450}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003449}}
 .classifier.dialog {
   -moz-transition: opacity 0.25s ease-in-out;
   -ms-transition: opacity 0.25s ease-in-out;
@@ -395,15 +395,15 @@
   position: absolute;
   opacity: 0;
   z-index: 50; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003463}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003462}}
   .classifier.dialog .content {
     padding: 10px 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003467}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003466}}
   .classifier.dialog .buttons {
     border-top: 1px solid #ececec;
     padding: 10px 20px;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003472}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003471}}
     .classifier.dialog .buttons button {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -420,11 +420,11 @@
       font-weight: inherit;
       margin: 0 0.25em;
       padding: 0em 2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003487}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003486}}
   .classifier.dialog.open {
     opacity: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003492}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003491}}
 .dialog-blocker {
   -moz-transition: opacity 0.25s ease-in-out;
   -ms-transition: opacity 0.25s ease-in-out;
@@ -433,6 +433,6 @@
   background: rgba(241, 241, 241, 0.25);
   position: absolute;
   z-index: 40; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003498}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/amit\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003497}}
   .dialog-blocker.open {
     opacity: 1; }

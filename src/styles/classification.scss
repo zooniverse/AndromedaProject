@@ -411,14 +411,13 @@
 				text-align: center;
 				width: 100%;
 			}
-
 			> .talk {
 				@include contain-floats;
         color: $white;
         position: absolute;
         bottom: 0px;
 				button {
-					width: 49%;
+					width: 100%;
 
 					&:first-child {
 						margin-right: 1%;
