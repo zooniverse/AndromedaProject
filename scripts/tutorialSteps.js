@@ -250,7 +250,7 @@
         arrowClass: 'right-middle'
       }), new Step({
         heading: 'The End: Great job!',
-        content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to explore on your own! If you\'re ever unsure of what to mark, you can always consult the "Guide" page.', 'Click Yes or No to proceed'],
+        content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to explore on your own! If you\'re ever unsure of what to mark, you can always consult the "Guide" page.', 'Click Yes or No (bottom right) to proceed'],
         attach: {
           to: '.creature-picker',
           at: {

@@ -24,7 +24,7 @@ define (require, exports, module) ->
 
 		circle:
 			cursor: 'move'
-			fill: '#fff'
+			fill: '#040D19'
 			r: 5
 			stroke: 'none'
 			'stroke-width': 0
@@ -40,7 +40,7 @@ define (require, exports, module) ->
 			'stroke-width': 2
 
 		line:
-			stroke: '#fff'
+			stroke: '#040D19'
 			'stroke-width': 2
 
 		boundingBox:
