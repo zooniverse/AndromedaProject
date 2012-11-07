@@ -35,7 +35,7 @@ define (require, exports, module) ->
     domain: 'andromedaproject.org'
     talkHost: 'http://talk.andromedaproject.org'
 
-    googleAnalytics: 'UA-1224199-30'
+    googleAnalytics: 'UA-1224199-37'
 
   config.set
     app: new App
