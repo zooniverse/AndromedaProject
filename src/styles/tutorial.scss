@@ -78,9 +78,44 @@
 	.arrow {
 		$arrow-color: $blue-darker;
 		$arrow-size: 25px;
+		$inner-size: 20px;
 
 	  border: $arrow-size solid transparent;
 	  position: absolute;
+	  z-index: 1;
+
+	  &.down-center {
+	    border-top-color: $arrow-color;
+	    border-bottom-width: 0;
+	    left: 50%;
+	    margin-left: -$arrow-size;
+	    top: 100%;
+	  }
+
+	  &.right-middle {
+	    border-left-color: $arrow-color;
+	    border-right-width: 0;
+	    left: 100%;
+	    margin-top: -$arrow-size;
+	    top: 50%;
+	  }
+
+	  &.left-middle {
+	    border-right-color: $arrow-color;
+	    border-left-width: 0;
+	    right: 100%;
+	    margin-top: -$arrow-size;
+	    top: 50%;
+	  }
+	}
+
+	.inner-arrow {
+		$arrow-color: #f1f1f1;
+		$arrow-size: 19px;
+
+	  border: $arrow-size solid transparent;
+	  position: absolute;
+	  z-index: 2;
 
 	  &.down-center {
 	    border-top-color: $arrow-color;

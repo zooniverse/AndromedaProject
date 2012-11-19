@@ -16,6 +16,7 @@ define (require, exports, module) ->
     className: 'tutorial-step'
     controlsClass: 'controls'
     arrowClass: 'arrow'
+    innerArrowClass: 'inner-arrow'
     messageClass: 'message'
     continueClass: 'continue'
     blockerClass: 'tutorial-blocker'
@@ -42,7 +43,7 @@ define (require, exports, module) ->
 
       @message = $("<div class='#{@messageClass}'></div>")
 
-      @arrow = $("<div class='#{@arrowClass}'></div>")
+      @arrow = $("<div class='#{@arrowClass}'></div><div class='#{@innerArrowClass}'></div>")
 
       @controls.appendTo @el
       @message.appendTo @el
