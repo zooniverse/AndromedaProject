@@ -38,7 +38,10 @@
         'click .talk [value="yes"]': 'goToTalk',
         'click .talk [value="no"]': 'nextSubjects',
         'click .favorite [value="no"]': 'nextSubjects',
-        'click .tutorial-again': 'startTutorial'
+        'click .tutorial-again': 'startTutorial',
+        'click .feedback': 'showLabels',
+        'click .toggle-subject': 'toggleSubject',
+        'click .reset-subject': 'resetClassification'
       };
 
       Classifier.prototype.elements = {
@@ -56,6 +59,10 @@
       function Classifier() {
         this.finishSpecies = __bind(this.finishSpecies, this);
 
+        this.toggleSubject = __bind(this.toggleSubject, this);
+
+        this.showLabels = __bind(this.showLabels, this);
+
         this.changeOther = __bind(this.changeOther, this);
 
         this.showArtifacts = __bind(this.showArtifacts, this);
@@ -67,6 +74,8 @@
         this.renderSpeciesPage = __bind(this.renderSpeciesPage, this);
 
         this.render = __bind(this.render, this);
+
+        this.resetClassification = __bind(this.resetClassification, this);
 
         this.reset = __bind(this.reset, this);
 
@@ -110,16 +119,18 @@
         this.picker.reset();
         Classifier.__super__.reset.apply(this, arguments);
         this.otherSpeciesAnnotation = new Annotation({
-          classification: this.classification,
-          value: {
-            otherSpecies: null
-          }
+          classification: this.classification
         });
         this.changeSpecies(null);
         this.steps.removeClass('finished');
         return delay(500, function() {
           return _this.updateFavoriteButtons();
         });
+      };
+
+      Classifier.prototype.resetClassification = function(e) {
+        e.preventDefault();
+        return this.reset();
       };
 
       Classifier.prototype.render = function() {
@@ -228,8 +239,30 @@
         target = $(e.target);
         value = target.val();
         this.otherSpeciesAnnotation.value.otherSpecies = value;
-        console.log("value" + this.otherSpeciesAnnotation.value.otherSpecies);
         return this.classification.trigger('change');
+      };
+
+      Classifier.prototype.showLabels = function() {
+        var m, _i, _len, _ref1, _results;
+        _ref1 = this.picker.markers;
+        _results = [];
+        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+          m = _ref1[_i];
+          m.label.show();
+          _results.push(m.label.animate({
+            opacity: 1
+          }, 100));
+        }
+        return _results;
+      };
+
+      Classifier.prototype.toggleSubject = function(e) {
+        var img, src;
+        e.preventDefault();
+        img = jQuery('.selection-area img');
+        src = img.attr('src');
+        src = src.replace('standard', 'F475W');
+        return img.attr('src', src);
       };
 
       Classifier.prototype.finishSpecies = function() {
@@ -237,7 +270,6 @@
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
-        console.log(subject);
         center = subject.metadata.center;
         if (center != null) {
           x = parseFloat(center.x);

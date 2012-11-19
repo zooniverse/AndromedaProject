@@ -34,6 +34,8 @@ define (require, exports, module) ->
       'click .favorite [value="no"]'            : 'nextSubjects'
       'click .tutorial-again'                   : 'startTutorial'
       'click .feedback'                         : 'showLabels'
+      'click .toggle-subject'                   : 'toggleSubject'
+      'click .reset-subject'                    : 'resetClassification'
 
     elements:
       '.steps'                                  : 'steps'
@@ -74,7 +76,6 @@ define (require, exports, module) ->
       super
       @otherSpeciesAnnotation = new Annotation
         classification: @classification
-        value: otherSpecies: null
 
       @changeSpecies null
       # @speciesFinishedButton.attr 'disabled'
@@ -83,7 +84,11 @@ define (require, exports, module) ->
 
       delay 500, =>
         @updateFavoriteButtons()
-
+        
+    resetClassification: (e) =>
+      e.preventDefault()
+      @reset()
+    
     render: =>
       @renderSpeciesPage()
       
@@ -159,7 +164,14 @@ define (require, exports, module) ->
       for m in @picker.markers
         m.label.show()
         m.label.animate opacity: 1, 100
-
+        
+    toggleSubject: (e) =>
+      e.preventDefault()
+      img = jQuery('.selection-area img')
+      src = img.attr('src')
+      src = src.replace('standard', 'F475W')
+      img.attr('src', src)
+    
     finishSpecies: =>
       @picker.setDisabled true
       @steps.addClass 'finished'

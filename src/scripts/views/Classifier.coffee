@@ -6,6 +6,11 @@ define (require, exports, module) ->
 			<div class="steps">
 				<div data-page="species" class="species active">
 					<h4>Objects in this image</h4>
+					
+					<div class='tools'>
+					  <a href="#!/classify" title="Toggle image" class="toggle-subject">Toggle</a>
+					    <a href="#!/classify" title="Reset classification" class="reset-subject">Reset</a>
+				  </div>
 
 					<ul class="toggles">
 						<li><button value="cluster" data-marker="circle">Star Cluster <span class="count">0</button><div class="divider"></div></li>
