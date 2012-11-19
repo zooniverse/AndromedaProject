@@ -101,7 +101,7 @@
       Marker.prototype.hideLabel = function() {
         var _this = this;
         delete this.dontHide;
-        return delay(500, function() {
+        return delay(1000, function() {
           if (!_this.dontHide) {
             return _this.label.animate({
               opacity: 0
