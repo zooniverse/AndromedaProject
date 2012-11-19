@@ -33,6 +33,7 @@ define (require, exports, module) ->
       'click .talk [value="no"]'                : 'nextSubjects'
       'click .favorite [value="no"]'            : 'nextSubjects'
       'click .tutorial-again'                   : 'startTutorial'
+      'click .feedback'                         : 'showLabels'
 
     elements:
       '.steps'                                  : 'steps'
@@ -152,15 +153,18 @@ define (require, exports, module) ->
       target = $(e.target)
       value = target.val()
       @otherSpeciesAnnotation.value.otherSpecies = value
-      console.log("value"+@otherSpeciesAnnotation.value.otherSpecies)
       @classification.trigger 'change'
+
+    showLabels: =>
+      for m in @picker.markers
+        m.label.show()
+        m.label.animate opacity: 1, 100
 
     finishSpecies: =>
       @picker.setDisabled true
       @steps.addClass 'finished'
       
       subject = @picker.classifier.workflow.selection[0]
-      console.log subject
       # Show center of field on small map
       center = subject.metadata.center
       if center?

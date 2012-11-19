@@ -67,7 +67,7 @@ define (require, exports, module) ->
 
     hideLabel: =>
       delete @dontHide
-      delay 500, =>
+      delay 1000, =>
         unless @dontHide then @label.animate opacity: 0, 100, => @label.hide()
 
     onClickDelete: =>
