@@ -62,6 +62,15 @@ define (require, exports, module) ->
     current = $(el).attr 'data-image-flipper'
     new ImageFlipper {el, current}
 
+  $('img.canToggle').hover(
+    ->
+        src = $(this).attr('src').replace('color', 'F475W')
+        $(this).attr('src', src)
+    ,->
+        src = $(this).attr('src').replace('F475W', 'color')
+        $(this).attr('src', src)
+  )
+
   devRefs =
     config: require 'zooniverse/config'
     API: require 'zooniverse/API'
