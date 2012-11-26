@@ -81,6 +81,7 @@ define (require, exports, module) ->
       # @speciesFinishedButton.attr 'disabled'
       
       @steps.removeClass 'finished'
+      $('#toggleCol').text('B/W')
 
       delay 500, =>
         @updateFavoriteButtons()
@@ -166,10 +167,16 @@ define (require, exports, module) ->
         m.label.animate opacity: 1, 100
         
     toggleSubject: (e) =>
+      target = $(e.target)
       e.preventDefault()
       img = jQuery('.selection-area img')
       src = img.attr('src')
-      src = src.replace('standard', 'F475W')
+      if src.indexOf("standard") >= 0
+        src = src.replace('standard', 'F475W')
+        target.text("Color")
+      else
+        src = src.replace('F475W', 'standard')
+        target.text("B/W")
       img.attr('src', src)
     
     finishSpecies: =>
