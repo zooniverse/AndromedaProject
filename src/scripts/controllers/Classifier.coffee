@@ -36,6 +36,7 @@ define (require, exports, module) ->
       'click .feedback'                         : 'showLabels'
       'click .toggle-subject'                   : 'toggleSubject'
       'click .reset-subject'                    : 'resetClassification'
+      'click .show-hide'                        : 'showHide'
 
     elements:
       '.steps'                                  : 'steps'
@@ -178,8 +179,17 @@ define (require, exports, module) ->
         src = src.replace('F475W', 'standard')
         target.text("B/W")
       img.attr('src', src)
+
+    showHide: =>
+      if $('.show-hide').text() == 'Hide' and @picker.markers.length > 0
+        $('.show-hide').text('Show')
+        $('svg').hide()
+      else
+        $('.show-hide').text('Hide')
+        $('svg').show()
     
     finishSpecies: =>
+      $('svg').show()
       @picker.setDisabled true
       @steps.addClass 'finished'
       

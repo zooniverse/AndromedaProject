@@ -121,12 +121,12 @@ define (require, exports, module) ->
         'You can also click here to see images in just one channel.'
         'Sometimes this helps you see fainter objects more easily.'
       ]
-      attach: to: '.creature-picker', at: x: 0.5, y: 0.5
+      attach: y: 'top', to: '#toggleCol', at: y: 2
       onEnter: ->
         jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_bw.jpeg")
       style: width: 400
       continueText: 'Next'
-      arrowClass: 'left-middle'
+      arrowClass: 'up-center'
 
     new Step
       heading: 'Done Identifying and Marking'

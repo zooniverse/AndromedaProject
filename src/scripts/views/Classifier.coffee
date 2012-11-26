@@ -26,7 +26,7 @@ define (require, exports, module) ->
 				<div class="help">
 					<a href="#!/classify" id="toggleCol" title="Toggle between color and monochrome images" class="toggle-subject">B/W</a>
 					<a href="#!/classify" title="Restart this classification" class="reset-subject">Restart</a>
-					<a href="#!/guide/from-classify" target="_blank" title="Check out the guide" class="field-guide">Guide</a>
+					<a href="#!/classify" title="Show or hide all markings" class="show-hide">Hide</a>
 					<a href="#start-tutorial" title="Go through the tutorial again" class="tutorial-again">Tutorial</a>
 				</div>
 			</div>

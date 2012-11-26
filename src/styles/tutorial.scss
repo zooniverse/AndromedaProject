@@ -91,6 +91,14 @@
 	    top: 100%;
 	  }
 
+	  &.up-center {
+	    border-bottom-color: $arrow-color;
+	    border-top-width: 0;
+	    left: 50%;
+	    margin-left: -$arrow-size;
+	    bottom: 100%;
+	  }
+
 	  &.right-middle {
 	    border-left-color: $arrow-color;
 	    border-right-width: 0;
@@ -122,6 +130,14 @@
 	    left: 50%;
 	    margin-left: -$arrow-size;
 	    top: 100%;
+	  }
+
+	  &.up-center {
+	    border-bottom-color: $arrow-color;
+	    border-top-width: 0;
+	    left: 50%;
+	    margin-left: -$arrow-size;
+	    bottom: 100%;
 	  }
 
 	  &.right-middle {
