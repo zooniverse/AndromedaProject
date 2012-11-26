@@ -62,6 +62,13 @@ define (require, exports, module) ->
 
     showLabel: =>
       @dontHide = true
+      if @labelRect.attr('x')+@labelRect.attr('width') >= 700
+        shift = @labelRect.attr('width') + 5
+        @deleteButton.attr('x', @deleteButton.attr('x')-2*shift)
+        @deleteText.attr('x', @deleteText.attr('x')-2*shift)
+        @labelRect.attr('x', @labelRect.attr('x')-shift)
+        @labelText.attr('x', @labelText.attr('x')-shift)
+        @labelRect.attr('width', shift)
       @label.show()
       @label.animate opacity: 1, 100
 
