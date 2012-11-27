@@ -67,25 +67,7 @@ File.open("#{dirname}/../data/beta_subjects_3_1.txt", 'r') do |f|
 end
 
 centers = JSON.parse(File.read("#{dirname}/../data/image-centers.json"))
-year1 = {}
 synthetic = {}
-
-# Parse Year1 PHAT Stellar Cluster Catalog
-CSV.foreach("#{dirname}/../data/year1catalog.csv") do |row|
-  fieldname, cluster, x, y, pixradius, ra, dec = row
-  unless year1.has_key?(fieldname)
-    year1[fieldname] = []
-  end
-  object = {
-    cluster: cluster.strip(),
-    x: x.strip(),
-    y: y.strip(),
-    pixradius: pixradius.strip(),
-    ra: ra.strip(),
-    dec: dec.strip()
-  }
-  year1[fieldname].push(object)
-end
 
 # Parse Synthetic Cluster Catalog
 CSV.foreach("#{dirname}/../data/synthetic-clusters.csv") do |row|
@@ -122,7 +104,6 @@ beta.each_with_index do |name, index|
     center = centers[brickname]
     coords = [center["ra"], center["dec"]]
     center = [center["nx"], center["ny"]]
-    year1clusters = year1[brickname]
     synthetic_clusters = synthetic[brickname]
   end
   
@@ -140,7 +121,6 @@ beta.each_with_index do |name, index|
     metadata: {
       subimg: name,
       center: center,
-      year1: year1clusters,
       synthetic: synthetic_clusters
     }
   })
@@ -159,7 +139,6 @@ end
 #   center = centers[brickname]
 #   coords = [center["ra"], center["dec"]]
 #   center = [center["x"], center["y"]]
-#   year1clusters = year1[brickname]
 #   synthetic_clusters = synthetic[brickname]
 #   
 #   AndromedaSubject.create({
@@ -175,7 +154,6 @@ end
 #     metadata: {
 #       subimg: name,
 #       center: center,
-#       year1: year1clusters,
 #       synthetic: synthetic_clusters
 #     }
 #   })

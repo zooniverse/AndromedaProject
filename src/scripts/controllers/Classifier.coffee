@@ -189,39 +189,37 @@ define (require, exports, module) ->
         $('svg').show()
     
     finishSpecies: =>
+      
       $('svg').show()
       @picker.setDisabled true
       @steps.addClass 'finished'
       
       subject = @picker.classifier.workflow.selection[0]
+        
       # Show center of field on small map
+      width = 249
+      height = 286
       center = subject.metadata.center
       if center?
-        x = parseFloat(center.x)
-        y = 282 - parseFloat(center.y)
+        nx = parseFloat(center[0])
+        ny = parseFloat(center[1])
+        
+        x = width * nx
+        y = height * ny
         radius = 4
         
+        @overlay[0].width = width
+        @overlay[0].height = height
         context = @overlay[0].getContext('2d')
-        context.clearRect(0, 0, 245, 282)
         
         context.beginPath()
         context.arc(x, y, radius, 0, 2 * Math.PI, false)
-        context.fillStyle = "#F1F1F1"
+        context.fillStyle = "#FAFAFA"
+        context.fill()
         context.lineWidth = 1
         context.strokeStyle = "#505050"
         context.stroke()
-        context.fill()
-      
-      # # Show year 1 catalog on subject
-      # year1 = subject.metadata.year1
-      # if year1?
-      #   
-      #   for cluster in year1
-      #     x = parseFloat(cluster.x)
-      #     y = parseFloat(cluster.y)
-      #     pixradius = parseFloat(cluster.pixradius)
-      #     @picker.paper.circle(x, 500 - y, pixradius).attr({stroke: '#F1F1F1', 'stroke-width': 4})
-      # 
+        context.closePath()
       
       # Check if subject has synthetics
       synthetics = subject.metadata.synthetic

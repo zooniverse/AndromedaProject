@@ -287,25 +287,31 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var annotation, center, centerPoint, context, distance, pixradius, points, radius, subject, synthetic, synthetics, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
+        var annotation, center, centerPoint, context, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
         $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
+        width = 249;
+        height = 286;
         center = subject.metadata.center;
         if (center != null) {
-          x = parseFloat(center.x);
-          y = 282 - parseFloat(center.y);
+          nx = parseFloat(center[0]);
+          ny = parseFloat(center[1]);
+          x = width * nx;
+          y = height * ny;
           radius = 4;
+          this.overlay[0].width = width;
+          this.overlay[0].height = height;
           context = this.overlay[0].getContext('2d');
-          context.clearRect(0, 0, 245, 282);
           context.beginPath();
           context.arc(x, y, radius, 0, 2 * Math.PI, false);
-          context.fillStyle = "#F1F1F1";
+          context.fillStyle = "#FAFAFA";
+          context.fill();
           context.lineWidth = 1;
           context.strokeStyle = "#505050";
           context.stroke();
-          context.fill();
+          context.closePath();
         }
         synthetics = subject.metadata.synthetic;
         if (synthetics) {
