@@ -15,9 +15,9 @@ define (require, exports, module) ->
 					<div class="indicator"><!--Marker indicator--></div>
 					
 					<ul class="toggles" id="artefact-list">
-						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button><div class="divider"></div></li>
 						<li><button value="cross" data-marker="axes">Cross <span class="count">0</button><div class="divider"></div></li>
 						<li><button value="linear" data-marker="line">Linear <span class="count">0</button><div class="divider"></div></li>
+						<li><button value="ghost" data-marker="circle">Ghost <span class="count">0</button><div class="divider"></div></li>
 					</ul>
 
 					<button class="finished">Finished</button>

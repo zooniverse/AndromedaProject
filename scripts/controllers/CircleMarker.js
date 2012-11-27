@@ -30,18 +30,24 @@
         this.radiusHandleDrag = __bind(this.radiusHandleDrag, this);
 
         this.render = __bind(this.render, this);
+
+        var circleStyle, radiusStyle;
         CircleMarker.__super__.constructor.apply(this, arguments);
         this.radiusHandle = this.picker.paper.circle();
         this.radiusHandle.toBack();
         this.radiusHandle.attr(style.circle);
         this.radiusHandle.click(this.stopPropagation);
         this.radiusHandle.drag(this.radiusHandleDrag, this.dragStart);
+        radiusStyle = style.boundingBox;
+        radiusStyle['stroke'] = style[this.annotation.value.species];
         this.radiusLine = this.picker.paper.path();
         this.radiusLine.toBack();
-        this.radiusLine.attr(style.boundingBox);
+        this.radiusLine.attr(radiusStyle);
+        circleStyle = style.line;
+        circleStyle['stroke'] = style[this.annotation.value.species];
         this.boundingCircle = this.picker.paper.circle();
         this.boundingCircle.toBack();
-        this.boundingCircle.attr(style.line[this.annotation.value.species]);
+        this.boundingCircle.attr(circleStyle);
         this.annotation.trigger('change');
       }
 

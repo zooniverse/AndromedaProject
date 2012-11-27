@@ -44,33 +44,13 @@
         'stroke-width': 2
       },
       line: {
-        cluster: {
-          stroke: '#DB9F00',
-          'stroke-width': 2
-        },
-        galaxy: {
-          stroke: '#9C62EE',
-          'stroke-width': 2
-        },
-        ghost: {
-          stroke: '#097D4E',
-          'stroke-width': 2
-        },
-        cross: {
-          stroke: '#A20F32',
-          'stroke-width': 2
-        },
-        linear: {
-          stroke: '#3D75DB',
-          'stroke-width': 2
-        }
+        'stroke-width': 2
       },
       boundingBox: {
-        opacity: 0.5,
-        stroke: '#fff',
+        opacity: 0.7,
         'stroke-dasharray': '- ',
         'stroke-linejoin': 'round',
-        'stroke-width': 2
+        'stroke-width': 4
       },
       button: {
         fill: '#000',

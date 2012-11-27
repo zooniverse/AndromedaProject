@@ -61,6 +61,12 @@ define (require, exports, module) ->
         if e.keyCode is ESC
           @resetStrays()
           @classifier.indicator.setStep 0
+      
+      # Disable species buttons until cross is finished
+      $(document).on 'create-half-axes-marker', (e) =>
+        $('.species button[data-marker]').attr('disabled', true)
+      $(document).on 'create-axes-marker', (e) =>
+        $('.species button[data-marker]').attr('disabled', false)
 
     reset: =>
       @paper.clear()
@@ -103,9 +109,12 @@ define (require, exports, module) ->
       strayCircle1 = @strayCircles[@strayCircles.length - 2]
       strayCircle2 = @strayCircles[@strayCircles.length - 1]
 
+      lineStyles = style.boundingBox
+      lineStyles['stroke'] = style[@selectedSpecies]
+
       line = @paper.path Marker::lineBetween strayCircle1, strayCircle2
       line.toBack()
-      line.attr style.boundingBox
+      line.attr lineStyles
       @strayAxes.push line
 
       @el.trigger 'create-stray-axis'
@@ -118,8 +127,11 @@ define (require, exports, module) ->
       cx = @strayCircles[0].attr 'cx'
       cy = @strayCircles[0].attr 'cy'
 
+      circleStyles = style.line
+      circleStyles['stroke'] = style[@selectedSpecies]
+      
       circle = @paper.circle cx, cy
-      circle.attr style.line[@selectedSpecies]
+      circle.attr circleStyles
       @strayAxes.push circle # Not an axis, but same idea.
 
       circle
