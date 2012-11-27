@@ -41,7 +41,8 @@
         'click .tutorial-again': 'startTutorial',
         'click .feedback': 'showLabels',
         'click .toggle-subject': 'toggleSubject',
-        'click .reset-subject': 'resetClassification'
+        'click .reset-subject': 'resetClassification',
+        'click .show-hide': 'showHide'
       };
 
       Classifier.prototype.elements = {
@@ -58,6 +59,8 @@
 
       function Classifier() {
         this.finishSpecies = __bind(this.finishSpecies, this);
+
+        this.showHide = __bind(this.showHide, this);
 
         this.toggleSubject = __bind(this.toggleSubject, this);
 
@@ -123,6 +126,7 @@
         });
         this.changeSpecies(null);
         this.steps.removeClass('finished');
+        $('#toggleCol').text('B/W');
         return delay(500, function() {
           return _this.updateFavoriteButtons();
         });
@@ -257,16 +261,34 @@
       };
 
       Classifier.prototype.toggleSubject = function(e) {
-        var img, src;
+        var img, src, target;
+        target = $(e.target);
         e.preventDefault();
         img = jQuery('.selection-area img');
         src = img.attr('src');
-        src = src.replace('standard', 'F475W');
+        if (src.indexOf("standard") >= 0) {
+          src = src.replace('standard', 'F475W');
+          target.text("Color");
+        } else {
+          src = src.replace('F475W', 'standard');
+          target.text("B/W");
+        }
         return img.attr('src', src);
+      };
+
+      Classifier.prototype.showHide = function() {
+        if ($('.show-hide').text() === 'Hide' && this.picker.markers.length > 0) {
+          $('.show-hide').text('Show');
+          return $('svg').hide();
+        } else {
+          $('.show-hide').text('Hide');
+          return $('svg').show();
+        }
       };
 
       Classifier.prototype.finishSpecies = function() {
         var annotation, center, centerPoint, context, distance, pixradius, points, radius, subject, synthetic, synthetics, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
+        $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];

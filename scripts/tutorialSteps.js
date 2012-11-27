@@ -7,7 +7,7 @@
     return module.exports = [
       new Step({
         heading: 'Welcome to the Andromeda Project!',
-        content: ['This short tutorial will guide you through the classification process.', 'Please read each step carefully and follow the instructions.'],
+        content: ['This tutorial will show you how to use this site. Just read each step and follow any instructions.'],
         continueText: 'Begin',
         style: {
           width: 450
@@ -22,7 +22,7 @@
         block: '.options'
       }), new Step({
         heading: 'Identify Star Clusters',
-        content: ['Let\'s identify star clusters in the image.', 'Star clusters are compact groups of many stars.', 'Star clusters usually appear quite blue, but some clusters may appear orange if they are old or dusty.', 'In this image we can see two clusters. We\'ll mark these first.'],
+        content: ['Star clusters are compact groups of many stars. They usually appear blue, but some will look orange if they are old or dusty.', 'Let\' mark the two clusters in this image.'],
         continueText: 'Next',
         style: {
           width: 450
@@ -33,12 +33,12 @@
         block: '.options'
       }), new Step({
         heading: 'Identify Star Clusters',
-        content: ['The button "star cluster" is always marked by default.'],
+        content: ['The button "star cluster" is selected by default when you begin.'],
         attach: {
           x: 'right',
           to: '[value="cluster"]',
           at: {
-            x: 'left'
+            x: -0.05
           }
         },
         style: {
@@ -54,8 +54,8 @@
           x: 'left',
           to: '.creature-picker',
           at: {
-            x: 0.3,
-            y: 0.66
+            x: 0.24,
+            y: 0.7
           }
         },
         style: {
@@ -73,8 +73,8 @@
           x: 'left',
           to: '.creature-picker',
           at: {
-            x: 0.25,
-            y: 0.2
+            x: 0.23,
+            y: 0.22
           }
         },
         style: {
@@ -87,12 +87,12 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Identifying Background Galaxies',
-        content: ['We\'ve finished marking all the clusters in this image. On to the background galaxies!', 'Background galaxies are distant objects that shine through the disk of Andromeda.', 'These galaxies appear fuzzy and vary in size.', 'Choose "galaxy" from the species list to mark them.'],
+        content: ['On this site we are looking at the disc of the Andromeda galaxy.', 'Distant galaxies sometimes shine through. They appear fuzzy and they vary in size.', 'Choose "galaxy" from the species list to mark them.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',
           at: {
-            x: 'left'
+            x: -0.05
           }
         },
         style: {
@@ -113,8 +113,8 @@
           x: 'left',
           to: '.creature-picker',
           at: {
-            x: 0.4,
-            y: 0.6
+            x: 0.38,
+            y: 0.62
           }
         },
         nextOn: {
@@ -132,8 +132,8 @@
           x: 'right',
           to: '.creature-picker',
           at: {
-            x: 0.75,
-            y: 0.65
+            x: 0.78,
+            y: 0.67
           }
         },
         nextOn: {
@@ -143,23 +143,7 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Identify Artifacts',
-        content: ['Science can be messy.  We also need your help to identify telescope artifacts.', 'This image has a saturated star.', 'The cross-shaped pattern centered on the star is caused by the support structure of Hubble’s secondary mirror.'],
-        attach: {
-          x: 'right',
-          to: '.creature-picker',
-          at: {
-            x: 0.75,
-            y: 0.55
-          }
-        },
-        style: {
-          width: 320
-        },
-        continueText: 'Okay!',
-        block: '.species .toggles .species .finished'
-      }), new Step({
-        heading: 'Identify Artifacts',
-        content: ['Choose "cross" from the object list to mark it.'],
+        content: ['Science can be messy.  We also need your help to identify image artifacts. For example, this image contains a bright star, which satures Hubble\'s instruments.', 'Choose "cross" from the object list to mark it.'],
         attach: {
           x: 'right',
           to: '[value="cross"]',
@@ -177,7 +161,7 @@
         block: '.species .toggles button:not([value="cross"]), .species .finished .other-creatures'
       }), new Step({
         heading: 'Identify Artifacts',
-        content: ['To mark the cross, click and drag from end-to-end along the two crossing line segments.', 'When you can only see one spike, you can use the \'linear\' tool instead.'],
+        content: ['To mark the cross, click and drag from end-to-end along each of the two crossing line segments.', 'When you can only see one spike, you should use the \'linear\' tool instead.'],
         style: {
           width: 320
         },
@@ -196,12 +180,12 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Black and white images',
-        content: ['Sometimes we\'ll show you grayscale images such as this one.', 'These are just images taken with only one of the camera\'s filters.', 'You just mark them as you do with the colour images.'],
+        content: ['You can also click here to see images in just one channel.', 'Sometimes this helps you see fainter objects more easily.'],
         attach: {
-          to: '.creature-picker',
+          y: 'top',
+          to: '#toggleCol',
           at: {
-            x: 0.5,
-            y: 0.5
+            y: 2
           }
         },
         onEnter: function() {
@@ -211,7 +195,7 @@
           width: 400
         },
         continueText: 'Next',
-        arrowClass: 'left-middle'
+        arrowClass: 'up-center'
       }), new Step({
         heading: 'Done Identifying and Marking',
         content: ['Now that we\'ve finished marking all objects, click "Finished"'],
@@ -219,7 +203,7 @@
           x: 'right',
           to: '.species .finished',
           at: {
-            x: 'left'
+            x: -0.05
           }
         },
         style: {
@@ -235,8 +219,8 @@
         attach: {
           to: '.creature-picker',
           at: {
-            x: 0.25,
-            y: 0.5
+            x: 0.3,
+            y: 0.22
           }
         },
         onEnter: function() {
@@ -246,11 +230,10 @@
         style: {
           width: 400
         },
-        continueText: 'Next',
-        arrowClass: 'right-middle'
+        continueText: 'Next'
       }), new Step({
         heading: 'The End: Great job!',
-        content: ['You can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. Now you\'re ready to explore on your own! If you\'re ever unsure of what to mark, you can always consult the "Guide" page.', 'Click Yes or No (bottom right) to proceed'],
+        content: ['Finally, you can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. You can always consult the "Guide" page for more detailed information.', 'Click Yes or No (bottom right) to proceed'],
         attach: {
           to: '.creature-picker',
           at: {

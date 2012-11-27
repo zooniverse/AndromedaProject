@@ -25,7 +25,7 @@ define (require, exports, module) ->
 
 			@boundingCircle = @picker.paper.circle()
 			@boundingCircle.toBack()
-			@boundingCircle.attr style.line
+			@boundingCircle.attr style.line[@annotation.value.species]
 
 			@annotation.trigger 'change'
 
