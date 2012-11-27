@@ -176,7 +176,7 @@ define (require, exports, module) ->
       ]
       attach: y: 'top', to: '#toggleCol', at: y: 2
       onEnter: ->
-        jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_bw.jpeg")
+        jQuery('#classifier .selection-area img').attr('src', 'http://www.andromedaproject.org/subjects/F475W/tutorial.jpg')
       style: width: 400
       continueText: 'Next'
       arrowClass: 'up-center'
