@@ -62,12 +62,39 @@ define (require, exports, module) ->
     current = $(el).attr 'data-image-flipper'
     new ImageFlipper {el, current}
 
-  $('img.canToggle').hover(
-    ->
+  window.bw = false
+
+  $('li.guideToggle').click( ->
+    if window.bw == false
+      window.bw = true
+      $('li.guideToggle').text("Show Color Images")
+      $('img.canToggle').each( ->
         src = $(this).attr('src').replace('color', 'F475W')
         $(this).attr('src', src)
-    ,->
+      )
+    else
+      window.bw = false
+      $('li.guideToggle').text("Show B/W Images")
+      $('img.canToggle').each( ->
         src = $(this).attr('src').replace('F475W', 'color')
+        $(this).attr('src', src)
+      )
+  )
+  
+  $('img.canToggle').hover(
+    ->
+      if window.bw == false
+        src = $(this).attr('src').replace('color', 'F475W')
+        $(this).attr('src', src)
+      else
+        src = $(this).attr('src').replace('F475W', 'color')
+        $(this).attr('src', src)
+    ,->
+      if window.bw == false
+        src = $(this).attr('src').replace('F475W', 'color')
+        $(this).attr('src', src)
+      else
+        src = $(this).attr('src').replace('color', 'F475W')
         $(this).attr('src', src)
   )
 
