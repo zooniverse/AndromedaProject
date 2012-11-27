@@ -2,6 +2,7 @@ define (require, exports, module) ->
   {Step} = require 'zooniverse/controllers/Tutorial'
 
   module.exports = [
+
     new Step
       heading: 'Welcome to the Andromeda Project!'
       content: [
@@ -41,6 +42,19 @@ define (require, exports, module) ->
       ]
       attach: x: 'left', to: '.creature-picker', at: x: 0.24, y: 0.7
       style: width: 400
+      onEnter: =>
+        jQuery("#classifier .selection-area svg").attr('id', 'svg')
+        svgDocument = document.getElementById('svg')
+        shape = document.createElementNS("http://www.w3.org/2000/svg","circle")
+        shape.setAttributeNS(null, "class", "cluster1")
+        shape.setAttributeNS(null, "cx", 110)
+        shape.setAttributeNS(null, "cy", 350)
+        shape.setAttributeNS(null, "r", 30)
+        shape.setAttributeNS(null, "stroke", "white")
+        shape.setAttributeNS(null, "stroke-width", 2)
+        shape.setAttributeNS(null, "fill", "none")
+        document.getElementById('svg').appendChild(shape)
+        jQuery(".cluster1").fadeOut(1000)
       nextOn: 'create-marking': '#classifier'
       arrowClass: 'left-middle'
       block: '.species .finished .other-creatures'
