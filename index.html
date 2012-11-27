@@ -13,6 +13,43 @@
     <meta name="viewport" content="initial-scale=1" />
 
     <!--[if lt IE 9]><script src="scripts/lib/html5shiv.js" type="text/javascript"></script><![endif]-->
+
+    <!-- Prefetch Guide images to speed up pageload -->
+    <script>
+      window.onload = function () {
+        var xhr = new XMLHttpRequest();
+        files = [ 'pc1358_F475W.jpg',
+                  'pc358_F475W.jpg',
+                  'pc1148_F475W.jpg',
+                  'pc236_F475W.jpg',
+                  'pc362_F475W.jpg',
+                  'pc1_F475W.jpg',
+                  'pc1053_F475W.jpg',
+                  'pc1627_F475W.jpg',
+                  'pc1156_F475W.jpg',
+                  'pc998-pc1002_F475W.jpg',
+                  'pc663_F475W.jpg',
+                  'pc1104_F475W.jpg',
+                  'pc1640_F475W.jpg',
+                  'fake-left_real-right_F475W.jpg',
+                  'hii_F475W.jpg',
+                  'bckgals_F475W.jpg',
+                  'chipgap1_F475W.jpg',
+                  'chipgap2_F475W.jpg',
+                  'chipgap3_F475W.jpg',
+                  'chipgap4_F475W.jpg',
+                  'cte_F475W.jpg',
+                  'sat_1_F475W.jpg',
+                  'sat_2_F475W.jpg',
+                  'linear_dragon_F475W.jpg',
+                  'linear_longspike_F475W.jpg',
+                  'ghost_F475W.jpg'];
+        for (var i=0,len=cars.length; i<len; i++) { 
+          xhr.open('GET', "/images/tutorial/"+files[i], false);
+          xhr.send(null);
+        }
+      };
+    </script>
   </head>
 
   <body>
@@ -247,6 +284,9 @@
                   <li><a href="#!/guide/type/artifacts" class="before">Artifacts</a></li>
                   <li><a href="#!/guide/type/examples" class="before">Examples</a></li>
                 </ul>
+                <ul class="right" style="float:right;">
+                  <li>Show B/W Images</li>
+                </ul>
               </nav>
               
               <section data-page="phat-guide" class="active">
@@ -260,6 +300,8 @@
                       <li>How to identify distant galaxies seen through the disk of Andromeda.</li>
                       <li>How to flag unusual artifacts in the images.</li>
                     </ul>
+
+                    <p><strong>You can mouse over any of the images in the Guide to see them in black and white.</strong></p>
 
                     <p>If you'd like to learn more about the science we are hoping to tackle with this project, click on the "About" or "Blog" tabs at the top of the page.</p>
 
@@ -283,9 +325,7 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/pc1358_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/pc1358_F475W.jpg" class="hidden">
                         <img src="images/tutorial/pc358_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/pc358_F475W.jpg" class="hidden">
                         <span class="caption">Left: A massive cluster, containing ~10,000 times the mass of the Sun.  Right: A low mass cluster, which is 10x less massive than the cluster on the left.</span>
                       </div>
                     </div>
@@ -300,9 +340,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                          <img src="images/tutorial/pc1148_color.jpg" class="medium_3 canToggle">
                          <img src="images/tutorial/pc236_color.jpg" class="medium_3 canToggle">
                          <img src="images/tutorial/pc362_color.jpg" class="medium_3 canToggle">
-                         <img src="images/tutorial/pc1148_F475W.jpg" class="hidden">
-                         <img src="images/tutorial/pc236_F475W.jpg" class="hidden">
-                         <img src="images/tutorial/pc362_F475W.jpg" class="hidden">
                          <span class="caption">Three clusters with similar masses but different sizes.  The most extended cluster is the most difficult to find.</span>
                        </div> 
                     </div>
@@ -317,9 +354,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                         <img src="images/tutorial/pc1_color.jpg" class="medium_3 canToggle">
                         <img src="images/tutorial/pc1053_color.jpg" class="medium_3 canToggle">
                         <img src="images/tutorial/pc1627_color.jpg" class="medium_3 canToggle">
-                        <img src="images/tutorial/pc1_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/pc1053_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/pc1627_F475W.jpg" class="hidden">
                         <span class="caption">Stellar clusters with different ages, ranging from a few million years on the left, to a hundred million years in the center, to a few billion years on the right.</span>
                       </div>
                     </div>
@@ -334,8 +368,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                       <div class="images">
                         <img src="images/tutorial/pc1156_color.jpg" class="medium canToggle">
                         <img src="images/tutorial/pc998-pc1002_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/pc1156_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/pc998-pc1002_F475W.jpg" class="hidden">
                         <br/>
                         <span class="caption">Left: one of the most highly reddened clusters found so far in M31. Right: a close pair of clusters, where one is reddened by dust and the other is not.</span>
                       </div>
@@ -352,9 +384,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                         <img src="images/tutorial/pc663_color.jpg" class="medium_3 canToggle">
                         <img src="images/tutorial/pc1104_color.jpg" class="medium_3 canToggle">
                         <img src="images/tutorial/pc1640_color.jpg" class="medium_3 canToggle">
-                        <img src="images/tutorial/pc663_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/pc1104_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/pc1640_F475W.jpg" class="hidden">
                         <span class="caption">Clusters found in different galactic environments.  From left to right, the clusters are found in the central galactic bulge, midway out in the star forming disk, and in the outskirts of the galaxy.</span>
                       </div>
                     </div>
@@ -376,7 +405,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/fake-left_real-right_color.jpg" class="large canToggle">
-                        <img src="images/tutorial/fake-left_real-right_F475W.jpg" class="hidden">
                         <span class="caption">Example of an artifical cluster (left) next to a real cluster (right).</span>
                       </div>
                     </div>
@@ -393,7 +421,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/hii_color.jpg" class="large canToggle">
-                        <img src="images/tutorial/hii_F475W.jpg" class="hidden">
                         <br/>
                         <span class="caption">An example of an HII region, which can be identified by the blue nebulosity around the stars.</span>
                       </div>
@@ -419,7 +446,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     <div class="left-col" style="width:580px;">
                       <div class="images">
                         <img src="images/tutorial/bckgals_color.jpg" width="580px" style="position:relative;top:-3px;left:-5px" class="canToggle">
-                        <img src="images/tutorial/bckgals_F475W.jpg" width="580px" style="position:relative;top:-3px;left:-5px" class="hidden">
                       </div>
                     </div>
 
@@ -449,13 +475,9 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                         <div class="images">
                         <img src="images/tutorial/chipgap1_color.jpg" class="medium canToggle">
                         <img src="images/tutorial/chipgap2_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/chipgap1_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/chipgap2_F475W.jpg" class="hidden">
                         <div style="clear:both;"></div>
                         <img src="images/tutorial/chipgap3_color.jpg" class="medium canToggle">
                         <img src="images/tutorial/chipgap4_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/chipgap3_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/chipgap4_F475W.jpg" class="hidden">
                         <br/>
                         <span class="caption">Examples of chip-gaps, caused by the small space between the two CCDs on the Advanced Camera for Surveys.  Within the gaps, you will sometimes see black stripes, individual bright pixels due to cosmic rays, and stars with unusual colors or morphologies.</span>
                       </div>
@@ -469,7 +491,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/cte_color.jpg" class="large canToggle">
-                        <img src="images/tutorial/cte_F475W.jpg" class="hidden">
                         <br/>
                         <span class="caption">An example of CTE "streaks".  Problems on the CCD lead to "bleeding".  These features are most evident in images with smaller numbers of stars, and become weaker farther away from the chip gap.</span>
                       </div>
@@ -487,8 +508,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                       <div class="images">
                         <img src="images/tutorial/sat_1_color.jpg" class="medium canToggle">
                         <img src="images/tutorial/sat_2_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/sat_1_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/sat_2_F475W.jpg" class="hidden">
                         <span class="caption">Examples of saturated stars.</span>
                       </div>
                     </div>
@@ -502,8 +521,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                       <div class="images">
                         <img src="images/tutorial/linear_dragon_color.jpg" class="medium canToggle">
                         <img src="images/tutorial/linear_longspike_color.jpg" class="medium canToggle">
-                        <img src="images/tutorial/linear_dragon_F475W.jpg" class="hidden">
-                        <img src="images/tutorial/linear_longspike_F475W.jpg" class="hidden">
                         <span class="caption">Two examples of linear features.</span>
                       </div>
                     </div>
@@ -516,7 +533,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/ghost_color.jpg" class="large canToggle">
-                        <img src="images/tutorial/ghost_F475W.jpg" class="hidden">
                         <span class="caption">An example of an "eyeglass" ghost caused by a internal telescope reflections of a bright star elsewhere in HST's field of view.</span>
                       </div>
                     </div>
