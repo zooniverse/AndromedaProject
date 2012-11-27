@@ -224,7 +224,7 @@
         if (this.disabled) {
           return;
         }
-        if (!this.image.add(this.paper.canvas).is(e.target)) {
+        if (!this.image.add(this.paper.canvas).add(".guideline").is(e.target)) {
           return;
         }
         _ref = this.markers;

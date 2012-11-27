@@ -227,10 +227,10 @@ define (require, exports, module) ->
       synthetics = subject.metadata.synthetic
       if synthetics      
         # Check if user marked near a synthetic cluster
-        if @classification.hasOwnProperty('annotations')
+        if 'annotations' of @classification
           for annotation in @classification.annotations
-            if annotation.hasOwnProperty('value')
-              if annotation.value.hasOwnProperty('species')
+            if 'value' of annotation
+              if 'species' of annotation.value
                 if annotation.value.species is 'cluster'
                   points = annotation.value.points
                   centerPoint = points[0]
@@ -242,12 +242,11 @@ define (require, exports, module) ->
                     y2 = 500 - parseFloat(synthetic.y)
                     distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
                     
-                    console.log "distance = ", distance
                     if distance < 20
                       pixradius = parseFloat(synthetic.pixradius)
                       @picker.paper.circle(x2, y2, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
                       words = @feedback[Math.floor(Math.random() * @feedback.length)]
-                      @picker.paper.text(x2, y2 - 20, "#{words}\nYou found a synthetic cluster!").attr("fill", "#F1F1F1").attr("font-size", "12px")
+                      @picker.paper.text(x2, y2 - 20, "#{words}\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px")
       
       @saveClassification()
 

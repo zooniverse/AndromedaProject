@@ -55,9 +55,9 @@ define (require, exports, module) ->
 
 		cluster: '#DB9F00'
 		galaxy: '#9C62EE'
-		ghost: '#097d4e'
-		cross: '#a20f32' 
-		linear: '#3D75DB'  
+		ghost: '#097D4E'
+		cross: '#A20F32' 
+		linear: '#3D75DB'
 
 		cool: '#001e29'
 

@@ -121,7 +121,7 @@ beta.each_with_index do |name, index|
   else
     center = centers[brickname]
     coords = [center["ra"], center["dec"]]
-    center = [center["x"], center["y"]]
+    center = [center["nx"], center["ny"]]
     year1clusters = year1[brickname]
     synthetic_clusters = synthetic[brickname]
   end

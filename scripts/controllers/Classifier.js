@@ -309,12 +309,12 @@
         }
         synthetics = subject.metadata.synthetic;
         if (synthetics) {
-          if (this.classification.hasOwnProperty('annotations')) {
+          if ('annotations' in this.classification) {
             _ref1 = this.classification.annotations;
             for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
               annotation = _ref1[_i];
-              if (annotation.hasOwnProperty('value')) {
-                if (annotation.value.hasOwnProperty('species')) {
+              if ('value' in annotation) {
+                if ('species' in annotation.value) {
                   if (annotation.value.species === 'cluster') {
                     points = annotation.value.points;
                     centerPoint = points[0];
@@ -325,7 +325,6 @@
                       x2 = parseFloat(synthetic.x);
                       y2 = 500 - parseFloat(synthetic.y);
                       distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-                      console.log("distance = ", distance);
                       if (distance < 20) {
                         pixradius = parseFloat(synthetic.pixradius);
                         this.picker.paper.circle(x2, y2, pixradius).attr({
@@ -333,7 +332,7 @@
                           'stroke-width': 4
                         });
                         words = this.feedback[Math.floor(Math.random() * this.feedback.length)];
-                        this.picker.paper.text(x2, y2 - 20, "" + words + "\nYou found a synthetic cluster!").attr("fill", "#F1F1F1").attr("font-size", "12px");
+                        this.picker.paper.text(x2, y2 - 20, "" + words + "\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px");
                       }
                     }
                   }
