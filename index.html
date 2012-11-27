@@ -44,7 +44,7 @@
                   'linear_dragon_F475W.jpg',
                   'linear_longspike_F475W.jpg',
                   'ghost_F475W.jpg'];
-        for (var i=0,len=cars.length; i<len; i++) { 
+        for (var i=0,len=files.length; i<len; i++) { 
           xhr.open('GET', "/images/tutorial/"+files[i], false);
           xhr.send(null);
         }
@@ -284,8 +284,8 @@
                   <li><a href="#!/guide/type/artifacts" class="before">Artifacts</a></li>
                   <li><a href="#!/guide/type/examples" class="before">Examples</a></li>
                 </ul>
-                <ul class="right" style="float:right;">
-                  <li>Show B/W Images</li>
+                <ul class="right">
+                  <li class=".guideToggle">Show B/W Images</li>
                 </ul>
               </nav>
               
