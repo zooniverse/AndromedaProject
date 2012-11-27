@@ -1007,8 +1007,8 @@ body {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003397}}
         .main #classifier > .options > .summary .feedback img {
           position: absolute;
-          width: 245px;
-          height: 282px;
+          width: 249px;
+          height: 286px;
           z-index: 0;
           border: 2px solid #f1f1f1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/classification\.scss}line{font-family:\00003410}}

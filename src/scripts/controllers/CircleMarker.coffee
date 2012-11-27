@@ -18,14 +18,20 @@ define (require, exports, module) ->
 			@radiusHandle.attr style.circle
 			@radiusHandle.click @stopPropagation
 			@radiusHandle.drag @radiusHandleDrag, @dragStart
-
+			
+			radiusStyle = style.boundingBox
+			radiusStyle['stroke'] = style[@annotation.value.species]
+			
 			@radiusLine = @picker.paper.path()
 			@radiusLine.toBack()
-			@radiusLine.attr style.boundingBox
+			@radiusLine.attr radiusStyle
 
+			circleStyle = style.line
+			circleStyle['stroke'] = style[@annotation.value.species]
+      
 			@boundingCircle = @picker.paper.circle()
 			@boundingCircle.toBack()
-			@boundingCircle.attr style.line[@annotation.value.species]
+			@boundingCircle.attr circleStyle
 
 			@annotation.trigger 'change'
 

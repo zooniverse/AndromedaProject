@@ -2,8 +2,40 @@
 (function() {
 
   define(function(require, exports, module) {
-    var Step;
+    var Step, drawCircle, drawLine,
+      _this = this;
     Step = require('zooniverse/controllers/Tutorial').Step;
+    drawCircle = function(x, y, r, name, svg) {
+      var shape, svgDocument;
+      svgDocument = document.getElementById(svg);
+      shape = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      shape.setAttributeNS(null, "id", name);
+      shape.setAttributeNS(null, "class", "guideline");
+      shape.setAttributeNS(null, "cx", x);
+      shape.setAttributeNS(null, "cy", y);
+      shape.setAttributeNS(null, "r", r);
+      shape.setAttributeNS(null, "stroke", "white");
+      shape.setAttributeNS(null, "stroke-width", 4);
+      shape.setAttributeNS(null, "fill", "none");
+      shape.setAttributeNS(null, "opacity", "0.5");
+      return document.getElementById('svg').appendChild(shape);
+    };
+    drawLine = function(x1, x2, y1, y2, name, svg) {
+      var shape, svgDocument;
+      svgDocument = document.getElementById(svg);
+      shape = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      shape.setAttributeNS(null, "id", name);
+      shape.setAttributeNS(null, "class", "guideline");
+      shape.setAttributeNS(null, "x1", x1);
+      shape.setAttributeNS(null, "x2", x2);
+      shape.setAttributeNS(null, "y1", y1);
+      shape.setAttributeNS(null, "y2", y2);
+      shape.setAttributeNS(null, "stroke", "white");
+      shape.setAttributeNS(null, "stroke-width", 4);
+      shape.setAttributeNS(null, "fill", "none");
+      shape.setAttributeNS(null, "opacity", "0.5");
+      return document.getElementById('svg').appendChild(shape);
+    };
     return module.exports = [
       new Step({
         heading: 'Welcome to the Andromeda Project!',
@@ -22,7 +54,7 @@
         block: '.options'
       }), new Step({
         heading: 'Identify Star Clusters',
-        content: ['Star clusters are compact groups of many stars. They usually appear blue, but some will look orange if they are old or dusty.', 'Let\' mark the two clusters in this image.'],
+        content: ['Star clusters are compact groups of many stars. They usually appear blue, but some will look orange if they are old or dusty. Some images will have no clusters, but some will have two or more.', 'Let\'s mark the two clusters in this image.'],
         continueText: 'Next',
         style: {
           width: 450
@@ -33,7 +65,7 @@
         block: '.options'
       }), new Step({
         heading: 'Identify Star Clusters',
-        content: ['The button "star cluster" is selected by default when you begin.'],
+        content: ['The "star cluster" button is selected by default when you begin.'],
         attach: {
           x: 'right',
           to: '[value="cluster"]',
@@ -61,6 +93,13 @@
         style: {
           width: 400
         },
+        onEnter: function() {
+          jQuery("#classifier .selection-area svg").attr('id', 'svg');
+          return drawCircle(110, 350, 42, 'cluster1', 'svg');
+        },
+        onLeave: function() {
+          return jQuery("#cluster1").hide();
+        },
         nextOn: {
           'create-marking': '#classifier'
         },
@@ -80,6 +119,12 @@
         style: {
           width: 240
         },
+        onEnter: function() {
+          return drawCircle(125, 101, 35, 'cluster2', 'svg');
+        },
+        onLeave: function() {
+          return jQuery("#cluster2").hide();
+        },
         nextOn: {
           'create-marking': '#classifier'
         },
@@ -87,7 +132,7 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Identifying Background Galaxies',
-        content: ['On this site we are looking at the disc of the Andromeda galaxy.', 'Distant galaxies sometimes shine through. They appear fuzzy and they vary in size.', 'Choose "galaxy" from the species list to mark them.'],
+        content: ['On this site we are looking at the disc of the Andromeda galaxy.', 'Distant galaxies sometimes shine through. They appear fuzzy and they vary in size.', 'Choose "galaxy" from the objects list to mark them.'],
         attach: {
           x: 'right',
           to: '[value="galaxy"]',
@@ -105,9 +150,15 @@
         block: '.species .toggles button:not([value="galaxy"]), .species .finished .other-creatures'
       }), new Step({
         heading: 'Mark Background Galaxies',
-        content: ['Mark the galaxy by clicking in the center then dragging out until the majority is enclosed (just like the star clusters).'],
+        content: ['Mark the galaxy by clicking in the center then dragging out until the majority of the galaxy\'s light is enclosed (just like the star clusters).'],
         style: {
           width: 320
+        },
+        onEnter: function() {
+          return drawCircle(210, 310, 40, 'galaxy1', 'svg');
+        },
+        onLeave: function() {
+          return jQuery("#galaxy1").hide();
         },
         attach: {
           x: 'left',
@@ -128,6 +179,12 @@
         style: {
           width: 320
         },
+        onEnter: function() {
+          return drawCircle(610, 335, 30, 'galaxy2', 'svg');
+        },
+        onLeave: function() {
+          return jQuery("#galaxy2").hide();
+        },
         attach: {
           x: 'right',
           to: '.creature-picker',
@@ -143,7 +200,7 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Identify Artifacts',
-        content: ['Science can be messy.  We also need your help to identify image artifacts. For example, this image contains a bright star, which satures Hubble\'s instruments.', 'Choose "cross" from the object list to mark it.'],
+        content: ['Science can be messy.  We also need your help to identify image artifacts. For example, this image contains a bright star, which saturates Hubble\'s instruments.', 'Choose "cross" from the object list to mark it.'],
         attach: {
           x: 'right',
           to: '[value="cross"]',
@@ -161,9 +218,17 @@
         block: '.species .toggles button:not([value="cross"]), .species .finished .other-creatures'
       }), new Step({
         heading: 'Identify Artifacts',
-        content: ['To mark the cross, click and drag from end-to-end along each of the two crossing line segments.', 'When you can only see one spike, you should use the \'linear\' tool instead.'],
+        content: ['To mark the cross, click and drag from end-to-end along each of the two crossing line segments.', 'If you can only see one spike, you should use the \'linear\' tool instead.'],
         style: {
           width: 320
+        },
+        onEnter: function() {
+          drawLine(566, 683, 18, 132, 'line1', 'svg');
+          return drawLine(683, 577, 23, 134, 'line2', 'svg');
+        },
+        onLeave: function() {
+          jQuery("#line1").hide();
+          return jQuery("#line2").hide();
         },
         attach: {
           x: 'right',
@@ -180,7 +245,7 @@
         block: '.species .finished .other-creatures'
       }), new Step({
         heading: 'Black and white images',
-        content: ['You can also click here to see images in just one channel.', 'Sometimes this helps you see fainter objects more easily.'],
+        content: ['You can also click here to see a "negative" image of the blue channel', 'Sometimes this helps you see fainter objects more easily.'],
         attach: {
           y: 'top',
           to: '#toggleCol',
@@ -215,7 +280,7 @@
         arrowClass: 'right-middle'
       }), new Step({
         heading: 'Chip-gaps',
-        content: ['You may sometimes see blocky image artifacts like this.', 'These are called chip-gaps and you don\'t need to mark them.'],
+        content: ['You will frequently see diagonal, blocky image artifacts like this.', 'These are called chip-gaps and you don\'t need to mark them.'],
         attach: {
           to: '.creature-picker',
           at: {
@@ -232,8 +297,8 @@
         },
         continueText: 'Next'
       }), new Step({
-        heading: 'The End: Great job!',
-        content: ['Finally, you can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. You can always consult the "Guide" page for more detailed information.', 'Click Yes or No (bottom right) to proceed'],
+        heading: 'The End: Thanks for your help!',
+        content: ['Finally, you can use Talk to discuss images with other volunteers if you have questions or find something interesting.', 'This concludes the tutorial. You can always consult the "Guide" page for more examples and detailed information.', 'Click Yes or No (bottom right) to proceed'],
         attach: {
           to: '.creature-picker',
           at: {

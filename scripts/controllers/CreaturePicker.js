@@ -107,11 +107,17 @@
         CreaturePicker.__super__.delegateEvents.apply(this, arguments);
         $(document).on('mousemove', this.onMouseMove);
         $(document).on('mouseup', this.onMouseUp);
-        return $(document).on('keydown', function(e) {
+        $(document).on('keydown', function(e) {
           if (e.keyCode === ESC) {
             _this.resetStrays();
             return _this.classifier.indicator.setStep(0);
           }
+        });
+        $(document).on('create-half-axes-marker', function(e) {
+          return $('.species button[data-marker]').attr('disabled', true);
+        });
+        return $(document).on('create-axes-marker', function(e) {
+          return $('.species button[data-marker]').attr('disabled', false);
         });
       };
 
@@ -186,23 +192,27 @@
       };
 
       CreaturePicker.prototype.createStrayAxis = function() {
-        var line, strayCircle1, strayCircle2;
+        var line, lineStyles, strayCircle1, strayCircle2;
         strayCircle1 = this.strayCircles[this.strayCircles.length - 2];
         strayCircle2 = this.strayCircles[this.strayCircles.length - 1];
+        lineStyles = style.boundingBox;
+        lineStyles['stroke'] = style[this.selectedSpecies];
         line = this.paper.path(Marker.prototype.lineBetween(strayCircle1, strayCircle2));
         line.toBack();
-        line.attr(style.boundingBox);
+        line.attr(lineStyles);
         this.strayAxes.push(line);
         this.el.trigger('create-stray-axis');
         return line;
       };
 
       CreaturePicker.prototype.createStrayBoundingCircle = function() {
-        var circle, cx, cy;
+        var circle, circleStyles, cx, cy;
         cx = this.strayCircles[0].attr('cx');
         cy = this.strayCircles[0].attr('cy');
+        circleStyles = style.line;
+        circleStyles['stroke'] = style[this.selectedSpecies];
         circle = this.paper.circle(cx, cy);
-        circle.attr(style.line[this.selectedSpecies]);
+        circle.attr(circleStyles);
         this.strayAxes.push(circle);
         return circle;
       };
@@ -214,7 +224,7 @@
         if (this.disabled) {
           return;
         }
-        if (!this.image.add(this.paper.canvas).is(e.target)) {
+        if (!this.image.add(this.paper.canvas).add(".guideline").is(e.target)) {
           return;
         }
         _ref = this.markers;
