@@ -67,6 +67,15 @@
         current: current
       });
     }
+    $('img.canToggle').hover(function() {
+      var src;
+      src = $(this).attr('src').replace('color', 'F475W');
+      return $(this).attr('src', src);
+    }, function() {
+      var src;
+      src = $(this).attr('src').replace('F475W', 'color');
+      return $(this).attr('src', src);
+    });
     devRefs = {
       config: require('zooniverse/config'),
       API: require('zooniverse/API')

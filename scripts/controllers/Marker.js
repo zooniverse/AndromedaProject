@@ -91,7 +91,16 @@
       };
 
       Marker.prototype.showLabel = function() {
+        var shift;
         this.dontHide = true;
+        if (this.labelRect.attr('x') + this.labelRect.attr('width') >= 700) {
+          shift = this.labelRect.attr('width') + 5;
+          this.deleteButton.attr('x', this.deleteButton.attr('x') - 2 * shift);
+          this.deleteText.attr('x', this.deleteText.attr('x') - 2 * shift);
+          this.labelRect.attr('x', this.labelRect.attr('x') - shift);
+          this.labelText.attr('x', this.labelText.attr('x') - shift);
+          this.labelRect.attr('width', shift);
+        }
         this.label.show();
         return this.label.animate({
           opacity: 1

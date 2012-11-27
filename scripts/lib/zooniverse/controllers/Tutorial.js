@@ -28,6 +28,8 @@
 
       Tutorial.prototype.arrowClass = 'arrow';
 
+      Tutorial.prototype.innerArrowClass = 'inner-arrow';
+
       Tutorial.prototype.messageClass = 'message';
 
       Tutorial.prototype.continueClass = 'continue';
@@ -64,7 +66,7 @@
         });
         this.controls = $("<div class=\"" + this.controlsClass + "\">\n  <button value=\"skip\" title=\"" + this.skipTitle + "\">" + this.skipText + "</button>\n  <button value=\"end\" title=\"" + this.exitTitle + "\">" + this.exitText + "</button>\n</div>");
         this.message = $("<div class='" + this.messageClass + "'></div>");
-        this.arrow = $("<div class='" + this.arrowClass + "'></div>");
+        this.arrow = $("<div class='" + this.arrowClass + "'></div><div class='" + this.innerArrowClass + "'></div>");
         this.controls.appendTo(this.el);
         this.message.appendTo(this.el);
         this.arrow.appendTo(this.el);

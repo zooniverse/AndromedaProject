@@ -202,7 +202,7 @@
         cx = this.strayCircles[0].attr('cx');
         cy = this.strayCircles[0].attr('cy');
         circle = this.paper.circle(cx, cy);
-        circle.attr(style.line);
+        circle.attr(style.line[this.selectedSpecies]);
         this.strayAxes.push(circle);
         return circle;
       };

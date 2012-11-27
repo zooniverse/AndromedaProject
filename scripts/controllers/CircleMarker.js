@@ -41,7 +41,7 @@
         this.radiusLine.attr(style.boundingBox);
         this.boundingCircle = this.picker.paper.circle();
         this.boundingCircle.toBack();
-        this.boundingCircle.attr(style.line);
+        this.boundingCircle.attr(style.line[this.annotation.value.species]);
         this.annotation.trigger('change');
       }
 

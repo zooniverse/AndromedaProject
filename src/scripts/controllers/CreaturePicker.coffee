@@ -113,12 +113,13 @@ define (require, exports, module) ->
       line
 
     createStrayBoundingCircle: =>
+
       # It'll always be centered on the first stray circle.
       cx = @strayCircles[0].attr 'cx'
       cy = @strayCircles[0].attr 'cy'
 
       circle = @paper.circle cx, cy
-      circle.attr style.line
+      circle.attr style.line[@selectedSpecies]
       @strayAxes.push circle # Not an axis, but same idea.
 
       circle
