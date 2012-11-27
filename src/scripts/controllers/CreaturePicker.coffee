@@ -126,7 +126,7 @@ define (require, exports, module) ->
     mouseIsDown: false
     onMouseDown: (e) =>
       return if @disabled
-      return unless @image.add(@paper.canvas).is e.target
+      return unless @image.add(@paper.canvas).add(".guideline").is e.target
 
       m.deselect() for m in @markers when m.selected
 
