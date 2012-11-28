@@ -69,7 +69,7 @@ define (require, exports, module) ->
       content: [
         'Mark the cluster by clicking in the center then dragging out until the majority of the cluster is enclosed.'
       ]
-      attach: x: 'left', to: '.creature-picker', at: x: 0.24, y: 0.7
+      attach: x: 'left', to: '.creature-picker', at: x: 0.25, y: 0.7
       style: width: 400
       onEnter: =>
         jQuery("#classifier .selection-area svg").attr('id', 'svg')
@@ -85,7 +85,7 @@ define (require, exports, module) ->
       content: [
         'Now let\'s mark the other, fainter cluster.'
       ]
-      attach: x: 'left', to: '.creature-picker', at: x: 0.23, y: 0.22
+      attach: x: 'left', to: '.creature-picker', at: x: 0.26, y: 0.195
       style: width: 240
       onEnter: =>
         drawCircle(125,101,35,'cluster2','svg') 
@@ -133,7 +133,7 @@ define (require, exports, module) ->
         drawCircle(610,335,30,'galaxy2','svg') 
       onLeave: =>
         jQuery("#galaxy2").hide()
-      attach: x: 'right', to: '.creature-picker', at: x: 0.78, y: 0.67
+      attach: x: 'right', to: '.creature-picker', at: x: 0.77, y: 0.67
       nextOn: 'create-marking': '#classifier'
       arrowClass: 'right-middle'
       block: '.species .finished .other-creatures'
