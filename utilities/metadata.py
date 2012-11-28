@@ -4,6 +4,10 @@ import json
 import numpy
 import pyfits
 
+def fixSubImg(subimg):
+    [field, subimg] = subimg.split('_')
+    return "%s_%02d" % (field, int(subimg))
+
 def header2json():
     """
     Convert FITS headers with WCS to JSON.
@@ -33,7 +37,7 @@ def subimage_centers():
     
     d = {}
     for row in data:
-        img_id = row[3]
+        img_id = fixSubImg(row[3])
         [nx, ny] = row[8], row[9]
         d[img_id] = {'nx': str(nx), 'ny': str(ny), 'ra': row[4], 'dec': row[5]}
     output = open(os.path.join(data_dir, 'image-centers.json'), 'w')
@@ -71,7 +75,7 @@ def getSyntheticCatalog():
     
     with open('synthetic-clusters.csv', 'w') as f:
         for row in data:
-            subimg = row[1]
+            subimg = fixSubImg(row[1])
             fcid = row[2]
             x = row[3]
             y = row[4]

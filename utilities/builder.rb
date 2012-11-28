@@ -53,23 +53,24 @@ dirname = File.dirname(__FILE__)
 
 # All Subjects
 subjects = {}
-CSV.foreach("#{dirname}/../data/andromeda_subjects_with_ids.csv") do |row|
+CSV.foreach("#{dirname}/../data/subjects_with_ids.csv") do |row|
   _id, zooniverse_id, subimg = row
   subjects[subimg] = {'_id' => _id, 'zooniverse_id' => zooniverse_id}
 end
 
 # Beta Subjects
 beta = []
-File.open("#{dirname}/../data/beta_subjects_3_1.txt", 'r') do |f|
+File.open("#{dirname}/../data/beta_subjects.txt", 'r') do |f|
   while (line = f.gets)
     beta.push line.strip
   end
 end
 
+# Parse for image centers
 centers = JSON.parse(File.read("#{dirname}/../data/image-centers.json"))
-synthetic = {}
 
 # Parse Synthetic Cluster Catalog
+synthetic = {}
 CSV.foreach("#{dirname}/../data/synthetic-clusters.csv") do |row|
   subimg, fcid, x, y, ra, dec, reff, pixradius = row
   unless synthetic.has_key?(subimg)
@@ -87,59 +88,28 @@ CSV.foreach("#{dirname}/../data/synthetic-clusters.csv") do |row|
   synthetic[subimg].push(object)
 end
 
-
-beta.each_with_index do |name, index|
-  brickname = name.gsub('_F475W', '').gsub('_sc', '')
-  
-  _id = BSON::ObjectId(subjects[name]['_id'])
-  zooniverse_id = subjects[name]['zooniverse_id']
-  
-  if name == 'tutorial'
-    center = nil
-    coords = nil
-    center = nil
-    year1clusters = nil
-    synthetic_clusters = nil
-  else
-    center = centers[brickname]
-    coords = [center["ra"], center["dec"]]
-    center = [center["nx"], center["ny"]]
-    synthetic_clusters = synthetic[brickname]
-  end
-  
-  
-  AndromedaSubject.create({
-    _id: _id,
-    zooniverse_id: zooniverse_id,
-    project_id: project.id,
-    workflow_ids: [ workflow.id ],
-    coords: coords,
-    location: {
-      standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-      thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
-    },
-    metadata: {
-      subimg: name,
-      center: center,
-      synthetic: synthetic_clusters
-    }
-  })
-  
-  puts "#{ index + 1 } / #{ beta.length }"
-end
-
-# # All subjects for production
-# index = 0
-# subjects.each_pair do |name, ids|
+#
+# Create Beta Subjects
+#
+# beta.each_with_index do |name, index|
 #   brickname = name.gsub('_F475W', '').gsub('_sc', '')
 #   
-#   _id = ids['_id']
-#   zooniverse_id = ids['zooniverse_id']
+#   _id = BSON::ObjectId(subjects[name]['_id'])
+#   zooniverse_id = subjects[name]['zooniverse_id']
 #   
-#   center = centers[brickname]
-#   coords = [center["ra"], center["dec"]]
-#   center = [center["x"], center["y"]]
-#   synthetic_clusters = synthetic[brickname]
+#   if name == 'tutorial'
+#     center = nil
+#     coords = nil
+#     center = nil
+#     year1clusters = nil
+#     synthetic_clusters = nil
+#   else
+#     center = centers[brickname]
+#     coords = [center["ra"], center["dec"]]
+#     center = [center["nx"], center["ny"]]
+#     synthetic_clusters = synthetic[brickname]
+#   end
+#   
 #   
 #   AndromedaSubject.create({
 #     _id: _id,
@@ -158,8 +128,45 @@ end
 #     }
 #   })
 #   
-#   puts "#{ index + 1 } / #{ subjects.length }"
-#   index += 1
+#   puts "#{ index + 1 } / #{ beta.length }"
 # end
+
+#
+# Create All Subjects
+#
+index = 0
+subjects.each_pair do |name, ids|
+  brickname = name.gsub('_F475W', '').gsub('_sc', '')
+  
+  _id = ids['_id']
+  zooniverse_id = ids['zooniverse_id']
+  
+  unless name == 'tutorial'
+    center = centers[brickname]
+    coords = [center["ra"], center["dec"]]
+    center = [center["x"], center["y"]]
+    synthetic_clusters = synthetic[brickname]
+  end
+  
+  AndromedaSubject.create({
+    _id: _id,
+    zooniverse_id: zooniverse_id,
+    project_id: project.id,
+    workflow_ids: [ workflow.id ],
+    coords: coords,
+    location: {
+      standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
+      thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+    },
+    metadata: {
+      subimg: name,
+      center: center,
+      synthetic: synthetic_clusters
+    }
+  })
+  
+  puts "#{ index + 1 } / #{ subjects.length }"
+  index += 1
+end
 
 AndromedaSubject.activate_randomly if Rails.env == "development"

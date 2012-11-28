@@ -254,7 +254,7 @@
           }
         },
         onEnter: function() {
-          return jQuery("#classifier .selection-area img").attr("src", "http://www.andromedaproject.org/subjects/standard/tutorial_bw.jpeg");
+          return jQuery('#classifier .selection-area img').attr('src', 'http://www.andromedaproject.org/subjects/F475W/tutorial.jpg');
         },
         style: {
           width: 400
