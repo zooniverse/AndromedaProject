@@ -86,7 +86,7 @@
           x: 'left',
           to: '.creature-picker',
           at: {
-            x: 0.24,
+            x: 0.25,
             y: 0.7
           }
         },
@@ -112,8 +112,8 @@
           x: 'left',
           to: '.creature-picker',
           at: {
-            x: 0.23,
-            y: 0.22
+            x: 0.26,
+            y: 0.195
           }
         },
         style: {
@@ -189,7 +189,7 @@
           x: 'right',
           to: '.creature-picker',
           at: {
-            x: 0.78,
+            x: 0.77,
             y: 0.67
           }
         },

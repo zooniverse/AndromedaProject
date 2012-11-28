@@ -67,14 +67,44 @@
         current: current
       });
     }
+    window.bw = false;
+    $('li.guideToggle').click(function() {
+      if (window.bw === false) {
+        window.bw = true;
+        $('li.guideToggle').text("Show Color Images");
+        return $('img.canToggle').each(function() {
+          var src;
+          src = $(this).attr('src').replace('color', 'F475W');
+          return $(this).attr('src', src);
+        });
+      } else {
+        window.bw = false;
+        $('li.guideToggle').text("Show B/W Images");
+        return $('img.canToggle').each(function() {
+          var src;
+          src = $(this).attr('src').replace('F475W', 'color');
+          return $(this).attr('src', src);
+        });
+      }
+    });
     $('img.canToggle').hover(function() {
       var src;
-      src = $(this).attr('src').replace('color', 'F475W');
-      return $(this).attr('src', src);
+      if (window.bw === false) {
+        src = $(this).attr('src').replace('color', 'F475W');
+        return $(this).attr('src', src);
+      } else {
+        src = $(this).attr('src').replace('F475W', 'color');
+        return $(this).attr('src', src);
+      }
     }, function() {
       var src;
-      src = $(this).attr('src').replace('F475W', 'color');
-      return $(this).attr('src', src);
+      if (window.bw === false) {
+        src = $(this).attr('src').replace('F475W', 'color');
+        return $(this).attr('src', src);
+      } else {
+        src = $(this).attr('src').replace('color', 'F475W');
+        return $(this).attr('src', src);
+      }
     });
     devRefs = {
       config: require('zooniverse/config'),

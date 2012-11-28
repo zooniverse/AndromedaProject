@@ -141,29 +141,41 @@ subjects.each_pair do |name, ids|
   _id = ids['_id']
   zooniverse_id = ids['zooniverse_id']
   
-  unless name == 'tutorial'
+  if name == 'tutorial'
+    AndromedaSubject.create({
+      _id: _id,
+      zooniverse_id: zooniverse_id,
+      project_id: project.id,
+      tutorial: 'true',
+      workflow_ids: [ workflow.id ],
+      location: {
+        standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
+        thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+      }
+    })
+  else
     center = centers[brickname]
     coords = [center["ra"], center["dec"]]
     center = [center["x"], center["y"]]
     synthetic_clusters = synthetic[brickname]
+    
+    AndromedaSubject.create({
+      _id: _id,
+      zooniverse_id: zooniverse_id,
+      project_id: project.id,
+      workflow_ids: [ workflow.id ],
+      coords: coords,
+      location: {
+        standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
+        thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+      },
+      metadata: {
+        subimg: name,
+        center: center,
+        synthetic: synthetic_clusters
+      }
+    })
   end
-  
-  AndromedaSubject.create({
-    _id: _id,
-    zooniverse_id: zooniverse_id,
-    project_id: project.id,
-    workflow_ids: [ workflow.id ],
-    coords: coords,
-    location: {
-      standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-      thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
-    },
-    metadata: {
-      subimg: name,
-      center: center,
-      synthetic: synthetic_clusters
-    }
-  })
   
   puts "#{ index + 1 } / #{ subjects.length }"
   index += 1
