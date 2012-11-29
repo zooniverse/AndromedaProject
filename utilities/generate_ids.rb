@@ -29,11 +29,11 @@ end
 dirname = File.dirname(__FILE__)
 
 # Init CSV file for writing ids
-csv = CSV::open('subjects_with_ids.csv', 'wb')
+csv = CSV::open("#{dirname}/../data/subjects_with_ids.csv", 'wb')
 header = ['_id', 'zooniverse_id', 'subimage']
 csv << header
 
-File.open("#{dirname}/../data/all_subjects.txt").each do |line|
+File.open("#{dirname}/../data/final_subjects.txt").each do |line|
   bson_id = BSON::ObjectId.new
   zooniverse_id = ZooniverseIdGenerator.next_id
   subimg = line.strip()
