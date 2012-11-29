@@ -48,6 +48,7 @@ define (require, exports, module) ->
       '.overlay'                                : 'overlay'
       '.summary .favorite .create'              : 'favoriteCreation'
       '.summary .favorite .destroy'             : 'favoriteDestruction'
+      '.feedback .box'                          : 'feedbackBox'
 
     constructor: ->
       super
@@ -93,6 +94,9 @@ define (require, exports, module) ->
     
     render: =>
       @renderSpeciesPage()
+      
+      # Hide the feedback box
+      @feedbackBox.hide()
       
       # Star cluster selected by default
       active = false
@@ -197,8 +201,8 @@ define (require, exports, module) ->
       subject = @picker.classifier.workflow.selection[0]
         
       # Show center of field on small map
-      width = 249
-      height = 286
+      width = 240
+      height = 309
       center = subject.metadata.center
       if center?
         nx = parseFloat(center[0])
@@ -220,6 +224,14 @@ define (require, exports, module) ->
         context.strokeStyle = "#505050"
         context.stroke()
         context.closePath()
+        
+        # Position the feedback box
+        coords = subject.coords
+        if coords
+          @feedbackBox.show()
+          @feedbackBox.find('.value:nth-child(2)').text("#{coords[0].toFixed(3)}")
+          @feedbackBox.find('.value:nth-child(5)').text("#{coords[1].toFixed(3)}")
+          @feedbackBox.css({top: "#{y + 40}px", left: "#{x + 20}px"})
       
       # Check if subject has synthetics
       synthetics = subject.metadata.synthetic

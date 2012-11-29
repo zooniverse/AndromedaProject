@@ -54,7 +54,8 @@
         '.summary': 'summary',
         '.overlay': 'overlay',
         '.summary .favorite .create': 'favoriteCreation',
-        '.summary .favorite .destroy': 'favoriteDestruction'
+        '.summary .favorite .destroy': 'favoriteDestruction',
+        '.feedback .box': 'feedbackBox'
       };
 
       function Classifier() {
@@ -140,6 +141,7 @@
       Classifier.prototype.render = function() {
         var active, item, _i, _len, _ref1;
         this.renderSpeciesPage();
+        this.feedbackBox.hide();
         active = false;
         _ref1 = $('button[data-marker]');
         for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
@@ -287,13 +289,13 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var annotation, center, centerPoint, context, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
+        var annotation, center, centerPoint, context, coords, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
         $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
-        width = 249;
-        height = 286;
+        width = 240;
+        height = 309;
         center = subject.metadata.center;
         if (center != null) {
           nx = parseFloat(center[0]);
@@ -312,6 +314,16 @@
           context.strokeStyle = "#505050";
           context.stroke();
           context.closePath();
+          coords = subject.coords;
+          if (coords) {
+            this.feedbackBox.show();
+            this.feedbackBox.find('.value:nth-child(2)').text("" + (coords[0].toFixed(3)));
+            this.feedbackBox.find('.value:nth-child(5)').text("" + (coords[1].toFixed(3)));
+            this.feedbackBox.css({
+              top: "" + (y + 40) + "px",
+              left: "" + (x + 20) + "px"
+            });
+          }
         }
         synthetics = subject.metadata.synthetic;
         if (synthetics) {

@@ -388,16 +388,42 @@
         width: 0px;
         padding-bottom: 60px;
         
+        .box {
+          display: none;
+          position: absolute;
+          z-index: 2;
+          font-size: 11px;
+          font-weight: 700;
+          background: #FAFAFA;
+          color: #505050;
+          opacity: 0.7;
+          padding: 6px;
+          width: 80px;
+          border-radius: 8px;
+          
+          .key {
+            width: 30px;
+            display: inline-block;
+            text-align: right;
+          }
+          
+          .value {
+            width: 44px;
+            display: inline-block;
+            text-align: left;
+          }
+        }
+        
         canvas {
           position: absolute;
-          width: 249px;
-          height: 286px;
+          width: 240px;
+          height: 309px;
           z-index: 1;
         }
         img {
           position: absolute;
-          width: 249px;
-          height: 286px;
+          width: 240px;
+          height: 309px;
           z-index: 0;
           border: 2px solid rgb(241,241,241);
         }
@@ -444,7 +470,7 @@
         position: absolute;
         bottom: 0px;
 				button {
-					width: 100%;
+					width: 49%;
 
 					&:first-child {
 						margin-right: 1%;

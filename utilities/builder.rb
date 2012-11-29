@@ -138,7 +138,7 @@ index = 0
 subjects.each_pair do |name, ids|
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
   
-  _id = ids['_id']
+  _id = BSON::ObjectId(ids['_id'])
   zooniverse_id = ids['zooniverse_id']
   
   if name == 'tutorial'
@@ -149,14 +149,16 @@ subjects.each_pair do |name, ids|
       tutorial: 'true',
       workflow_ids: [ workflow.id ],
       location: {
-        standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-        thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+        standard: "http://0.0.0.0:8000/standard/color/#{ name }.jpg",
+        thumbnail: "http://0.0.0.0:8000/thumbnail/color/#{ name }.jpg"
+        # standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
+        # thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
       }
     })
   else
     center = centers[brickname]
     coords = [center["ra"], center["dec"]]
-    center = [center["x"], center["y"]]
+    center = [center["nx"], center["ny"]]
     synthetic_clusters = synthetic[brickname]
     
     AndromedaSubject.create({
@@ -166,8 +168,10 @@ subjects.each_pair do |name, ids|
       workflow_ids: [ workflow.id ],
       coords: coords,
       location: {
-        standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-        thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+        standard: "http://0.0.0.0:8000/standard/color/#{ name }.jpg",
+        thumbnail: "http://0.0.0.0:8000/thumbnail/color/#{ name }.jpg"
+        # standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
+        # thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
       },
       metadata: {
         subimg: name,
