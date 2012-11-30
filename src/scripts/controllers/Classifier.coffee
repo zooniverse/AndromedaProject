@@ -176,11 +176,11 @@ define (require, exports, module) ->
       e.preventDefault()
       img = jQuery('.selection-area img')
       src = img.attr('src')
-      if src.indexOf("standard") >= 0
-        src = src.replace('standard', 'F475W')
+      if src.indexOf("color") >= 0
+        src = src.replace('color', 'F475W')
         target.text("Color")
       else
-        src = src.replace('F475W', 'standard')
+        src = src.replace('F475W', 'color')
         target.text("B/W")
       img.attr('src', src)
 
@@ -201,63 +201,64 @@ define (require, exports, module) ->
       subject = @picker.classifier.workflow.selection[0]
         
       # Show center of field on small map
-      width = 240
-      height = 309
-      center = subject.metadata.center
-      if center?
-        nx = parseFloat(center[0])
-        ny = parseFloat(center[1])
+      if subject
+        width = 240
+        height = 309
+        center = subject.metadata.center
+        if center?
+          nx = parseFloat(center[0])
+          ny = parseFloat(center[1])
         
-        x = width * nx
-        y = height * ny
-        radius = 4
+          x = width * nx
+          y = height * ny
+          radius = 4
         
-        @overlay[0].width = width
-        @overlay[0].height = height
-        context = @overlay[0].getContext('2d')
+          @overlay[0].width = width
+          @overlay[0].height = height
+          context = @overlay[0].getContext('2d')
         
-        context.beginPath()
-        context.arc(x, y, radius, 0, 2 * Math.PI, false)
-        context.fillStyle = "#FAFAFA"
-        context.fill()
-        context.lineWidth = 1
-        context.strokeStyle = "#505050"
-        context.stroke()
-        context.closePath()
+          context.beginPath()
+          context.arc(x, y, radius, 0, 2 * Math.PI, false)
+          context.fillStyle = "#FAFAFA"
+          context.fill()
+          context.lineWidth = 1
+          context.strokeStyle = "#505050"
+          context.stroke()
+          context.closePath()
         
-        # Position the feedback box
-        coords = subject.coords
-        if coords
-          @feedbackBox.show()
-          @feedbackBox.find('.value:nth-child(2)').text("#{coords[0].toFixed(3)}")
-          @feedbackBox.find('.value:nth-child(5)').text("#{coords[1].toFixed(3)}")
-          @feedbackBox.css({top: "#{y + 40}px", left: "#{x + 20}px"})
+          # Position the feedback box
+          coords = subject.coords
+          if coords
+            @feedbackBox.show()
+            @feedbackBox.find('.value:nth-child(2)').text("#{coords[0].toFixed(3)}")
+            @feedbackBox.find('.value:nth-child(5)').text("#{coords[1].toFixed(3)}")
+            @feedbackBox.css({top: "#{y + 40}px", left: "#{x + 20}px"})
       
-      # Check if subject has synthetics
-      synthetics = subject.metadata.synthetic
-      if synthetics      
-        # Check if user marked near a synthetic cluster
-        if 'annotations' of @classification
-          for annotation in @classification.annotations
-            if 'value' of annotation
-              if 'species' of annotation.value
-                if annotation.value.species is 'cluster'
-                  points = annotation.value.points
-                  centerPoint = points[0]
-                  x1 = 725 * centerPoint.x
-                  y1 = 500 * centerPoint.y
+        # Check if subject has synthetics
+        synthetics = subject.metadata.synthetic
+        if synthetics      
+          # Check if user marked near a synthetic cluster
+          if 'annotations' of @classification
+            for annotation in @classification.annotations
+              if 'value' of annotation
+                if 'species' of annotation.value
+                  if annotation.value.species is 'cluster'
+                    points = annotation.value.points
+                    centerPoint = points[0]
+                    x1 = 725 * centerPoint.x
+                    y1 = 500 * centerPoint.y
                   
-                  for synthetic in synthetics
-                    x2 = parseFloat(synthetic.x)
-                    y2 = 500 - parseFloat(synthetic.y)
-                    distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
+                    for synthetic in synthetics
+                      x2 = parseFloat(synthetic.x)
+                      y2 = 500 - parseFloat(synthetic.y)
+                      distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
                     
-                    if distance < 20
-                      pixradius = parseFloat(synthetic.pixradius)
-                      @picker.paper.circle(x2, y2, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
-                      words = @feedback[Math.floor(Math.random() * @feedback.length)]
-                      @picker.paper.text(x2, y2 - 20, "#{words}\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px")
+                      if distance < 20
+                        pixradius = parseFloat(synthetic.pixradius)
+                        @picker.paper.circle(x2, y2, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
+                        words = @feedback[Math.floor(Math.random() * @feedback.length)]
+                        @picker.paper.text(x2, y2 - 20, "#{words}\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px")
       
-      @saveClassification()
+        @saveClassification()
 
   module.exports = Classifier

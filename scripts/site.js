@@ -21,8 +21,8 @@
       tutorialSubjects: new Subject({
         id: ids.tutorialSubject,
         location: {
-          standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/tutorial.jpg",
-          thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/tutorial.jpg"
+          standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/tutorial.jpg",
+          thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/tutorial.jpg"
         }
       })
     });

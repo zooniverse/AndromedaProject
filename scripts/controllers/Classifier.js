@@ -268,11 +268,11 @@
         e.preventDefault();
         img = jQuery('.selection-area img');
         src = img.attr('src');
-        if (src.indexOf("standard") >= 0) {
-          src = src.replace('standard', 'F475W');
+        if (src.indexOf("color") >= 0) {
+          src = src.replace('color', 'F475W');
           target.text("Color");
         } else {
-          src = src.replace('F475W', 'standard');
+          src = src.replace('F475W', 'color');
           target.text("B/W");
         }
         return img.attr('src', src);
@@ -294,63 +294,65 @@
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
-        width = 240;
-        height = 309;
-        center = subject.metadata.center;
-        if (center != null) {
-          nx = parseFloat(center[0]);
-          ny = parseFloat(center[1]);
-          x = width * nx;
-          y = height * ny;
-          radius = 4;
-          this.overlay[0].width = width;
-          this.overlay[0].height = height;
-          context = this.overlay[0].getContext('2d');
-          context.beginPath();
-          context.arc(x, y, radius, 0, 2 * Math.PI, false);
-          context.fillStyle = "#FAFAFA";
-          context.fill();
-          context.lineWidth = 1;
-          context.strokeStyle = "#505050";
-          context.stroke();
-          context.closePath();
-          coords = subject.coords;
-          if (coords) {
-            this.feedbackBox.show();
-            this.feedbackBox.find('.value:nth-child(2)').text("" + (coords[0].toFixed(3)));
-            this.feedbackBox.find('.value:nth-child(5)').text("" + (coords[1].toFixed(3)));
-            this.feedbackBox.css({
-              top: "" + (y + 40) + "px",
-              left: "" + (x + 20) + "px"
-            });
+        if (subject) {
+          width = 240;
+          height = 309;
+          center = subject.metadata.center;
+          if (center != null) {
+            nx = parseFloat(center[0]);
+            ny = parseFloat(center[1]);
+            x = width * nx;
+            y = height * ny;
+            radius = 4;
+            this.overlay[0].width = width;
+            this.overlay[0].height = height;
+            context = this.overlay[0].getContext('2d');
+            context.beginPath();
+            context.arc(x, y, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = "#FAFAFA";
+            context.fill();
+            context.lineWidth = 1;
+            context.strokeStyle = "#505050";
+            context.stroke();
+            context.closePath();
+            coords = subject.coords;
+            if (coords) {
+              this.feedbackBox.show();
+              this.feedbackBox.find('.value:nth-child(2)').text("" + (coords[0].toFixed(3)));
+              this.feedbackBox.find('.value:nth-child(5)').text("" + (coords[1].toFixed(3)));
+              this.feedbackBox.css({
+                top: "" + (y + 40) + "px",
+                left: "" + (x + 20) + "px"
+              });
+            }
           }
-        }
-        synthetics = subject.metadata.synthetic;
-        if (synthetics) {
-          if ('annotations' in this.classification) {
-            _ref1 = this.classification.annotations;
-            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
-              annotation = _ref1[_i];
-              if ('value' in annotation) {
-                if ('species' in annotation.value) {
-                  if (annotation.value.species === 'cluster') {
-                    points = annotation.value.points;
-                    centerPoint = points[0];
-                    x1 = 725 * centerPoint.x;
-                    y1 = 500 * centerPoint.y;
-                    for (_j = 0, _len1 = synthetics.length; _j < _len1; _j++) {
-                      synthetic = synthetics[_j];
-                      x2 = parseFloat(synthetic.x);
-                      y2 = 500 - parseFloat(synthetic.y);
-                      distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-                      if (distance < 20) {
-                        pixradius = parseFloat(synthetic.pixradius);
-                        this.picker.paper.circle(x2, y2, pixradius).attr({
-                          stroke: '#CD3E20',
-                          'stroke-width': 4
-                        });
-                        words = this.feedback[Math.floor(Math.random() * this.feedback.length)];
-                        this.picker.paper.text(x2, y2 - 20, "" + words + "\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px");
+          synthetics = subject.metadata.synthetic;
+          if (synthetics) {
+            if ('annotations' in this.classification) {
+              _ref1 = this.classification.annotations;
+              for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+                annotation = _ref1[_i];
+                if ('value' in annotation) {
+                  if ('species' in annotation.value) {
+                    if (annotation.value.species === 'cluster') {
+                      points = annotation.value.points;
+                      centerPoint = points[0];
+                      x1 = 725 * centerPoint.x;
+                      y1 = 500 * centerPoint.y;
+                      for (_j = 0, _len1 = synthetics.length; _j < _len1; _j++) {
+                        synthetic = synthetics[_j];
+                        x2 = parseFloat(synthetic.x);
+                        y2 = 500 - parseFloat(synthetic.y);
+                        distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                        if (distance < 20) {
+                          pixradius = parseFloat(synthetic.pixradius);
+                          this.picker.paper.circle(x2, y2, pixradius).attr({
+                            stroke: '#CD3E20',
+                            'stroke-width': 4
+                          });
+                          words = this.feedback[Math.floor(Math.random() * this.feedback.length)];
+                          this.picker.paper.text(x2, y2 - 20, "" + words + "\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px");
+                        }
                       }
                     }
                   }
@@ -358,8 +360,8 @@
               }
             }
           }
+          return this.saveClassification();
         }
-        return this.saveClassification();
       };
 
       return Classifier;
