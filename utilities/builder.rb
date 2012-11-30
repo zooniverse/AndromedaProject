@@ -149,10 +149,8 @@ subjects.each_pair do |name, ids|
       tutorial: 'true',
       workflow_ids: [ workflow.id ],
       location: {
-        standard: "http://0.0.0.0:8000/standard/color/#{ name }.jpg",
-        thumbnail: "http://0.0.0.0:8000/thumbnail/color/#{ name }.jpg"
-        # standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-        # thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+        standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/#{ name }.jpg",
+        thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/#{ name }.jpg"
       }
     })
   else
@@ -168,10 +166,8 @@ subjects.each_pair do |name, ids|
       workflow_ids: [ workflow.id ],
       coords: coords,
       location: {
-        standard: "http://0.0.0.0:8000/standard/color/#{ name }.jpg",
-        thumbnail: "http://0.0.0.0:8000/thumbnail/color/#{ name }.jpg"
-        # standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-        # thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
+        standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/#{ name }.jpg",
+        thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/#{ name }.jpg"
       },
       metadata: {
         subimg: name,
