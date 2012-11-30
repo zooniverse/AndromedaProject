@@ -48,6 +48,25 @@
           xhr.open('GET', "/images/tutorial/"+files[i], false);
           xhr.send(null);
         }
+
+        files = [ 'B02-F12_2_F475W.jpg',
+                  'B02-F12_2_F475W_id.jpg',
+                  'B09-F09_12_F475W.jpg',
+                  'B09-F09_12_F475W_id.jpg',
+                  'B15-F03_26_F475W.jpg',
+                  'B15-F03_26_F475W_id.jpg',
+                  'B15-F09_18_F475W.jpg',
+                  'B15-F09_18_F475W_id.jpg',
+                  'B15-F09_26_F475W.jpg',
+                  'B15-F03_26_F475W_id.jpg',
+                  'B15-F11_19_F475W.jpg',
+                  'B15-F11_19_F475W_id.jpg',
+                  'B21-F14_21_F475W.jpg',
+                  'B21-F14_21_F475W_id.jpg'];
+        for (var i=0,len=files.length; i<len; i++) { 
+          xhr.open('GET', "/images/examples/"+files[i], false);
+          xhr.send(null);
+        }
       };
     </script>
   </head>
@@ -318,9 +337,11 @@
                     <h4>Identifying star clusters:</h4>
                     <p>Star clusters are the most compact groupings of stars visible in the PHAT images.  Star clusters have an amazing range of properties, ranging from scrawny newborn clusters to old massive globular clusters that are among the oldest objects known in the Universe.  In this page, you will learn how to identify star clusters.</p>     
 
+                    <h4>The Images</h4>
+                    <p>There are two types of images that can be used to find star clusters.  The first are color images, created by combining two separate exposures: one taken through a blue filter (centered at 475 nm) and the other taken through a red filter (centered at 814 nm).  The second type are black and white images, available by clicking the “B/W” button, which show an inverted version of the blue filter image.  In this guide, scroll over any color image to see its B/W version.  These single filter images are sometimes useful for picking out very faint clusters or to separate stars in possible clusters.</p>
+
                     <h4>What do star clusters look like?</h4>
-                    <p>All star clusters are dense groups of stars.  However, the exact
-appearance of a star cluster depends on five factors: (1) mass; (2) angular size; (3) age; (4) dust extinction; and (5) local environment. Let's take a look how each of these influence a star cluster's appearance.</p>
+                    <p>All star clusters are dense groups of stars.  However, the exact appearance of a star cluster depends on five factors: (1) mass; (2) angular size; (3) age; (4) dust extinction; and (5) local environment. Let's take a look how each of these influence a star cluster's appearance.</p>
 
                     <div class="left-col">
                       <div class="images">
@@ -332,7 +353,7 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
 
                     <div class="right-col">
                       <h4>1. Mass</h4>
-                      <p>Stellar clusters have a wide range in mass.  The most massive clusters have millions of stars and are easy to find.  The least massive clusters only have a few hundred stars, and are thus difficult to spot. </p>
+                      <p>Stellar clusters have a wide range in mass.  The most massive clusters have millions of stars and are easy to find. The least massive clusters only have a few hundred stars, with just a few of these being bright enough to appear in our images. These clusters are therefore difficult to spot.</p>
                     </div>
 
                     <div class="left-col">
@@ -346,7 +367,7 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
 
                     <div class="right-col">
                       <h4>2. Angular size</h4>
-                       <p>The typical star cluster is about 20 light years across, which in our images is about 30 pixels. However, the full population contains clusters whose sizes differ by more than a factor of ten.  If two clusters contain the same number of stars, the cluster with a larger diameter is harder to find, because its light is spread out over a larger area.</p>
+                       <p>The typical star cluster is about 20 light years across, which in our images is about 30 pixels. However Andromeda contains clusters whose sizes differ by more than a factor of ten.  If two clusters contain the same number of stars, the cluster with a larger diameter is harder to find, because its light is spread out over a larger area.</p>
                      </div>
 
                     <div class="left-col">
@@ -395,13 +416,48 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
 
                     <h3 class="smaller">Tips for identifying star clusters</h3>
 
-                    <h4>Look for the "fuzz" in the clusters</h4>
-                    <p>Star clusters contain stars of many different brightnesses.  When you look at an image, you can typically only see the brightest of these stars.  Thus, even a star cluster that has only 3-4 bright stars can have hundreds of fainter ones that individually go unseen, but which blend together to form a component of diffuse unresolved light. Because of this, one reliable signature of a star cluster is an enhancement in the background light,  giving them a “fuzzy” appearance.  This fuzz may be less apparent in the more extended diffuse clusters, where more of the faint stars can be detected individually.</p>
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/tutorial/pc428_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption">Examples of fuzz around a large star cluster.</span>
+                      </div>
+                    </div>
 
-                    <h4>Avoid "stellar associations"</h4>
-                    <p>Stars are grouped together on a wide range of size scales. In addition to the small dense star clusters shown above, there are also extended "loose associations" of stars.  These associations may be star clusters that have "dissolved" as the cluster stars drifted apart, or they may be loose collections of stars that formed in the same general area, but outside of a dense stellar cluster.  Loose associations can be easily identified using automated algorithms, so in this study, we ask volunteers to ignore dispersed, un-concentrated groups of stars and focus only on the compact clusters.</p>
+                    <div class="right-col">
+                      <h4>Look for the "fuzz" in the clusters</h4>
+                      <p>Star clusters contain stars of many different brightnesses.  When you look at an image, you can typically only see the brightest of these stars.  Thus, even a star cluster that has only 3-4 bright stars can have hundreds of fainter ones that individually go unseen, but which blend together to form a component of diffuse unresolved light. Because of this, one reliable signature of a star cluster is an enhancement in the background light,  giving them a “fuzzy” appearance.  This fuzz may be less apparent in the more extended diffuse clusters, where more of the faint stars can be detected individually.</p>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/tutorial/singlestar-1_color.jpg" class="medium_3 canToggle">
+                        <img src="images/tutorial/singlestar-2_color.jpg" class="medium_3 canToggle">
+                        <img src="images/tutorial/singlestar-3_color.jpg" class="medium_3 canToggle">
+                        <br/>
+                        <span class="caption">Examples of single bright stars.</span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                      <h4>Avoid single bright stars</h4>
+                      <p>A bright single star can sometimes be mistaken for a star cluster, particularly if it is surrounded by a 'halo' of light scattered by the telescope optics. The brightest of these can often be recognized by a small cross feature crossing through them, also caused by the telescope optics. In contrast to these single bright stars, a true star cluster will be tightly grouped with at least three or four individually visible stars.</p>
+                    </div>
+
+<!--                     <div class="left-col">
+                        <div class="images">
+                        <img src="images/tutorial/clst-assoc_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption">E</span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                      <h4>Avoid stellar associations</h4>
+                      <p>Stars are grouped together on a wide range of size scales. In addition to the small dense star clusters shown above, there are also extended "loose associations" of stars.  These associations may be star clusters that have "dissolved" as the cluster stars drifted apart, or they may be loose collections of stars that formed in the same general area, but outside of a dense stellar cluster.  Loose associations can be easily identified using automated algorithms, so in this study, we ask volunteers to ignore dispersed, un-concentrated groups of stars and focus only on the compact clusters.</p>
+                    </div> -->
                     
-                    <h3 class="smaller">...and finally</h3>
+                    <h3 class="smaller">Other Cluster Notes</h3>
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/fake-left_real-right_color.jpg" class="large canToggle">
@@ -417,7 +473,6 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                       <p>In addition to real clusters, we have inserted some highly-realistic synthetic clusters into the images.  We use these objects to understand which kinds of clusters can be detected in the images, and which will be overlooked.  Knowledge of these limits will be essential to deriving how Andromeda's system of stellar clusters evolves over time.</p> 
                     </div>
 
-                    <h3>HII Regions</h3>
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/hii_color.jpg" class="large canToggle">
@@ -427,6 +482,7 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
                     </div>
 
                     <div class="right-col">
+                      <h4>HII Regions</h4>
                       <p>Some of the youngest stars reach high enough temperatures that they emit very high energy ultraviolet light. This light can ionize the surrounding gas, which then glows at a number of distinct wavelengths. The glow from these "emission lines" is particularly strong in our blue image, leading to a diffuse blue nebula (see below). This nebula is known as an "HII Region" (pronounced "H-two"), because it contains ionized Hydrogen. If you see tight groups of stars associated with these blue nebulae, you should mark them as clusters.  However, not all HII regions contain or are associated with clusters, as is the case for the example presented here.</p>
                     </div>
                     
@@ -498,12 +554,13 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
 
                     <div class="right-col">
                       <h4>2. Charge Transfer Efficiency (CTE) Imperfections</h4>
-                      <p>The cameras used to take the images are charge-coupled devices or CCDs. When a photon hits a pixel in these cameras, it creates a free electron. These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal. This process is typically very efficient, moving &gt;99.999% of the electrons correctly. But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred. This inefficiency shows itself as small streaks in the image; some examples are shown in this image. This is especially noticeable in the least dense parts of our images.</p>   
+                      <p>The cameras used to take the images are charge-coupled devices or CCDs. When a photon hits a pixel in these cameras, it creates a free electron. These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal. This process is typically very efficient, moving &gt;99.999% of the electrons correctly. But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred. This inefficiency shows itself as small streaks in the image; some examples are shown in this image. This is especially noticeable in the least dense parts of our images, and particularly in the black and white images.</p>   
                     </div>        
 
                     <h3 class="smaller">Image artifacts you should mark:</h3>
-                    <p>There are a number of artifacts that we would like your help in finding.  These are features whose presence cannot be predicted, but that can corrupt our measurements if we do not know they're there.</p>
-
+                    <p>There are a number of artifacts that we would like your help in finding.  These are features whose presence cannot be predicted, but that can corrupt our measurements if we do not know about them.</p>
+                    <div style="clear:both;"></div>
+                    
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/sat_1_color.jpg" class="medium canToggle">
@@ -559,21 +616,134 @@ appearance of a star cluster depends on five factors: (1) mass; (2) angular size
 
                     <div class="left-col">
                         <div class="images">
-                        <img src="images/examples/01.png" class="large canToggle">
+                        <img src="images/examples/B02-F12_2_color.jpg" class="large canToggle">
                         <br/>
-                        <span class="caption">This image contains a saturated star - marked by a cross - and a lovely star cluster, to which we give an approximate size.</span>
+                        <span class="caption"></span>
                       </div>
                     </div>
 
                     <div class="right-col">
                         <div class="images">
-                        <img src="images/examples/01_annotated.png" class="large canToggle">
+                        <img src="images/examples/B02-F12_2_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B09-F09_12_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B09-F09_12_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F03_26_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F03_26_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F09_18_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F09_18_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F09_26_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F09_26_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F11_19_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B15-F11_19_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B18-F05_23_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B18-F05_23_color_id.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="left-col">
+                        <div class="images">
+                        <img src="images/examples/B21-F14_21_color.jpg" class="large canToggle">
+                        <br/>
+                        <span class="caption"></span>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="images">
+                        <img src="images/examples/B21-F14_21_color_id.jpg" class="large canToggle">
                         <br/>
                         <span class="caption"></span>
                       </div>
                     </div>
 
                     <div style="clear:both;"></div>
+
                     <a href="#!/classify" class="dive-in">Classify &rarr;</a>
                     
                   </div>
