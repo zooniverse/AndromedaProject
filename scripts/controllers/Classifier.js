@@ -27,7 +27,7 @@
 
       Classifier.prototype.indicator = null;
 
-      Classifier.prototype.feedback = ["PHAT Catch!", "Wicked!", "Nice!", "Congratulations!"];
+      Classifier.prototype.feedback = ["Well done", "Awesome", "Nice", "Congratulations"];
 
       Classifier.prototype.events = {
         'click .species .toggles button': 'changeSpecies',
@@ -289,7 +289,7 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var annotation, center, centerPoint, context, coords, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, y, y1, y2, _i, _j, _len, _len1, _ref1;
+        var anchor, annotation, center, centerPoint, context, coords, distance, height, nx, ny, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, xtext, y, y1, y2, _i, _j, _len, _len1, _ref1;
         $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
@@ -345,13 +345,25 @@
                         y2 = 500 - parseFloat(synthetic.y);
                         distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
                         if (distance < 20) {
-                          pixradius = parseFloat(synthetic.pixradius);
+                          if (x2 > 500) {
+                            xtext = x2 - pixradius - 8;
+                            anchor = 'end';
+                          } else {
+                            xtext = x2 + pixradius + 8;
+                            anchor = 'start';
+                          }
                           this.picker.paper.circle(x2, y2, pixradius).attr({
-                            stroke: '#CD3E20',
-                            'stroke-width': 4
+                            'stroke': '#F1F1F1',
+                            'stroke-width': 6
+                          });
+                          this.picker.paper.circle(x2, y2, pixradius).attr({
+                            'stroke': '#000000',
+                            'stroke-width': 3
                           });
                           words = this.feedback[Math.floor(Math.random() * this.feedback.length)];
-                          this.picker.paper.text(x2, y2 - 20, "" + words + "\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px");
+                          this.picker.paper.text(xtext, y2, "" + words + ", you found a synthetic cluster!").attr("font", "bold 11px 'Open Sans', sans-serif").attr("text-anchor", anchor).attr({
+                            "fill": "#F1F1F1"
+                          });
                         }
                       }
                     }
