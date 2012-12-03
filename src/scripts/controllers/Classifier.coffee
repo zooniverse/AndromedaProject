@@ -21,7 +21,7 @@ define (require, exports, module) ->
 
     picker: null
     indicator: null
-    feedback: ["PHAT Catch!", "Wicked!", "Nice!", "Congratulations!"]
+    feedback: ["Well done", "Awesome", "Nice", "Congratulations"]
     
     events:
       'click .species .toggles button'          : 'changeSpecies'
@@ -254,11 +254,17 @@ define (require, exports, module) ->
                       distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
                     
                       if distance < 20
-                        pixradius = parseFloat(synthetic.pixradius)
-                        @picker.paper.circle(x2, y2, pixradius).attr({stroke: '#CD3E20', 'stroke-width': 4})
+                        if x2 > 500
+                          xtext = x2 - pixradius - 8
+                          anchor = 'end'
+                        else
+                          xtext = x2 + pixradius + 8
+                          anchor = 'start'
+                        @picker.paper.circle(x2, y2, pixradius).attr({'stroke': '#F1F1F1', 'stroke-width': 6})
+                        @picker.paper.circle(x2, y2, pixradius).attr({'stroke': '#000000', 'stroke-width': 3})
                         words = @feedback[Math.floor(Math.random() * @feedback.length)]
-                        @picker.paper.text(x2, y2 - 20, "#{words}\nYou found a synthetic cluster!").attr("fill", "#DB9F00").attr("font-size", "16px")
-      
+                        @picker.paper.text(xtext, y2, "#{words}, you found a synthetic cluster!").attr("font", "bold 11px 'Open Sans', sans-serif").attr("text-anchor", anchor).attr({"fill": "#F1F1F1"})
+
         @saveClassification()
 
   module.exports = Classifier
