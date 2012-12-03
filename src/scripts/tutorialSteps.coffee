@@ -209,7 +209,7 @@ define (require, exports, module) ->
       content: [
         'Finally, you can use Talk to discuss images with other volunteers if you have questions or find something interesting.'
         'This concludes the tutorial. You can always consult the "Guide" page for more examples and detailed information.'
-        'Click Yes or No (bottom right) to proceed'
+        'Click No (bottom right) to proceed'
       ]
       attach: to: '.creature-picker', at: x: 0.5, y: 0.5
       style: width: 400
