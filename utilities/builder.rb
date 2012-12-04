@@ -58,14 +58,6 @@ CSV.foreach("#{dirname}/../data/subjects_with_ids.csv") do |row|
   subjects[subimg] = {'_id' => _id, 'zooniverse_id' => zooniverse_id}
 end
 
-# Beta Subjects
-beta = []
-File.open("#{dirname}/../data/beta_subjects.txt", 'r') do |f|
-  while (line = f.gets)
-    beta.push line.strip
-  end
-end
-
 # Parse for image centers
 centers = JSON.parse(File.read("#{dirname}/../data/image-centers.json"))
 
@@ -89,49 +81,6 @@ CSV.foreach("#{dirname}/../data/synthetic-clusters.csv") do |row|
 end
 
 #
-# Create Beta Subjects
-#
-# beta.each_with_index do |name, index|
-#   brickname = name.gsub('_F475W', '').gsub('_sc', '')
-#   
-#   _id = BSON::ObjectId(subjects[name]['_id'])
-#   zooniverse_id = subjects[name]['zooniverse_id']
-#   
-#   if name == 'tutorial'
-#     center = nil
-#     coords = nil
-#     center = nil
-#     year1clusters = nil
-#     synthetic_clusters = nil
-#   else
-#     center = centers[brickname]
-#     coords = [center["ra"], center["dec"]]
-#     center = [center["nx"], center["ny"]]
-#     synthetic_clusters = synthetic[brickname]
-#   end
-#   
-#   
-#   AndromedaSubject.create({
-#     _id: _id,
-#     zooniverse_id: zooniverse_id,
-#     project_id: project.id,
-#     workflow_ids: [ workflow.id ],
-#     coords: coords,
-#     location: {
-#       standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ name }.jpg",
-#       thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ name }.jpg"
-#     },
-#     metadata: {
-#       subimg: name,
-#       center: center,
-#       synthetic: synthetic_clusters
-#     }
-#   })
-#   
-#   puts "#{ index + 1 } / #{ beta.length }"
-# end
-
-#
 # Create All Subjects
 #
 index = 0
@@ -148,7 +97,7 @@ subjects.each_pair do |name, ids|
       project_id: project.id,
       tutorial: 'true',
       workflow_ids: [ workflow.id ],
-      coords: ["11.318979", "41.958249"],
+      coords: [11.318979, 41.958249],
       location: {
         standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/#{ name }.jpg",
         thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/#{ name }.jpg"

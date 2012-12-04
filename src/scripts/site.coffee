@@ -26,6 +26,10 @@ define (require, exports, module) ->
         location:
           standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/tutorial.jpg"
           thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/tutorial.jpg"
+        coords: [11.318979, 41.958249]
+        metadata:          
+          subimg: 'B17-F16_tutorial',
+          center: ["0.4701", "0.3234"]
   
   config.set
     name: 'Andromeda Project'

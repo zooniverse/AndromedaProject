@@ -9,13 +9,13 @@
       ids = {
         project: 'andromeda',
         workflow: '5052085f516bcb6b8a000003',
-        tutorialSubject: '509935796aa0e064b6000001'
+        tutorialSubject: '50b781751a320e4aac000001'
       };
     } else {
       ids = {
         project: 'andromeda',
         workflow: '5052085f516bcb6b8a000003',
-        tutorialSubject: '509935796aa0e064b6000001'
+        tutorialSubject: '50b781751a320e4aac000001'
       };
     }
     return module.exports = ids;
