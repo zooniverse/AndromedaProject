@@ -148,9 +148,14 @@ subjects.each_pair do |name, ids|
       project_id: project.id,
       tutorial: 'true',
       workflow_ids: [ workflow.id ],
+      coords: ["11.318979", "41.958249"],
       location: {
         standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/#{ name }.jpg",
         thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/#{ name }.jpg"
+      },
+      metadata: {
+        subimg: 'B17-F16_tutorial',
+        center: ["0.4701", "0.3234"]
       }
     })
   else

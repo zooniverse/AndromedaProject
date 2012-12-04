@@ -254,7 +254,7 @@
           }
         },
         onEnter: function() {
-          return jQuery('#classifier .selection-area img').attr('src', 'http://www.andromedaproject.org/subjects/F475W/color/tutorial.jpg');
+          return jQuery('#classifier .selection-area img').attr('src', 'http://www.andromedaproject.org/subjects/standard/F475W/tutorial.jpg');
         },
         style: {
           width: 400
