@@ -24,7 +24,7 @@ define (require, exports, module) ->
 
       @images ?= @el.children 'img, figure'
 
-      console.log 'New flipper with', @images
+      # console.log 'New flipper with', @images
 
       @el.append """
         <div class="flipper-controls">
@@ -42,7 +42,7 @@ define (require, exports, module) ->
       @current = parseInt @current, 10
 
       for image, i in @images
-        console.log image, @current, i
+        # console.log image, @current, i
         image = $(image)
         image.toggleClass @beforeClass, i <  @current
         image.toggleClass @activeClass, i is @current

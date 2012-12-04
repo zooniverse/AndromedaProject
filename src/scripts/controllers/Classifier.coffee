@@ -202,7 +202,6 @@ define (require, exports, module) ->
       
       # Show center of field on small map
       if subject
-        console.log subject
         width = 240
         height = 309
         center = subject.metadata.center
