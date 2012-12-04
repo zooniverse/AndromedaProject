@@ -4,17 +4,16 @@
   define(function(require, exports, module) {
     var dev, ids;
     dev = require('zooniverse/config').dev;
-    dev = true;
     if (dev) {
       ids = {
         project: 'andromeda',
-        workflow: '5052085f516bcb6b8a000003',
+        workflow: '50be4f973ae7409761000001',
         tutorialSubject: '50b781751a320e4aac000001'
       };
     } else {
       ids = {
         project: 'andromeda',
-        workflow: '5052085f516bcb6b8a000003',
+        workflow: '50be4f973ae7409761000001',
         tutorialSubject: '50b781751a320e4aac000001'
       };
     }

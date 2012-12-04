@@ -295,7 +295,6 @@
         this.steps.addClass('finished');
         subject = this.picker.classifier.workflow.selection[0];
         if (subject) {
-          console.log(subject);
           width = 240;
           height = 309;
           center = subject.metadata.center;

@@ -1,1 +1,154 @@
-.main [data-page="guide"] div.content{padding:5px 20px}.main [data-page="guide"] ul.right{position:absolute;top:10px;right:0;cursor:pointer}.main [data-page="guide"] h3.smaller{padding-top:20px;font-size:20px}.main [data-page="guide"] .dive-in{clear:both;border:1px solid #c1c1c1;border-radius:3px;box-shadow:inset 0px 1px 0px #fff,0 1px 3px rgba(0,0,0,0.1);color:black;float:right;margin-top:0px;font-size:14px;font-weight:600;padding:4px 10px;text-decoration:none;text-shadow:0px 1px 0px white;background:#EFEFEF}.main [data-page="guide"] div.images{text-align:left;width:700px;margin:0 0 10px 0;padding:5px 0px}.main [data-page="guide"] img.large{float:left;width:440px;padding:0 10px 10px 0}.main [data-page="guide"] img.medium{float:left;width:215px;padding:0 10px 10px 0}.main [data-page="guide"] img.medium_3{float:left;width:140px;padding:0 10px 10px 0}.main [data-page="guide"] img.small{float:left;width:138px}.main [data-page="guide"] .caption{padding:0 10px 10px 0;float:left;width:440px;font-size:0.9em;font-style:italic}.main [data-page="guide"] a.to-classify{background-image:-moz-linear-gradient(top, #eee, #eee);background-image:-ms-linear-gradient(top, #eee, #eee);background-image:-webkit-linear-gradient(top, #eee, #eee);background-image:linear-gradient(top, #eee, #eee);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#eee')";border:1px solid #ddd;border-radius:3px;box-shadow:0 1px 0 #ddd inset;color:#040d19;font-weight:bold;padding:5px 20px;position:absolute;right:20px;text-decoration:none;text-shadow:0 1px 0px #eee;top:65px}.main [data-page="guide"]>[data-page="data"]>section>section{border-top:1px solid #dbdbdb}.main [data-page="guide"]>[data-page="data"]>section>section .example{float:left;width:400px}.main [data-page="guide"]>[data-page="data"]>section>section .example+.content{float:left;margin:20px;width:560px}.main [data-page="guide"]>[data-page="data"]>section>section .example+.content>:first-child{margin-top:0}.main [data-page="guide"]>[data-page="type"]>section>section{border-top:1px solid #dbdbdb}.main [data-page="guide"]>[data-page="type"]>section>section:after{content:"";clear:both;display:table}.main [data-page="guide"]>[data-page="type"]>section>section .content{position:relative;margin:20px 20px 40px 20px}.main [data-page="guide"]>[data-page="type"]>section>section .content p{clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content h4{clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content h3{clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content .left-col{margin-top:20px;position:relative;float:left;width:450px;margin-right:10px;clear:both}.main [data-page="guide"]>[data-page="type"]>section>section .content .left-col>:first-child{margin-top:0}.main [data-page="guide"]>[data-page="type"]>section>section .content .right-col{margin-top:20px;position:relative;float:left;width:450px;margin-left:10px}.main [data-page="guide"]>[data-page="type"]>section>section .content .right-col>:first-child{margin-top:0}.main [data-page="guide"] [data-page="organizations"]{text-align:center}.main [data-page="guide"] [data-page="organizations"] figure{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:125px;margin:0 0 3px;line-height:140px;padding:10px;vertical-align:middle;width:19%}.main [data-page="guide"] [data-page="organizations"] figure img{max-height:100px;max-width:100px}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
+.main [data-page="guide"] div.content {
+  padding: 5px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000038}}
+.main [data-page="guide"] ul.right {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000315}}
+.main [data-page="guide"] h3.smaller {
+  padding-top: 20px;
+  font-size: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000320}}
+.main [data-page="guide"] .dive-in {
+  clear: both;
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 0px white, 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: black;
+  float: right;
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px white;
+  background: #EFEFEF; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000336}}
+.main [data-page="guide"] div.images {
+  text-align: left;
+  width: 700px;
+  margin: 0 0 10px 0;
+  padding: 5px 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000343}}
+.main [data-page="guide"] img.large {
+  float: left;
+  width: 440px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000349}}
+.main [data-page="guide"] img.medium {
+  float: left;
+  width: 215px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000355}}
+.main [data-page="guide"] img.medium_3 {
+  float: left;
+  width: 140px;
+  padding: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000361}}
+.main [data-page="guide"] img.small {
+  float: left;
+  width: 138px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000366}}
+.main [data-page="guide"] .caption {
+  padding: 0 10px 10px 0;
+  float: left;
+  width: 440px;
+  font-size: 0.9em;
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000374}}
+.main [data-page="guide"] a.to-classify {
+  background-image: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -ms-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #eeeeee);
+  background-image: linear-gradient(top, #eeeeee, #eeeeee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#eeeeee')";
+  border: 1px solid #dddddd;
+    border-radius: 3px;
+  box-shadow: 0 1px 0 #dddddd inset;
+  color: #040d19;
+  font-weight: bold;
+  padding: 5px 20px;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0px #eeeeee;
+  top: 65px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000393}}
+.main [data-page="guide"] > [data-page="data"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\0000396}}
+  .main [data-page="guide"] > [data-page="data"] > section > section .example {
+    float: left;
+    width: 400px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003100}}
+    .main [data-page="guide"] > [data-page="data"] > section > section .example + .content {
+      float: left;
+      margin: 20px;
+      width: 560px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003105}}
+      .main [data-page="guide"] > [data-page="data"] > section > section .example + .content > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003113}}
+.main [data-page="guide"] > [data-page="type"] > section > section {
+  border-top: 1px solid #dbdbdb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+  .main [data-page="guide"] > [data-page="type"] > section > section:after {
+    content: "";
+    clear: both;
+    display: table; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003117}}
+  .main [data-page="guide"] > [data-page="type"] > section > section .content {
+    position: relative;
+    margin: 20px 20px 40px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003121}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content p {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003125}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content h4 {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003129}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content h3 {
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003133}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content .left-col {
+      margin-top: 20px;
+      position: relative;
+      float: left;
+      width: 450px;
+      margin-right: 10px;
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003141}}
+      .main [data-page="guide"] > [data-page="type"] > section > section .content .left-col > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003146}}
+    .main [data-page="guide"] > [data-page="type"] > section > section .content .right-col {
+      margin-top: 20px;
+      position: relative;
+      float: left;
+      width: 450px;
+      margin-left: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003153}}
+      .main [data-page="guide"] > [data-page="type"] > section > section .content .right-col > :first-child {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003160}}
+.main [data-page="guide"] [data-page="organizations"] {
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003163}}
+  .main [data-page="guide"] [data-page="organizations"] figure {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 125px;
+    margin: 0 0 3px;
+    line-height: 140px;
+    padding: 10px;
+    vertical-align: middle;
+    width: 19%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003173}}
+    .main [data-page="guide"] [data-page="organizations"] figure img {
+      max-height: 100px;
+      max-width: 100px; }

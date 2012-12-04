@@ -47,7 +47,6 @@
         if ((_ref1 = this.images) == null) {
           this.images = this.el.children('img, figure');
         }
-        console.log('New flipper with', this.images);
         this.el.append("<div class=\"flipper-controls\">\n  <button name=\"prev\"><span class=\"icon\">&#9668;</span><span class=\"label\">Previous</span></button>\n  <button name=\"next\"><span class=\"label\">Next</span><span class=\"icon\">&#9658;</span></button>\n</div>");
         this.el.on('click', 'button[name="prev"]', this.prev);
         this.el.on('click', 'button[name="next"]', this.next);
@@ -62,7 +61,6 @@
         _results = [];
         for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
           image = _ref[i];
-          console.log(image, this.current, i);
           image = $(image);
           image.toggleClass(this.beforeClass, i < this.current);
           image.toggleClass(this.activeClass, i === this.current);

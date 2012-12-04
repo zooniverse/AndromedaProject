@@ -1,6 +1,5 @@
 define (require, exports, module) ->
   {dev} = require 'zooniverse/config'
-  dev = true
   
   if dev
     ids =
