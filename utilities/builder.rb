@@ -86,6 +86,7 @@ end
 index = 0
 subjects.each_pair do |name, ids|
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
+  puts brickname
   
   _id = BSON::ObjectId(ids['_id'])
   zooniverse_id = ids['zooniverse_id']
@@ -111,7 +112,13 @@ subjects.each_pair do |name, ids|
     center = centers[brickname]
     coords = [center["ra"], center["dec"]]
     center = [center["nx"], center["ny"]]
-    synthetic_clusters = synthetic[brickname]
+    
+    metadata = {}
+    metadata['subimg'] = name
+    metadata['center'] = center
+    if name.include? '_sc'
+      metadata['synthetic'] = synthetic[brickname]
+    end
     
     AndromedaSubject.create({
       _id: _id,
@@ -123,11 +130,7 @@ subjects.each_pair do |name, ids|
         standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/#{ name }.jpg",
         thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/#{ name }.jpg"
       },
-      metadata: {
-        subimg: name,
-        center: center,
-        synthetic: synthetic_clusters
-      }
+      metadata: metadata
     })
   end
   
