@@ -39,9 +39,9 @@
       function Classifier() {
         this.noMoreSubjects = __bind(this.noMoreSubjects, this);
 
-        this.nextSubjects = __bind(this.nextSubjects, this);
-
         this.goToTalk = __bind(this.goToTalk, this);
+
+        this.nextSubjects = __bind(this.nextSubjects, this);
 
         this.destroyFavorite = __bind(this.destroyFavorite, this);
 
@@ -173,18 +173,6 @@
         return favorite.destroy(true);
       };
 
-      Classifier.prototype.goToTalk = function() {
-        if (arraysMatch(this.workflow.selection, this.workflow.tutorialSubjects)) {
-          return new Dialog({
-            content: 'Tutorial subjects are not available in Talk at this time.',
-            className: 'classifier',
-            target: this.el
-          });
-        } else {
-          return open(this.workflow.selection[0].talkHref());
-        }
-      };
-
       Classifier.prototype.nextSubjects = function() {
         var dialog, _ref1,
           _this = this;
@@ -223,6 +211,55 @@
         return this.workflow.fetchSubjects().done(function() {
           return _this.workflow.selectNext();
         });
+      };
+
+      Classifier.prototype.goToTalk = function() {
+        var dialog, _ref1,
+          _this = this;
+        if (arraysMatch(this.workflow.selection, this.workflow.tutorialSubjects)) {
+          return new Dialog({
+            content: 'Tutorial subjects are not available in Talk at this time.',
+            className: 'classifier',
+            target: this.el
+          });
+        } else {
+          open(this.workflow.selection[0].talkHref());
+          if (((_ref1 = this.classificationsThisSession) === 3 || _ref1 === 9) && !User.current) {
+            dialog = new Dialog({
+              content: $('<div></div>').append('<p>You\'re not signed in!</p>\n<p>Sign in or create an account to receive credit for your work.</p>').html(),
+              buttons: [
+                {
+                  'Log in': true
+                }, {
+                  'No thanks': false
+                }
+              ],
+              target: this.el.parent(),
+              className: 'classifier',
+              done: function(logIn) {
+                var loginForm;
+                if (logIn) {
+                  dialog = new Dialog({
+                    content: '',
+                    buttons: [
+                      {
+                        'Cancel': null
+                      }
+                    ],
+                    target: _this.el.parent(),
+                    className: 'classifier'
+                  });
+                  loginForm = new LoginForm;
+                  dialog.contentContainer.append(loginForm.el);
+                  return dialog.reposition();
+                }
+              }
+            });
+          }
+          return this.workflow.fetchSubjects().done(function() {
+            return _this.workflow.selectNext();
+          });
+        }
       };
 
       Classifier.prototype.noMoreSubjects = function() {

@@ -199,7 +199,6 @@ define (require, exports, module) ->
       @steps.addClass 'finished'
       
       subject = @picker.classifier.workflow.selection[0]
-      
       # Show center of field on small map
       if subject
         width = 240
@@ -236,7 +235,7 @@ define (require, exports, module) ->
       
         # Check if subject has synthetics
         synthetics = subject.metadata.synthetic
-        if synthetics      
+        if synthetics
           # Check if user marked near a synthetic cluster
           if 'annotations' of @classification
             for annotation in @classification.annotations
@@ -252,7 +251,8 @@ define (require, exports, module) ->
                       x2 = parseFloat(synthetic.x)
                       y2 = 500 - parseFloat(synthetic.y)
                       distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
-                    
+                      pixradius = parseFloat(synthetic.pixradius)
+                      
                       if distance < 20
                         if x2 > 500
                           xtext = x2 - pixradius - 8

@@ -85,6 +85,7 @@ end
 #
 index = 0
 subjects.each_pair do |name, ids|
+  
   brickname = name.gsub('_F475W', '').gsub('_sc', '')
   puts brickname
   

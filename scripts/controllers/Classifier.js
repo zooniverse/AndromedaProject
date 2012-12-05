@@ -289,7 +289,7 @@
       };
 
       Classifier.prototype.finishSpecies = function() {
-        var anchor, annotation, center, centerPoint, context, coords, distance, height, nx, ny, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, xtext, y, y1, y2, _i, _j, _len, _len1, _ref1;
+        var anchor, annotation, center, centerPoint, context, coords, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, xtext, y, y1, y2, _i, _j, _len, _len1, _ref1;
         $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
@@ -344,6 +344,7 @@
                         x2 = parseFloat(synthetic.x);
                         y2 = 500 - parseFloat(synthetic.y);
                         distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                        pixradius = parseFloat(synthetic.pixradius);
                         if (distance < 20) {
                           if (x2 > 500) {
                             xtext = x2 - pixradius - 8;
