@@ -105,15 +105,6 @@ define (require, exports, module) ->
       favorite = (fav for fav in User.current.favorites when arraysMatch fav.subjects, @workflow.selection)[0]
       favorite.destroy true
 
-    goToTalk: =>
-      if arraysMatch @workflow.selection, @workflow.tutorialSubjects
-        new Dialog
-          content: 'Tutorial subjects are not available in Talk at this time.'
-          className: 'classifier'
-          target: @el
-      else
-        open @workflow.selection[0].talkHref()
-
     nextSubjects: =>
       if @classificationsThisSession in [3, 9] and not User.current
         dialog = new Dialog
@@ -138,6 +129,38 @@ define (require, exports, module) ->
               dialog.reposition()
 
       @workflow.fetchSubjects().done => @workflow.selectNext()
+
+    goToTalk: =>
+      if arraysMatch @workflow.selection, @workflow.tutorialSubjects
+        new Dialog
+          content: 'Tutorial subjects are not available in Talk at this time.'
+          className: 'classifier'
+          target: @el
+      else
+        open @workflow.selection[0].talkHref()
+        if @classificationsThisSession in [3, 9] and not User.current
+          dialog = new Dialog
+            content: $('<div></div>').append('''
+              <p>You're not signed in!</p>
+              <p>Sign in or create an account to receive credit for your work.</p>
+            ''').html()
+            buttons: [{'Log in': true}, {'No thanks': false}]
+            target: @el.parent()
+            className: 'classifier'
+            done: (logIn) =>
+              if logIn
+                dialog = new Dialog
+                  content: ''
+                  buttons: [{'Cancel': null}]
+                  target: @el.parent()
+                  className: 'classifier'
+
+                loginForm = new LoginForm
+
+                dialog.contentContainer.append loginForm.el
+                dialog.reposition()
+
+        @workflow.fetchSubjects().done => @workflow.selectNext()
 
     noMoreSubjects: =>
       alert 'We\'ve run out of subjects for you!' # TODO: Make this much nicer.
