@@ -66,9 +66,14 @@ define (require, exports, module) ->
       $(document).on 'create-half-axes-marker', (e) =>
         $('.species button[data-marker]').attr('disabled', true)
       $(document).on 'create-axes-marker', (e) =>
+        console.log 'received create-axes-marker'
         $('.species button[data-marker]').attr('disabled', false)
 
     reset: =>
+      # Fix for when reset is called midst cross marking
+      @el.trigger 'create-axes-marker'
+      @resetStrays()
+      
       @paper.clear()
       @image.attr 'src', @classifier.workflow.selection[0].location.standard
       subject = @classifier.workflow.selection[0]

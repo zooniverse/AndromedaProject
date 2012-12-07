@@ -117,12 +117,15 @@
           return $('.species button[data-marker]').attr('disabled', true);
         });
         return $(document).on('create-axes-marker', function(e) {
+          console.log('received create-axes-marker');
           return $('.species button[data-marker]').attr('disabled', false);
         });
       };
 
       CreaturePicker.prototype.reset = function() {
         var subject;
+        this.el.trigger('create-axes-marker');
+        this.resetStrays();
         this.paper.clear();
         this.image.attr('src', this.classifier.workflow.selection[0].location.standard);
         return subject = this.classifier.workflow.selection[0];
