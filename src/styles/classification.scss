@@ -130,13 +130,32 @@
 		}
 	}
 
+	> .completion-note {
+		background: $white;
+		padding: $gutter-width/2;
+		border-radius: 0 3px 3px 0;
+		box-shadow: 0 3px 3px -3px transparentize($black, 0.33);
+		position: absolute;
+		left: 0;
+		top: 515px;
+		text-align: center;
+		width: 980px;
+    	z-index: 0;
+    	background: $white;
+
+    	> p {
+    		margin: 0;
+    		padding: 0;
+    	}
+    }
+
 	> .options {
 		height: $classification-height + 10;
 		position: absolute;
 		right: 0;
 		top: 0;
 		width: $quarter-width + $gutter-width;
-    z-index: 0;
+    	z-index: 0;
     
 		> .steps {
 			@include box-sizing(border-box);

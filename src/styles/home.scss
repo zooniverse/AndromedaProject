@@ -43,5 +43,24 @@
   .dive-in:active {
     box-shadow: inset 0px 0px 2px rgba(0,0,0,.2);
   }
+
+  .completion-note {
+    background: $white;
+    padding: $gutter-width/2;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 3px 3px -3px transparentize($black, 0.33);
+    position: absolute;
+    left: 0;
+    top: 515px;
+    text-align: center;
+    width: 980px;
+      z-index: 0;
+      background: $white;
+
+      > p {
+        margin: 0;
+        padding: 0;
+      }
+    }
   
 }
