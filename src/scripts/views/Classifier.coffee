@@ -58,8 +58,4 @@ define (require, exports, module) ->
         </div>
 			</div>
 		</div>
-		<div class="completion-note">
-			<p>Round #1 science is complete! You can continue to classify, but we no longer need further work on these images. <a href="http://blog.andromedaproject.org">Learn more here</a>.</p>
-			<p>We'll have more data in 2013. Meanwhile there are other Zooniverse projects that need your help. Visit <a href="http://www.zooniverse.org">zooniverse.org</a> for the complete list.</p>
-		</div>
 	'''

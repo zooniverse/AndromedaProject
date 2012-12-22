@@ -130,6 +130,22 @@ $full-width: ($twelfth-width * 12) + ($gutter-width * 11);
   }
 }
 
+.completion-note {
+  padding: $gutter-width/2;
+  margin-bottom: 5px;
+  border-radius: 0;
+  box-shadow: 0 3px 3px -3px transparentize($black, 0.33);
+  left: 0;
+  text-align: center;
+  width: 980px;
+  z-index: 0;
+  background: #ff9540;  
+    > p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
 @mixin contain-floats {
   &:after {
     content: "";
