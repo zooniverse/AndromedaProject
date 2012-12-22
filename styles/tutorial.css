@@ -1,4 +1,20 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003133}}
+.completion-note {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 0;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.67);
+  left: 0;
+  text-align: center;
+  width: 980px;
+  z-index: 0;
+  background: #ff9540; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003143}}
+  .completion-note > p {
+    margin: 0;
+    padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\000033}}
 .tutorial-step {
   -moz-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
   -ms-transition: left 0.25s ease-in 0.125s, top 0.25s ease-out;
@@ -12,14 +28,14 @@
   font-weight: bold;
   position: absolute;
   z-index: 10; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000318}}
   .tutorial-step .controls {
     opacity: 0;
     position: absolute;
     right: 0;
     text-align: right;
     top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000325}}
     .tutorial-step .controls button {
       background: transparent;
       border: 0;
@@ -33,20 +49,20 @@
       opacity: 0.5;
       padding: 0;
       width: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000343}}
     .tutorial-step .controls:hover button {
       opacity: 0.9; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000349}}
   .tutorial-step .message {
     margin: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000352}}
     .tutorial-step .message .heading {
       font-size: 16px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000357}}
   .tutorial-step .continue {
     margin-top: 20px;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000361}}
     .tutorial-step .continue button {
       background-image: -moz-linear-gradient(top, #f1f1f1, #e3e3e3);
       background-image: -ms-linear-gradient(top, #f1f1f1, #e3e3e3);
@@ -62,77 +78,77 @@
       font-weight: inherit;
       margin: 0;
       padding: 5px 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000378}}
   .tutorial-step .arrow {
     border: 25px solid transparent;
     position: absolute;
     z-index: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000386}}
     .tutorial-step .arrow.down-center {
       border-top-color: #040d19;
       border-bottom-width: 0;
       left: 50%;
       margin-left: -25px;
       top: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\0000394}}
     .tutorial-step .arrow.up-center {
       border-bottom-color: #040d19;
       border-top-width: 0;
       left: 50%;
       margin-left: -25px;
       bottom: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003102}}
     .tutorial-step .arrow.right-middle {
       border-left-color: #040d19;
       border-right-width: 0;
       left: 100%;
       margin-top: -25px;
       top: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003110}}
     .tutorial-step .arrow.left-middle {
       border-right-color: #040d19;
       border-left-width: 0;
       right: 100%;
       margin-top: -25px;
       top: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003119}}
   .tutorial-step .inner-arrow {
     border: 19px solid transparent;
     position: absolute;
     z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003127}}
     .tutorial-step .inner-arrow.down-center {
       border-top-color: #f1f1f1;
       border-bottom-width: 0;
       left: 50%;
       margin-left: -19px;
       top: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003135}}
     .tutorial-step .inner-arrow.up-center {
       border-bottom-color: #f1f1f1;
       border-top-width: 0;
       left: 50%;
       margin-left: -19px;
       bottom: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003143}}
     .tutorial-step .inner-arrow.right-middle {
       border-left-color: #f1f1f1;
       border-right-width: 0;
       left: 100%;
       margin-top: -19px;
       top: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003151}}
     .tutorial-step .inner-arrow.left-middle {
       border-right-color: #f1f1f1;
       border-left-width: 0;
       right: 100%;
       margin-top: -19px;
       top: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003161}}
   .tutorial-step:hover .controls {
     opacity: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/tutorial\.scss}line{font-family:\00003167}}
 .tutorial-blocker {
   cursor: not-allowed;
   filter: alpha(opacity=1);

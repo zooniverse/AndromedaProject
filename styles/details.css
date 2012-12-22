@@ -1,57 +1,73 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003133}}
+.completion-note {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 0;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.67);
+  left: 0;
+  text-align: center;
+  width: 980px;
+  z-index: 0;
+  background: #ff9540; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003143}}
+  .completion-note > p {
+    margin: 0;
+    padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000033}}
 .main .details {
   font-size: 12px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000036}}
   .main .details [data-page] {
     display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\000039}}
     .main .details [data-page].active {
       display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000314}}
   .main .details h3 {
     font-size: 35px;
     font-weight: normal;
     margin: 0.5em 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000322}}
   .main .details h4 {
     font-size: 14px;
     font-weight: bold;
     margin: 1.5em 0 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000330}}
   .main .details p {
     margin: 0 0 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000335}}
   .main .details > nav > ul {
     margin: 0;
     padding: 0 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000339}}
     .main .details > nav > ul > li {
       display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000342}}
       .main .details > nav > ul > li a {
         color: inherit;
         display: inline-block;
         font-size: 12px;
         padding: 10px;
         text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000349}}
         .main .details > nav > ul > li a.active {
           font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000359}}
   .main .details > section > nav > ul {
     display: table;
     margin: 0;
     padding: 0;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000365}}
     .main .details > section > nav > ul > li {
       border-left: 1px solid #dbdbdb;
       display: table-cell;
       width: 10%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000370}}
       .main .details > section > nav > ul > li:first-child {
         border-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000374}}
       .main .details > section > nav > ul > li > a {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -64,44 +80,44 @@
         text-align: center;
         text-decoration: none;
         text-transform: uppercase; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000387}}
         .main .details > section > nav > ul > li > a.active {
           background-image: -moz-linear-gradient(top, #e1e1e1, #f1f1f1);
           background-image: -ms-linear-gradient(top, #e1e1e1, #f1f1f1);
           background-image: -webkit-linear-gradient(top, #e1e1e1, #f1f1f1);
           background-image: linear-gradient(top, #e1e1e1, #f1f1f1);
           -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1e1e1', endColorstr='#f1f1f1')"; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000392}}
       .main .details > section > nav > ul > li:nth-child(1n) > a {
         border-top-color: #db9f00; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\0000396}}
         .main .details > section > nav > ul > li:nth-child(1n) > a:hover, .main .details > section > nav > ul > li:nth-child(1n) > a.active {
           color: #db9f00; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003101}}
       .main .details > section > nav > ul > li:nth-child(2n) > a {
         border-top-color: #a20f32; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003105}}
         .main .details > section > nav > ul > li:nth-child(2n) > a:hover, .main .details > section > nav > ul > li:nth-child(2n) > a.active {
           color: #a20f32; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003110}}
       .main .details > section > nav > ul > li:nth-child(3n) > a {
         border-top-color: #9c62ee; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003114}}
         .main .details > section > nav > ul > li:nth-child(3n) > a:hover, .main .details > section > nav > ul > li:nth-child(3n) > a.active {
           color: #9c62ee; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003119}}
       .main .details > section > nav > ul > li:nth-child(4n) > a {
         border-top-color: #097d4e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003123}}
         .main .details > section > nav > ul > li:nth-child(4n) > a:hover, .main .details > section > nav > ul > li:nth-child(4n) > a.active {
           color: #097d4e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003128}}
       .main .details > section > nav > ul > li:nth-child(5n) > a {
         border-top-color: #3d75db; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/details\.scss}line{font-family:\00003132}}
         .main .details > section > nav > ul > li:nth-child(5n) > a:hover, .main .details > section > nav > ul > li:nth-child(5n) > a.active {
           color: #3d75db; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003150}}
   .main .details > section > section:after {
     content: "";
     clear: both;

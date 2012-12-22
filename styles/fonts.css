@@ -1,3 +1,19 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003133}}
+.completion-note {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 0;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.67);
+  left: 0;
+  text-align: center;
+  width: 980px;
+  z-index: 0;
+  background: #ff9540; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003143}}
+  .completion-note > p {
+    margin: 0;
+    padding: 0; }
+
 @font-face {
   font-family: "Titillium";
   font-weight: 100;

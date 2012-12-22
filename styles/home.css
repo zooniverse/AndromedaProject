@@ -1,21 +1,37 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003133}}
+.completion-note {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 0;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.67);
+  left: 0;
+  text-align: center;
+  width: 980px;
+  z-index: 0;
+  background: #ff9540; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003143}}
+  .completion-note > p {
+    margin: 0;
+    padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\000034}}
 .main [data-page="home"] #banner {
   border: 3px solid #ffffff;
   height: 400px;
   width: 984px;
   margin-bottom: 0px;
   padding: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000312}}
 .main [data-page="home"] h2 {
   font-size: 1.7em;
   font-weight: 800; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000317}}
 .main [data-page="home"] p {
   font-size: 0.9em;
   font-weight: 400;
   margin: 0;
   padding: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000324}}
 .main [data-page="home"] .dive-in {
   border: 1px solid #c1c1c1;
   border-radius: 3px;
@@ -29,9 +45,9 @@
   text-decoration: none;
   text-shadow: 0px 1px 0px white;
   background: #EFEFEF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000339}}
 .main [data-page="home"] .dive-in:hover {
   border: 1px solid #979797; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/akapadia\/Projects\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/home\.scss}line{font-family:\0000343}}
 .main [data-page="home"] .dive-in:active {
   box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2); }
