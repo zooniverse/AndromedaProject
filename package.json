@@ -1,0 +1,11 @@
+{
+  "name": "andromeda-project",
+  "description": "Find star clusters.",
+  "author": "Zooniverse <support@zooniverse.org>",
+  "version": "0.0.1",
+  "devDependencies": {
+    "requirejs": "2.0.0",
+    "coffee-script": "1.4.0"
+  },
+  "engine": "node >= 0.10.12"
+}
