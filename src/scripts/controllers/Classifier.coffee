@@ -84,7 +84,7 @@ define (require, exports, module) ->
       
       @steps.removeClass 'finished'
       $('#toggleCol').text('B/W')
-
+      
       delay 500, =>
         @updateFavoriteButtons()
         
@@ -193,6 +193,7 @@ define (require, exports, module) ->
         $('svg').show()
     
     finishSpecies: =>
+      console.log "finishSpecies"
       
       $('svg').show()
       @picker.setDisabled true

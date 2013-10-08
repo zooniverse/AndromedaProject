@@ -290,6 +290,7 @@
 
       Classifier.prototype.finishSpecies = function() {
         var anchor, annotation, center, centerPoint, context, coords, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, xtext, y, y1, y2, _i, _j, _len, _len1, _ref1;
+        console.log("finishSpecies");
         $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');
