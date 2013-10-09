@@ -1,5 +1,7 @@
 
 require 'bson'
+require 'json'
+
 
 # Base ID for Andromeda Project subjects
 @base_id = '50b781761a320e4aac'
@@ -35,9 +37,10 @@ end
 
 @data_path = File::join(File.dirname(__FILE__), '..', 'data')
 
-phat_subjects = Dir["#{ @data_path }/jpg_final_2/*.jpg"]
-phat_synthetics = Dir["#{ @data_path }/jpg_fcz2/*.jpg"]
-archival_subjects = Dir["#{ @data_path }/jpg_strip/*.jpg"]
+# Using glob to exclude F475W and F555W images
+phat_subjects = Dir["#{ @data_path }/jpg_final_2/*[0-9].jpg"]
+phat_synthetics = Dir["#{ @data_path }/jpg_fcz2/*[0-9].jpg"]
+archival_subjects = Dir["#{ @data_path }/jpg_strip/*[0-9].jpg"]
 archival_synthetics = []
 
 phat_subjects.map! { |subject| File.basename(subject, '.jpg') }
@@ -46,6 +49,10 @@ archival_subjects.map! { |subject| File.basename(subject, '.jpg') }
 
 subjects = phat_subjects.concat(phat_synthetics)
 subjects.sort!
+
+# Parse for image centers
+center = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/image-centers-round-2.json") )
+synthetics = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/synthetic-clusters-round-2.json") )
 
 subjects.each do |subject|
   puts "#{subject}, #{ZooniverseIdGenerator.next_id}, #{next_id}"

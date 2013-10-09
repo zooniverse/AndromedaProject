@@ -81,20 +81,31 @@ def getSyntheticCatalog():
     """
     Convert FITS table of synthetic clusters to CSV
     """
-    data_file = os.path.join('..', 'data', 'phat_fcz-directory.fits')
-    data = pyfits.getdata(data_file)
+    data_dir = os.path.join('..', 'data')
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_fcz2-directory.fits'))
     
-    with open('synthetic-clusters.csv', 'w') as f:
-        for row in data:
-            subimg = fixSubImg(row[1])
-            fcid = row[2]
-            x = row[3]
-            y = row[4]
-            ra = row[9]
-            dec = row[10]
-            reff = row[17]
-            pixradius = reff * 13.12
-            f.write("%s, %s, %s, %s, %s, %s, %s, %s\n" % (subimg, fcid, x, y, ra, dec, reff, pixradius))
+    SUBIMG = data['SUBIMG']
+    FCID = data['FCID']
+    X = data['X']
+    Y = data['Y']
+    RA = data['RA']
+    DEC = data['DEC']
+    REFF = data['REFF']
+    
+    obj = {}
+    for index, subimg in enumerate(SUBIMG):
+      obj[subimg] = {
+        "fcid": str(FCID[index]),
+        "x": str(X[index]),
+        "y": str(Y[index]),
+        "ra": str(RA[index]),
+        "dec": str(DEC[index]),
+        "reff": str(REFF[index])
+      }
+    
+    output = open(os.path.join(data_dir, 'synthetic-clusters-round-2.json'), 'w')
+    output.write(json.dumps(obj))
+    output.close()
 
 
 def getBetaSubjects():
