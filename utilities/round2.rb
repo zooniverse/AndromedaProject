@@ -37,6 +37,32 @@ end
 
 @data_path = File::join(File.dirname(__FILE__), '..', 'data')
 
+project = AndromedaSubject.project
+
+AndromedaSubject.destroy_all
+project.workflows.destroy_all if project
+project.destroy if project
+
+if Rails.env == "development"
+  redis = Ouroboros.redis["andromeda_#{ Rails.env }"]
+  redis.keys('andromeda_*').each do |key|
+    redis.del key
+  end
+end
+
+project = Project.where(name: 'andromeda').first || Project.create({
+  name: 'andromeda'
+})
+
+workflow = Workflow.where(name: 'andromeda').first || Workflow.create({
+  _id: BSON::ObjectId('5052085f516bcb6b8a000003'),
+  project_id: project.id,
+  primary: false,
+  name: 'Andromeda',
+  description: 'Andromeda',
+  entities: []
+})
+
 # Using glob to exclude F475W and F555W images
 phat_subjects = Dir["#{ @data_path }/jpg_final_2/*[0-9].jpg"]
 phat_synthetics = Dir["#{ @data_path }/jpg_fcz2/*[0-9].jpg"]
@@ -44,16 +70,45 @@ archival_subjects = Dir["#{ @data_path }/jpg_strip/*[0-9].jpg"]
 archival_synthetics = []
 
 phat_subjects.map! { |subject| File.basename(subject, '.jpg') }
-phat_synthetics.map! { |subject| "#{File.basename(subject, '.jpg')}_sc" }
+phat_synthetics.map! { |subject| "#{File.basename(subject, '.jpg')}" }
 archival_subjects.map! { |subject| File.basename(subject, '.jpg') }
 
-subjects = phat_subjects.concat(phat_synthetics)
+subjects = phat_subjects.concat(phat_synthetics).concat(archival_subjects)
 subjects.sort!
 
 # Parse for image centers
-center = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/image-centers-round-2.json") )
+centers = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/image-centers-round-2.json") )
 synthetics = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/synthetic-clusters-round-2.json") )
 
 subjects.each do |subject|
-  puts "#{subject}, #{ZooniverseIdGenerator.next_id}, #{next_id}"
+  # puts "#{subject}, #{ZooniverseIdGenerator.next_id}, #{next_id}"
+  puts "#{subject}\t#{centers[subject]}"
+  
+  center = centers[subject]
+  synthetic = synthetics[subject]
+  
+  coords = [ center["ra"], center["dec"] ]
+  nxny = [ center["nx"], center["ny"] ]
+  
+  metadata = {
+    subimg: subject,
+    center: nxny
+  }
+  metadata[synthetic] = synthetic if synthetic
+  
+  puts AndromedaSubject.create({
+    _id: next_id,
+    zooniverse_id: ZooniverseIdGenerator.next_id,
+    project_id: project.id,
+    workflow_ids: [ workflow.id ],
+    coords: coords,
+    location: {
+      standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/#{ subject }.jpg",
+      inverted: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/inverted/#{ subject }.jpg",
+      thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/#{ subject }.jpg"
+    },
+    metadata: metadata
+  })
+  
+  
 end

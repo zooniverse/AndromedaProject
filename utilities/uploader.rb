@@ -11,7 +11,6 @@ AWS.config access_key_id: ENV['S3_ACCESS_ID'], secret_access_key: ENV['S3_SECRET
 
 def upload(path, type, synthetic)
   basename = File.basename(path, '.jpg')
-  basename += '_sc' if synthetic
   basename.gsub!('_F475W', '')
   basename.gsub!('_F555W', '')
   
