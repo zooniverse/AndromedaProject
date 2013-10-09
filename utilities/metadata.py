@@ -2,7 +2,8 @@ import os
 import sys
 import json
 import numpy
-import pyfits
+from astropy.io import fits as pyfits
+
 
 def fixSubImg(subimg):
     [field, subimg] = subimg.split('_')
@@ -33,15 +34,25 @@ def header2json():
 def subimage_centers():
     
     data_dir = os.path.join('..', 'data')
-    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs_v2.fits'))
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs2.fits'))
     
-    d = {}
-    for row in data:
-        img_id = fixSubImg(row[3])
-        [nx, ny] = row[8], row[9]
-        d[img_id] = {'nx': str(nx), 'ny': str(ny), 'ra': row[4], 'dec': row[5]}
-    output = open(os.path.join(data_dir, 'image-centers.json'), 'w')
-    output.write(json.dumps(d))
+    FILENAME = data['FILENAME']
+    RA = data['RA']
+    DEC = data['DEC']
+    NX = data['NX']
+    NY = data['NY']
+    
+    obj = {}
+    for index, img_id in enumerate(FILENAME):
+      obj[img_id] = {
+        "ra": RA[index],
+        "dec": DEC[index],
+        "nx": str(NX[index]),
+        "ny": str(NY[index])
+      }
+    
+    output = open(os.path.join(data_dir, 'image-centers-round-2.json'), 'w')
+    output.write(json.dumps(obj))
     output.close()
 
 
