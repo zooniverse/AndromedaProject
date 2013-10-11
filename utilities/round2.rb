@@ -83,6 +83,7 @@ synthetics = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/synthetic-
 subjects.each do |subject|
   # puts "#{subject}, #{ZooniverseIdGenerator.next_id}, #{next_id}"
   puts "#{subject}\t#{centers[subject]}"
+  puts "#{subject}\t#{synthetics[subject]}"
   
   center = centers[subject]
   synthetic = synthetics[subject]
@@ -94,7 +95,7 @@ subjects.each do |subject|
     subimg: subject,
     center: nxny
   }
-  metadata[synthetic] = synthetic if synthetic
+  metadata['synthetic'] = synthetic if synthetic
   
   puts AndromedaSubject.create({
     _id: next_id,
@@ -112,3 +113,5 @@ subjects.each do |subject|
   
   
 end
+
+SubjectImporter.perform_async 'AndromedaSubject'

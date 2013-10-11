@@ -176,11 +176,11 @@ define (require, exports, module) ->
       e.preventDefault()
       img = jQuery('.selection-area img')
       src = img.attr('src')
-      if src.indexOf("color") >= 0
-        src = src.replace('color', 'F475W')
+      if src.indexOf("standard") > -1
+        src = src.replace('standard', 'inverted')
         target.text("Color")
       else
-        src = src.replace('F475W', 'color')
+        src = src.replace('inverted', 'standard')
         target.text("B/W")
       img.attr('src', src)
 
@@ -193,7 +193,6 @@ define (require, exports, module) ->
         $('svg').show()
     
     finishSpecies: =>
-      console.log "finishSpecies"
       
       $('svg').show()
       @picker.setDisabled true

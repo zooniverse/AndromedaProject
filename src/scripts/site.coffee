@@ -24,8 +24,8 @@ define (require, exports, module) ->
     tutorialSubjects: new Subject
         id: ids.tutorialSubject
         location:
-          standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/color/tutorial.jpg"
-          thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/color/tutorial.jpg"
+          standard: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/standard/tutorial.jpg"
+          thumbnail: "http://www.andromedaproject.org.s3.amazonaws.com/subjects/thumbnail/tutorial.jpg"
         coords: [11.318979, 41.958249]
         metadata:          
           subimg: 'B17-F16_tutorial',

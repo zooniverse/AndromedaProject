@@ -268,11 +268,11 @@
         e.preventDefault();
         img = jQuery('.selection-area img');
         src = img.attr('src');
-        if (src.indexOf("color") >= 0) {
-          src = src.replace('color', 'F475W');
+        if (src.indexOf("standard") > -1) {
+          src = src.replace('standard', 'inverted');
           target.text("Color");
         } else {
-          src = src.replace('F475W', 'color');
+          src = src.replace('inverted', 'standard');
           target.text("B/W");
         }
         return img.attr('src', src);
@@ -290,7 +290,6 @@
 
       Classifier.prototype.finishSpecies = function() {
         var anchor, annotation, center, centerPoint, context, coords, distance, height, nx, ny, pixradius, points, radius, subject, synthetic, synthetics, width, words, x, x1, x2, xtext, y, y1, y2, _i, _j, _len, _len1, _ref1;
-        console.log("finishSpecies");
         $('svg').show();
         this.picker.setDisabled(true);
         this.steps.addClass('finished');

@@ -34,7 +34,7 @@ def header2json():
 def subimage_centers():
     
     data_dir = os.path.join('..', 'data')
-    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs2_v3.fits'))
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs2_v4.fits'))
     
     FILENAME = data['FILENAME']
     RA = data['RA']
@@ -92,19 +92,22 @@ def getSyntheticCatalog():
     DEC = data['DEC']
     REFF = data['REFF']
     
-    obj = {}
+    synthetics = {}
     for index, subimg in enumerate(SUBIMG):
-      obj[subimg] = {
+      if subimg not in synthetics:
+        synthetics[subimg] = []
+      
+      obj = {
         "fcid": str(FCID[index]),
         "x": str(X[index]),
         "y": str(Y[index]),
-        "ra": str(RA[index]),
-        "dec": str(DEC[index]),
-        "reff": str(REFF[index])
+        "reff": str(REFF[index]),
+        "pixradius": str(REFF[index] * 13.12)
       }
+      synthetics[subimg].append(obj)
     
     output = open(os.path.join(data_dir, 'synthetic-clusters-round-2.json'), 'w')
-    output.write(json.dumps(obj))
+    output.write( json.dumps(synthetics) )
     output.close()
 
 

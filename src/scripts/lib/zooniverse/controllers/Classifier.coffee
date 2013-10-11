@@ -66,7 +66,7 @@ define (require, exports, module) ->
         subjects: @workflow.selection
 
       @classification.bind 'change', @render
-
+      
       # Delay so extending classes can modify the classification before rendering
       delay => @classification.trigger 'change'
 
@@ -98,7 +98,6 @@ define (require, exports, module) ->
       favorite = new Favorite
         subjects: @workflow.selection
         projectID: @workflow.project.id
-      console.log favorite
       favorite.persist()
 
     destroyFavorite: =>
@@ -127,7 +126,7 @@ define (require, exports, module) ->
 
               dialog.contentContainer.append loginForm.el
               dialog.reposition()
-
+            
       @workflow.fetchSubjects().done => @workflow.selectNext()
 
     goToTalk: =>
