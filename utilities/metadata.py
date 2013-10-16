@@ -34,7 +34,7 @@ def header2json():
 def subimage_centers():
     
     data_dir = os.path.join('..', 'data')
-    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs2_v4.fits'))
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_subimg-cntrs2_v5.fits'))
     
     FILENAME = data['FILENAME']
     RA = data['RA']
@@ -82,7 +82,7 @@ def getSyntheticCatalog():
     Convert FITS table of synthetic clusters to CSV
     """
     data_dir = os.path.join('..', 'data')
-    data = pyfits.getdata(os.path.join(data_dir, 'phat_fcz2-directory.fits'))
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_fcz2-directory_v2.fits'))
     
     SUBIMG = data['SUBIMG']
     FCID = data['FCID']

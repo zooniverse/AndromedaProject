@@ -40,10 +40,56 @@ trouble = []
 phat_subjects = Dir["#{ @data_path }/jpg_final_2/*.jpg"]
 phat_synthetics = Dir["#{ @data_path }/jpg_fcz2/*.jpg"]
 archival_subjects = Dir["#{ @data_path }/jpg_strip/*.jpg"]
+archival_synthetics = Dir["#{ @data_path }/jpg_r2pt2/*.jpg"]
 
-phat_subjects.each.with_index do |path, file_index|
+# phat_subjects.each.with_index do |path, file_index|
+#   basename = File.basename(path)
+#   type = basename.include?('F475W') ? 'inverted' : 'standard'
+#   
+#   begin
+#     puts "Uploading #{ file_index + 1 } / #{ phat_subjects.length }"
+#     upload(path, type, false)
+#     upload_thumbnail(path, type, false) if type == 'standard'
+#   rescue
+#     trouble.push basename
+#     next
+#   end
+#   
+# end
+# 
+# phat_synthetics.each.with_index do |path, file_index|
+#   basename = File.basename path
+#   type = basename.include?('F475W') ? 'inverted' : 'standard'
+#   
+#   begin
+#     puts "Uploading #{ file_index + 1 } / #{ phat_synthetics.length }"
+#     upload(path, type, true)
+#     upload_thumbnail(path, type, true) if type == 'standard'
+#   rescue
+#     trouble.push basename
+#     next
+#   end
+#   
+# end
+# 
+# archival_subjects.each.with_index do |path, file_index|
+#   basename = File.basename(path)
+#   type = basename.include?('F555W') ? 'inverted' : 'standard'
+#   
+#   begin
+#     puts "Uploading #{ file_index + 1 } / #{ archival_subjects.length }"
+#     upload(path, type, false)
+#     upload_thumbnail(path, type, false) if type == 'standard'
+#   rescue
+#     trouble.push basename
+#     next
+#   end
+#   
+# end
+
+archival_synthetics.each.with_index do |path, file_index|
   basename = File.basename(path)
-  type = basename.include?('F475W') ? 'inverted' : 'standard'
+  type = ( basename.include?('F475W') or basename.include?('F555W') ) ? 'inverted' : 'standard'
   
   begin
     puts "Uploading #{ file_index + 1 } / #{ phat_subjects.length }"
@@ -55,36 +101,5 @@ phat_subjects.each.with_index do |path, file_index|
   end
   
 end
-
-phat_synthetics.each.with_index do |path, file_index|
-  basename = File.basename path
-  type = basename.include?('F475W') ? 'inverted' : 'standard'
-  
-  begin
-    puts "Uploading #{ file_index + 1 } / #{ phat_synthetics.length }"
-    upload(path, type, true)
-    upload_thumbnail(path, type, true) if type == 'standard'
-  rescue
-    trouble.push basename
-    next
-  end
-  
-end
-
-archival_subjects.each.with_index do |path, file_index|
-  basename = File.basename(path)
-  type = basename.include?('F555W') ? 'inverted' : 'standard'
-  
-  begin
-    puts "Uploading #{ file_index + 1 } / #{ archival_subjects.length }"
-    upload(path, type, false)
-    upload_thumbnail(path, type, false) if type == 'standard'
-  rescue
-    trouble.push basename
-    next
-  end
-  
-end
-
 
 puts trouble
