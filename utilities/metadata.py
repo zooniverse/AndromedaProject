@@ -160,4 +160,3 @@ if __name__ == '__main__':
     getSyntheticCatalog()
   elif argument == 'beta':
     getBetaSubjects()
-  
