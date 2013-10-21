@@ -23,10 +23,5 @@ bucket.objects['styles/zooniverse.css'].write file: 'styles/zooniverse.css', acl
 bucket.objects['styles/main.css'].write file: 'styles/main.css', acl: :public_read, content_type: 'text/css'
 bucket.objects['scripts/build/main.js'].write file: 'scripts/build/main.js', acl: :public_read, content_type: 'application/javascript'
 
-bucket.objects['images/tutorial/cosmic-rays_color.png'].write file: 'images/tutorial/cosmic-rays_color.png', acl: :public_read
-bucket.objects['images/tutorial/cosmic-rays_F475W.png'].write file: 'images/tutorial/cosmic-rays_F475W.png', acl: :public_read
-bucket.objects['images/tutorial/edge-field_color.jpg'].write file: 'images/tutorial/edge-field_color.jpg', acl: :public_read
-bucket.objects['images/tutorial/edge-field_F475W.jpg'].write file: 'images/tutorial/edge-field_F475W.jpg', acl: :public_read
-
 system "rm -rf build"
 puts 'Done!'
