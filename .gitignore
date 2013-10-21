@@ -11,3 +11,7 @@ data/imghead_final
 tiles/
 .rvmrc
 beta/
+data/ap-round2-subjects.txt
+data/image-centers-round-2.json
+data/synthetic-clusters-round-2.json
+images/andromeda_opt_old1.jpg
