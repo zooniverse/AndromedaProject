@@ -82,7 +82,7 @@ def getSyntheticCatalog():
     Convert FITS table of synthetic clusters to CSV
     """
     data_dir = os.path.join('..', 'data')
-    data = pyfits.getdata(os.path.join(data_dir, 'phat_fcz2-directory_v2.fits'))
+    data = pyfits.getdata(os.path.join(data_dir, 'phat_fcz2-directory_v3.fits'))
     
     SUBIMG = data['SUBIMG']
     FCID = data['FCID']

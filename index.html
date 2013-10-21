@@ -134,7 +134,7 @@
                   <h3>About PHAT</h3>
                   <p>The Andromeda galaxy is the closest spiral galaxy to our own Milky Way. For a hundred years, Andromeda (also known by its Messier Catalog identifier, M31) has played an important role in shaping our view of the Universe. In the early 1920's, Edwin Hubble's observations of Andromeda confirmed for the first time that galaxies lie outside of the Milky Way, and that Andromeda must contain billions of stars. Today, Andromeda is a template for understanding how spiral galaxies form and evolve.</p>                  
                   
-                  <p>The Panchromatic Hubble Andromeda Treasury (PHAT) survey (public webpage <a href="http://www.astro.washington.edu/groups/phat">here</a>) opens a new window on Andromeda.  This ongoing, four-year Hubble Space Telescope (HST) project will map one-third of Andomeda's spiral disk at six wavelengths ranging from the near-infrared to the ultraviolet (<a href="http://adsabs.harvard.edu/abs/2012ApJS..200...18D">Dalcanton+ 2012</a>). The HST images have exquisite resolution, allowing PHAT to reveal more than 100 million stars by the time the survey is complete. This beautiful data set is the heart of the Andromeda Project.</p>
+                  <p>The Panchromatic Hubble Andromeda Treasury (PHAT) survey (public webpage <a href="http://www.astro.washington.edu/groups/phat">here</a>) opens a new window on Andromeda.  This four-year Hubble Space Telescope (HST) project has recently finished mapping one-third of Andromeda's spiral disk at six wavelengths ranging from the near-infrared to the ultraviolet (<a href="http://adsabs.harvard.edu/abs/2012ApJS..200...18D">Dalcanton+ 2012</a>). The HST images have exquisite resolution, allowing PHAT to reveal more than 100 million stars in Andromeda. This beautiful data set is the heart of the Andromeda Project.</p>
                 
                   <div class="images">
                     <img src="images/about/footprint.jpg" />
@@ -544,10 +544,34 @@
                     </div>
 
                     <div class="right-col">
-                      <h4> 1. Chip-Gaps</h4>
+                      <h4>1. Chip-Gaps</h4>
                       <p>The images for this project were taken using HST’s Advanced Camera for Surveys (ACS) instrument. This camera uses two separate CCD chips that have a small gap separating them. We fill in this gap using overlapping images, but sometimes these overlapping data do not exist, or the overlapping data are imperfectly aligned. This causes diagonal streaks in the image, but we are aware of their locations and therefore they should simply be ignored. In this image there are examples of chip gaps.</p>
                     </div>
                     
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/edge-field_color.jpg" class="large canToggle">
+                        <br/>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                      <h4>2. Edge Fields</h4>
+                      <p>Our current round of data includes a lot of fields near the edges of our data. This means that you'll see images where a big portion of the image is blank, like the one to the left. This is not because the galaxy ends beyond that point, but just because our images don't cover that part of the galaxy. But we want to make the most of the images we do have and so we're trying to make sure that no part of our data goes unsearched for clusters, even the raggedy bits at the edges.</p>
+                    </div>
+                    
+                    <div class="left-col">
+                      <div class="images">
+                        <img src="images/tutorial/cosmic-rays_color.png" class="large canToggle">
+                        <br/>
+                      </div>
+                    </div>
+
+                    <div class="right-col">
+                      <h4>3. Cosmic Rays</h4>
+                      <p>Most of the images you will see were created by combining multiple exposures of the same area of the sky. This helps us see fainter objects, and also allows us to get rid of cosmic rays. Cosmic rays are bright dots or streaks that are created when an energetic particle (mostly protons) fly through the detector. These cosmic rays are abundant above the Earth's surface, and individual Hubble images are filled with them. In the current round, some of our data only has one exposure in each filter, and therefore many streaks from cosmic rays, like that shown to the left, remain.  These look like either blue or red in the color images depending on whether they hit the telescope during the observations through the blue filter or red filter. Please ignore these and do your best to find any clusters that are in the field!</p>
+                    </div>
+
                     <div class="left-col">
                       <div class="images">
                         <img src="images/tutorial/cte_color.jpg" class="large canToggle">
@@ -557,9 +581,9 @@
                     </div>
 
                     <div class="right-col">
-                      <h4>2. Charge Transfer Efficiency (CTE) Imperfections</h4>
+                      <h4>4. Charge Transfer Efficiency (CTE) Imperfections</h4>
                       <p>The cameras used to take the images are charge-coupled devices or CCDs. When a photon hits a pixel in these cameras, it creates a free electron. These electrons are stored in the pixel until the exposure is finished, and then the charge from each pixel is transferred to its neighboring pixels, and finally out to one corner of the chip where the electrons are converted into a digital signal. This process is typically very efficient, moving &gt;99.999% of the electrons correctly. But as the CCDs age, the pixels wear out a little, causing a little inefficiency in the way that charge is transferred. This inefficiency shows itself as small streaks in the image; some examples are shown in this image. This is especially noticeable in the least dense parts of our images, and particularly in the black and white images.</p>   
-                    </div>        
+                    </div>
 
                     <h3 class="smaller">Image artifacts you should mark:</h3>
                     <p>There are a number of artifacts that we would like your help in finding.  These are features whose presence cannot be predicted, but that can corrupt our measurements if we do not know about them.</p>

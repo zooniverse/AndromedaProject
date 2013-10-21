@@ -63,24 +63,26 @@ workflow = Workflow.where(name: 'andromeda').first || Workflow.create({
   entities: []
 })
 
-# Using glob to exclude F475W and F555W images
-phat_subjects = Dir["#{ @data_path }/jpg_final_2/*[0-9].jpg"]
-phat_synthetics = Dir["#{ @data_path }/jpg_fcz2/*[0-9].jpg"]
-archival_subjects = Dir["#{ @data_path }/jpg_strip/*[0-9].jpg"]
-archival_synthetics = Dir["#{ @data_path }/jpg_r2pt2/*[0-9].jpg"]
+# # Using glob to exclude F475W and F555W images
+# phat_subjects = Dir["#{ @data_path }/jpg_final_2/*[0-9].jpg"]
+# phat_synthetics = Dir["#{ @data_path }/jpg_fcz2/*[0-9].jpg"]
+# archival_subjects = Dir["#{ @data_path }/jpg_strip/*[0-9].jpg"]
+# archival_synthetics = Dir["#{ @data_path }/jpg_r2pt2/*[0-9].jpg"]
+# 
+# phat_subjects.map! { |subject| File.basename(subject, '.jpg') }
+# phat_synthetics.map! { |subject| File.basename(subject, '.jpg') }
+# archival_subjects.map! { |subject| File.basename(subject, '.jpg') }
+# archival_synthetics.map! { |subject| File.basename(subject, '.jpg') }
+# 
+# subjects = []
+# subjects.concat(phat_subjects).concat(phat_synthetics).concat(archival_subjects).concat(archival_synthetics)
+# subjects.sort!
 
-phat_subjects.map! { |subject| File.basename(subject, '.jpg') }
-phat_synthetics.map! { |subject| File.basename(subject, '.jpg') }
-archival_subjects.map! { |subject| File.basename(subject, '.jpg') }
-archival_synthetics.map! { |subject| File.basename(subject, '.jpg') }
-
-subjects = []
-subjects.concat(phat_subjects).concat(phat_synthetics).concat(archival_subjects).concat(archival_synthetics)
-subjects.sort!
 
 # Parse for image centers
 centers = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/image-centers-round-2.json") )
 synthetics = JSON.parse( File.read("#{File.dirname(__FILE__)}/../data/synthetic-clusters-round-2.json") )
+subjects = File.read("#{File.dirname(__FILE__)}/../data/ap-round2-subjects.txt").split("\n")
 
 subjects.each do |subject|
   puts "#{subject}\t#{centers[subject]}"

@@ -172,6 +172,7 @@ define (require, exports, module) ->
         m.label.animate opacity: 1, 100
         
     toggleSubject: (e) =>
+      
       target = $(e.target)
       e.preventDefault()
       img = jQuery('.selection-area img')
