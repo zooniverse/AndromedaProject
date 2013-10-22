@@ -202,8 +202,8 @@ define (require, exports, module) ->
       subject = @picker.classifier.workflow.selection[0]
       # Show center of field on small map
       if subject
-        width = 240
-        height = 309
+        width = 165
+        height = 350
         center = subject.metadata.center
         if center?
           nx = parseFloat(center[0])
