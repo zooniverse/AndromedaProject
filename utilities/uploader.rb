@@ -22,7 +22,6 @@ end
 
 def upload_thumbnail(path, type, synthetic)
   basename = File.basename(path, '.jpg')
-  basename += '_sc' if synthetic
   basename.gsub!('_F475W', '')
   basename.gsub!('_F555W', '')
   
@@ -48,7 +47,7 @@ archival_synthetics = Dir["#{ @data_path }/jpg_r2pt2/*.jpg"]
 #   
 #   begin
 #     puts "Uploading #{ file_index + 1 } / #{ phat_subjects.length }"
-#     upload(path, type, false)
+#     # upload(path, type, false)
 #     upload_thumbnail(path, type, false) if type == 'standard'
 #   rescue
 #     trouble.push basename
@@ -63,7 +62,7 @@ archival_synthetics = Dir["#{ @data_path }/jpg_r2pt2/*.jpg"]
 #   
 #   begin
 #     puts "Uploading #{ file_index + 1 } / #{ phat_synthetics.length }"
-#     upload(path, type, true)
+#     # upload(path, type, true)
 #     upload_thumbnail(path, type, true) if type == 'standard'
 #   rescue
 #     trouble.push basename
@@ -71,21 +70,21 @@ archival_synthetics = Dir["#{ @data_path }/jpg_r2pt2/*.jpg"]
 #   end
 #   
 # end
-# 
-# archival_subjects.each.with_index do |path, file_index|
-#   basename = File.basename(path)
-#   type = basename.include?('F555W') ? 'inverted' : 'standard'
-#   
-#   begin
-#     puts "Uploading #{ file_index + 1 } / #{ archival_subjects.length }"
-#     upload(path, type, false)
-#     upload_thumbnail(path, type, false) if type == 'standard'
-#   rescue
-#     trouble.push basename
-#     next
-#   end
-#   
-# end
+
+archival_subjects.each.with_index do |path, file_index|
+  basename = File.basename(path)
+  type = basename.include?('F555W') ? 'inverted' : 'standard'
+  
+  begin
+    puts "Uploading #{ file_index + 1 } / #{ archival_subjects.length }"
+    # upload(path, type, false)
+    upload_thumbnail(path, type, false) if type == 'standard'
+  rescue
+    trouble.push basename
+    next
+  end
+  
+end
 
 archival_synthetics.each.with_index do |path, file_index|
   basename = File.basename(path)
@@ -93,7 +92,7 @@ archival_synthetics.each.with_index do |path, file_index|
   
   begin
     puts "Uploading #{ file_index + 1 } / #{ phat_subjects.length }"
-    upload(path, type, false)
+    # upload(path, type, false)
     upload_thumbnail(path, type, false) if type == 'standard'
   rescue
     trouble.push basename

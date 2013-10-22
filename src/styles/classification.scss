@@ -398,12 +398,17 @@
 				size: 14px;
 				weight: bold;
 			};
+			
 			margin: $gutter-width/4;
 			text-align: center;
       
+      p {
+        margin: 4px 0;
+      }
+      
       .feedback {
         position: static;
-        height: 282px;
+        height: 315px;
         width: 0px;
         padding-bottom: 60px;
         
@@ -433,15 +438,16 @@
           }
         }
         
+        
         canvas {
           position: absolute;
-          width: 240px;
-          height: 309px;
+          width: 165px;
+          height: 350px;
           z-index: 1;
         }
         img {
           position: absolute;
-          width: 156px;
+          width: 165px;
           margin-left: 38px;
           z-index: 0;
           border: 2px solid rgb(241,241,241);
