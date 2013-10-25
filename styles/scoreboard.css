@@ -1,7 +1,7 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003133}}
 .completion-note {
   padding: 10px;
-  margin-bottom: 5px;
+  margin: 0px 0 10px 0;
   border-radius: 0;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.67);
   left: 0;
@@ -9,17 +9,57 @@
   width: 980px;
   z-index: 0;
   background: #ff9540; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003143}}
   .completion-note > p {
     margin: 0;
     padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003157}}
+#try-list {
+  display: block;
+  margin: 5px 0 5px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003162}}
+.try-project {
+  position: relative;
+  border: 3px solid #ffffff;
+  height: 160px;
+  display: inline-block;
+  width: 235px;
+  padding: 0 0px 5px 0;
+  margin: 0 8px 0 0;
+  overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003172}}
+  .try-project.last {
+    margin-right: 0;
+    margin-left: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003177}}
+  .try-project img {
+    width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003181}}
+  .try-project a img {
+    border: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003186}}
+span.try-me {
+  position: absolute;
+  width: 225px;
+  left: 0;
+  bottom: 0px;
+  margin: 0px;
+  padding: 5px;
+  background: rgba(250, 250, 250, 0.85);
+  text-align: center;
+  color: black;
+  font-size: 0.9em;
+  font-weight: 400; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/common\.scss}line{font-family:\00003150}}
 .main .scoreboard:after {
   content: "";
   clear: both;
   display: table; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\000036}}
 .main .scoreboard > .score {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -28,31 +68,31 @@
   float: left;
   text-align: right;
   width: 20%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000313}}
   .main .scoreboard > .score:first-child {
     border-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000317}}
   .main .scoreboard > .score > .description {
     color: #f1f1f1;
     font-weight: 800;
     line-height: 1.5;
     padding: 40px 20px 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000324}}
   .main .scoreboard > .score.galaxy > .description {
     background: #9c62ee; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000325}}
   .main .scoreboard > .score.cross > .description {
     background: #a20f32; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000326}}
   .main .scoreboard > .score.cluster > .description {
     background: #db9f00; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000327}}
   .main .scoreboard > .score.ghost > .description {
     background: #097d4e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000328}}
   .main .scoreboard > .score.classifications > .description {
     background: #001e29; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/arfon\/Sites\/Adler\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/scoreboard\.scss}line{font-family:\0000330}}
   .main .scoreboard > .score > .count {
     font-size: 20px;
     line-height: 1;

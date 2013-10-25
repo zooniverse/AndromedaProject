@@ -132,7 +132,7 @@ $full-width: ($twelfth-width * 12) + ($gutter-width * 11);
 
 .completion-note {
   padding: $gutter-width/2;
-  margin-bottom: 5px;
+  margin: 0px 0 10px 0;
   border-radius: 0;
   box-shadow: 0 3px 3px -3px transparentize($black, 0.33);
   left: 0;
@@ -152,4 +152,47 @@ $full-width: ($twelfth-width * 12) + ($gutter-width * 11);
     clear: both;
     display: table;
   }
+}
+
+#try-list {
+  display: block;
+  margin: 5px 0 5px 0;
+}
+
+.try-project {
+  position: relative;
+  border: 3px solid #ffffff;
+  height: 160px;
+  display: inline-block;
+  width: 235px;
+  padding: 0 0px 5px 0;
+  margin: 0 8px 0 0;
+  overflow: hidden;
+
+    &.last {
+      margin-right: 0;
+      margin-left: 2px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    a img {
+      border: none;
+    }
+}
+
+span.try-me {
+  position: absolute;
+  width: 225px;
+  left:0;
+  bottom: 0px;
+  margin: 0px;
+  padding: 5px;
+  background: rgba(250,250,250,0.85);
+  text-align: center;
+  color: black;
+  font-size: 0.9em;
+  font-weight: 400;
 }
