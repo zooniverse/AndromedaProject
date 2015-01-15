@@ -901,6 +901,10 @@ span.try-me {
   font-weight: 400; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
+.main [data-page="authors"] div.content {
+  padding: 5px 20px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000034}}
 .main [data-page="guide"] div.content {
   padding: 5px 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\000038}}
@@ -1003,6 +1007,10 @@ span.try-me {
     display: table; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003117}}
   .main [data-page="guide"] > [data-page="type"] > section > section .content {
+    position: relative;
+    margin: 20px 20px 40px 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003117}}
+  .main [data-page="authors"] > [data-page="groups"] > section > section .content {
     position: relative;
     margin: 20px 20px 40px 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Rob\/Sites\/AndromedaProject\/src\/styles\/guide\.scss}line{font-family:\00003121}}
